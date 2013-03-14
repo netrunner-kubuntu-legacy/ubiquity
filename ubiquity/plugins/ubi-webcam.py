@@ -37,16 +37,16 @@ class PageGtk(plugin.PluginUI):
         from gi.repository import UbiquityWebcam
         from ubiquity import gtkwidgets
         if ('UBIQUITY_NO_WEBCAM' in os.environ
-            or not UbiquityWebcam.Webcam.available()
-            or 'UBIQUITY_AUTOMATIC' in os.environ
-            or controller.oem_config):
+                or not UbiquityWebcam.Webcam.available()
+                or self.is_automatic
+                or controller.oem_config):
             self.page = None
             return
         self.controller = controller
         builder = Gtk.Builder()
         self.controller.add_builder(builder)
-        builder.add_from_file(os.path.join(os.environ['UBIQUITY_GLADE'],
-            'stepWebcam.ui'))
+        builder.add_from_file(os.path.join(
+            os.environ['UBIQUITY_GLADE'], 'stepWebcam.ui'))
         builder.connect_signals(self)
         self.page = builder.get_object('stepWebcam')
         self.plugin_widgets = self.page

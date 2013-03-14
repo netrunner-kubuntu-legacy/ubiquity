@@ -21,7 +21,7 @@ INTROSPECTION_GIRS = UbiquityWebcam-1.0.gir
 introspection_sources = $(libubiwebcam_la_SOURCES)
 
 UbiquityWebcam-1.0.gir: libubiwebcam.la
-UbiquityWebcam_1_0_gir_INCLUDES = GObject-2.0 Gtk-3.0 Gst-0.10
+UbiquityWebcam_1_0_gir_INCLUDES = GObject-2.0 Gtk-3.0 Gst-1.0
 UbiquityWebcam_1_0_gir_CFLAGS = $(INCLUDES) --identifier-prefix=Ubiquity
 UbiquityWebcam_1_0_gir_LIBS = libubiwebcam.la
 UbiquityWebcam_1_0_gir_FILES = $(introspection_sources)

@@ -131,8 +131,8 @@ ubiquity_webcam_init (UbiquityWebcam *self) {
 	gtk_box_pack_start (GTK_BOX (self), priv->drawing_area, TRUE, TRUE, 0);
 	gtk_box_pack_start (GTK_BOX (self), priv->button, FALSE, FALSE, 0);
 
-	priv->camerabin = gst_element_factory_make ("camerabin2" , "cam");
-	priv->viewfinder_caps = gst_caps_new_simple ("video/x-raw-rgb",
+	priv->camerabin = gst_element_factory_make ("camerabin" , "cam");
+	priv->viewfinder_caps = gst_caps_new_simple ("video/x-raw",
 		"width", G_TYPE_INT, 640,
 		"height", G_TYPE_INT, 480, NULL);
 	g_object_set (G_OBJECT (priv->camerabin),
@@ -156,7 +156,7 @@ ubiquity_webcam_init (UbiquityWebcam *self) {
 	priv->bus = gst_element_get_bus (priv->camerabin);
 	gst_bus_add_signal_watch (priv->bus);
 	g_signal_connect (priv->bus, "message", G_CALLBACK (message_cb), self);
-	gst_bus_set_sync_handler (priv->bus, (GstBusSyncHandler) window_id_cb, NULL);
+	gst_bus_set_sync_handler (priv->bus, (GstBusSyncHandler) window_id_cb, NULL, NULL);
 	gst_object_ref (priv->bus);
 	gst_object_ref (priv->camerabin);
 }
@@ -170,8 +170,7 @@ ubiquity_webcam_test (UbiquityWebcam *webcam) {
 		return;
 	priv->src = gst_element_factory_make ("wrappercamerabinsrc", NULL);
 	priv->testsrc = gst_element_factory_make ("videotestsrc", NULL);
-	g_object_set (G_OBJECT (priv->testsrc), "is-live", TRUE,
-		"peer-alloc", FALSE, NULL);
+	g_object_set (G_OBJECT (priv->testsrc), "is-live", TRUE, NULL);
 	g_object_set (G_OBJECT (priv->src), "video-source", priv->testsrc, NULL);
 	g_object_set (G_OBJECT (priv->camerabin), "camera-source", priv->src, NULL);
 	ubiquity_webcam_stop (webcam);
@@ -278,12 +277,12 @@ window_id_cb (GstBus *bus, GstMessage *msg, gpointer data) {
 	if (GST_MESSAGE_TYPE (msg) != GST_MESSAGE_ELEMENT)
 		return GST_BUS_PASS;
 
-	if (!gst_structure_has_name (msg->structure, "prepare-xwindow-id"))
+	if (!gst_is_video_overlay_prepare_window_handle_message(msg))
 		return GST_BUS_PASS;
 
 	g_object_set(G_OBJECT(msg->src), "force-aspect-ratio", TRUE, NULL);
 
-	gst_x_overlay_set_xwindow_id (GST_X_OVERLAY (GST_MESSAGE_SRC(msg)),
+	gst_video_overlay_set_window_handle (GST_VIDEO_OVERLAY (GST_MESSAGE_SRC(msg)),
 								video_window_xid);
 	gst_message_unref (msg);
 	return GST_BUS_DROP;

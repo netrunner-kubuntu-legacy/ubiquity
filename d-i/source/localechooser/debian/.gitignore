@@ -1,0 +1,17 @@
+files
+iso-codes
+iso_3166.tab
+languagelist.data
+localechooser
+locales
+pobuild
+short-tmp
+templates
+templates.base
+templates.base-in
+templates.continents
+templates.tmp
+*.debhelper*
+*.substvars
+SUPPORTED-short
+

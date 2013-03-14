@@ -29,7 +29,7 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #include <gst/gst.h>
-#include <gst/interfaces/xoverlay.h>
+#include <gst/video/videooverlay.h>
 
 
 G_BEGIN_DECLS

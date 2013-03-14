@@ -2,12 +2,13 @@
 # -*- coding: utf-8; -*-
 
 import os
+import shutil
 import sys
 from test.support import run_unittest
 import unittest
 
 import dbus
-from gi.repository import Gtk, TimezoneMap
+from gi.repository import GdkPixbuf, Gst, Gtk, TimezoneMap
 import mock
 
 from ubiquity import gtkwidgets, nm, segmented_bar
@@ -64,7 +65,6 @@ class WidgetTests(unittest.TestCase):
     @mock.patch('ubiquity.misc.drop_privileges')
     @mock.patch('ubiquity.misc.regain_privileges')
     def test_face_selector_save_to(self, *args):
-        from gi.repository import GdkPixbuf, Gst
         Gst.init(sys.argv)
         WRITE_TO = '/tmp/nonexistent-directory/windows_square.png'
         fs = gtkwidgets.FaceSelector(None)
@@ -75,7 +75,6 @@ class WidgetTests(unittest.TestCase):
         fs.selected_image.set_from_pixbuf(pb)
         fs.save_to(WRITE_TO)
         self.assertTrue(os.path.exists(WRITE_TO))
-        import shutil
         shutil.rmtree(os.path.dirname(WRITE_TO))
 
     def test_face_selector_translated(self):
@@ -106,7 +105,9 @@ class WidgetTests(unittest.TestCase):
         self.assertEqual(gtkwidgets.gtk_to_cairo_color('white'),
                          (1.0, 1.0, 1.0))
         self.assertEqual(gtkwidgets.gtk_to_cairo_color('black'), (0, 0, 0))
-        self.assertEqual(gtkwidgets.gtk_to_cairo_color('green'), (0, 1.0, 0))
+        # After all these years a discrepancy between X11 green and CSS
+        # green was noticed
+        self.assertEqual(gtkwidgets.gtk_to_cairo_color('#00ff00'), (0, 1.0, 0))
         self.assertEqual(gtkwidgets.gtk_to_cairo_color('red'), (1.0, 0, 0))
         self.assertEqual(gtkwidgets.gtk_to_cairo_color('blue'), (0, 0, 1.0))
 
