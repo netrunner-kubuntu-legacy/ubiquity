@@ -3,9 +3,9 @@ base-installer 1.122ubuntu14
 bterm-unifont 1.2
 choose-mirror 2.44ubuntu1
 clock-setup 0.113ubuntu1
-console-setup 1.70ubuntu6
+console-setup 1.70ubuntu7
 debian-installer-utils 1.94ubuntu1
-flash-kernel 3.0~rc.4ubuntu29
+flash-kernel 3.0~rc.4ubuntu30
 grub-installer 1.78ubuntu6
 hw-detect 1.92ubuntu1
 localechooser 2.49ubuntu2
@@ -15,7 +15,7 @@ partman-auto 105ubuntu2
 partman-auto-crypto 19ubuntu1
 partman-auto-loop 0ubuntu21
 partman-auto-lvm 46ubuntu2
-partman-base 163ubuntu1
+partman-base 163ubuntu2
 partman-basicfilesystems 76ubuntu4
 partman-basicmethods 51
 partman-btrfs 10ubuntu1

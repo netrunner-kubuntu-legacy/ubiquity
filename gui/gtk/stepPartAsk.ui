@@ -45,7 +45,7 @@
                     <property name="margin_left">24</property>
                     <property name="xalign">0</property>
                     <property name="yalign">0</property>
-                    <property name="label" translatable="yes">&lt;span weight="light" size="small"&gt;Documents, music, and other personal files will be kept. Installed software will be kept where possible. System-wide settings will be cleared.&lt;/span&gt;</property>
+                    <property name="label" translatable="yes">&lt;span size="small"&gt;Documents, music, and other personal files will be kept. Installed software will be kept where possible. System-wide settings will be cleared.&lt;/span&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                   </object>
@@ -79,7 +79,7 @@
                     <property name="margin_left">24</property>
                     <property name="xalign">0</property>
                     <property name="yalign">0</property>
-                    <property name="label" translatable="yes">&lt;span weight="light" size="small"&gt;&lt;span foreground="darkred"&gt;Warning:&lt;/span&gt; This will delete all your Ubuntu 11.04 programs, documents, photos, music, and any other files.&lt;/span&gt;</property>
+                    <property name="label" translatable="yes">&lt;span size="small"&gt;&lt;span foreground="darkred"&gt;Warning:&lt;/span&gt; This will delete all your Ubuntu 11.04 programs, documents, photos, music, and any other files.&lt;/span&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                   </object>
@@ -115,7 +115,7 @@
                     <property name="margin_left">24</property>
                     <property name="xalign">0</property>
                     <property name="yalign">0</property>
-                    <property name="label" translatable="yes">&lt;span weight="light" size="small"&gt;Documents, music, and other personal files will be kept. You can choose which operating system you want each time the computer starts up.&lt;/span&gt;</property>
+                    <property name="label" translatable="yes">&lt;span size="small"&gt;Documents, music, and other personal files will be kept. You can choose which operating system you want each time the computer starts up.&lt;/span&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                   </object>
@@ -154,7 +154,7 @@
                     <property name="margin_left">24</property>
                     <property name="xalign">0</property>
                     <property name="yalign">0</property>
-                    <property name="label" translatable="yes">&lt;span weight="light" size="small"&gt;&lt;span foreground="darkred"&gt;Warning:&lt;/span&gt; This will delete all of your Windows programs, documents, photos, music, and any other files.&lt;/span&gt;</property>
+                    <property name="label" translatable="yes">&lt;span size="small"&gt;&lt;span foreground="darkred"&gt;Warning:&lt;/span&gt; This will delete all of your Windows programs, documents, photos, music, and any other files.&lt;/span&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                   </object>
@@ -192,7 +192,7 @@
                     <property name="margin_left">24</property>
                     <property name="xalign">0</property>
                     <property name="yalign">0</property>
-                    <property name="label" translatable="yes">&lt;span weight="light" size="small"&gt;You’ll choose a security key in the next step.&lt;/span&gt;</property>
+                    <property name="label" translatable="yes">&lt;span size="small"&gt;You’ll choose a security key in the next step.&lt;/span&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                   </object>
@@ -228,7 +228,7 @@
                     <property name="margin_left">24</property>
                     <property name="xalign">0</property>
                     <property name="yalign">0</property>
-                    <property name="label" translatable="yes">&lt;span weight="light" size="small"&gt;This will set up Logical Volume Management. It allows taking snapshots and easier partition resizing.&lt;/span&gt;</property>
+                    <property name="label" translatable="yes">&lt;span size="small"&gt;This will set up Logical Volume Management. It allows taking snapshots and easier partition resizing.&lt;/span&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                   </object>
@@ -285,7 +285,7 @@
                     <property name="margin_left">24</property>
                     <property name="xalign">0</property>
                     <property name="yalign">0</property>
-                    <property name="label" translatable="yes">&lt;span weight="light" size="small"&gt;You can create or resize partitions yourself, or choose multiple partitions for Ubuntu.&lt;/span&gt;</property>
+                    <property name="label" translatable="yes">&lt;span size="small"&gt;You can create or resize partitions yourself, or choose multiple partitions for Ubuntu.&lt;/span&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                   </object>

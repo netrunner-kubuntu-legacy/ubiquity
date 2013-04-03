@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2013-03-07 18:33+0000\n"
-"PO-Revision-Date: 2013-01-30 11:55+0000\n"
+"PO-Revision-Date: 2013-03-27 09:19+0000\n"
 "Last-Translator: Kim Boram <boramism@gmail.com>\n"
 "Language-Team: Korean <debian-l10n-korean@lists.debian.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-07 18:08+0000\n"
-"X-Generator: Launchpad (build 16514)\n"
+"X-Launchpad-Export-Date: 2013-03-30 12:46+0000\n"
+"X-Generator: Launchpad (build 16546)\n"
 
 #. Type: text
 #. Description
@@ -42,7 +42,7 @@ msgstr "설치"
 #. Description
 #: ../ubiquity.templates:6001
 msgid "Install (OEM mode, for manufacturers only)"
-msgstr "설치 (OEM 모드, 제조사 전용)"
+msgstr "설치(OEM 모드, 제조사 전용)"
 
 #. Type: text
 #. Description
@@ -254,7 +254,7 @@ msgid ""
 "&lt;small&gt;If more than one person will use this computer, you can set up "
 "multiple accounts after installation.&lt;/small&gt;"
 msgstr ""
-"&lt;small&gt;한 명보다 많은 사람이 컴퓨터를 사용한다면, 설치 후 복수 계정을 "
+"&lt;small&gt;한 명보다 많은 사람이 컴퓨터를 사용한다면, 설치 후 여러 계정을 "
 "설정할 수 있습니다.&lt;/small&gt;"
 
 #. Type: text
@@ -417,8 +417,8 @@ msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
 msgstr ""
-"가져올 계정을 선택하십시오. 이 계정의 문서와 설정은 설치가 완료된 뒤에 사용"
-"할 수 있습니다."
+"가져올 계정을 선택하십시오. 이 계정의 문서와 설정은 설치를 완료한 후 사용할 "
+"수 있습니다."
 
 #. Type: text
 #. Description
@@ -427,7 +427,7 @@ msgid ""
 "If you do not wish to import any accounts, select nothing and go to the next "
 "page."
 msgstr ""
-"가져올 계정이 없는 경우 아무것도 선택하지 마시고 다음 페이지로 이동하십시오."
+"가져올 계정이 없으면 아무것도 선택하지 마시고 다음 페이지로 이동하십시오."
 
 #. Type: text
 #. Description
@@ -440,7 +440,7 @@ msgstr "설치 형식"
 #. SIZE is a variable substituted into this string, and may be '100 GB'
 #: ../ubiquity.templates:61001
 msgid "Files (${SIZE})"
-msgstr "(${SIZE}) 파일"
+msgstr "파일 (${SIZE})"
 
 #. Type: text
 #. Description
@@ -519,7 +519,7 @@ msgstr "설치 작업을 취소합니다."
 #. Description
 #: ../ubiquity.templates:73001
 msgid "This may leave your computer unable to boot."
-msgstr "취소하는 경우 컴퓨터를 사용할 수 없을 수 있습니다."
+msgstr "취소하면 컴퓨터를 사용할 수 없을 수도 있습니다."
 
 #. Type: text
 #. Description
@@ -700,7 +700,7 @@ msgstr "사용함"
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:100001
 msgid "System"
-msgstr ""
+msgstr "시스템"
 
 #. Type: text
 #. Description
@@ -780,7 +780,7 @@ msgid ""
 "will not be preserved."
 msgstr ""
 "설치를 완료했습니다. ${RELEASE}을(를) 계속 사용할 수 있습니다. 하지만 컴퓨터"
-"를 다시 시작하지 않으면 바뀐 내용이나 저장한 문서가 보존되지 않습니다."
+"를 다시 시작하지 않으면 바뀐 내용이나 저장한 문서를 잃게 됩니다."
 
 #. Type: text
 #. Description
@@ -820,8 +820,8 @@ msgid ""
 "Installation is complete. You need to restart the computer in order to use "
 "the new installation."
 msgstr ""
-"설치가 완료되었습니다. 새로 설치한 프로그램을 사용하려면 컴퓨터를 다시 시작해"
-"야 합니다."
+"설치가 끝났습니다. 새로 설치한 프로그램을 사용하려면 컴퓨터를 다시 시작해야 "
+"합니다."
 
 #. Type: text
 #. Description
@@ -881,7 +881,7 @@ msgstr "설치 실패"
 #: ../ubiquity.templates:127001 ../ubiquity.templates:128001
 msgid "The installer encountered an error copying files to the hard disk:"
 msgstr ""
-"파일을 하드 디스크로 복사하는 도중 설치 프로그램이 오류를 발견했습니다."
+"파일을 하드 디스크로 복사하는 도중 설치 프로그램이 오류를 발견했습니다:"
 
 #. Type: error
 #. Description
@@ -1053,7 +1053,7 @@ msgstr "제거할 패키지 확인 중..."
 #. Description
 #: ../ubiquity.templates:147001
 msgid "Downloading packages (${TIME} remaining)..."
-msgstr "패키지 다운로드 중 (${TIME} 남음)..."
+msgstr "패키지 다운로드 중(${TIME} 남음)..."
 
 #. Type: text
 #. Description
@@ -1065,7 +1065,7 @@ msgstr "패키지 목록 다운로드 중..."
 #. Description
 #: ../ubiquity.templates:149001
 msgid "Downloading package lists (${TIME} remaining)..."
-msgstr "패키지 목록 다운로드 중 (${TIME} 남음)..."
+msgstr "패키지 목록 다운로드 중(${TIME} 남음)..."
 
 #. Type: error
 #. Description
@@ -1146,7 +1146,7 @@ msgid ""
 "installed system."
 msgstr ""
 "네트워크 설정을 복사하는 중 오류가 발생했습니다. 설치 과정은 계속하지만 완료"
-"된 후에 네트워크를 다시 설정해야 합니다."
+"한 후에 네트워크를 다시 설정해야 합니다."
 
 #. Type: error
 #. Description
@@ -1214,19 +1214,19 @@ msgid ""
 "because partitions on the following mount points could not be unmounted:"
 msgstr ""
 "설치 프로그램이 파티션 테이블에 바뀐 내용을 적용해야 하지만 다음 마운트 포인"
-"트를 해제할 수 없기 때문에 작업을 수행할 수 없습니다:"
+"트를 해제할 수 없어 작업을 수행할 수 없습니다:"
 
 #. Type: boolean
 #. Description
 #: ../ubiquity.templates:172001
 msgid "Please close any applications using these mount points."
-msgstr "이 마운트 위치를 사용하는 모든 프로그램을 종료해주십시오."
+msgstr "이 마운트 위치를 사용하는 모든 프로그램을 닫아주십시오."
 
 #. Type: boolean
 #. Description
 #: ../ubiquity.templates:172001
 msgid "Would you like the installer to try to unmount these partitions again?"
-msgstr "설치 프로그램이 다시 이 파티션을 마운트 해제하도록 할까요?"
+msgstr "설치 프로그램이 이 파티션을 다시 마운트 해제하도록 할까요?"
 
 #. Type: boolean
 #. Description
@@ -1361,7 +1361,7 @@ msgstr "업데이트 설치 중"
 #. Description
 #: ../ubiquity.templates:199001
 msgid "Error updating installer"
-msgstr "설피 프로그램 업데이트 오류"
+msgstr "설치 프로그램 업데이트 오류"
 
 #. Type: text
 #. Description
@@ -1390,7 +1390,7 @@ msgid ""
 "Please choose the language to use for the install process. This language "
 "will be the default language for this computer."
 msgstr ""
-"설치 과정 중 사용할 언어를 선택하십시오, 선택한 언어를 이 컴퓨터의 기본 언어"
+"설치 과정 중 사용할 언어를 선택하십시오. 선택한 언어를 이 컴퓨터의 기본 언어"
 "로 사용합니다."
 
 #. Type: text
@@ -1487,13 +1487,13 @@ msgstr "드라이브 선택:"
 #. Description
 #: ../ubiquity.templates:218001
 msgid "Allocate drive space by dragging the divider below:"
-msgstr "아래 칸막이르 끌어 드라이브 공간을 확보해주십시오:"
+msgstr "아래 칸막이를 끌어 드라이브 공간을 확보해주십시오:"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:219001
 msgid "The entire disk will be used:"
-msgstr "디스크 전체 사용:"
+msgstr "디스크 전체를 사용합니다:"
 
 #. Type: text
 #. Description
@@ -1547,7 +1547,7 @@ msgstr "가장 큰 파티션 나누기"
 #. Description
 #: ../ubiquity.templates:226001
 msgid "For best results, please ensure that this computer:"
-msgstr "최적의 결과를 위해 이 컴퓨터의 다음 항목을 확인하십시오:"
+msgstr "최적의 결과를 얻으려면 이 컴퓨터의 다음 항목을 확인하십시오:"
 
 #. Type: text
 #. Description
@@ -1621,7 +1621,7 @@ msgstr "변종:"
 #. Description
 #: ../ubiquity.templates:239001
 msgid "Below is an image of your current layout:"
-msgstr "애래의 그림은 사용자의 현재 배치입니다."
+msgstr "아래의 그림은 사용자의 현재 배치입니다."
 
 #. Type: text
 #. Description
@@ -1866,7 +1866,7 @@ msgstr ""
 msgid ""
 "This computer currently has no detected operating systems. What would you "
 "like to do?"
-msgstr "이 컴퓨터에는 설치한 운영 체계가 없습니다. 어떻게 하시겠습니까?"
+msgstr "이 컴퓨터에는 설치한 운영 체제가 없습니다. 어떻게 하시겠습니까?"
 
 #. Type: text
 #. Description
@@ -2040,7 +2040,7 @@ msgstr "OEM 모드(제조사 전용)"
 #. worry too much about clarity.
 #: ../oem-config-udeb.templates:1001
 msgid "Prepare for OEM configuration"
-msgstr "OEM설정용으로 준"
+msgstr "OEM설정용으로 준비"
 
 #. Type: text
 #. Description
@@ -2053,7 +2053,7 @@ msgstr "OEM 설정 준비 중 ..."
 #. Description
 #: ../oem-config-udeb.templates:3001
 msgid "Ready for OEM configuration"
-msgstr "OEM 설정 준비됨"
+msgstr "OEM 설정 준비함"
 
 #. Type: text
 #. Description
@@ -2064,9 +2064,9 @@ msgid ""
 "administrative privileges using 'sudo'. You will then be able to make any "
 "additional modifications you require to the system."
 msgstr ""
-"새 시스템으로 시동 후 'oem' 사용자로 이전에 선택한 암호를 사용해 로그인할 수 "
-"있습니다. 이 사용자는 또한 'sudo' 명령을 사용해 관리자 권한을 얻을 수 있습니"
-"다. 또 시스템에 필요한 추가 수정을 할 수 있습니다."
+"새 시스템으로 시동한 후 'oem' 사용자로 이전에 선택한 암호를 사용해 로그인할 "
+"수 있습니다. 또한 이 사용자는 'sudo' 명령을 사용해 관리자 권한을 얻을 수 있으"
+"며 시스템에 필요한 추가 수정을 할 수 있습니다."
 
 #. Type: text
 #. Description
@@ -2077,8 +2077,8 @@ msgid ""
 "ask the end user various configuration questions the next time it boots."
 msgstr ""
 "시스템 설정이 끝나면 'oem-config-prepare' 명령을 실행하여 임시 계정인 'oem' "
-"사용자를 삭제하고 다음 번 실행할 때 최종 사용자에게 다양한 설정을 묻도록 하십"
-"시오."
+"사용자를 삭제하고 다음 실행할 때 최종 사용자에게 다양한 설정을 묻도록 하십시"
+"오."
 
 #. Type: text
 #. Description

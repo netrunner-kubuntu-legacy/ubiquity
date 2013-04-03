@@ -635,7 +635,6 @@ class PageGtk(PageBase):
                 opt_desc.show()
                 opt_widget.set_label(options[option].title)
                 opt_desc.set_markup(fmt % options[option].desc)
-                opt_desc.set_sensitive(False)
                 if not ticked:
                     opt_widget.set_active(True)
                     ticked = True

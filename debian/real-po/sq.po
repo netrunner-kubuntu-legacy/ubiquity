@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2013-03-07 18:33+0000\n"
-"PO-Revision-Date: 2013-01-29 15:21+0000\n"
+"PO-Revision-Date: 2013-03-08 14:48+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Debian L10n Albanian <debian-l10n-albanian@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-07 18:08+0000\n"
-"X-Generator: Launchpad (build 16514)\n"
+"X-Launchpad-Export-Date: 2013-03-30 12:46+0000\n"
+"X-Generator: Launchpad (build 16546)\n"
 
 #. Type: text
 #. Description
@@ -715,7 +715,7 @@ msgstr "Në përdorim"
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:100001
 msgid "System"
-msgstr ""
+msgstr "Sistemi"
 
 #. Type: text
 #. Description

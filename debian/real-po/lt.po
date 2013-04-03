@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2013-03-07 18:33+0000\n"
-"PO-Revision-Date: 2012-10-16 21:33+0000\n"
-"Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
+"PO-Revision-Date: 2013-03-18 08:13+0000\n"
+"Last-Translator: Aurimas Fišeras <Unknown>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-07 18:08+0000\n"
-"X-Generator: Launchpad (build 16514)\n"
+"X-Launchpad-Export-Date: 2013-03-30 12:45+0000\n"
+"X-Generator: Launchpad (build 16546)\n"
 
 #. Type: text
 #. Description
@@ -707,7 +707,7 @@ msgstr "Panaudota"
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:100001
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #. Type: text
 #. Description

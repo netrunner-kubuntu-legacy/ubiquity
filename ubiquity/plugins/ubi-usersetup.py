@@ -566,6 +566,7 @@ class PageKde(PageBase):
         self.page.login_encrypt.setEnabled(checked)
 
     def on_login_auto_clicked(self, checked):
+        self.page.login_encrypt.setChecked(not(checked))
         self.page.login_encrypt.setEnabled(not(checked))
 
     def set_encrypt_home(self, value):

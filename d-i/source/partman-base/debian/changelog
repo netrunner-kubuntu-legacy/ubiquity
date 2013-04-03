@@ -1,3 +1,10 @@
+partman-base (163ubuntu2) raring; urgency=low
+
+  * Use the device's logical sector size throughout rather than
+    PED_SECTOR_SIZE_DEFAULT (LP: #1065281).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 28 Mar 2013 18:31:11 +0000
+
 partman-base (163ubuntu1) raring; urgency=low
 
   * Resynchronise with Debian.  Remaining changes:

@@ -328,6 +328,7 @@ EndSection
                     '/usr/share/xfce4/backdrops/xubuntu-precise-right.png',
                     '/usr/share/lubuntu/wallpapers/'
                     'lubuntu-default-wallpaper.png',
+                    '/usr/share/backgrounds/ubuntukylin-default-settings.jpg',
                     '/usr/share/backgrounds/warty-final-ubuntu.png'):
                 exists = os.access(background, os.R_OK)
                 if exists:

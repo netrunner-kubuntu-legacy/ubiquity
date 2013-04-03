@@ -1220,12 +1220,17 @@ class Wizard(BaseFrontend):
                 self.set_current_page(self.steps.page_num(self.stepPartAuto))
             return False
 
-    def step_name(self, step_index):
+    def step_name(self, step_index, return_index=False):
         w = self.steps.get_nth_page(step_index)
+        name = None
+        index = None
         for p in self.pages:
             if w in p.all_widgets:
-                return p.module.NAME
-        return None
+                name = p.module.NAME
+                index = self.pages.index(p)
+        if return_index:
+            return name, index
+        return name
 
     def page_name(self, step_index):
         return self.steps.get_nth_page(step_index).get_name()
@@ -1476,15 +1481,15 @@ class Wizard(BaseFrontend):
 
     def on_steps_switch_page(self, unused_notebook, unused_page, current):
         self.current_page = current
-        name = self.step_name(current)
+        name, index = self.step_name(current, return_index=True)
         if 'UBIQUITY_GREETER' in os.environ:
             if name == 'language':
                 self.navigation_control.hide()
             else:
                 self.navigation_control.show()
-        for i in range(len(self.pages))[:current + 1]:
+        for i in range(len(self.pages))[:index + 1]:
             self.dot_grid.get_child_at(i, 0).set_fraction(1)
-        for i in range(len(self.pages))[current + 1:]:
+        for i in range(len(self.pages))[index + 1:]:
             self.dot_grid.get_child_at(i, 0).set_fraction(0)
 
         syslog.syslog('switched to page %s' % name)

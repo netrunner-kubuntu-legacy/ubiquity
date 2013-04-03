@@ -1,3 +1,78 @@
+ubiquity (2.14.1) raring; urgency=low
+
+  * Pass --identifier-prefix=Ubiquity via
+    UbiquityMockResolver_1_0_gir_SCANNERFLAGS rather than
+    UbiquityMockResolver_1_0_gir_CFLAGS, fixing build failure with
+    gobject-introspection >= 1.35.9.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 30 Mar 2013 23:15:26 +0000
+
+ubiquity (2.14.0) raring; urgency=low
+
+  [ Dmitrijs Ledkovs ]
+  * ubiquity.ubiquity.upstart: exit with 1 if fails for unknown reasons
+    (LP: #1151224)
+
+  [ Jason Gerard DeRose ]
+  * Add 'ubiquity-frontend-gtk' to the tuple of packages to remove in
+    bin/oem-config-remove-gtk (LP: #1161943).
+
+  [ Colin Watson ]
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu30, partman-base 163ubuntu2.
+  * Update translations from Launchpad.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 30 Mar 2013 13:54:57 +0000
+
+ubiquity (2.13.18) raring; urgency=low
+
+  [ Aurélien Gâteau ]
+  * KDE: create web view manually to ensure it starts slideshow
+  * KDE: Fix the cancel button. It was missing its icon and not connected to
+    an action
+
+  [ Jonathan Riddell ]
+  * 01oem-config-udeb install kubuntu slideshow for oem-config in Kubuntu
+  * KDE: Untick encrypt tickbox when selecting login automatically LP: #1131459
+
+  [ Dmitrijs Ledkovs ]
+  * Drop compiz from alternative supported window managers for
+    ubiquity-dm. This reverts to using metacity. It has proven to be
+    unreliable.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Fri, 22 Mar 2013 15:40:56 +0000
+
+ubiquity (2.13.17) raring; urgency=low
+
+  * Remove webcam step (LP: #1118589):
+    - User testing showed people are not expecting to be photographed and
+      raise privacy concerns as to where the picture will be uploaded to.
+    - Provides limited benefit, as avatar only ever shown on multi-login
+      systems in the switch user indicator / pkexec.
+    - Crashes the installer or doesn't work with certain webcams.
+    - Miss detects camera presence, when it's just a sensor.
+    - The recommendation is to move webcam test to checkbox / hw testing,
+      as video conferencing is very popular these days and should work
+      reliably out of the box.
+    - LP: #924419 , LP: #981644 , LP: #987392, LP: #1152254, LP: #843354,
+      LP: #1008204, LP: #1021449, LP: #1082458, LP: #1103780, LP: #1142751
+  * Do not count optional pages, when updating the progress dots. This
+    fixes "Porgress dots, well don't progress after partman step"
+    LP: #1152746
+  * Do not mark explanatory text on "Installation Type" screen
+    insensitive, as otherwise it's ineligible (LP: #1074386)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Tue, 19 Mar 2013 15:17:51 +0000
+
+ubiquity (2.13.16) raring; urgency=low
+
+  * ubiquity-dm: Add UbuntuKylin background image.
+  * debian/tests/control: Depend only on the debs we generate, not on "@"
+    which is expanded to the udebs as well.
+  * Automatic update of included source packages: console-setup 1.70ubuntu7.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 15 Mar 2013 10:51:22 +0000
+
 ubiquity (2.13.15) raring; urgency=low
 
   * Re-upload due to broken hint on previous upload

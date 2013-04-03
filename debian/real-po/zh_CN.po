@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2013-03-07 18:33+0000\n"
-"PO-Revision-Date: 2012-10-16 21:33+0000\n"
-"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"PO-Revision-Date: 2013-03-19 02:16+0000\n"
+"Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-07 18:08+0000\n"
-"X-Generator: Launchpad (build 16514)\n"
+"X-Launchpad-Export-Date: 2013-03-30 12:44+0000\n"
+"X-Generator: Launchpad (build 16546)\n"
 
 #. Type: text
 #. Description
@@ -251,6 +251,8 @@ msgid ""
 "&lt;small&gt;If more than one person will use this computer, you can set up "
 "multiple accounts after installation.&lt;/small&gt;"
 msgstr ""
+"&lt;small&gt;如果多人使用这台计算机，您可以在安装完毕后设置多个帐号。&lt;/"
+"small&gt;"
 
 #. Type: text
 #. Description
@@ -276,7 +278,7 @@ msgstr "选择一个密码："
 msgid ""
 "&lt;small&gt;Enter the same password twice, so that it can be checked for "
 "typing errors.&lt;/small&gt;"
-msgstr ""
+msgstr "&lt;small&gt;输入相同的密码两次，以检查是否输入有误。&lt;/small&gt;"
 
 #. Type: text
 #. Description
@@ -433,7 +435,7 @@ msgstr "文件 (${SIZE})"
 #. Description
 #: ../ubiquity.templates:62001
 msgid "Where would you like to install Kubuntu?"
-msgstr ""
+msgstr "您要把 Kubuntu 安装在哪？"
 
 #. Type: text
 #. Description

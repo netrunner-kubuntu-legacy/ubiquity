@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2013-03-07 18:33+0000\n"
-"PO-Revision-Date: 2013-02-05 09:12+0000\n"
-"Last-Translator: Igor Zubarev <igor.zubarev@gmail.com>\n"
+"PO-Revision-Date: 2013-03-12 05:20+0000\n"
+"Last-Translator: Patsev Anton <Unknown>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-07 18:08+0000\n"
-"X-Generator: Launchpad (build 16514)\n"
+"X-Launchpad-Export-Date: 2013-03-30 12:44+0000\n"
+"X-Generator: Launchpad (build 16546)\n"
 
 #. Type: text
 #. Description
@@ -708,7 +708,7 @@ msgstr "Использовано"
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:100001
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #. Type: text
 #. Description
