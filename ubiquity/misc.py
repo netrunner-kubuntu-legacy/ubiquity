@@ -469,20 +469,19 @@ ReleaseInfo = namedtuple('ReleaseInfo', 'name, version')
 
 def get_release():
     if get_release.release_info is None:
-        try:
-            with open('/cdrom/.disk/info') as fp:
-                line = fp.readline()
-                if line:
-                    line = line.split()
-                    if line[2] == 'LTS':
-                        line[1] += ' LTS'
-                    get_release.release_info = ReleaseInfo(
-                        name=line[0], version=line[1])
-        except:
-            syslog.syslog(syslog.LOG_ERR, 'Unable to determine the release.')
+        #try:
+            #with open('/cdrom/.disk/info') as fp:
+                #line = fp.readline()
+                #if line:
+                    #line = line.split()
+                    #if line[2] == 'LTS':
+                        #line[1] += ' LTS'
+                    #get_release.release_info = ReleaseInfo(
+                        #name=line[0], version=line[1])
+            #syslog.syslog(syslog.LOG_ERR, 'Unable to determine the release.')
 
-        if not get_release.release_info:
-            get_release.release_info = ReleaseInfo(name='Ubuntu', version='')
+        #if not get_release.release_info:
+        get_release.release_info = ReleaseInfo(name='Netrunner', version='13.06')
     return get_release.release_info
 
 get_release.release_info = None
@@ -837,11 +836,11 @@ def install_size():
     if min_install_size:
         return min_install_size
 
-    # Fallback size to 5 GB
-    size = 5 * 1024 * 1024 * 1024
+    # Fallback size to 8 GB
+    size = 8 * 1024 * 1024 * 1024
 
-    # Maximal size to 8 GB
-    max_size = 8 * 1024 * 1024 * 1024
+    # Maximal size to 10 GB
+    max_size = 10 * 1024 * 1024 * 1024
 
     try:
         with open('/cdrom/casper/filesystem.size') as fp:
@@ -852,8 +851,8 @@ def install_size():
     # TODO substitute into the template for the state box.
     min_disk_size = size * 2  # fudge factor
 
-    # Set minimum size to 8GB if current minimum size is larger
-    # than 8GB and we still have an extra 20% of free space
+    # Set minimum size to 10GB if current minimum size is larger
+    # than 10GB and we still have an extra 20% of free space
     if min_disk_size > max_size and size * 1.2 < max_size:
         min_disk_size = max_size
 

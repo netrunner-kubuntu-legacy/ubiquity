@@ -1,3 +1,9 @@
+ubiquity (2.14.3-1netrunner1) enigma-1306; urgency=low
+
+  * Initial Enigma-1306 release
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 18 Apr 2013 14:00:08 +0200
+
 ubiquity (2.14.3) raring; urgency=low
 
   * Update translations from Launchpad.

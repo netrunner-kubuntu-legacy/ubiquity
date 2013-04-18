@@ -178,9 +178,13 @@ class PageGtk(plugin.PluginUI):
                     model.append([
                         result['name'], result['admin1'], result['country'],
                         result['latitude'], result['longitude']])
+                
 
                 # Only cache positive results.
                 self.geoname_cache[text] = model
+                
+            except ValueError:
+                syslog.syslog('Server return does not appear to be valid JSON.')
 
             except ValueError:
                 syslog.syslog(

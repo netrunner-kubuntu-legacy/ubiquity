@@ -73,7 +73,7 @@ class UbiquityUI(QtGui.QMainWindow):
         # this to be restartable.
         signal.siginterrupt(signal.SIGCHLD, False)
 
-        distro_name = "Kubuntu"
+        distro_name = "Netrunner"
         distro_release = ""
 
         ## setup the release and codename
@@ -81,7 +81,7 @@ class UbiquityUI(QtGui.QMainWindow):
             for line in fp:
                 if "DISTRIB_ID=" in line:
                     name = str.strip(line.split("=")[1], '\n')
-                    if name != "Ubuntu":
+                if name != "Netrunner":
                         distro_name = name
                 elif "DISTRIB_RELEASE=" in line:
                     distro_release = str.strip(line.split("=")[1], '\n')
@@ -154,6 +154,7 @@ class Wizard(BaseFrontend):
         self._apply_stylesheet()
 
         self.app.setWindowIcon(QtGui.QIcon.fromTheme("ubiquity"))
+         
         import dbus.mainloop.qt
         dbus.mainloop.qt.DBusQtMainLoop(set_as_default=True)
 
@@ -258,6 +259,7 @@ class Wizard(BaseFrontend):
         # Array to keep callback functions needed by debconf file descriptors.
         self.debconf_callbacks = {}
 
+         
         self.allow_go_backward(False)
 
         self.stop_debconf()
@@ -270,6 +272,7 @@ class Wizard(BaseFrontend):
         elif self.oem_user_config:
             self.ui.setWindowTitle(self.get_string('oem_user_config_title'))
             self.ui.setWindowIcon(QtGui.QIcon.fromTheme("preferences-system"))
+          
             flags = self.ui.windowFlags() ^ QtCore.Qt.WindowMinMaxButtonsHint
             if hasattr(QtCore.Qt, 'WindowCloseButtonHint'):
                 flags = flags ^ QtCore.Qt.WindowCloseButtonHint
@@ -286,8 +289,10 @@ class Wizard(BaseFrontend):
         self.ui.progressCancel.setIcon(QtGui.QIcon.fromTheme("dialog-close"))
 
         self._show_progress_bar(False)
+         
 
         misc.add_connection_watch(self.network_change)
+         
 
     def _show_progress_bar(self, show):
         if show:

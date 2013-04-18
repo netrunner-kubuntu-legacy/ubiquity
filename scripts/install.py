@@ -49,7 +49,12 @@ class Install(install_misc.InstallBase):
             os.makedirs('/var/lib/ubiquity')
         with open('/var/lib/ubiquity/started-installing', 'a'):
             pass
-
+        
+        if not os.path.exists('/var/lib/ubiquity'):
+              os.makedirs('/var/lib/ubiquity')
+        with open('/var/lib/ubiquity/started-installing', 'a'):
+              pass
+            
         self.update_proc = None
 
         if os.path.isdir('/rofs'):
