@@ -401,6 +401,7 @@ class PageKde(PageBase):
             from PyQt4.QtGui import QWidget, QPixmap
             self.page = uic.loadUi('/usr/share/ubiquity/qt/stepLanguage.ui')
             self.combobox = self.page.language_combobox
+            self.combobox.view().setUniformItemSizes(True)
             self.combobox.currentIndexChanged[str].connect(
                 self.on_language_selection_changed)
             if not self.controller.oem_config:
