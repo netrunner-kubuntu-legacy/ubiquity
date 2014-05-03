@@ -1,4 +1,4 @@
-ubiquity
+ubiquity (patched version for netrunner)
 ========
 update https://github.com/netrunner/ubiquity to latest version (Kubuntu 14.04)
 Keyboard: kubuntu 14.04 ubiquity has the "keyboard language dropdown glitch" fixed, should be fixed then with update to latest version, as it is still there in build1 ubiquity
