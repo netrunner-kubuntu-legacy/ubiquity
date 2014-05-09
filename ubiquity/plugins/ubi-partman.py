@@ -615,16 +615,31 @@ class PageGtk(PageBase):
             ("some_device_lvm", "use_lvm"),
         )
 
+        release = misc.get_release()
         if 'some_device_crypto' in extra_options:
             title = self.controller.get_string(
                 'ubiquity/text/use_crypto')
+            title = title.replace('${RELEASE}', release.name)
             desc = self.controller.get_string('ubiquity/text/use_crypto_desc')
             options['some_device_crypto'] = PartitioningOption(title, desc)
 
         if 'some_device_lvm' in extra_options:
             title = self.controller.get_string('ubiquity/text/use_lvm')
+            title = title.replace('${RELEASE}', release.name)
             desc = self.controller.get_string('ubiquity/text/use_lvm_desc')
             options['some_device_lvm'] = PartitioningOption(title, desc)
+
+        crypto_desc_obj = getattr(self, 'crypto_description_2')
+        text = self.controller.get_string(
+            'ubiquity/text/crypto_description_2')
+        text = text.replace('${RELEASE}', release.name)
+        crypto_desc_obj.set_label(text)
+
+        lvm_explanation_obj = getattr(self, 'partition_lvm_explanation')
+        text = self.controller.get_string(
+            'ubiquity/text/partition_lvm_explanation')
+        text = text.replace('${RELEASE}', release.name)
+        lvm_explanation_obj.set_label(text)
 
         ticked = False
         for option, name in option_to_widget:
@@ -1135,7 +1150,7 @@ class PageGtk(PageBase):
         # point makes no sense. TODO cjwatson 2007-01-31: Unfortunately we
         # have to hardcode the list of known filesystems here.
         known_filesystems = ('ext4', 'ext3', 'ext2', 'filesystem',
-                             'btrfs', 'reiserfs', 'jfs', 'xfs',
+                             'btrfs', 'jfs', 'xfs',
                              'fat16', 'fat32', 'ntfs', 'uboot')
         show = bool(iterator and model[iterator][0] in known_filesystems)
         self.partition_mount_combo.set_visible(show)
@@ -2734,7 +2749,7 @@ class Page(plugin.Plugin):
                     self.description(question),
                     self.extended_description(question),
                     ('ubiquity/text/go_back', 'ubiquity/text/continue'))
-                if response is None or response == 'ubiquity/text/continue':
+                if response == 'ubiquity/text/continue':
                     self.preseed(question, 'true', seen=False)
                 else:
                     self.preseed(question, 'false', seen=False)
@@ -2921,8 +2936,7 @@ class Page(plugin.Plugin):
                         self.description(question),
                         self.extended_description(question),
                         ('ubiquity/text/go_back', 'ubiquity/text/continue'))
-                    if (response is None or
-                            response == 'ubiquity/text/continue'):
+                    if response == 'ubiquity/text/continue':
                         self.preseed(question, 'true', seen=False)
                     else:
                         self.preseed(question, 'false', seen=False)
@@ -2939,7 +2953,7 @@ class Page(plugin.Plugin):
                     self.description(question),
                     self.extended_description(question),
                     ('ubiquity/text/go_back', 'ubiquity/text/continue'))
-                if response is None or response == 'ubiquity/text/continue':
+                if response == 'ubiquity/text/continue':
                     self.preseed(question, 'true', seen=False)
                 else:
                     self.preseed(question, 'false', seen=False)
@@ -3138,7 +3152,7 @@ class Page(plugin.Plugin):
             if question in ('partman-jfs/jfs_boot', 'partman-jfs/jfs_root',
                             'partman/unmount_active'):
                 answer_reversed = True
-            if response is None or response == yes:
+            if response == yes:
                 answer = answer_reversed
             else:
                 answer = not answer_reversed

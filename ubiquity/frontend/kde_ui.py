@@ -65,6 +65,9 @@ UIDIR = os.path.join(PATH, 'qt')
 class UbiquityUI(QtGui.QMainWindow):
     def __init__(self, parent=None):
         QtGui.QMainWindow.__init__(self, parent)
+        #app.ui MainWindow now hardcoded to 1000px wide for main
+        #content this will look bad on high res displays and should be
+        #defined by dpi not pixels
         uic.loadUi(os.path.join(UIDIR, "app.ui"), self)
 
         # QProcessManager sets a SIGCHLD handler without SA_RESTART; this
@@ -81,7 +84,7 @@ class UbiquityUI(QtGui.QMainWindow):
             for line in fp:
                 if "DISTRIB_ID=" in line:
                     name = str.strip(line.split("=")[1], '\n')
-                if name != "Netrunner":
+                    if name != "Netrunner":
                         distro_name = name
                 elif "DISTRIB_RELEASE=" in line:
                     distro_release = str.strip(line.split("=")[1], '\n')
@@ -150,11 +153,22 @@ class Wizard(BaseFrontend):
         self.previous_excepthook = sys.excepthook
         sys.excepthook = self.excepthook
 
+        # Hardcode the KDE platform plugin to get Oxygen palette. Without this,
+        # Ubiquity uses the default Windows-95-like palette when running as a
+        # DM.
+        os.environ["QT_PLATFORM_PLUGIN"] = "kde"
+        # For above settings to apply automatically we need to indicate that we
+        # are inside a full KDE session.
+        os.environ["KDE_FULL_SESSION"] = "TRUE"
+
         self.app = QtGui.QApplication([])
+        # The "hicolor" icon theme gets picked when Ubiquity is running as a
+        # DM. This causes some icons to be missing. Hardcode the theme name to
+        # prevent that.
+        QtGui.QIcon.setThemeName('oxygen')
         self._apply_stylesheet()
 
-        self.app.setWindowIcon(QtGui.QIcon.fromTheme("ubiquity"))
-         
+        self.app.setWindowIcon(QtGui.QIcon.fromTheme("ubiquity-kde"))
         import dbus.mainloop.qt
         dbus.mainloop.qt.DBusQtMainLoop(set_as_default=True)
 
@@ -166,12 +180,15 @@ class Wizard(BaseFrontend):
         self.ui.content_widget.setVisible(False)
 
         if 'UBIQUITY_GREETER' in os.environ:
-            self.ui.setWindowState(
-                self.ui.windowState() ^ QtCore.Qt.WindowFullScreen)
+            self.ui.setWindowFlags(
+                QtCore.Qt.Dialog
+                | QtCore.Qt.CustomizeWindowHint
+                | QtCore.Qt.WindowTitleHint
+                )
 
         self.ui.setWizard(self)
 
-        self.stackLayout = QtGui.QStackedLayout(self.ui.widgetStack)
+        self.stackLayout = QtGui.QStackedLayout(self.ui.content_widget)
 
         self.pages = []
         self.pagesindex = 0
@@ -248,8 +265,6 @@ class Wizard(BaseFrontend):
 
         self.set_busy_cursor(True)
 
-        self.laptop = misc.execute("laptop-detect")
-
         # set default language
         self.locale = i18n.reset_locale(self)
 
@@ -259,7 +274,6 @@ class Wizard(BaseFrontend):
         # Array to keep callback functions needed by debconf file descriptors.
         self.debconf_callbacks = {}
 
-         
         self.allow_go_backward(False)
 
         self.stop_debconf()
@@ -272,7 +286,6 @@ class Wizard(BaseFrontend):
         elif self.oem_user_config:
             self.ui.setWindowTitle(self.get_string('oem_user_config_title'))
             self.ui.setWindowIcon(QtGui.QIcon.fromTheme("preferences-system"))
-          
             flags = self.ui.windowFlags() ^ QtCore.Qt.WindowMinMaxButtonsHint
             if hasattr(QtCore.Qt, 'WindowCloseButtonHint'):
                 flags = flags ^ QtCore.Qt.WindowCloseButtonHint
@@ -282,17 +295,14 @@ class Wizard(BaseFrontend):
             self.ui.install_process_label.hide()
             self.breadcrumb_install.hide()
 
-        self.ui.pageMode.setCurrentWidget(self.ui.setup_page)
         self.update_back_button()
         self.update_next_button(install_now=False)
         self.ui.quit.setIcon(QtGui.QIcon.fromTheme("dialog-close"))
         self.ui.progressCancel.setIcon(QtGui.QIcon.fromTheme("dialog-close"))
 
         self._show_progress_bar(False)
-         
 
         misc.add_connection_watch(self.network_change)
-         
 
     def _show_progress_bar(self, show):
         if show:
@@ -420,20 +430,23 @@ class Wizard(BaseFrontend):
             if self.current_page is None:
                 break
 
-            self.backup = False
             page = self.pages[self.pagesindex]
+            skip = False
+            if hasattr(page.ui, 'plugin_skip_page'):
+                if page.ui.plugin_skip_page():
+                    skip = True
             automatic = False
             if hasattr(page.ui, 'is_automatic'):
                 automatic = page.ui.is_automatic
 
-            if not page.filter_class:
+            if not skip and not page.filter_class:
                 # This page is just a UI page
                 self.dbfilter = None
                 self.dbfilter_status = None
                 if self.set_page(page.module.NAME):
                     self.allow_change_step(True)
                     self.app.exec_()
-            else:
+            elif not skip:
                 old_dbfilter = self.dbfilter
                 if issubclass(page.filter_class, Plugin):
                     ui = page.ui
@@ -534,13 +547,43 @@ class Wizard(BaseFrontend):
         else:
             self.breadcrumb_install.setState(Breadcrumb.TODO)
 
+    def _create_webview(self):
+        # HACK! For some reason, if the QWebView is created from the .ui file,
+        # the slideshow does not start (but it starts if one runs
+        # UBIQUITY_TEST_SLIDESHOW=1 ubiquity !). Creating it from the code
+        # works. I have no idea why.
+        from PyQt4.QtWebKit import QWebView
+        from PyQt4.QtWebKit import QWebPage
+
+        webView = QWebView()
+        webView.setMinimumSize(700, 420)
+        webView.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+
+# Make it transparent, see
+# http://ariya.blogspot.com/2009/04/transparent-qwebview-and-qwebpage.html
+
+        palette = webView.palette()
+        palette.setBrush(QtGui.QPalette.Base, QtCore.Qt.transparent)
+        page = webView.page()
+        page.setPalette(palette)
+        webView.setAttribute(QtCore.Qt.WA_OpaquePaintEvent, False)
+
+        page.setLinkDelegationPolicy(QWebPage.DelegateExternalLinks)
+        page.mainFrame().setScrollBarPolicy(
+            QtCore.Qt.Horizontal, QtCore.Qt.ScrollBarAlwaysOff)
+        page.mainFrame().setScrollBarPolicy(
+            QtCore.Qt.Vertical, QtCore.Qt.ScrollBarAlwaysOff)
+        return webView
+
     def start_slideshow(self):
         slideshow_dir = '/usr/share/ubiquity-slideshow'
         slideshow_locale = self.slideshow_get_available_locale(slideshow_dir,
                                                                self.locale)
         slideshow_main = os.path.join(slideshow_dir, 'slides', 'index.html')
         if not os.path.exists(slideshow_main) or self.hide_slideshow:
-            self.ui.pageMode.hide()
+            placeHolder = QtGui.QWidget()
+            self.stackLayout.addWidget(placeHolder)
+            self.stackLayout.setCurrentWidget(placeHolder)
             return
 
         parameters = []
@@ -553,30 +596,16 @@ class Wizard(BaseFrontend):
 
         slides = 'file://%s#%s' % (slideshow_main, parameters_encoded)
 
-        # HACK! For some reason, if the QWebView is created from the .ui file,
-        # the slideshow does not start (but it starts if one runs
-        # UBIQUITY_TEST_SLIDESHOW=1 ubiquity !). Creating it from the code
-        # works. I have no idea why.
-        from PyQt4.QtWebKit import QWebView
-        from PyQt4.QtWebKit import QWebPage
-
         def openLink(qUrl):
             QtGui.QDesktopServices.openUrl(qUrl)
 
-        webView = QWebView()
-        webView.setMinimumSize(700, 420)
+        webView = self._create_webview()
         webView.linkClicked.connect(openLink)
-        webView.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        webView.page().setLinkDelegationPolicy(QWebPage.DelegateExternalLinks)
-        webView.page().mainFrame().setScrollBarPolicy(
-            QtCore.Qt.Horizontal, QtCore.Qt.ScrollBarAlwaysOff)
-        webView.page().mainFrame().setScrollBarPolicy(
-            QtCore.Qt.Vertical, QtCore.Qt.ScrollBarAlwaysOff)
         webView.load(QtCore.QUrl(slides))
 
         self.ui.navigation.hide()
-        self.ui.install_page.layout().addWidget(webView)
-        self.ui.pageMode.setCurrentWidget(self.ui.install_page)
+        self.stackLayout.addWidget(webView)
+        self.stackLayout.setCurrentWidget(webView)
 
     def set_layout_direction(self, lang=None):
         if not lang:
@@ -850,6 +879,10 @@ class Wizard(BaseFrontend):
 
     def set_page(self, n):
         self.run_automation_error_cmd()
+        # We only stop the backup process when we're on a page where questions
+        # need to be asked, otherwise you wont be able to back up past
+        # pages that do not stop on questions or are preseeded away.
+        self.backup = False
         self.ui.show()
 
         #set all the steps active

@@ -7,15 +7,24 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # Console-setup strings translations:
 # (identified by "./console-setup.templates")
-# Copyright (C) 2003-2010 Miguel Figueiredo <elmig@debianpt.org>
+# Copyright (C) 2003-2013 Miguel Figueiredo <elmig@debianpt.org>
 # This file is distributed under the same license as debian-installer.
+#
+#
+# Translations from iso-codes:
+#   Tobias Quathamer <toddy@debian.org>, 2007.
+#     Translations taken from ICU SVN on 2007-09-09
+#   Miguel Figueiredo <elmig@debianpt.org>, 2005, 2006, 2008, 2009, 2010
+#   Free Software Foundation, Inc., 2001,2004
+#   Filipe Maia <fmaia@gmx.net>, 2001.
+#   Alastair McKinstry <mckinstry@computer.org>, 2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
-"POT-Creation-Date: 2010-08-20 22:02+0200\n"
-"PO-Revision-Date: 2010-08-21 11:38+0100\n"
+"POT-Creation-Date: 2013-11-29 20:50+0000\n"
+"PO-Revision-Date: 2013-05-23 20:41+0100\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -625,6 +634,17 @@ msgstr "noatime - não actualizar datas de acesso aos inode em cada acesso"
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
+#, fuzzy
+#| msgid "noatime - do not update inode access times at each access"
+msgid "nodiratime - do not update directory inode access times"
+msgstr "noatime - não actualizar datas de acesso aos inode em cada acesso"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:44001
 msgid "relatime - update inode access times relative to modify time"
 msgstr ""
 "relatime - actualizar data de acesso ao inode relativo à data de modificação"
@@ -634,7 +654,7 @@ msgstr ""
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:44001
+#: ../partman-basicfilesystems.templates:45001
 msgid "nodev - do not support character or block special devices"
 msgstr "nodev - não suportar dispositivos especiais de caracteres ou blocos"
 
@@ -643,7 +663,7 @@ msgstr "nodev - não suportar dispositivos especiais de caracteres ou blocos"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:45001
+#: ../partman-basicfilesystems.templates:46001
 msgid "nosuid - ignore set-user-identifier or set-group-identifier bits"
 msgstr "nosuid - ignorar bits set-user-identifier ou set-group-identifier"
 
@@ -652,7 +672,7 @@ msgstr "nosuid - ignorar bits set-user-identifier ou set-group-identifier"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:46001
+#: ../partman-basicfilesystems.templates:47001
 msgid "noexec - do not allow execution of any binaries"
 msgstr "noexec - não permitir a execução de qualquer binário"
 
@@ -661,7 +681,7 @@ msgstr "noexec - não permitir a execução de qualquer binário"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:47001
+#: ../partman-basicfilesystems.templates:48001
 msgid "ro - mount the file system read-only"
 msgstr "ro - montar o sistema de ficheiros apenas para leitura"
 
@@ -670,7 +690,7 @@ msgstr "ro - montar o sistema de ficheiros apenas para leitura"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:48001
+#: ../partman-basicfilesystems.templates:49001
 msgid "sync - all input/output activities occur synchronously"
 msgstr "sync - toda a actividade de entrada/saída ocorre de maneira síncrona"
 
@@ -679,7 +699,7 @@ msgstr "sync - toda a actividade de entrada/saída ocorre de maneira síncrona"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:49001
+#: ../partman-basicfilesystems.templates:50001
 msgid "usrquota - user disk quota accounting enabled"
 msgstr "usrquota - quota de disco por utilizador activada"
 
@@ -688,7 +708,7 @@ msgstr "usrquota - quota de disco por utilizador activada"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:50001
+#: ../partman-basicfilesystems.templates:51001
 msgid "grpquota - group disk quota accounting enabled"
 msgstr "grpquota - quota de disco por grupo activada"
 
@@ -697,7 +717,7 @@ msgstr "grpquota - quota de disco por grupo activada"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:51001
+#: ../partman-basicfilesystems.templates:52001
 msgid "user_xattr - support user extended attributes"
 msgstr "user_xattr - suportar atributos extendidos de utilizador"
 
@@ -706,7 +726,7 @@ msgstr "user_xattr - suportar atributos extendidos de utilizador"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:52001
+#: ../partman-basicfilesystems.templates:53001
 msgid "quiet - changing owner and permissions does not return errors"
 msgstr "quiet - alterar o dono e as permissões não retornam erros"
 
@@ -715,17 +735,26 @@ msgstr "quiet - alterar o dono e as permissões não retornam erros"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:53001
+#: ../partman-basicfilesystems.templates:54001
 msgid "notail - disable packing of files into the file system tree"
 msgstr ""
 "notail - desabilitar o packing de ficheiros na árvore do sistema de ficheiros"
 
 #. Type: text
 #. Description
+#. :sl2:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:55001
+msgid "discard - trim freed blocks from underlying block device"
+msgstr ""
+
+#. Type: text
+#. Description
 #. :sl4:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:54001
+#: ../partman-basicfilesystems.templates:56001
 msgid "acls - support POSIX.1e Access Control List"
 msgstr "acls - suportar Listas de Controlo de Acessos POSIX.1e"
 
@@ -734,6 +763,63 @@ msgstr "acls - suportar Listas de Controlo de Acessos POSIX.1e"
 #. :sl4:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:55001
+#: ../partman-basicfilesystems.templates:57001
 msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
 msgstr "nomes curtos - usar os antigos nomes de ficheiros MS-DOS 8.3"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#: ../partman-basicfilesystems.templates:59001
+msgid "Go back to the menu and correct this problem?"
+msgstr "Voltar atrás ao menu e corrigir este problema?"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#, fuzzy
+msgid ""
+"Your boot partition has not been configured with the ext2 file system. This "
+"is needed by your machine in order to boot. Please go back and use the ext2 "
+"file system."
+msgstr ""
+"A sua partição de arranque não foi configurada com o sistema de ficheiros "
+"ext2 ou ext3. A sua máquina necessita disto para que possa arrancar.  Por "
+"favor volte atrás e utilize o sistema de ficheiros ext2 ou ext3."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#: ../partman-basicfilesystems.templates:59001
+msgid ""
+"If you do not go back to the partitioning menu and correct this error, the "
+"partition will be used as is. This means that you may not be able to boot "
+"from your hard disk."
+msgstr ""
+"Se não voltar atrás ao menu de particionamento e corrigir este erro, a "
+"partição será utilizada como está.  Isto significa que poderá não ser "
+"possível iniciar a partir do seu disco rígido."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:59001
+#, fuzzy
+msgid ""
+"Your boot partition is not located on the first partition of your hard disk. "
+"This is needed by your machine in order to boot.  Please go back and use "
+"your first partition as a boot partition."
+msgstr ""
+"A sua partição de arranque não se encontra localizada na primeira partição "
+"primária do seu disco rígido.  Isto é necessário pela sua máquina de modo a "
+"arrancar.  Por favor volte atrás e utilize a sua primeira partição primária "
+"como partição de boot."

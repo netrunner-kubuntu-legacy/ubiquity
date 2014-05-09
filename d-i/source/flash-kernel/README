@@ -106,6 +106,9 @@ The supported fields are:
   Boot-Initrd-Path but for an U-Boot boot script; see also
   U-Boot-Script-Name and Boot-Device
 
+* Boot-Dtb-Path: (optional) where to put the DTB file on the filesystem;
+  see also DTB-Id
+
 * Required-packages: (optional) list of packages which must be added
   during installer phase for flash-kernel to work properly; failure to
   add these packages aborts the installation
@@ -128,3 +131,6 @@ The supported fields are:
   kernel,  initrd and U-Boot script; Boot-Kernel-Path, Boot-Initrd-Path and
   Boot-Script-Path are then taken relative to this boot device
 
+* DTB-Kernel-Version: (optional) minimal kernel version for DTB concatenation
+
+* DTB-Id: (optional) specifies the name of the DTB file for this device

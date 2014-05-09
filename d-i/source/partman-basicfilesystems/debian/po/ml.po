@@ -15,13 +15,20 @@
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt#
 #
+#
+# Translations from iso-codes:
+#   Tobias Quathamer <toddy@debian.org>, 2007.
+#     Translations taken from ICU SVN on 2007-09-09
+#   Praveen A <pravi.a@gmail.com>, 2006, 2008.
+#   Ani Peter <peter.ani@gmail.com>, 2009
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
-"POT-Creation-Date: 2010-08-20 22:02+0200\n"
-"PO-Revision-Date: 2010-11-21 02:13+0530\n"
-"Last-Translator: Praveen Arimbrathodiyil <pravi.a@gmail.com>\n"
+"POT-Creation-Date: 2013-11-29 20:50+0000\n"
+"PO-Revision-Date: 2012-10-30 10:16+0530\n"
+"Last-Translator: Hrishikesh K B <hrishi.kb@gmail.com>\n"
 "Language-Team: Debian Malayalam <debian-l10n-malayalam@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -624,6 +631,17 @@ msgstr "noatime - ഓരോ സമീപനത്തിലും inode സമീ
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
+#, fuzzy
+#| msgid "noatime - do not update inode access times at each access"
+msgid "nodiratime - do not update directory inode access times"
+msgstr "noatime - ഓരോ സമീപനത്തിലും inode സമീപന സമയം പുതുക്കേണ്ട"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:44001
 msgid "relatime - update inode access times relative to modify time"
 msgstr ""
 "relatime - ഐനോഡ് (inode) സമീപന സമയങ്ങള്‍ മാറ്റം വരുത്തിയ സമയത്തിനു് അപേക്ഷികമായി പുതുക്കുക"
@@ -633,7 +651,7 @@ msgstr ""
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:44001
+#: ../partman-basicfilesystems.templates:45001
 msgid "nodev - do not support character or block special devices"
 msgstr "nodev - കാരക്ടര്‍ അല്ലെങ്കില്‍ ബ്ലോക് പ്രത്യേക ഉപകരണങ്ങളെ സപ്പോര്‍ട്ട് ചെയ്യേണ്ട"
 
@@ -642,7 +660,7 @@ msgstr "nodev - കാരക്ടര്‍ അല്ലെങ്കില്‍
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:45001
+#: ../partman-basicfilesystems.templates:46001
 msgid "nosuid - ignore set-user-identifier or set-group-identifier bits"
 msgstr ""
 "nosuid - set-user-identifier അല്ലെങ്കില്‍ set-group-identifier എന്നീ ബിറ്റുകള്‍ "
@@ -653,7 +671,7 @@ msgstr ""
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:46001
+#: ../partman-basicfilesystems.templates:47001
 msgid "noexec - do not allow execution of any binaries"
 msgstr "noexec - ഒരു ബൈനറികളുടേയും പ്രവര്‍ത്തനം അനുവദിക്കരുത്"
 
@@ -662,7 +680,7 @@ msgstr "noexec - ഒരു ബൈനറികളുടേയും പ്രവ�
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:47001
+#: ../partman-basicfilesystems.templates:48001
 msgid "ro - mount the file system read-only"
 msgstr "ro - വായനക്ക് മാത്രമായി ഫയല്‍ സിസ്റ്റം മൌണ്ട് ചെയ്യുക"
 
@@ -671,7 +689,7 @@ msgstr "ro - വായനക്ക് മാത്രമായി ഫയല്�
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:48001
+#: ../partman-basicfilesystems.templates:49001
 msgid "sync - all input/output activities occur synchronously"
 msgstr "sync - എല്ലാ ഇന്‍പുട്ട്/ഔട്ട്പുട്ട് നടപടികളും ഒരേ സമയത്തു് നടക്കും"
 
@@ -680,7 +698,7 @@ msgstr "sync - എല്ലാ ഇന്‍പുട്ട്/ഔട്ട്പ
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:49001
+#: ../partman-basicfilesystems.templates:50001
 msgid "usrquota - user disk quota accounting enabled"
 msgstr "usrquota - ഉപയോക്തൃ ഡിസ്ക് ആനുപാതിക പങ്ക് കണക്ക് വെയ്പ് ഇനേബിള്‍ ചെയ്യുക"
 
@@ -689,7 +707,7 @@ msgstr "usrquota - ഉപയോക്തൃ ഡിസ്ക് ആനുപാ�
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:50001
+#: ../partman-basicfilesystems.templates:51001
 msgid "grpquota - group disk quota accounting enabled"
 msgstr "grpquota - ഗ്രൂപ്പ് ഡിസ്ക് ആനുപാതിക പങ്ക്  കണക്ക് വെയ്പ് ഇനേബിള്‍ ചെയ്യുക"
 
@@ -698,7 +716,7 @@ msgstr "grpquota - ഗ്രൂപ്പ് ഡിസ്ക് ആനുപാ�
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:51001
+#: ../partman-basicfilesystems.templates:52001
 msgid "user_xattr - support user extended attributes"
 msgstr "user_xattr - ഉപയോക്തൃ വികസിത ഗുണങ്ങളെ പിന്തുണക്കുക"
 
@@ -707,7 +725,7 @@ msgstr "user_xattr - ഉപയോക്തൃ വികസിത ഗുണങ്
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:52001
+#: ../partman-basicfilesystems.templates:53001
 msgid "quiet - changing owner and permissions does not return errors"
 msgstr "quiet - ഉടമസ്തനെയും അനുമതികളും മാറ്റുന്നത് തെറ്റുകള്‍ തിരിച്ചു് തരില്ല"
 
@@ -716,16 +734,25 @@ msgstr "quiet - ഉടമസ്തനെയും അനുമതികളും
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:53001
+#: ../partman-basicfilesystems.templates:54001
 msgid "notail - disable packing of files into the file system tree"
 msgstr "notail - ഫയല്‍ സിസ്റ്റം ട്രീയിലേക്ക് ഫയലുകള്‍ പാക്ക് ചെയ്യുന്നത് കഴിയാത്തതാക്കുക"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:55001
+msgid "discard - trim freed blocks from underlying block device"
+msgstr ""
 
 #. Type: text
 #. Description
 #. :sl4:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:54001
+#: ../partman-basicfilesystems.templates:56001
 msgid "acls - support POSIX.1e Access Control List"
 msgstr "acls - POSIX.1e ആക്സസ് കണ്ട്രോള്‍ ലിസ്റ്റ്"
 
@@ -734,6 +761,62 @@ msgstr "acls - POSIX.1e ആക്സസ് കണ്ട്രോള്‍ ലി
 #. :sl4:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:55001
+#: ../partman-basicfilesystems.templates:57001
 msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
 msgstr "shortnames - പഴയ എംഎസ്-ഡോസ് 8.3 ശൈലിയിലുള്ള ഫയലിന്റെ പേരുകള്‍ മാത്രം ഉപയോഗിയ്ക്കുക"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#: ../partman-basicfilesystems.templates:59001
+msgid "Go back to the menu and correct this problem?"
+msgstr "മെനുവിലേയ്ക്കു് തിരിച്ചു് പോയി ഈ പ്രശ്നം ശരിയാക്കണോ?"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#, fuzzy
+msgid ""
+"Your boot partition has not been configured with the ext2 file system. This "
+"is needed by your machine in order to boot. Please go back and use the ext2 "
+"file system."
+msgstr ""
+"നിങ്ങളുടെ ബൂട്ട് ഭാഗം ext2 അല്ലെങ്കില്‍ ext3 ഫയല്‍ സിസ്റ്റം കൊണ്ടല്ല ക്രമീകരിച്ചിരിക്കുന്നതു്. "
+"നിങ്ങളുടെ മഷീന്‍ ബൂട്ട് ചെയ്യുന്നതിന് ഇതു് ആവശ്യമാണു്. ദയവായി തിരിച്ചു് പോയി ext2 അല്ലെങ്കില്‍ ext3 "
+"ഫയല്‍ സിസ്റ്റം ഉപയോഗിയ്ക്കുക."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#: ../partman-basicfilesystems.templates:59001
+msgid ""
+"If you do not go back to the partitioning menu and correct this error, the "
+"partition will be used as is. This means that you may not be able to boot "
+"from your hard disk."
+msgstr ""
+"നിങ്ങള്‍ വിഭജന മെനുവിലേയ്ക്കു് തിരിച്ചു് പോയി ഈ പ്രശ്നം ശരിയാക്കിയില്ലെങ്കില്‍ ഭാഗം അങ്ങനെ തന്നെ "
+"ഉപയോഗിക്കുന്നതായിരിയ്ക്കും. നിങ്ങള്‍ക്കു് ഹാര്‍ഡ് ഡിസ്കില്‍ നിന്നും ബൂട്ട് ചെയ്യാന്‍ കഴിഞ്ഞെന്ന് വരില്ല "
+"എന്നാണ് ഇതിനര്‍ത്ഥം."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:59001
+#, fuzzy
+msgid ""
+"Your boot partition is not located on the first partition of your hard disk. "
+"This is needed by your machine in order to boot.  Please go back and use "
+"your first partition as a boot partition."
+msgstr ""
+"നിങ്ങളുടെ ബൂട്ട് ഭാഗം നിങ്ങളുടെ ഹാര്‍ഡ് ഡിസ്കിന്റെ ആദ്യത്തെ പ്രാഥമിക ഭാഗത്തല്ല സ്ഥിതി ചെയ്യുന്നത്. "
+"നിങ്ങളുടെ മഷീന്‍ ബൂട്ട് ചെയ്യുന്നതിനു് ഇതു് ആവശ്യമാണു്. ദയവായി തിരിച്ചു് പോയി നിങ്ങളുടെ ആദ്യത്തെ "
+"പ്രാഥമിക ഭാഗം ബൂട്ട് ഭാഗമായി ഉപയോഗിയ്ക്കുക."

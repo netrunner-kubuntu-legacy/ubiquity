@@ -14,6 +14,14 @@ Template: ubiquity/text/connecting_label
 Type: text
 _Description: Connecting...
 
+Template: ubiquity/text/connection_failed_label
+Type: text
+_Description: Connection failed.
+
+Template: ubiquity/text/connected_label
+Type: text
+_Description: Connected.
+
 Template: ubiquity/text/restart_to_continue
 Type: text
 _Description: Restart to Continue
@@ -72,31 +80,6 @@ Type: text
 _Description:
  You may wish to <a href="update">update this installer</a>.
 
-Template: ubiquity/show_alpha_warning
-Type: boolean
-Default: false
-Description: for internal use; can be preseeded
- Show a message warning that this installer version is not ready for
- production use.
-
-Template: ubiquity/text/alpha_warning_label
-Type: text
-#flag:comment:2
-# RELEASE is a variable substituted into this string, and may be 'Ubuntu'
-# MEDIUM is a variable substituted into this string, and may be 'CD'
-_Description:
- This is a pre-release of the ${RELEASE} live ${MEDIUM} installer. It is not
- a final release; that will come with the final release of ${RELEASE} in
- April 2013.
- .
- The installation process may resize or erase partitions on your hard disk.
- Be sure to <b>take a full backup of any valuable data</b> before running
- this program.
-
-Template: ubiquity/text/warning_heading_label
-Type: text
-_Description: Warning
-
 Template: ubiquity/text/timezone_heading_label
 Type: text
 _Description: Where are you?
@@ -133,22 +116,6 @@ Template: ubiquity/text/userinfo_heading_label
 Type: text
 _Description: Who are you?
 
-Template: ubiquity/text/webcam_heading_label
-Type: text
-_Description: Choose a picture
-
-Template: ubiquity/text/webcam_photo_label
-Type: text
-_Description: Take a photo:
-
-Template: ubiquity/text/webcam_existing_label
-Type: text
-_Description: Or choose an existing picture:
-
-Template: ubiquity/text/webcam_take_button
-Type: text
-_Description: Take Photo
-
 Template: ubiquity/text/fullname_label
 Type: text
 _Description: Your name:
@@ -156,6 +123,14 @@ _Description: Your name:
 Template: ubiquity/text/fullname_inactive_label
 Type: text
 _Description: Your name
+
+Template: ubiquity/text/password_new_inactive_label
+Type: text
+_Description: At least 8 characters password
+
+Template: ubiquity/text/password_new_again_inactive_label
+Type: text
+_Description: Retype password
 
 Template: ubiquity/text/username_label
 Type: text
@@ -176,6 +151,10 @@ _Description: Must start with a lower-case letter.
 Template: ubiquity/text/username_error_badchar
 Type: text
 _Description: May only contain lower-case letters, digits, hyphens, and underscores.
+
+Template: ubiquity/text/skip
+Type: text
+_Description: Skip
 
 Template: ubiquity/text/password_label
 Type: text
@@ -261,21 +240,6 @@ _Description: Require my password to log in
 Template: ubiquity/text/login_encrypt
 Type: text
 _Description: Encrypt my home folder
-
-Template: ubiquity/text/webcam_heading
-Type: text
-_Description:
- This picture will be associated with your user name and displayed
- alongside it at times.
-
-Template: ubiquity/text/ma_text_label
-Type: text
-_Description:
- Select any accounts you would like to import.  The documents and settings
- for these accounts will be available after the install completes.
- .
- If you do not wish to import any accounts, select nothing and go to the next
- page.
 
 Template: ubiquity/text/part_auto_heading_label
 Type: text
@@ -970,6 +934,10 @@ Template: ubiquity/text/breadcrumb_language
 Type: text
 _Description: Language
 
+Template: ubiquity/text/breadcrumb_wireless
+Type: text
+_Description: Wireless
+
 Template: ubiquity/text/breadcrumb_prepare
 Type: text
 _Description: Prepare
@@ -1404,7 +1372,7 @@ _Description:
 Template: ubiquity/text/use_crypto
 Type: text
 _Description:
- Encrypt the new Ubuntu installation for security
+ Encrypt the new ${RELEASE} installation for security
 
 Template: ubiquity/text/use_crypto_desc
 Type: text
@@ -1414,7 +1382,7 @@ _Description:
 Template: ubiquity/text/use_lvm
 Type: text
 _Description:
- Use LVM with the new Ubuntu installation
+ Use LVM with the new ${RELEASE} installation
 
 Template: ubiquity/text/use_lvm_desc
 Type: text
@@ -1439,7 +1407,7 @@ _Description:
 Template:ubiquity/text/crypto_description_2
 Type: text
 _Description:
- Any files outside of Ubuntu will not be encrypted.
+ Any files outside of ${RELEASE} will not be encrypted.
 
 Template:ubiquity/text/crypto_warning
 Type: text
@@ -1496,10 +1464,10 @@ Type: text
 _Description:
  MB
 
-Template:ubiquity/text/parition_lvm_explanation
+Template:ubiquity/text/partition_lvm_explanation
 Type: text
 _Description:
- Logical Volume Management (LVM) lets Ubuntu treat multiple physical volumes as a single volume.
+ Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical volumes as a single volume.
 
 Template:ubiquity/text/partition_lvm_dialog
 Type: text

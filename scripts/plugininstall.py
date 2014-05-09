@@ -202,7 +202,6 @@ class Install(install_misc.InstallBase):
         #self.configure_apt()
 
         self.configure_plugins()
-        self.configure_face()
 
         self.next_region()
         self.run_target_config_hooks()
@@ -310,9 +309,8 @@ class Install(install_misc.InstallBase):
 
         self.db.progress('SET', self.end)
 
-    def configure_face(self):
-        PHOTO_PATH = '/var/lib/ubiquity/webcam_photo.png'
-        target_user = self.db.get('passwd/username')
+    def _get_uid_gid_on_target(self, target_user):
+        """Helper that gets the uid/gid of the username in the target chroot"""
         uid = subprocess.Popen(
             ['chroot', self.target, 'sudo', '-u', target_user, '--',
              'id', '-u'], stdout=subprocess.PIPE, universal_newlines=True)
@@ -325,11 +323,8 @@ class Install(install_misc.InstallBase):
             uid = int(uid)
             gid = int(gid)
         except ValueError:
-            return
-        if os.path.exists(PHOTO_PATH):
-            targetpath = self.target_file('home', target_user, '.face')
-            shutil.copy2(PHOTO_PATH, targetpath)
-            os.lchown(targetpath, uid, gid)
+            return (None, None)
+        return uid, gid
 
     def configure_python(self):
         """Byte-compile Python modules.

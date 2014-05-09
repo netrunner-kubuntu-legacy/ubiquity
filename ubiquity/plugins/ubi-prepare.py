@@ -1,6 +1,6 @@
 # -*- coding: utf-8; Mode: Python; indent-tabs-mode: nil; tab-width: 4 -*-
 
-# Copyright (C) 2010 Canonical Ltd.
+# Copyright (C) 2013 Canonical Ltd.
 # Written by Evan Dandrea <evan.dandrea@canonical.com>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -27,7 +27,7 @@ from ubiquity import i18n, misc, osextras, plugin, upower
 
 
 NAME = 'prepare'
-AFTER = 'language'
+AFTER = 'wireless'
 WEIGHT = 11
 OEM = False
 
@@ -151,6 +151,8 @@ class PageKde(PreparePageBase):
             self.prepare_foss_disclaimer = self.page.prepare_foss_disclaimer
             self.prepare_sufficient_space = StateBox(self.page)
             self.page.vbox1.addWidget(self.prepare_sufficient_space)
+            # TODO we should set these up and tear them down while on this
+            # page.
             self.prepare_download_updates.setVisible(False)
             self.prepare_nonfree_software.setVisible(False)
             self.prepare_foss_disclaimer.setVisible(False)

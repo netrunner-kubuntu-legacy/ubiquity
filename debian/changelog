@@ -1,8 +1,676 @@
-ubiquity (2.14.8-1netrunner1) enigma-1306; urgency=low
+ubiquity (2.18.8) trusty-proposed; urgency=medium
 
-  * Initial Enigma release
+  [ Rohan Garg ]
+  * LP: #1309458 KDE: ubiquity installer crashes when clicking release
+    notes
 
- -- Frédéric Gaudet <fred@linuxmint.com>  Mon, 29 Apr 2013 11:49:40 +0200
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 22 Apr 2014 12:25:19 +0100
+
+ubiquity (2.18.7) trusty; urgency=medium
+
+  [ Aurélien Gâteau ]
+  * KDE: Remove spacer to fix vertical space in sidebar LP: #1308440
+
+  [ Dimitri John Ledkov ]
+  * Fix localechooser-apply in OEM configuration mode (LP: #1307983),
+    whilst previous only fixed the offline installation mode.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 16 Apr 2014 11:51:38 +0100
+
+ubiquity (2.18.6) trusty; urgency=medium
+
+  * Automatic update of included source packages: localechooser 2.49ubuntu5.
+  * Rebase localechooser patch to account for creation of skeleton
+    locale-langpack subdirectories (LP: #1307983).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 15 Apr 2014 19:58:47 +0100
+
+ubiquity (2.18.5) trusty; urgency=medium
+
+  * KDE frontend fixes:
+   - LP: #1038522 Fix manual partitioning in installer crashes when handling many
+     partitions
+   - LP: #1285705: read release notes not working
+   - LP: #1038522: [kde] manual partitioning in installer crashes when
+     handling many partitions
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 15 Apr 2014 13:22:24 +0100
+
+ubiquity (2.18.4) trusty; urgency=medium
+
+  * Add power indicator to the list of indicators launched under install
+    ubiquity mode.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Fri, 11 Apr 2014 15:59:44 +0100
+
+ubiquity (2.18.3) trusty; urgency=medium
+
+  * Add future location of indicator-keyboard-service, tolerating missing
+    indicators (LP: #1306598).
+  * Automatic update of included source packages: partman-auto 118ubuntu3.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 11 Apr 2014 14:38:57 +0100
+
+ubiquity (2.18.2) trusty; urgency=medium
+
+  * Set HOME, because without HOME GtkBuilder upon seeing a FileChooser
+    button in the ui file and trying to initialise object for it throws a
+    hizzy fit and aborts on an assert, if per-default it's meant to open
+    present working directory and it happens to be inaccessible one like
+    /root/. (LP: #1306341). This resolves launching Mythubuntu installer
+    in a live session using pkexec, back in 12.04 gksudo/sudo was used
+    instead.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Fri, 11 Apr 2014 05:18:42 +0100
+
+ubiquity (2.18.1) trusty; urgency=medium
+
+  * Fix overlay scrollbars to be used under live-session.
+  * Reduce installer width, by forcing a few more labels to wrap.
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu49.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 10 Apr 2014 16:40:32 +0100
+
+ubiquity (2.18.0) trusty; urgency=medium
+
+  * Update translations from Launchpad (LP: #1297859).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 10 Apr 2014 13:41:46 +0100
+
+ubiquity (2.17.13) trusty; urgency=medium
+
+  * Copy extended attributes to target system (LP: #1302192).
+  * Automatic update of included source packages: grub-installer
+    1.78ubuntu20, user-setup 1.48ubuntu2.
+  * Update translations from Launchpad.
+  * Remove lots of cruft relating to removed Ubuntu One, webcam, and
+    migration-assistant steps.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 09 Apr 2014 22:36:22 +0100
+
+ubiquity (2.17.12) trusty; urgency=medium
+
+  * Drop ubiquity-plugin-ubuntuone from adt tests dependencies, it's been
+    removed.
+  * Automatic update of included source packages: netcfg 1.116ubuntu1.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 07 Apr 2014 09:50:35 +0100
+
+ubiquity (2.17.11) trusty; urgency=medium
+
+  * Drop U1 plugin package (LP: #1300916)
+  * Automatic update of included source packages: grub-installer
+    1.78ubuntu19.
+  * Fix new pyflakes warnings.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 02 Apr 2014 14:45:43 +0100
+
+ubiquity (2.17.10) trusty; urgency=low
+
+  [ Luke Yelavich ]
+  * Set up atk label association for grub boot loader location combo box in
+    advanced partition editor.
+  * Add Super + Alt + S as an activation keystroke for the screen reader
+    profile. This mirrors the same keystroke that can be used to activate the
+    screen reader when in a Unity or GNOME desktop. The Control + S keystroke
+    is still present for transitional purposes, so new users don't need to
+    hunt for new information when they attempt to install trusty. It will be
+    removed in trusty+1.
+
+  [ Jason Gerard DeRose ]
+  * ubiquity-dm: 'indicator-application-service' =>
+    'indicator-application/indicator-application-service' (LP: #1297312).
+
+  [ Colin Watson ]
+  * Resolve LABEL= and UUID= entries in /etc/crypttab into real devices
+    before trying to run swapoff and test -b on them (LP: #1296697).
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu48, grub-installer 1.78ubuntu18, partconf 1.45,
+    partman-jfs 43, partman-lvm 90, partman-newworld 32.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 26 Mar 2014 15:11:43 +0000
+
+ubiquity (2.17.9) trusty; urgency=medium
+
+  [ Matthew Paul Thomas ]
+  * Remove redundant placeholder text from fields on user-entry page (LP:
+    #1283047)
+
+  [ Tim Lunn ]
+  * Update ubiquity gnome-shell mode for 3.10 (LP: #1284983)
+
+  [ Colin Watson ]
+  * Remove some unused calls to laptop-detect in frontends; it's still used
+    in the usersetup plugin.
+
+  [ Aurélien Gâteau ]
+  * Merge lp:~agateau/ubiquity/kde-fix-cropped-greeter-buttons
+   - KDE: Fix cropped button in OEM mode
+   - KDE: improve the OEM panel spacing
+
+  [ Jonathan Riddell ]
+  * Automatic update of included source packages: base-installer
+    1.144ubuntu1, flash-kernel 3.0~rc.4ubuntu47, grub-installer
+    1.78ubuntu16, partman-crypto 63ubuntu2.
+
+ -- Tim Lunn <tim@feathertop.org>  Wed, 26 Feb 2014 16:59:12 +1100
+
+ubiquity (2.17.8) trusty; urgency=medium
+
+  * Fix deprecated warnings in nmwidgets.
+  * Run test-suite under auto-allocated xvfb-run server.
+  * g-i changed return values, thus convert list of integers into
+    bytestring to preserve old logic in item_str. (LP: #1282640)
+  * Launch unity-settings-daemon if available.
+  * Automatic update of included source packages: apt-setup
+    1:0.80ubuntu6, base-installer 1.143ubuntu1, choose-mirror
+    2.55ubuntu1, debian-installer-utils 1.105ubuntu1, hw-detect
+    1.95ubuntu2.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Fri, 21 Feb 2014 20:00:50 +0000
+
+ubiquity (2.17.7) trusty; urgency=medium
+
+  * Fix ubiquity-dm to create logfile directory before opening logfile
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 12 Feb 2014 12:39:14 +0000
+
+ubiquity (2.17.6) trusty; urgency=medium
+
+  * Automatic update of included source packages: base-installer
+    1.122ubuntu21, debian-installer-utils 1.104ubuntu1.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 11 Feb 2014 17:41:37 +0000
+
+ubiquity (2.17.5) trusty; urgency=medium
+
+  * Fix loading indicators in ubiquity-dm.
+  * Automatic update of included source packages: base-installer
+    1.122ubuntu20, choose-mirror 2.50ubuntu2, console-setup 1.70ubuntu8,
+    grub-installer 1.78ubuntu14, partman-auto 118ubuntu2, partman-base
+    172ubuntu1, partman-btrfs 14ubuntu2, partman-lvm 89, partman-
+    partitioning 99ubuntu1.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 05 Feb 2014 15:58:14 +0000
+
+ubiquity (2.17.4) trusty; urgency=medium
+
+  [ Lars Uebernickel ]
+  * Limit width of some long labels in prepare and wireless steps. (LP:
+    #1260396)
+
+  [ Dimitri John Ledkov ]
+  * In the ResizeWidget's, do_draw method, call the Parent's HPaned
+    do_draw method, as it does not appear to be automatically called and
+    thus results in no HPaned widgets getting rendered. (LP: #1260473)
+  * Migrate ResizeWidget from HPaned to Paned, and use etched-in Frames
+    instead of EventBoxes for better aesthetic appearance of the "handle".
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu46, partman-auto 118ubuntu1, partman-basicmethods 58.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 22 Jan 2014 17:39:57 +0000
+
+ubiquity (2.17.3) trusty; urgency=medium
+
+  * Automatic update of included source packages: apt-setup 1:0.80ubuntu5,
+    base-installer 1.122ubuntu19, grub-installer 1.78ubuntu10 (LP:
+    #1265483), partman-basicmethods 57, partman-jfs 42, partman-lvm 88.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Fri, 03 Jan 2014 11:09:21 +0000
+
+ubiquity (2.17.2) trusty; urgency=low
+
+  [ Dan Chapman ]
+  * Only check for error dialogs on test teardown so we can be sure we
+    always catch them during autopilot tests. (lp: #1262575)
+
+  [ Harald Sitter ]
+  * KDE: Hardcode KDE_FULL_SESSION to ensure oxygen colors are picked up
+         automatically.
+
+  [ Jonathan Riddell ]
+  * ubiquity-dm: call gsettings only if frontend is gtk
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu45, netcfg 1.114ubuntu1.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 17 Dec 2013 18:05:28 +0000
+
+ubiquity (2.17.1) trusty; urgency=low
+
+  [ Dmitrijs Ledkovs ]
+  * Drop ntfsprogs alternative depends.
+  * Merge packaging change to add debian-menu entry.
+  * Tidy up autopilot tests warnings.
+  * Move autopilot tests to lp:ubiquity and python3.
+  * Bump to automake-1.14
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu44, grub-installer 1.78ubuntu9, netcfg 1.112ubuntu1,
+    partman-base 169ubuntu1, partman-basicfilesystems 86ubuntu2,
+    partman-efi 25ubuntu6, partman-ext3 80ubuntu1, yaboot-installer
+    1.1.29ubuntu1.
+
+  [ Brian Murray ]
+  * Use the apt cache with with so that we close the cache when we are
+    done with it (LP: #1051935)
+  
+  [ Dan Chapman ]
+  * Autopilot tests update.
+  * Autopilot tests for Edubuntu's extra install pages
+  
+  [ Jean-Baptiste Lallement ]
+  * Join auto-pilot runner.
+  * fix tests to be pep8 compliant
+  * add directory autopilot/ to tests/run-pep8
+
+  [ Huan Peng ]
+  * Replace "Ubuntu" with the correct flavour name in several templates
+    (LP: #1197220).
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Mon, 09 Dec 2013 16:05:50 +0000
+
+ubiquity (2.17.0) trusty; urgency=low
+
+  [ Aurélien Gâteau ]
+  * Fix going back through skipped steps in kde_ui frontend.
+
+  [ Dmitrijs Ledkovs ]
+  * Switch "wireless" and "prepare" steps around (LP: #955232)
+  * Don't read proc_cmdline twice (LP: #1213748)
+  * Set wallpaper for 'feh' only, for others just assume gsettings schemes
+    are correct.
+  * Silence progress dots with invalid a11y (LP: #1154345)
+
+  [ Colin Watson ]
+  * Automatic update of included source packages: choose-mirror 2.50ubuntu1,
+    debian-installer-utils 1.100ubuntu1, netcfg 1.111ubuntu1,
+    partman-auto-lvm 51ubuntu1, partman-crypto 63ubuntu1, preseed
+    1.62ubuntu1.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 29 Oct 2013 07:46:26 -0700
+
+ubiquity (2.15.26) saucy; urgency=low
+
+  [ Dmitrijs Ledkovs ]
+  * Adding custom classes to EventBox somehow kills the install now
+    button event. Instead use simple bg styling. (LP: #1240532)
+
+  [ Colin Watson ]
+  * Update translations from Launchpad.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 16 Oct 2013 18:30:55 +0100
+
+ubiquity (2.15.25) saucy; urgency=low
+
+  * Remove all cairo styling from partition boxes in automatic
+    partitioning, instead use gtk3/css styling. (LP: #947107)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 16 Oct 2013 09:58:29 +0100
+
+ubiquity (2.15.24) saucy; urgency=low
+
+  [ Colin Watson ]
+  * Move oem user removal from upstart & wrapper into
+    oem-config-firstboot, after ubiquity-dm finished executing. (LP:
+    #1231166) (LP: #1239471)
+
+  [ Dmitrijs Ledkovs ]
+  * Kill any remaining oem user process before removing oem user (session
+    dbus leaves zombies). (LP: #1231166)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Mon, 14 Oct 2013 18:19:27 +0100
+
+ubiquity (2.15.23) saucy; urgency=low
+
+  * Attempt to remove oem user again in the oem-config/post-start, after
+    oem-config-first-boot setup has been completed. (LP: #1231166)
+  * Load U1 Terms & Conditions page lazily when asked, instead of at U1
+    plugin import time. Thus the page will only be loaded once there is a
+    working internet connection and the user is signing up for U1. This
+    also resolves ubiquity failing to load when booting direct live user
+    session. (LP: #1226912)
+  * Instead of skipping u1 plugin when offline, display "No internet
+    connectivity" page and show the login later button. Thus avoiding
+    hanging when installing fully offline, and explaining why U1 login was
+    not available. (LP: #1237694)
+  * Run debconf-updatepo to actually update templates.pot and make all the
+    U1 page strings translatable. (LP: #1235192)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Fri, 11 Oct 2013 15:37:31 +0100
+
+ubiquity (2.15.22) saucy; urgency=low
+
+  * In U1 plugin fix ping_u1_url to not include body in a GET
+    request. (LP: #1229684)
+  * Update test-suite with the new expected call.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Thu, 10 Oct 2013 10:48:39 +0100
+
+ubiquity (2.15.21) saucy; urgency=low
+
+  [ Aurélien Gâteau ]
+  * KDE: Hardcode the KDE platform plugin to get Oxygen palette
+
+  [ Dmitrijs Ledkovs ]
+  * Allow "skip" navigation control to take focus, and thus be part of the
+    tab switch chain. (LP: #1231175)
+  * Disable Ubuntu One plugin at OEM config setup stage (LP: #1233879)
+  * Declare oem_config as False in the mock controller for the Ubuntu One plugin tests.
+  * Keep Ubuntu One page for OEM client setup stage (LP: #1233879)
+  * Skip Ubuntu One page when offline (LP: #1220804)
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu42, partman-auto 107ubuntu3, partman-basicfilesystems
+    84ubuntu1, partman-btrfs 14ubuntu1, partman-ext3 79ubuntu1.
+  * Automatic update of included source packages: hw-detect 1.95ubuntu1.
+
+  [ Colin Watson ]
+  * Update translations from Launchpad.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Mon, 07 Oct 2013 11:23:52 +0100
+
+ubiquity (2.15.20) saucy; urgency=low
+
+  [ Colin Watson ]
+  * (Build-)depend on python3-icu rather than transitional python3-pyicu.
+
+  [ Howard Chan ]
+  * Fix the new Ubuntu Studio wallpaper backdrop for ubiquity. (LP: #1229651)
+
+  [ Dmitrijs Ledkovs ]
+  * Add dependencies on python3-pam.
+  * Establish a PAM session with logind "greeter" mode in ubiquity-dm,
+    resolving the following bugs:
+    - WiFi page not working (LP: #1178638) (LP: #1220193)
+    - Sound system / a11y not available (LP: #1229416)
+    - and maybe others.
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu41.
+
+  [ Lars Uebernickel ]
+  * Force ubiquity/panel to 28 pixels height. (LP: #1207890)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 25 Sep 2013 13:36:05 +0100
+
+ubiquity (2.15.19) saucy; urgency=low
+
+  [ Colin Watson ]
+  * Remove ReiserFS support, following Debian's removal of partman-reiserfs.
+
+  [ Stéphane Graber ]
+  * Change default wallpaper for Xubuntu. (LP: #1228098)
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu40, partman-auto 107ubuntu2, partman-basicfilesystems
+    78ubuntu2, partman-efi 25ubuntu5.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Fri, 20 Sep 2013 15:37:42 -0500
+
+ubiquity (2.15.18) saucy; urgency=low
+
+  * debian/tests/control: Add ubiquity-plugin-ubuntuone to Depends.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 12 Sep 2013 01:34:29 +0100
+
+ubiquity (2.15.17) saucy; urgency=low
+
+  [ Dmitrijs Ledkovs ]
+  * Split ubuntuone page into a separate package and seed/unseed it as
+    appropriate. (LP: #1218175)
+  * Automatic update of included source packages: base-installer
+    1.122ubuntu17, clock-setup 0.117ubuntu1, flash-kernel
+    3.0~rc.4ubuntu39, partconf 1.43, partman-jfs 41, partman-lvm 87,
+    partman-newworld 31, partman-xfs 53.
+
+  [ Jeremy Bicha ]
+  * Add 'ubiquity' keyword to .desktop
+
+  [ Tim Lunn ]
+  * Update default Ubuntu GNOME Background 
+  * disable g-s-d background plugin for Ubuntu GNOME
+  * set gsettings keys before launch g-s-d, helps with clunky transitions
+  * Don't set num-workspaces as this carries through the live session
+  
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 11 Sep 2013 10:18:46 +0100
+
+ubiquity (2.15.16) saucy; urgency=low
+
+  * Disable ubuntu one plugin on Edubuntu flavour.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Mon, 02 Sep 2013 13:47:06 +0100
+
+ubiquity (2.15.15) saucy; urgency=low
+
+  [ Tim Lunn ]
+  * Add Ubuntu GNOME background to ubiquity-dm (LP: #1204312)
+  * Use gnome-shell as wm in ubiquity-dm on Ubuntu GNOME (LP: #1214732)
+  * export XDG_SESSION_ID to provide access to hijacked logind session
+
+  [ Dmitrijs Ledkovs ]
+  * Add gnome-shell as alternative window manager dependency on the
+    ubiquity binary package.
+  * Enable U1 page, if U1 is part of the image.
+  * Do not try to install U1 keyring into encrypted home directories, not
+    supported at the moment. (LP: #1217143)
+  * Automatic update of included source packages: partman-basicmethods
+    55.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Thu, 29 Aug 2013 01:26:09 +0100
+
+ubiquity (2.15.14) saucy; urgency=low
+
+  * Port autopilot tests to updated API for retrieving application proxy
+    over custom dbus address.
+  * Enable Ubuntu One plugin by default, against production server.
+  * Drop obsolete --no-webcam option, webcam step dropped some time ago.
+  * Automatic update of included source packages: clock-setup
+    0.116ubuntu1, partman-auto-lvm 50ubuntu1, partman-btrfs 12ubuntu1,
+    partman-crypto 60ubuntu1, partman-ext3 77ubuntu1, partman-lvm 86,
+    preseed 1.60ubuntu1.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 21 Aug 2013 18:54:49 +0100
+
+ubiquity (2.15.13) saucy; urgency=low
+
+  [ Aurélien Gâteau ]
+  * [KDE] Add network manager wifi setup page
+  * Refactor network manager code to create a separte GTK class and
+    base class for both frontends to use
+
+  [ Dmitrijs Ledkovs ]
+  * Properly drop privileges with pkexec by deriving UID/GID/username from
+    PKEXEC_UID.
+
+  [ Jeremy Bicha ]
+  * Rename ubiquity-gtkui.desktop to ubiquity.desktop (LP: #1203223, #1203224)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Thu, 01 Aug 2013 21:10:09 +0100
+
+ubiquity (2.15.12) saucy; urgency=low
+
+  [ Rohan Garg ]
+  * [KDE] Fix language drop down list closes on first click (LP:
+    #1187762)
+
+  [ Aurélien Gâteau ]
+  * [KDE] Fix max width to 1000px on content and refactor widget stack to simplify
+
+  [ Lars Uebernickel ]
+  * Port ubiquity panel to new indicators (LP: #1204290)
+
+  [ Dmitrijs Ledkovs ]
+  * Automatic update of included source packages: debian-installer-utils
+    1.98ubuntu1, partman-base 167ubuntu1.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Tue, 30 Jul 2013 12:00:21 +0100
+
+ubiquity (2.15.11) saucy; urgency=low
+
+  * Automatic update of included source packages: base-installer
+    1.122ubuntu16, partman-newworld 30. (LP: #1184297)
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Fri, 19 Jul 2013 13:00:57 -0400
+
+ubiquity (2.15.10) saucy; urgency=low
+
+  [ Kaj Ailomaa ]
+  * Change Ubuntu Studio background in ubiquity-dm.
+
+  [ Jeremy Bicha ]
+  * Don't tell automake to install everything to ubiquity-frontend-gtk and
+    try to clean up after
+  * Reorganize app icon handling
+    - Fixes missing app icon in GNOME Shell (LP: #1164573)
+    - Use improved icon from Humanity as fallback icon
+  * Update *.install files for above changes
+  * Fix minor lintian warning by not installing empty /usr/share/applications/
+
+  [ Aurélien Gâteau ]
+  * KDE: Set icon theme to Oxygen, shows icons on standalone Ubiquity
+
+  [ Dan Chapman ]
+  * Add initial autopilot support! UI testing, brave new world!
+
+  [ Stéphane Graber ]
+  * Install the shim and signed grub and kernels by default on all UEFI
+    machines instead of relying on the SecureBoot nvram variable.
+    (LP: #1184297)
+  * Automatic update of included source packages: bterm-unifont 1.3,
+    grub-installer 1.78ubuntu8, partconf 1.42, partman-basicmethods 54,
+    partman-jfs 40, partman-reiserfs 55, partman-xfs 52.
+  * Fix mix tabs/spaces in test_ubiquity_custom.py.
+  * Fix autopkgtests not passing pyflakes.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Thu, 18 Jul 2013 18:10:17 -0400
+
+ubiquity (2.15.9) saucy; urgency=low
+
+  [ Dmitrijs Ledkovs ]
+  * Use pyflakes3 instead of pyflakes, for better python3 checks.
+
+  [ Aurélien Gâteau ]
+  * Merge lp:~agateau/ubiquity/kde-rework-try-install-buttons
+   - Make the icon part of the buttons so that they are clickable as
+     well (I always click the icon and get frustrated it does not do
+     anything...)
+   - Use latest Oxygen icons
+
+  [ Iain Lane ]
+  * Use ISO-639-2/{B,T} codes when looking up keyboard layout variants since
+    these are what's referred to in xkb-data's xorg.xml file. 
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 09 Jul 2013 11:50:03 +0100
+
+ubiquity (2.15.8) saucy; urgency=low
+
+  [ Colin Watson ]  
+  * Fix "parition" typo in template names.
+
+  [ Dmitrijs Ledkovs ]
+  * Wrap ubiquity call in sh, due to broken desktop-file/pkexec
+    interaction on XFCE and LXDE (LP: #1193526)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Tue, 25 Jun 2013 13:11:30 +0100
+
+ubiquity (2.15.7) saucy; urgency=low
+
+  [ Colin Watson ]
+  * Consistently consider closing a question dialog as a negative response,
+    not a positive one (LP: #1177115).
+
+  [ Dmitrijs Ledkovs ]
+  * Use staging U1 APIs, as production is not enabled for unverified
+    accounts yet.
+  * Move to automake-1.13
+  * Include policykit policy file to allow pkexec ubiquity as an X11
+    application for any frontend/flavour.
+  * Drop all other privilege escalation methods, as pkexec is available on
+    all flavours.
+  * Drop "--desktop %k" from desktop files, not needed with pkexec.
+  * U1 plugin: do not use subprocess.Popen.wait(), as it may cause
+    block thus causing a deadlock.
+  * Shade U1 logos with #DED9CB to match color scheme.
+  * Automatic update of included source packages: clock-setup
+    0.115ubuntu1, partconf 1.41, partman-auto 107ubuntu1, partman-base
+    166ubuntu1, partman-target 83ubuntu1, yaboot-installer
+    1.1.27ubuntu1.
+
+  [ Jeremy Bicha ]
+  * Use spaces not hyphens in release name such as "Ubuntu GNOME" not
+    "Ubuntu-GNOME".
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Tue, 18 Jun 2013 13:04:40 +0100
+
+ubiquity (2.15.6) saucy; urgency=low
+
+  * Merge U1 plugin, without activating it by default at the moment. This
+    plugin offers ability to login or register for U1 account, view terms
+    & conditions and further information about U1.
+  * Stop calling GLib.threads_init, no longer needed with new PyGI.
+  * Add gir webkit, gir gnome-keyring, oauthlib to dependencies.
+  * Automatic update of included source packages: partman-auto-crypto
+    20ubuntu1, partman-auto-lvm 49ubuntu1, partman-basicfilesystems
+    78ubuntu1, partman-ext3 75ubuntu1.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 29 May 2013 12:07:17 +0100
+
+ubiquity (2.15.5) saucy; urgency=low
+
+  * ubiquity/install_misc.py: Make the fake initctl pass through "initctl
+    version" calls, used by such things as invoke-rc.d to figure out whether
+    it's running under Upstart (LP: #1182540).
+  * Automatic update of included source packages: apt-setup 1:0.80ubuntu1,
+    debian-installer-utils 1.97ubuntu1, partman-basicmethods 53,
+    partman-btrfs 11ubuntu1, partman-jfs 39, partman-newworld 29,
+    partman-reiserfs 54, partman-xfs 51, user-setup 1.48ubuntu1.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 22 May 2013 17:27:22 +0100
+
+ubiquity (2.15.4) saucy; urgency=low
+
+  * Make ubiquity-frontend-debconf Architecture: any rather than all; the
+    .bgf font format is architecture-dependent (LP: #1180880).
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu34.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 17 May 2013 14:52:57 +0100
+
+ubiquity (2.15.3) saucy; urgency=low
+
+  * Increment reference count on address before returning it from
+    ubiquity_mock_resolver_lookup_by_name_finish, fixing a segfault in the
+    test suite.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 15 May 2013 22:22:07 +0100
+
+ubiquity (2.15.2) saucy; urgency=low
+
+  * Replace recommendations of transitional uboot-mkimage and uboot-envtools
+    with u-boot-tools.
+  * Automatic update of included source packages: apt-setup 1:0.79ubuntu1,
+    partman-target 82ubuntu1, yaboot-installer 1.1.26ubuntu1.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 15 May 2013 17:16:35 +0100
+
+ubiquity (2.15.1) saucy; urgency=low
+
+  * Remove consolekit integration, as consolekit is going away. This
+    potentially reopens http://pad.lv/631538 - enable to shutdown system
+    via indicator in ubiquity-dm session. But we can only test / re-fix
+    this once systemd aware indicator-session lands on the daily image.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 01 May 2013 11:27:51 -0700
+
+ubiquity (2.15.0) saucy; urgency=low
+
+  * Remove support for the alpha warning.  This was much more useful some
+    years back than it is now; it's only currently shown by the KDE frontend
+    anyway; and it's one more thing to go wrong at the last minute before
+    release.
+  * Automatic update of included source packages: choose-mirror 2.45ubuntu1,
+    clock-setup 0.114ubuntu1, debian-installer-utils 1.95ubuntu1,
+    partman-base 165ubuntu1, partman-basicmethods 52.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 30 Apr 2013 09:17:59 -0700
 
 ubiquity (2.14.8) raring; urgency=low
 

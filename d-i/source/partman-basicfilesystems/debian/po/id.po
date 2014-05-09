@@ -31,9 +31,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer (level1)\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
-"POT-Creation-Date: 2010-08-20 22:02+0200\n"
-"PO-Revision-Date: 2012-02-13 03:15+0700\n"
-"Last-Translator: Mahyuddin Susanto <udienz@ubuntu.com>\n"
+"POT-Creation-Date: 2013-11-29 20:50+0000\n"
+"PO-Revision-Date: 2012-10-18 21:29+0700\n"
+"Last-Translator: T. Surya Fajri <kilelme@gmail.com>\n"
 "Language-Team: Debian Indonesia Translators <debian-l10n-indonesian@lists."
 "debian.org>\n"
 "Language: \n"
@@ -636,6 +636,17 @@ msgstr "noatime - jangan mengubah waktu akses pada tiap inode"
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
+#, fuzzy
+#| msgid "noatime - do not update inode access times at each access"
+msgid "nodiratime - do not update directory inode access times"
+msgstr "noatime - jangan mengubah waktu akses pada tiap inode"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:44001
 msgid "relatime - update inode access times relative to modify time"
 msgstr "relatime - ubah waktu akses relatif terhadap waktu penyuntingan"
 
@@ -644,7 +655,7 @@ msgstr "relatime - ubah waktu akses relatif terhadap waktu penyuntingan"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:44001
+#: ../partman-basicfilesystems.templates:45001
 msgid "nodev - do not support character or block special devices"
 msgstr "nodev - jangan mendukung karakter atau piranti khusus blok"
 
@@ -653,7 +664,7 @@ msgstr "nodev - jangan mendukung karakter atau piranti khusus blok"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:45001
+#: ../partman-basicfilesystems.templates:46001
 msgid "nosuid - ignore set-user-identifier or set-group-identifier bits"
 msgstr ""
 "nosuid - abaikan bit-bit 'set-user-identifier' atau 'set-group-identifier'"
@@ -663,7 +674,7 @@ msgstr ""
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:46001
+#: ../partman-basicfilesystems.templates:47001
 msgid "noexec - do not allow execution of any binaries"
 msgstr "noexec - jangan izinkan eksekusi program biner apapun"
 
@@ -672,7 +683,7 @@ msgstr "noexec - jangan izinkan eksekusi program biner apapun"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:47001
+#: ../partman-basicfilesystems.templates:48001
 msgid "ro - mount the file system read-only"
 msgstr "ro - kaitkan sistem berkas sebagai hanya-baca (read-only)"
 
@@ -681,7 +692,7 @@ msgstr "ro - kaitkan sistem berkas sebagai hanya-baca (read-only)"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:48001
+#: ../partman-basicfilesystems.templates:49001
 msgid "sync - all input/output activities occur synchronously"
 msgstr "sync - semua masukan/keluaran terjadi secara serempak"
 
@@ -690,7 +701,7 @@ msgstr "sync - semua masukan/keluaran terjadi secara serempak"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:49001
+#: ../partman-basicfilesystems.templates:50001
 msgid "usrquota - user disk quota accounting enabled"
 msgstr "usrquota - lakukan perhitungan kuota untuk setiap pengguna"
 
@@ -699,7 +710,7 @@ msgstr "usrquota - lakukan perhitungan kuota untuk setiap pengguna"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:50001
+#: ../partman-basicfilesystems.templates:51001
 msgid "grpquota - group disk quota accounting enabled"
 msgstr "grpquota - lakukan perhitungan kuota untuk grup pengguna"
 
@@ -708,7 +719,7 @@ msgstr "grpquota - lakukan perhitungan kuota untuk grup pengguna"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:51001
+#: ../partman-basicfilesystems.templates:52001
 msgid "user_xattr - support user extended attributes"
 msgstr "user_xattr - dukungan atribut tambahan untuk pengguna"
 
@@ -717,7 +728,7 @@ msgstr "user_xattr - dukungan atribut tambahan untuk pengguna"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:52001
+#: ../partman-basicfilesystems.templates:53001
 msgid "quiet - changing owner and permissions does not return errors"
 msgstr ""
 "quiet - perubahan kepemilikan dan perijinan tidak menampilkan kesalahan"
@@ -727,16 +738,25 @@ msgstr ""
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:53001
+#: ../partman-basicfilesystems.templates:54001
 msgid "notail - disable packing of files into the file system tree"
 msgstr "notail - mematikan pengepakan berkas pada pohon sistem berkas"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:55001
+msgid "discard - trim freed blocks from underlying block device"
+msgstr ""
 
 #. Type: text
 #. Description
 #. :sl4:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:54001
+#: ../partman-basicfilesystems.templates:56001
 msgid "acls - support POSIX.1e Access Control List"
 msgstr "acl - dukungan untuk POSIX.1e Access Control List"
 
@@ -745,6 +765,63 @@ msgstr "acl - dukungan untuk POSIX.1e Access Control List"
 #. :sl4:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:55001
+#: ../partman-basicfilesystems.templates:57001
 msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
 msgstr "namasingkat - hanya menggunakan sistem penamaan 8.3 MS-DOS"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#: ../partman-basicfilesystems.templates:59001
+msgid "Go back to the menu and correct this problem?"
+msgstr "Kembali ke menu sebelumnya dan perbaiki kesalahan tersebut?"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#, fuzzy
+msgid ""
+"Your boot partition has not been configured with the ext2 file system. This "
+"is needed by your machine in order to boot. Please go back and use the ext2 "
+"file system."
+msgstr ""
+"Partisi boot Anda belum dikonfigurasi untuk menggunakan sistem berkas ext2 "
+"atau ext3. Hal ini diperlukan Anda agar dapat menjalankan komputer. Silakan "
+"kembali ke menu sebelumnya dan gunakan sistem berkas ext2 atau ext3."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:58001
+#: ../partman-basicfilesystems.templates:59001
+msgid ""
+"If you do not go back to the partitioning menu and correct this error, the "
+"partition will be used as is. This means that you may not be able to boot "
+"from your hard disk."
+msgstr ""
+"Jika Anda tidak kembali ke menu partisi dan memperbaiki kesalahan-kesalahan "
+"ini, partisi ini akan digunakan menurut kondisi sebelumnya. Hal ini berarti "
+"Anda mungkin tidak dapat menyalakan komputer lewat hard disk."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-basicfilesystems.templates:59001
+#, fuzzy
+msgid ""
+"Your boot partition is not located on the first partition of your hard disk. "
+"This is needed by your machine in order to boot.  Please go back and use "
+"your first partition as a boot partition."
+msgstr ""
+"Partisi boot Anda tidak terletak pada partisi utama (primer) pertama hard "
+"disk. Hal ini diperlukan agar dapat menyalakan komputer Anda. Silakan "
+"kembali ke menu sebelumnya dan gunakan partisi utama pertama hard disk "
+"sebagai partisi boot."

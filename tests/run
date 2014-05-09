@@ -40,7 +40,7 @@ options, args = parser.parse_args()
 if options.xvfb:
     argv = list(sys.argv)
     argv.insert(1, '--no-xvfb')
-    xvfb_argv = ['xvfb-run']
+    xvfb_argv = ['xvfb-run', '-a']
     if options.xvfb_log is not None:
         xvfb_argv.extend(['-e', options.xvfb_log])
     if 'TMPDIR' in os.environ:
@@ -49,10 +49,7 @@ if options.xvfb:
     argv[:0] = xvfb_argv
     os.execvp('xvfb-run', argv)
 
-extra_modules = []
-if not options.installed:
-    extra_modules.append('webcam')
-extra_modules.append('mockresolver')
+extra_modules = ['mockresolver']
 
 # Set up linker and gobject-introspection paths.  If we change the linker
 # path, we must re-exec ourselves.

@@ -100,8 +100,8 @@ class MiscTests(unittest.TestCase):
         mock_open.return_value = magic
         magic.readline.return_value = _disk_info
         release = misc.get_release()
-        self.assertEqual(release.name, 'Netrunner')
-        self.assertEqual(release.version, '4.2.1 LTS')
+        self.assertEqual(release.name, 'Ubuntu Server')
+        self.assertEqual(release.version, '10.04.1 LTS')
 
     @mock.patch('builtins.open')
     def test_get_release_fail(self, mock_open):
@@ -249,6 +249,7 @@ class PrivilegeTests(unittest.TestCase):
         os.getuid.return_value = 0
 
         pwd.getpwuid.return_value.pw_name = 'fakegrp'
+        pwd.getpwuid.return_value.pw_gid = '1000'
         gr = mock.Mock()
         gr.gr_mem = ['fakegrp']
         gr.gr_gid = 1234
@@ -263,8 +264,7 @@ class PrivilegeTests(unittest.TestCase):
     @mock.patch('os.setgroups')
     def test_drop_privileges(self, *args):
         with EnvironmentVarGuard() as env:
-            env['SUDO_UID'] = '1000'
-            env['SUDO_GID'] = '1000'
+            env['PKEXEC_UID'] = '1000'
             misc.drop_privileges()
         os.seteuid.assert_called_once_with(1000)
         os.setegid.assert_called_once_with(1000)
@@ -285,8 +285,7 @@ class PrivilegeTests(unittest.TestCase):
     def test_drop_all_privileges(self, *args):
         pwd.getpwuid.return_value.pw_dir = 'fakeusr'
         with EnvironmentVarGuardRestore():
-            os.environ['SUDO_UID'] = '1000'
-            os.environ['SUDO_GID'] = '1000'
+            os.environ['PKEXEC_UID'] = '1000'
             misc.drop_all_privileges()
             os.setreuid.assert_called_once_with(1000, 1000)
             os.setregid.assert_called_once_with(1000, 1000)
@@ -439,4 +438,3 @@ class GrubDefaultTests(unittest.TestCase):
 
 if __name__ == '__main__':
     run_unittest(MiscTests, PrivilegeTests, GrubDefaultTests)
-    pass

@@ -50,11 +50,12 @@ def set_groups_for_uid(uid):
 def drop_all_privileges():
     # gconf needs both the UID and effective UID set.
     global _dropped_privileges
-    uid = os.environ.get('SUDO_UID')
-    gid = os.environ.get('SUDO_GID')
+    uid = os.environ.get('PKEXEC_UID')
+    gid = None
     if uid is not None:
         uid = int(uid)
         set_groups_for_uid(uid)
+        gid = pwd.getpwuid(uid).pw_gid
     if gid is not None:
         gid = int(gid)
         os.setregid(gid, gid)
@@ -70,11 +71,12 @@ def drop_privileges():
     global _dropped_privileges
     assert _dropped_privileges is not None
     if _dropped_privileges == 0:
-        uid = os.environ.get('SUDO_UID')
-        gid = os.environ.get('SUDO_GID')
+        uid = os.environ.get('PKEXEC_UID')
+        gid = None
         if uid is not None:
             uid = int(uid)
             set_groups_for_uid(uid)
+            gid = pwd.getpwuid(uid).pw_gid
         if gid is not None:
             gid = int(gid)
             os.setegid(gid)
@@ -98,11 +100,12 @@ def drop_privileges_save():
     # At the moment, we only know how to handle this when effective
     # privileges were already dropped.
     assert _dropped_privileges is not None and _dropped_privileges > 0
-    uid = os.environ.get('SUDO_UID')
-    gid = os.environ.get('SUDO_GID')
+    uid = os.environ.get('PKEXEC_UID')
+    gid = None
     if uid is not None:
         uid = int(uid)
         set_groups_for_uid(uid)
+        gid = pwd.getpwuid(uid).pw_gid
     if gid is not None:
         gid = int(gid)
         os.setresgid(gid, gid, 0)
@@ -469,19 +472,21 @@ ReleaseInfo = namedtuple('ReleaseInfo', 'name, version')
 
 def get_release():
     if get_release.release_info is None:
-        #try:
-            #with open('/cdrom/.disk/info') as fp:
-                #line = fp.readline()
-                #if line:
-                    #line = line.split()
-                    #if line[2] == 'LTS':
-                        #line[1] += ' LTS'
-                    #get_release.release_info = ReleaseInfo(
-                        #name=line[0], version=line[1])
-            #syslog.syslog(syslog.LOG_ERR, 'Unable to determine the release.')
+        try:
+            with open('/cdrom/.disk/info') as fp:
+                line = fp.readline()
+                if line:
+                    line = line.split()
+                    if line[2] == 'LTS':
+                        line[1] += ' LTS'
+                    line[0] = line[0].replace('-', ' ')
+                    get_release.release_info = ReleaseInfo(
+                        name=line[0], version=line[1])
+        except:
+            syslog.syslog(syslog.LOG_ERR, 'Unable to determine the release.')
 
-        #if not get_release.release_info:
-        get_release.release_info = ReleaseInfo(name='Netrunner', version='13.06')
+        if not get_release.release_info:
+            get_release.release_info = ReleaseInfo(name='Ubuntu', version='')
     return get_release.release_info
 
 get_release.release_info = None
@@ -684,6 +689,8 @@ def set_indicator_keymaps(lang):
 
     def item_str(s):
         '''Convert a zero-terminated byte array to a proper str'''
+        import array
+        s = array.array('B', s).tostring()
         i = s.find(b'\x00')
         return s[:i].decode()
 
@@ -764,17 +771,17 @@ def set_indicator_keymaps(lang):
             "setxkbmap", "-layout", ",".join(kb_layouts),
             "-variant", ",".join(kb_variants))
 
-    iso_639_3 = ElementTree.parse('/usr/share/xml/iso-codes/iso_639_3.xml')
-    nodes = [element for element in iso_639_3.findall('iso_639_3_entry')
-             if element.get('part1_code') == lang]
+    iso_639 = ElementTree.parse('/usr/share/xml/iso-codes/iso_639.xml')
+    nodes = [element for element in iso_639.findall('iso_639_entry')
+             if element.get('iso_639_1_code') == lang]
     display = GdkX11.x11_get_default_xdisplay()
     engine = Xkl.Engine.get_instance(display)
     if nodes:
         configreg = Xkl.ConfigRegistry.get_instance(engine)
         configreg.load(False)
 
-        # Apparently part2_code doesn't always work (fails with French)
-        for prop in ('part2_code', 'id', 'part1_code'):
+        # Apparently iso_639_2B_code doesn't always work (fails with French)
+        for prop in ('iso_639_2B_code', 'iso_639_2T_code', 'iso_639_1_code'):
             code = nodes[0].get(prop)
             if code is not None:
                 configreg.foreach_language_variant(code, process_variant, None)

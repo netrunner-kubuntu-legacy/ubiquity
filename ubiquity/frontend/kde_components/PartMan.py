@@ -64,7 +64,9 @@ class PartMan(QtGui.QWidget):
             if item in disk_cache:
                 # the item is a disk
                 indexCount += 1
-                partition_bar = PartitionsBar(self.part_advanced_bar_frame)
+                partition_bar = PartitionsBar(
+                    self.part_advanced_bar_frame,
+                    controller=self.ctrlr)
                 self.part_advanced_bar_frame.layout().addWidget(partition_bar)
 
                 #hide all the other bars at first
@@ -229,7 +231,7 @@ class PartMan(QtGui.QWidget):
         if not hasattr(self, 'create_use_method_names'):
             return
         known_filesystems = ('ext4', 'ext3', 'ext2',
-                             'btrfs', 'reiserfs', 'jfs', 'xfs',
+                             'btrfs', 'jfs', 'xfs',
                              'fat16', 'fat32', 'ntfs', 'uboot')
         text = str(self.create_dialog.partition_create_use_combo.currentText())
         if text not in self.create_use_method_names:
@@ -373,7 +375,7 @@ class PartMan(QtGui.QWidget):
         # point makes no sense. TODO cjwatson 2007-01-31: Unfortunately we
         # have to hardcode the list of known filesystems here.
         known_filesystems = ('ext4', 'ext3', 'ext2',
-                             'btrfs', 'reiserfs', 'jfs', 'xfs',
+                             'btrfs', 'jfs', 'xfs',
                              'fat16', 'fat32', 'ntfs', 'uboot')
         text = str(self.edit_dialog.partition_edit_use_combo.currentText())
         if text not in self.edit_use_method_names:

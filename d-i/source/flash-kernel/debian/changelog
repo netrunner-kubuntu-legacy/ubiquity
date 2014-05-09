@@ -1,3 +1,109 @@
+flash-kernel (3.0~rc.4ubuntu49) trusty; urgency=medium
+
+  * db/all.db: add dummy entries as noops when running on VMs (LP: #1298070)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Thu, 10 Apr 2014 04:15:37 -0600
+
+flash-kernel (3.0~rc.4ubuntu48) trusty; urgency=medium
+
+  * Update APM X-Gene config to match upstream device tree filename/model
+  * Add a bootscript specific to X-Gene Mustang boards since they need to
+    pull their dtb from the OS.
+
+ -- dann frazier <dann.frazier@canonical.com>  Tue, 18 Mar 2014 16:31:38 -0600
+
+flash-kernel (3.0~rc.4ubuntu47) trusty; urgency=medium
+
+  * Add support for HP ProLiant m400 Server Cartridges (LP: #1287910)
+
+ -- dann frazier <dann.frazier@canonical.com>  Wed, 12 Mar 2014 15:10:43 +0100
+
+flash-kernel (3.0~rc.4ubuntu46) trusty; urgency=low
+
+  * Add support for APM X-Gene
+  * Add support for installing dtb files in boot partition; activate this for
+    APM X-Gene boards
+
+ -- dann frazier <dann.frazier@canonical.com>  Mon, 23 Dec 2013 14:51:32 -0700
+
+flash-kernel (3.0~rc.4ubuntu45) trusty; urgency=low
+
+  * bootscr.highbank: allow more space to load larger kernels (LP: #1250495)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 11 Dec 2013 03:48:23 -0700
+
+flash-kernel (3.0~rc.4ubuntu44) trusty; urgency=low
+
+  * flash-kernel-installer: make installable on armhf/exynos5 (LP: #1247601)
+
+ -- dann frazier <dann.frazier@canonical.com>  Wed, 13 Nov 2013 08:08:08 +0100
+
+flash-kernel (3.0~rc.4ubuntu43) trusty; urgency=low
+
+  * Add basic support for WandBoard Quad.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Thu, 07 Nov 2013 23:57:58 -0500
+
+flash-kernel (3.0~rc.4ubuntu42) saucy; urgency=low
+
+  * Add support for EXYNOS5440-based platforms (LP: #1231249)
+
+ -- dann frazier <dann.frazier@canonical.com>  Thu, 03 Oct 2013 13:56:55 +0100
+
+flash-kernel (3.0~rc.4ubuntu41) saucy; urgency=low
+
+  * Fix typo in dtb_kver test that made it break all non-dtb platforms.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Sat, 21 Sep 2013 13:07:23 -0600
+
+flash-kernel (3.0~rc.4ubuntu40) saucy; urgency=low
+
+  * Apply patch from Paolo Pisati for appended DTB support (LP: #1223261)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Thu, 19 Sep 2013 10:27:47 -0600
+
+flash-kernel (3.0~rc.4ubuntu39) saucy; urgency=low
+
+  * Fix get_kfile_suffix() function to deal with flavours with dashes.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 10 Sep 2013 19:30:34 -0400
+
+flash-kernel (3.0~rc.4ubuntu38) saucy; urgency=low
+
+  * debian/flash-kernel-installer.isinstallable: add arm*/generic-lpae
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 10 Sep 2013 17:43:52 -0400
+
+flash-kernel (3.0~rc.4ubuntu37) saucy; urgency=low
+
+  * And now fix the quoting error exposed by the fixed testsuite.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 10 Sep 2013 15:22:49 -0400
+
+flash-kernel (3.0~rc.4ubuntu36) saucy; urgency=low
+
+  * Fix the testsuite to work with the new DT model support and add
+    a new test to specifically try to use a DT instead of cpuinfo.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 10 Sep 2013 14:59:04 -0400
+
+flash-kernel (3.0~rc.4ubuntu35) saucy; urgency=low
+
+  * Check /proc/device-tree/model before /proc/cpuinfo (LP: #1164484)
+  * Add support for Calxeda ECX-2000 to the machine DB (LP: #1223439)
+  * Add generic-lpae to the XB-Subarchitecture list in debian/control
+  * Update the Highbank entry in DB to use its device-tree model name
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 10 Sep 2013 14:36:05 -0400
+
+flash-kernel (3.0~rc.4ubuntu34) saucy; urgency=low
+
+  * Extending Android specific options to cover the Ubuntu Touch use cases
+    (flashing to a specific device and support skipping initrd)
+  * Enabling support for mako (Nexus 4)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Tue, 14 May 2013 04:27:01 -0300
+
 flash-kernel (3.0~rc.4ubuntu33) raring; urgency=low
 
   * Also update XB-Subarchitecture to use "generic" instead of 'highbank"
