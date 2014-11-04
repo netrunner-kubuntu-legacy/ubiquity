@@ -158,6 +158,7 @@ def grub_options():
         result = subp.communicate()[0].splitlines()
         for res in result:
             res = res.split(':')
+            res[0] = re.match(r'[/\w\d]+', res[0]).group()
             oslist[res[0]] = res[1]
         p = PartedServer()
         for disk in p.disks():
@@ -430,6 +431,8 @@ def os_prober():
         result = subp.communicate()[0].splitlines()
         for res in result:
             res = res.split(':')
+            # launchpad bug #1265192, fix os-prober Windows EFI path
+            res[0] = re.match(r'[/\w\d]+', res[0]).group()
             if res[2] == 'Ubuntu':
                 version = [v for v in re.findall('[0-9.]*', res[1]) if v][0]
                 # Get rid of the superfluous (development version) (11.04)

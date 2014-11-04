@@ -1,3 +1,25 @@
+grub-installer (1.78ubuntu23) utopic; urgency=medium
+
+  * On ppc64el, wipe the PReP partition before installing grub-ieee1275,
+    otherwise installations where the PReP partition is not empty and does
+    not contain a previous boot loader installation will fail now that
+    grub-ieee1275.postinst runs grub-install (LP: #1376973).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 06 Oct 2014 18:29:15 +0100
+
+grub-installer (1.78ubuntu22) utopic; urgency=medium
+
+  * Handle partitioned /dev/mdNNN devices, installing to the corresponding
+    disk instead (LP: #1370368).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 26 Sep 2014 15:50:41 +0100
+
+grub-installer (1.78ubuntu21) utopic; urgency=medium
+
+  * Rebuild against libparted2.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 21 Jul 2014 21:43:16 +0100
+
 grub-installer (1.78ubuntu20) trusty; urgency=medium
 
   * Fall back to grub-pc if there is no /target/boot/efi directory (thanks,

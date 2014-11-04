@@ -1,1 +1,1 @@
-deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ RELEASE main restricted universe multiverse

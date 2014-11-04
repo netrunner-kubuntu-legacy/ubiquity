@@ -51,7 +51,7 @@ class GtkButton(AutopilotGtkEmulatorBase):
         So when calling this function if the sensitive property is 0 it will
         wait for 10 seconds for button to become sensitive before clicking
         """
-        #sometimes we may need to wait for the button to become clickable
+        # sometimes we may need to wait for the button to become clickable
         # so lets wait for it if we do
         logger.debug('Clicking "{0}" button'.format(self.name))
         if self.sensitive == 0:
@@ -106,16 +106,16 @@ class GtkToggleButton(AutopilotGtkEmulatorBase):
         to change after being clicked
 
         """
-        #get current state
+        # get current state
         new_val = 0
         if self.active == 0:
             new_val = 1
         logger.debug('Objects current state is "{0}", '
                      'the state after clicking should be "{1}"'
                      .format(self.active, new_val))
-        #now click it
+        # now click it
         self.pointing_device.click_object(self)
-        #now wait for state to change
+        # now wait for state to change
         self.active.wait_for(new_val)
         logger.debug('Object clicked, state change successful')
 
@@ -143,9 +143,9 @@ class GtkRadioButton(AutopilotGtkEmulatorBase):
         if self.active == 1:
             logger.debug('Object already selected. Returning')
             return
-        #now click it
+        # now click it
         self.pointing_device.click_object(self)
-        #now wait for state to change
+        # now wait for state to change
         self.active.wait_for(1)
         logger.debug(
             'Object clicked and and selected. Active state changed '
@@ -280,29 +280,29 @@ class GtkTreeView(AutopilotGtkEmulatorBase):
             >>> self.assertThat(item.accessible_name, Equals('/home'))
             >>> self.mouse.click(item)
         """
-        #first get accessible tree
+        # first get accessible tree
         treeview = self._get_gail_treeview()
         # Now each column header is a GtkButton, so we get the label from each
         # one and create a list
         tree_column_objects = treeview.select_many('GtkButtonAccessible')
         column_names = []
         for column in tree_column_objects:
-            #We are only interested in columns with headers. Blank columns
+            # We are only interested in columns with headers. Blank columns
             # seem to usually be used for spacing and contain no cells
             if column.accessible_name == '':
                 pass
             else:
-                #strip all non alpaha chars
+                # strip all non alpaha chars
                 name = re.sub(r'\W+', '', column.accessible_name)
                 column_names.append(name)
         # Create a named tuple using the column headers, which enables access
         # to the column by name
         Columns = namedtuple('Columns', column_names)
-        #generate a list of items
+        # generate a list of items
         tree_items = treeview.get_all_items()
         # lets create a temp list
         temp_list = []
-        #TODO: we actually don't really need this
+        # TODO: we actually don't really need this
         for item in tree_items:
             temp_list.append(item)
         # so we want to create a Columns tuple for each row in the table
@@ -380,7 +380,7 @@ class GtkComboBox(AutopilotGtkEmulatorBase):
 
         """
         logger.debug('Selecting "{0}" item'.format(labelText))
-        #get our gail combo to start
+        # get our gail combo to start
         combo = self._get_gail_combobox()
         # get total number of items in the combo
         items = combo.select_many('GtkMenuItemAccessible')
@@ -392,7 +392,7 @@ class GtkComboBox(AutopilotGtkEmulatorBase):
         else:
             self.kbd.press_and_release('Down')
 
-        #XXX: we should probably check the item is in the combo before
+        # XXX: we should probably check the item is in the combo before
         # cycling through.
         for item in items:
             if labelText == combo.accessible_name:
@@ -407,7 +407,7 @@ class GtkComboBox(AutopilotGtkEmulatorBase):
 
     def select_filesystem_format(self, fsFormat):
         logger.debug('Selecting "{0}" item'.format(fsFormat))
-        #get our gail combo to start
+        # get our gail combo to start
         combo = self._get_gail_combobox()
         # get total number of items in the combo
         items = combo.select_many('GtkMenuItemAccessible')

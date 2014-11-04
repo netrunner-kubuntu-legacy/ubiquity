@@ -1,3 +1,117 @@
+partman-crypto (74ubuntu1) utopic; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Disable partition erasing by default, as it's very slow and only of
+      moderate value.
+    - Warn that the passphrase cannot be recovered if lost.
+    - Allow preseeding the first passphrase prompt and
+      partman-crypto/weak_passphrase.
+    - Add an "Activate existing encrypted volumes" option to the
+      partman-crypto main menu.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 12 Aug 2014 18:21:29 +0100
+
+partman-crypto (74) unstable; urgency=high
+
+  * Cope with parted 3.2 automatically creating a partition when creating a
+    fresh loop label (closes: #757663).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 10 Aug 2014 16:10:58 +0100
+
+partman-crypto (73) unstable; urgency=low
+
+  [ Updated translations ]
+  * Greek (el.po) by galaxico
+  * Ukrainian (uk.po) by Anton Gladky
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 13 May 2014 07:26:30 +0200
+
+partman-crypto (72) unstable; urgency=low
+
+  * Add a lintian override for untranslatable-debconf-templates
+
+  [ Updated translations ]
+  * Portuguese (pt.po) by Miguel Figueiredo
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 08 May 2014 18:32:26 +0200
+
+partman-crypto (71) unstable; urgency=low
+
+  [ Updated translations ]
+  * German (de.po) by Holger Wansing
+  * Korean (ko.po) by Changwoo Ryu
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 19 Mar 2014 14:32:07 +0100
+
+partman-crypto (70) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Italian (it.po) by Milo Casagrande
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 14 Mar 2014 18:10:10 +0100
+
+partman-crypto (69) unstable; urgency=low
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Viktar Siarheichyk
+  * Tajik (tg.po) by Victor Ibragimov
+  * Turkish (tr.po) by Mert Dirik
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 06 Jan 2014 07:36:25 +0100
+
+partman-crypto (68) unstable; urgency=low
+
+  [ Updated translations ]
+  * Bokmål, Norwegian (nb.po) by Hans Fredrik Nordhaug
+  * Thai (th.po) by Theppitak Karoonboonyanan
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 21 Dec 2013 13:49:25 +0100
+
+partman-crypto (67) unstable; urgency=low
+
+  [ Updated translations ]
+  * Bulgarian (bg.po) by Damyan Ivanov
+  * Croatian (hr.po) by Tomislav Krznar
+  * Polish (pl.po) by Michał Kułach
+  * Slovak (sk.po) by Ivan Masár
+  * Uyghur (ug.po) by Abduqadir Abliz
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 13 Dec 2013 19:40:33 +0100
+
+partman-crypto (66) unstable; urgency=low
+
+  [ Thiemo Nagel ]
+  * Use the same security setting for wiping existing volumes
+    than previous settings, when the volume was already encrypted.
+    Closes: #726448
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 09 Nov 2013 09:14:39 +0100
+
+partman-crypto (65) unstable; urgency=low
+
+  [ Updated translations ]
+  * Czech (cs.po) by Miroslav Kure
+  * French (fr.po) by Christian Perrier
+  * Japanese (ja.po) by Kenshi Muto
+  * Simplified Chinese (zh_CN.po) by YunQiang Su
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 06 Nov 2013 06:49:03 +0100
+
+partman-crypto (64) unstable; urgency=low
+
+  [ Thiemo Nagel ]
+  * Make "Erasing data" step optional. blockdev-wipe is too slow
+    Closes: #722898
+  * blockdev-wipe: Set blocksize to 512k
+  * blockdev-wipe: Sync at most once per second
+  * blockdev-wipe: Allocate buffer from heap instead of stack
+  * blockdev-wipe: Reduce progress indicator granularity to 1/1000
+
+  [ Updated translations ]
+  * Polish (pl.po) by Michał Kułach
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 30 Oct 2013 20:24:43 +0100
+
 partman-crypto (63ubuntu2) trusty; urgency=medium
 
   [ Stéphane Graber ]

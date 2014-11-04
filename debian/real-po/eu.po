@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2014-02-07 21:09+0000\n"
+"PO-Revision-Date: 2014-04-21 11:58+0000\n"
 "Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -1556,8 +1556,8 @@ msgid ""
 "Fluendo MP3 plugin includes MPEG Layer-3 audio decoding technology licensed "
 "from Fraunhofer IIS and Technicolor SA."
 msgstr ""
-"Fluendo MP3 pluginak Fraunhofer IIS eta Technicolor SAren lizentziapeko MPEG "
-"Layer-3 audio-deskodetze teknologia dakar."
+"Fluendo MP3 pluginak MPEG Layer-3 audioa deskodetzeko teknologia dakar, "
+"Fraunhofer IIS eta Technicolor SAren lizentziapekoa."
 
 #. Type: text
 #. Description
@@ -1858,7 +1858,7 @@ msgstr "Ondoren:"
 #. Description
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
-msgstr ""
+msgstr "Zifratu ${RELEASE} instalazio berria segurtasunerako"
 
 #. Type: text
 #. Description
@@ -1870,7 +1870,7 @@ msgstr "Hurrengo pausoan segurtasun-gakoa aukeratuko duzu."
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "Erabili LVM ${RELEASE} instalazio berrian"
 
 #. Type: text
 #. Description
@@ -1910,7 +1910,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "${RELEASE} instalazioaz kanpoko fitxategiak ez dira zifratuko."
 
 #. Type: text
 #. Description
@@ -1985,6 +1985,8 @@ msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
 msgstr ""
+"LVM edo bolumen logikoen kudeaketari esker, ${RELEASE}(e)k hainbat bolumen "
+"fisiko bakarra balira bezala trata ditzake."
 
 #. Type: text
 #. Description

@@ -1,3 +1,10 @@
+user-setup (1.48ubuntu3) utopic; urgency=medium
+
+  [ KDEUSER56 / Rohan Garg ]
+  * Add SDDM autologin support (LP: #1362752).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 16 Sep 2014 13:55:09 +0100
+
 user-setup (1.48ubuntu2) trusty; urgency=medium
 
   * Add the initial user to the libvirtd group (LP: #1304008).

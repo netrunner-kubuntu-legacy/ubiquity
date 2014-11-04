@@ -1,3 +1,165 @@
+ubiquity (2.20.0) utopic; urgency=medium
+
+  * Exclude free space from counts of deleted partitions.
+  * There are far too many situations where we fail to accurately detect all
+    the operating systems installed on the disk, and we must defend in depth
+    against losing user data as a result of this.  This includes not
+    misleading users into believing that an option will erase less than it
+    in fact does.  Therefore, never describe the use_device autopartitioning
+    mode in any way other than "Erase disk and install Ubuntu", and offer
+    separate "Erase Ubuntu <version> and reinstall" and "Erase disk and
+    install Ubuntu" options even if we believe that the disk only contains
+    Ubuntu (LP: #1265192).
+  * Always show a confirmation dialog before committing partitioning.  I've
+    read considerably more reports of users having their data destroyed by
+    some misunderstanding or other of the partitioner than I'm comfortable
+    with; if a slightly ugly confirmation even when we think things are
+    clear saves some people from that, then it's worth it, and it adds
+    another layer of defence against bugs.
+  * Update translations from Launchpad.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 16 Oct 2014 01:38:28 +0100
+
+ubiquity (2.19.10) utopic; urgency=medium
+
+  * KDE: set widget and icon theme to breeze if using Plasma 5
+  * Automatic update of included source packages: grub-installer
+    1.78ubuntu23.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 13 Oct 2014 18:09:11 +0200
+
+ubiquity (2.19.9) utopic; urgency=medium
+
+  * Revert Update ubiquity.ubiquity.upstart and bin/ubiquity to add
+    support for SDDM, ubiquity-dm to SDDM transition is buggy and I
+    can't work out how to debug it
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu53, grub-installer 1.78ubuntu22, user-setup
+    1.48ubuntu3.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 06 Oct 2014 15:46:56 +0100
+
+ubiquity (2.19.8) utopic; urgency=medium
+
+  [ Colin Watson ]
+  * Avoid closing /dev/urandom persistent FD on oem-config startup (thanks,
+    Jamin W. Collins; LP: #1362920).
+
+  [ Chris Bainbridge ]
+  * Fix Windows UEFI detection. (LP: #1265192)
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Fri, 12 Sep 2014 14:35:57 -0400
+
+ubiquity (2.19.7) utopic; urgency=medium
+
+  * Update ubiquity.ubiquity.upstart and bin/ubiquity to add support for SDDM
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 01 Sep 2014 13:51:49 +0200
+
+ubiquity (2.19.6) utopic; urgency=medium
+
+  * ubiquity/plugins/ubi-console-setup.py: use untranslated keyboard
+    names, the GTK side does not translate them and comments say they
+    do not work.  KDE frontend has crashes due to keyboard names being
+    translated so give up for now.  LP: #1182784
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 01 Sep 2014 19:07:50 +0200
+
+ubiquity (2.19.5) utopic; urgency=medium
+
+  * Re-add "console output" stanza to the oem-config upstart job to
+    re-instate stdin/stdout. (LP: #1361595)
+  * Automatic update of included source packages: netcfg 1.119ubuntu1.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Sun, 31 Aug 2014 23:52:22 +0100
+
+ubiquity (2.19.4) utopic; urgency=medium
+
+  * Revert addition of sddm to upstart job head of Beta 1,
+    ubiquity-dm needs some fixes to support it
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu52.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 28 Aug 2014 14:18:21 +0200
+
+ubiquity (2.19.3) utopic; urgency=medium
+
+  [ Rohan Garg ]
+  * Add support for sddm
+
+  [ Jonathan Riddell ]
+  * Automatic update of included source packages: flash-kernel
+    3.0~rc.4ubuntu51.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 27 Aug 2014 17:01:20 +0200
+
+ubiquity (2.19.2) utopic; urgency=medium
+
+  [ Dimitri John Ledkov ]
+  * Remove redundant inactive labels in the user setup page. (LP:
+    #1283047).
+
+  [ Colin Watson ]
+  * Automatic update of included source packages: partman-auto-lvm
+    54ubuntu1, partman-base 175ubuntu1, partman-crypto 74ubuntu1,
+    partman-lvm 91.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 12 Aug 2014 21:13:42 +0100
+
+ubiquity (2.19.1) utopic; urgency=medium
+
+  * Fix up python2-dbus dependency back to python3-dbus, from previous
+    upload.
+  * Automatic update of included source packages: grub-installer
+    1.78ubuntu21, partconf 1.45build1, partman-base 174ubuntu2.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 22 Jul 2014 14:55:39 +0100
+
+ubiquity (2.19.0) utopic; urgency=medium
+
+  [ Rohan Garg ]
+  * Make sure ubiquity-dm works on Plasma 5 KWin.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 21 Jul 2014 21:47:59 +0100
+
+ubiquity (2.18.11) utopic; urgency=medium
+
+  [ Martin Wimpress ]
+  * Added marco (MATE window manager) support to ubiquity-dm.
+
+  [ Dimitri John Ledkov ]
+  * Automatic update of included source packages: hw-detect 1.95ubuntu4,
+    partman-auto-lvm 53ubuntu1, partman-base 174ubuntu1, partman-
+    basicfilesystems 97ubuntu1, partman-partitioning 101ubuntu1, preseed
+    1.64ubuntu1.
+  * Add "fuser -cv" before unmounting /target to figure out why it's being
+    held up open when preseeding installations from nfs via cobler.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 17 Jul 2014 15:17:11 +0100
+
+ubiquity (2.18.10) utopic; urgency=medium
+
+  [ Aurélien Gâteau ]
+  * [KDE] FIX layout of step labels in sidebar LP: #1308931
+
+  [ Jonathan Riddell ]
+  * Automatic update of included source packages: choose-mirror
+    2.57ubuntu1.
+  * Fix PEP8 fussyness throughout
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 30 Jun 2014 13:09:40 +0200
+
+ubiquity (2.18.9) utopic; urgency=medium
+
+  * Flush print into debconf-communicate stdin PIPE, as print(...,file=)
+    may not flush anymore. (LP: #1326707)
+  * Switch sources to utopic.
+  * Automatic update of included source packages: console-setup
+    1.70ubuntu9, flash-kernel 3.0~rc.4ubuntu50, hw-detect 1.95ubuntu3,
+    partman-basicfilesystems 95ubuntu1.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 10 Jun 2014 01:07:43 +0100
+
 ubiquity (2.18.8) trusty-proposed; urgency=medium
 
   [ Rohan Garg ]

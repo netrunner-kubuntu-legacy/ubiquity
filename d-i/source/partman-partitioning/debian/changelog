@@ -1,3 +1,60 @@
+partman-partitioning (101ubuntu1) utopic; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Make sure to wipe disk label on Sun disks before creating a new one.
+    - Depend on ntfs-3g-udeb as well as ntfsprogs-udeb.
+    - Add PATH, RAWMINSIZE, RAWPREFSIZE, and RAWMAXSIZE substitutions to
+      partman-partitioning/new_size in support of ubiquity's resize widget.
+    - Cache calls to tune2fs and ntfsresize, to make navigating through the
+      resize UI a little faster.
+    - Check that minimum filesystem sizes reported by tune2fs and ntfsresize
+      are between the minimum partition size and the current partition size;
+      if not, refuse to resize the partition at all.
+    - Use mac as the default disk label on ppc64.
+    - Save the swap size for ubiquity.
+    - On systems with only GPT disks, check that an EFI System Partition or
+      a BIOS Boot Partition exists, as appropriate.
+    - Detect "fsl" subarch for powerpc and set partition map to GPT.
+    - Use GPT as the default disk label on ppc64el.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 07 Jul 2014 11:14:42 +0100
+
+partman-partitioning (101) unstable; urgency=low
+
+  [ Phillip Susi ]
+  * Remove partition copy operation for libparted 3 transition (closes:
+    #738864).
+
+  [ Updated translations ]
+  * Amharic (am.po) by Tegegne Tefera
+  * Bulgarian (bg.po) by Damyan Ivanov
+  * Bosnian (bs.po) by Amila Valjevčić
+  * Danish (da.po) by Joe Hansen
+  * German (de.po) by Holger Wansing
+  * Greek, Modern (1453-) (el.po) by galaxico
+  * French (fr.po) by Christian Perrier
+  * Croatian (hr.po) by Tomislav Krznar
+  * Italian (it.po) by Milo Casagrande
+  * Japanese (ja.po) by Kenshi Muto
+  * Korean (ko.po) by Changwoo Ryu
+  * Bokmål, Norwegian (nb.po) by Hans Fredrik Nordhaug
+  * Polish (pl.po) by Michał Kułach
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Russian (ru.po) by Yuri Kozlov
+  * Slovak (sk.po) by Ivan Masár
+  * Thai (th.po) by Theppitak Karoonboonyananv
+  * Turkish (tr.po) by Mert Diriki
+  * Ukrainian (uk.po) by Anton Gladky
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 06 Jul 2014 23:18:28 +0100
+
+partman-partitioning (100) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Hungarian (hu.po) by Judit Gyimesi
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 14 Mar 2014 18:48:35 +0100
+
 partman-partitioning (99ubuntu1) trusty; urgency=medium
 
   * Resynchronise with Debian (LP: #1263756).  Remaining changes:

@@ -142,6 +142,13 @@ Boot-Kernel-Path: /boot/uImage
 Boot-Initrd-Path: /boot/uInitrd
 Boot-Script-Path: /boot/boot.scr
 
+Machine: HP ProLiant m800 Server Cartridge
+Kernel-Flavors: keystone
+U-Boot-Script-Address: 0x0
+U-Boot-Script-Name: bootscr.keystone2
+Required-Packages: u-boot-tools
+Boot-Script-Path: /boot/boot.scr
+
 Machine: HP t5325 Thin Client
 Kernel-Flavors: kirkwood
 Machine-Id: 2846

@@ -995,8 +995,8 @@ class Install(install_misc.InstallBase):
     def configure_bootloader(self):
         """Configure and install the boot loader."""
         if 'UBIQUITY_OEM_USER_CONFIG' in os.environ:
-            #the language might be different than initial install.
-            #recopy translations if we have them now
+            # the language might be different than initial install.
+            # recopy translations if we have them now
             full_lang = self.db.get('debian-installer/locale').split('.')[0]
             for lang in [full_lang.split('.')[0], full_lang.split('_')[0]]:
                 source = (

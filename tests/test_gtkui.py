@@ -72,7 +72,7 @@ class TestFrontend(unittest.TestCase):
             # height 556, because e.g. HP Mini has 580 - 24px (indicators)
             # Anything smaller will need to use Alt+Ctrl+Pgd/Right
             # Scrollbars anyone?
-            #self.assertLessEqual(alloc.width, 640, page.module.NAME)  # fixme
+            # self.assertLessEqual(alloc.width, 640, page.module.NAME)  # fixme
             self.assertLessEqual(alloc.height, 556, page.module.NAME)
             if page.module.NAME == 'partman':
                 ui.allow_change_step(False)

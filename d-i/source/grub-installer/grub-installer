@@ -170,7 +170,7 @@ hurd_convert () {
 # This should probably be rewritten using udevadm or similar.
 device_to_disk () {
 	echo "$1" | \
-		sed 's:\(/dev/\(cciss\|ida\|rs\)/c[0-9]d[0-9][0-9]*\|/dev/mmcblk[0-9]\|/dev/nvme[0-9]n[0-9]\|/dev/\(ad\|da\)[0-9]\+\|/dev/[hs]d[0-9]\+\|/dev/[a-z]\+\).*:\1:'
+		sed 's:\(/dev/\(cciss\|ida\|rs\)/c[0-9]d[0-9][0-9]*\|/dev/mmcblk[0-9]\|/dev/nvme[0-9]n[0-9]\|/dev/\(ad\|da\)[0-9]\+\|/dev/[hms]d[0-9]\+\|/dev/[a-z]\+\).*:\1:'
 }
 
 # Run update-grub in $ROOT
@@ -324,7 +324,7 @@ case $prefix in
     /dev/loop)
 	disc_offered_devfs="$bootfs"
 	;;
-    /dev/[hsv]d[a-z0-9]|/dev/xvd[a-z]|/dev/cciss/c[0-9]d[0-9]*|/dev/ida/c[0-9]d[0-9]*|/dev/rs/c[0-9]d[0-9]*|/dev/mmcblk[0-9]|/dev/ad[0-9]*|/dev/da[0-9]*|/dev/fio[a-z]|/dev/nvme[0-9]n[0-9])
+    /dev/[hmsv]d[a-z0-9]|/dev/xvd[a-z]|/dev/cciss/c[0-9]d[0-9]*|/dev/ida/c[0-9]d[0-9]*|/dev/rs/c[0-9]d[0-9]*|/dev/mmcblk[0-9]|/dev/ad[0-9]*|/dev/da[0-9]*|/dev/fio[a-z]|/dev/nvme[0-9]n[0-9])
 	disc_offered_devfs="$prefix"
 	;;
     *)
@@ -474,6 +474,14 @@ case "$frtype:$bootfstype:$bootfslabel:$grub_package" in
 	if [ "$RET" = false ]; then
 		grub_package="grub"
 	fi
+	;;
+esac
+
+case $ARCH:$grub_package in
+    ppc64el/*:grub-ieee1275)
+	wipe_bootdev="$(/usr/lib/grub-installer/prep-bootdev)"
+	info "Wiping PReP partition $wipe_bootdev"
+	log-output -t grub-installer dd if=/dev/zero of="$wipe_bootdev" bs=512 count="$(blockdev --getsz "$wipe_bootdev")"
 	;;
 esac
 
@@ -729,7 +737,7 @@ case $ARCH:$grub_package in
 			  sed 's:\(/dev/\(cciss\|ida\|rs\)/c[0-9]d[0-9][0-9]*\|/dev/mmcblk[0-9]\|/dev/\(ad\|da\)[0-9]\+\|/dev/[a-z]\+\).*:\1:')
 			disks="${disks:+$disks }$prefix"
 			case $prefix in
-			    /dev/[hsv]d[a-z]|/dev/xvd[a-z]|/dev/cciss/c[0-9]d[0-9]*|/dev/ida/c[0-9]d[0-9]*|/dev/rs/c[0-9]d[0-9]*|/dev/mmcblk[0-9]|/dev/ad[0-9]*|/dev/da[0-9]*|/dev/fio[a-z]|/dev/nvme[0-9]n[0-9])
+			    /dev/[hmsv]d[a-z]|/dev/xvd[a-z]|/dev/cciss/c[0-9]d[0-9]*|/dev/ida/c[0-9]d[0-9]*|/dev/rs/c[0-9]d[0-9]*|/dev/mmcblk[0-9]|/dev/ad[0-9]*|/dev/da[0-9]*|/dev/fio[a-z]|/dev/nvme[0-9]n[0-9])
 				if [ "$prefix" != "$frdisk_one" ]; then
 					use_disks=1
 				fi
@@ -884,13 +892,6 @@ if [ -z "$frdisk" ] || [ "$grub_version" = grub2 ]; then
 			# install even if it requires blocklists
 			grub_install_params="$grub_install_params --force"
 		fi
-
-		case $ARCH:$grub_package in
-		    ppc64el/*:grub-ieee1275)
-			info "Wiping PReP partition $bootdev"
-			log-output -t grub-installer dd if=/dev/zero of="$bootdev" bs=512 count="$(blockdev --getsz "$bootdev")"
-			;;
-		esac
 
 		CODE=0
 		case $ARCH:$grub_package in

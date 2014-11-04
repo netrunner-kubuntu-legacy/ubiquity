@@ -58,16 +58,16 @@ PATH = '/usr/share/ubiquity'
 # Define locale path
 LOCALEDIR = "/usr/share/locale"
 
-#currently using for testing, will remove
+# currently using for testing, will remove
 UIDIR = os.path.join(PATH, 'qt')
 
 
 class UbiquityUI(QtGui.QMainWindow):
     def __init__(self, parent=None):
         QtGui.QMainWindow.__init__(self, parent)
-        #app.ui MainWindow now hardcoded to 1000px wide for main
-        #content this will look bad on high res displays and should be
-        #defined by dpi not pixels
+        # app.ui MainWindow now hardcoded to 1000px wide for main
+        # content this will look bad on high res displays and should be
+        # defined by dpi not pixels
         uic.loadUi(os.path.join(UIDIR, "app.ui"), self)
 
         # QProcessManager sets a SIGCHLD handler without SA_RESTART; this
@@ -79,7 +79,7 @@ class UbiquityUI(QtGui.QMainWindow):
         distro_name = "Netrunner"
         distro_release = ""
 
-        ## setup the release and codename
+        # # setup the release and codename
         with open("/etc/lsb-release", 'r') as fp:
             for line in fp:
                 if "DISTRIB_ID=" in line:
@@ -165,7 +165,8 @@ class Wizard(BaseFrontend):
         # The "hicolor" icon theme gets picked when Ubiquity is running as a
         # DM. This causes some icons to be missing. Hardcode the theme name to
         # prevent that.
-        QtGui.QIcon.setThemeName('oxygen')
+        QtGui.QIcon.setThemeName(self.getIconTheme())
+        self.app.setStyle(self.getWidgetTheme())
         self._apply_stylesheet()
 
         self.app.setWindowIcon(QtGui.QIcon.fromTheme("ubiquity-kde"))
@@ -315,8 +316,7 @@ class Wizard(BaseFrontend):
         widget = Breadcrumb()
         widget.setObjectName(name)
         layout = self.ui.steps_widget.layout()
-        # "- 1" to insert before the bottom spacer
-        layout.insertWidget(layout.count() - 1, widget)
+        layout.addWidget(widget)
         return widget
 
     def _apply_stylesheet(self):
@@ -414,7 +414,7 @@ class Wizard(BaseFrontend):
         # Start the interface
         self.set_current_page(0)
 
-        if not 'UBIQUITY_AUTOMATIC' in os.environ:
+        if 'UBIQUITY_AUTOMATIC' not in os.environ:
             # Only show now so that the window does not show empty, then resize
             # itself and show content
             self.ui.show()
@@ -594,7 +594,7 @@ class Wizard(BaseFrontend):
             parameters.append('rtl')
         parameters_encoded = '&'.join(parameters)
 
-        slides = 'file://%s#%s' % (slideshow_main, parameters_encoded)
+        slides = 'file://%s# %s' % (slideshow_main, parameters_encoded)
 
         def openLink(qUrl):
             QtGui.QDesktopServices.openUrl(qUrl)
@@ -651,11 +651,11 @@ class Wizard(BaseFrontend):
                 for c in self.all_children(w):
                     widgets.append((c, prefix))
 
-        #if not just_current:
-        #for toplevel in self.toplevels:
-            #if toplevel.name != 'live_installer':
-                #for c in self.all_children(toplevel):
-                    #widgets.append((c, None))
+        # if not just_current:
+        # for toplevel in self.toplevels:
+            # if toplevel.name != 'live_installer':
+                # for c in self.all_children(toplevel):
+                    # widgets.append((c, None))
         self.translate_widgets(lang=lang, widgets=widgets, reget=reget)
         # Allow plugins to provide a hook for translation.
         for p in pages:
@@ -732,7 +732,7 @@ class Wizard(BaseFrontend):
     def translate_widget(self, widget, lang=None, prefix=None):
         if lang is None:
             lang = self.locale
-        #FIXME needs translations for Next, Back and Cancel
+        # FIXME needs translations for Next, Back and Cancel
         if not isinstance(widget, QtGui.QWidget):
             return
 
@@ -885,9 +885,9 @@ class Wizard(BaseFrontend):
         self.backup = False
         self.ui.show()
 
-        #set all the steps active
-        #each step will set its previous ones as inactive
-        #this handles the ability to go back
+        # set all the steps active
+        # each step will set its previous ones as inactive
+        # this handles the ability to go back
 
         is_install = False
         for page in self.pages:
@@ -1216,7 +1216,7 @@ class Wizard(BaseFrontend):
 
     def debconffilter_done(self, dbfilter):
         # processing events here prevents GUI from hanging until mouse moves
-        # (LP #556376)
+        # (LP # 556376)
         self.app.processEvents()
         if not dbfilter.status:
             self.find_next_step(dbfilter.__module__)
@@ -1382,3 +1382,17 @@ class Wizard(BaseFrontend):
     # returns the current wizard page
     def get_current_page(self):
         return self.stackLayout.indexOf(self.stackLayout.currentWidget())
+
+    # use breeze widgets if using Plasma 5
+    def getWidgetTheme(self):
+        if os.path.isfile("/usr/bin/plasmashell"):
+            return "breeze"
+        else:
+            return "Oxygen"
+
+    # use breeze icons if using Plasma 5
+    def getIconTheme(self):
+        if os.path.isfile("/usr/bin/plasmashell"):
+            return "breeze"
+        else:
+            return "oxygen"

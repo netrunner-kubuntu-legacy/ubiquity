@@ -39,7 +39,6 @@ for dev in $DEVICES/*; do
 			fi
 			db_subst $template PARTITION "$num"
 			db_subst $template DEVICE $(humandev $(cat device))
-			name_progress_bar $template
 			db_progress START 0 3 partman/text/formatting
 			db_progress INFO $template
 			db_progress SET 1

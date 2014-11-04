@@ -16,13 +16,14 @@
 # Borys Yanovych <borys@yanovy.ch>, 2010, 2011.
 # Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2010.
 # Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012, 2013.
+# Anton Gladky <gladk@debian.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
 "POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2013-10-02 18:46+0300\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"PO-Revision-Date: 2014-05-11 20:21+0100\n"
+"Last-Translator: Anton Gladky <gladk@debian.org>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
@@ -633,10 +634,8 @@ msgstr "noatime - не оновлювати часи доступу до inode �
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
-#, fuzzy
-#| msgid "noatime - do not update inode access times at each access"
 msgid "nodiratime - do not update directory inode access times"
-msgstr "noatime - не оновлювати часи доступу до inode при кожному зверненні"
+msgstr "noatime - не оновлювати часи доступу до inode каталогу"
 
 #. Type: text
 #. Description
@@ -745,7 +744,7 @@ msgstr "notail - заборонити упаковування файлів в �
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:55001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "discard - обрізати звільнені блоки з нижчележачого блочного пристрою"
 
 #. Type: text
 #. Description
@@ -781,15 +780,14 @@ msgstr "Повернутися до меню та виправити цю про
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:58001
-#, fuzzy
 msgid ""
 "Your boot partition has not been configured with the ext2 file system. This "
 "is needed by your machine in order to boot. Please go back and use the ext2 "
 "file system."
 msgstr ""
-"Ваш завантажувальний розділ не був сконфігурований з файловою системою ext2 "
-"або ext3. Це є необхідною умовою для завантаження вашої машини. Будь ласка, "
-"поверніться та вкажіть файлову систему ext2 або ext3."
+"Ваш завантажувальний розділ не був сконфігурований з файловою системою ext2. "
+"Це є необхідною умовою для завантаження вашої машини. Поверніться та вкажіть "
+"файлову систему ext2."
 
 #. Type: boolean
 #. Description
@@ -812,7 +810,6 @@ msgstr ""
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:59001
-#, fuzzy
 msgid ""
 "Your boot partition is not located on the first partition of your hard disk. "
 "This is needed by your machine in order to boot.  Please go back and use "

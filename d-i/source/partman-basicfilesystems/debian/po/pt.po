@@ -7,7 +7,7 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # Console-setup strings translations:
 # (identified by "./console-setup.templates")
-# Copyright (C) 2003-2013 Miguel Figueiredo <elmig@debianpt.org>
+# Copyright (C) 2003-2014 Miguel Figueiredo <elmig@debianpt.org>
 # This file is distributed under the same license as debian-installer.
 #
 #
@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
 "POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2013-05-23 20:41+0100\n"
+"PO-Revision-Date: 2014-05-06 20:25+0100\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -634,10 +634,8 @@ msgstr "noatime - não actualizar datas de acesso aos inode em cada acesso"
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
-#, fuzzy
-#| msgid "noatime - do not update inode access times at each access"
 msgid "nodiratime - do not update directory inode access times"
-msgstr "noatime - não actualizar datas de acesso aos inode em cada acesso"
+msgstr "nodiratime - não actualizar datas de acesso aos directórios"
 
 #. Type: text
 #. Description
@@ -747,7 +745,7 @@ msgstr ""
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:55001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "discard - trim a blocos livres do dispositivo"
 
 #. Type: text
 #. Description
@@ -782,15 +780,14 @@ msgstr "Voltar atrás ao menu e corrigir este problema?"
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:58001
-#, fuzzy
 msgid ""
 "Your boot partition has not been configured with the ext2 file system. This "
 "is needed by your machine in order to boot. Please go back and use the ext2 "
 "file system."
 msgstr ""
 "A sua partição de arranque não foi configurada com o sistema de ficheiros "
-"ext2 ou ext3. A sua máquina necessita disto para que possa arrancar.  Por "
-"favor volte atrás e utilize o sistema de ficheiros ext2 ou ext3."
+"ext2. Isto é necessário para que a sua máquina possa arrancar.  Por favor "
+"volte atrás e utilize o sistema de ficheiros ext2."
 
 #. Type: boolean
 #. Description
@@ -813,13 +810,12 @@ msgstr ""
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:59001
-#, fuzzy
 msgid ""
 "Your boot partition is not located on the first partition of your hard disk. "
 "This is needed by your machine in order to boot.  Please go back and use "
 "your first partition as a boot partition."
 msgstr ""
 "A sua partição de arranque não se encontra localizada na primeira partição "
-"primária do seu disco rígido.  Isto é necessário pela sua máquina de modo a "
-"arrancar.  Por favor volte atrás e utilize a sua primeira partição primária "
-"como partição de boot."
+"do seu disco rígido. Isto é necessário para que a sua máquina arranque. Por "
+"favor volte atrás e utilize a sua primeira partição como partição de "
+"arranque."

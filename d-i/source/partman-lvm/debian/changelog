@@ -1,3 +1,10 @@
+partman-lvm (91) unstable; urgency=medium
+
+  * Cope with parted 3.2 automatically creating a partition when creating a
+    fresh loop label (closes: #757664).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 10 Aug 2014 11:18:35 +0100
+
 partman-lvm (90) unstable; urgency=medium
 
   [ Updated translations ]

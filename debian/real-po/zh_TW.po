@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2013-10-12 04:45+0000\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"PO-Revision-Date: 2014-08-15 02:09+0000\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
 "debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -419,7 +419,7 @@ msgstr "要結束安裝嗎？"
 #. Description
 #: ../ubiquity.templates:62001
 msgid "Do you really want to quit the installation now?"
-msgstr "確定要現在結束安裝？"
+msgstr "確定要立刻結束安裝？"
 
 #. Type: text
 #. Description
@@ -489,7 +489,7 @@ msgstr "繼續試用"
 #. Description
 #: ../ubiquity.templates:74001
 msgid "Restart Now"
-msgstr "立即重新啟動"
+msgstr "立刻重新啟動"
 
 #. Type: text
 #. Description
@@ -1791,7 +1791,7 @@ msgstr "之後："
 #. Description
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
-msgstr ""
+msgstr "將新安裝的 ${RELEASE} 加密以增強安全性"
 
 #. Type: text
 #. Description
@@ -1803,7 +1803,7 @@ msgstr "下個步驟中您需要選擇一道安全金鑰"
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "在新安裝的 ${RELEASE} 使用 LVM"
 
 #. Type: text
 #. Description
@@ -1811,7 +1811,8 @@ msgstr ""
 msgid ""
 "This will set up Logical Volume Management. It allows taking snapshots and "
 "easier partition resizing."
-msgstr "這會設置邏輯儲存區管理。它讓您可以擷取快照，並輕鬆地重新調整分割大小。"
+msgstr ""
+"會設置邏輯儲存區管理(LVM)。讓您可以擷取快照，並輕鬆重新調整分割區大小。"
 
 #. Type: text
 #. Description
@@ -1839,7 +1840,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "${RELEASE} 以外的檔案都不會加密。"
 
 #. Type: text
 #. Description
@@ -1913,13 +1914,13 @@ msgstr "MB"
 msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
-msgstr ""
+msgstr "邏輯儲存區管理(LVM) 令 ${RELEASE} 將多個實體儲存區視為單一儲存區。"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:281001
 msgid "Logical Volume Management"
-msgstr "邏輯儲存區管理"
+msgstr "邏輯儲存區管理(LVM)"
 
 #. Type: text
 #. Description

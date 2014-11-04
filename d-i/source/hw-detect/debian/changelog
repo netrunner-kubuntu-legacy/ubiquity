@@ -1,3 +1,18 @@
+hw-detect (1.95ubuntu4) utopic; urgency=medium
+
+  * driver-injection-disk.sh: also probe disks for OEMDRV label (LP: #1332187)
+
+ -- Kent Baxley <kent.baxley@canonical.com>  Fri, 27 Jun 2014 11:52:43 -0500
+
+hw-detect (1.95ubuntu3) utopic; urgency=medium
+
+  * Drop "Register rtc module on i386 and amd64". Kernel dropped this
+    module. (LP: #1317077)
+  * Drop "Register lp module on i386 and amd64." as cups now ships
+    /etc/modules-load.d/cups-filters.conf which loads lp modules.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 07 May 2014 09:32:31 +0100
+
 hw-detect (1.95ubuntu2) trusty; urgency=medium
 
   * Add support for activating fakeraid devices with mdadm.

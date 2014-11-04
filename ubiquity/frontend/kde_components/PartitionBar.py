@@ -61,7 +61,7 @@ class Partition:
 class PartitionsBar(QtGui.QWidget):
     InfoColor = '#333333'
 
-    ## signals
+    # signals
     partitionResized = QtCore.pyqtSignal(['PyQt_PyObject', 'PyQt_PyObject'])
 
     def __init__(self, parent=None, controller=None):

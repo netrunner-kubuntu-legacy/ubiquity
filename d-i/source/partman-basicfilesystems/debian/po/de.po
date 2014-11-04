@@ -39,7 +39,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
 "POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2013-09-02 16:18+0200\n"
+"PO-Revision-Date: 2014-03-15 11:48+0100\n"
 "Last-Translator: Holger Wansing <linux@wansing-online.de>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -646,8 +646,7 @@ msgstr "Einbindungsoptionen können das Verhalten des Dateisystems optimieren."
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:42001
 msgid "noatime - do not update inode access times at each access"
-msgstr ""
-"noatime - Zugriffszeit einer Inode nicht bei jedem Zugriff aktualisieren"
+msgstr "noatime - Inode-Zugriffszeit nicht bei jedem Zugriff aktual."
 
 #. Type: text
 #. Description
@@ -655,11 +654,8 @@ msgstr ""
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
-#, fuzzy
-#| msgid "noatime - do not update inode access times at each access"
 msgid "nodiratime - do not update directory inode access times"
-msgstr ""
-"noatime - Zugriffszeit einer Inode nicht bei jedem Zugriff aktualisieren"
+msgstr "nodiratime - Inode-Zugriffszeit von Verzeichnissen nicht aktual."
 
 #. Type: text
 #. Description
@@ -668,7 +664,7 @@ msgstr ""
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:44001
 msgid "relatime - update inode access times relative to modify time"
-msgstr "relatime - Inode-Zugriffszeit ist relativ zur Modifizierungszeit"
+msgstr "relatime - Inode-Zugriffszeit relativ zur Modifizierungszeit"
 
 #. Type: text
 #. Description
@@ -677,7 +673,7 @@ msgstr "relatime - Inode-Zugriffszeit ist relativ zur Modifizierungszeit"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:45001
 msgid "nodev - do not support character or block special devices"
-msgstr "nodev - Keine Unterstützung für Zeichen- oder Blockgeräte"
+msgstr "nodev - Keine Unterstütz. für zeichen- oder blockorient. Geräte"
 
 #. Type: text
 #. Description
@@ -767,7 +763,7 @@ msgstr "notail - Keine Dateien im Dateisystembaum anlegen"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:55001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "discard - freigegeb. Blöcke des blockorient. Geräts markieren"
 
 #. Type: text
 #. Description

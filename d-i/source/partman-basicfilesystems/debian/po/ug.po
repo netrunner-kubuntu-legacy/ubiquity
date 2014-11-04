@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
 "POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2013-08-15 09:24+0600\n"
+"PO-Revision-Date: 2014-03-03 14:41+0600\n"
 "Last-Translator: Abduqadir Abliz <sahran.ug@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -634,12 +634,8 @@ msgstr ""
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
-#, fuzzy
-#| msgid "noatime - do not update inode access times at each access"
 msgid "nodiratime - do not update directory inode access times"
-msgstr ""
-"noatime - ھەر قېتىم سانلىق مەلۇماتنى ساقلىغاندا inode نىڭ ساقلاش ۋاقتىنى "
-"يېڭىلىمايدۇ"
+msgstr "noatime - مۇندەرىجە inode نىڭ ساقلاش ۋاقتىنى يېڭىلىمايدۇ"
 
 #. Type: text
 #. Description
@@ -750,7 +746,7 @@ msgstr "notail - ھۆججەتنى ھۆججەت سىستېما قۇرۇلمىسى
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:55001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "تاشلىۋەت - تۆۋەن قەۋەت بۆلەك ئۈسكۈنىدىن رەتلەپ بوشاتقان بۆلەكلەر"
 
 #. Type: text
 #. Description

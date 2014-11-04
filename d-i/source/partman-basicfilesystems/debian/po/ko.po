@@ -7,7 +7,7 @@
 # Copyright (C) 2003,2004,2005,2008 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
-# Changwoo Ryu <cwryu@debian.org>, 2010, 2011.
+# Changwoo Ryu <cwryu@debian.org>, 2010, 2011, 2012, 2014.
 #
 # Translations from iso-codes:
 # Copyright (C)
@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
 "POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2012-10-19 13:10+0900\n"
+"PO-Revision-Date: 2014-03-16 15:04+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
 "Language: ko\n"
@@ -634,10 +634,9 @@ msgstr "noatime - 접근할 때 inode의 접근 시각을 업데이트하지 않
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
-#, fuzzy
-#| msgid "noatime - do not update inode access times at each access"
 msgid "nodiratime - do not update directory inode access times"
-msgstr "noatime - 접근할 때 inode의 접근 시각을 업데이트하지 않습니다"
+msgstr ""
+"nodiratime - 접근할 때 디렉터리 inode의 접근 시각을 업데이트하지 않습니다"
 
 #. Type: text
 #. Description
@@ -745,7 +744,7 @@ msgstr "notail - 파일 시스템 트리에 파일을 몰아 넣지 않습니다
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:55001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "discard - 내부 블럭 장치에서 사용하지 않는 블럭을 잘라냅니다"
 
 #. Type: text
 #. Description
@@ -780,15 +779,14 @@ msgstr "메뉴로 돌아가서 이 문제를 바로잡으시겠습니까?"
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:58001
-#, fuzzy
 msgid ""
 "Your boot partition has not been configured with the ext2 file system. This "
 "is needed by your machine in order to boot. Please go back and use the ext2 "
 "file system."
 msgstr ""
-"부팅 파티션을 EXT2나 EXT3 파일 시스템으로 설정하지 않았습니다. 이 컴퓨터에서 "
-"부팅하려면 EXT2나 EXT3 파일 시스템을 사용해야 합니다. 돌아가서 EXT2나 EXT3 파"
-"일 시스템을 사용하십시오."
+"부팅 파티션을 EXT2 파일 시스템으로 설정하지 않았습니다. 이 컴퓨터에서 부팅하"
+"려면 EXT2 파일 시스템을 사용해야 합니다. 돌아가서 EXT2 파일 시스템을 사용하십"
+"시오."
 
 #. Type: boolean
 #. Description
@@ -810,12 +808,11 @@ msgstr ""
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:59001
-#, fuzzy
 msgid ""
 "Your boot partition is not located on the first partition of your hard disk. "
 "This is needed by your machine in order to boot.  Please go back and use "
 "your first partition as a boot partition."
 msgstr ""
-"부팅 파티션이 하드 디스크의 첫 번째 주 파티션이 아닙니다. 이 컴퓨터에서 부팅"
-"하려면 이 파티션이 필요합니다. 돌아가서 첫 번째 주 파티션을 부팅 파티션으로 "
-"사용하십시오."
+"부팅 파티션이 하드 디스크의 첫 번째 파티션이 아닙니다. 이 컴퓨터에서 부팅하려"
+"면 이 파티션이 필요합니다. 돌아가서 첫 번째 파티션을 부팅 파티션으로 사용하십"
+"시오."

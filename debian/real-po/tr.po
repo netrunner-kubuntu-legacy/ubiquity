@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2014-04-03 14:06+0000\n"
-"Last-Translator: Yiğit Ateş <Unknown>\n"
+"PO-Revision-Date: 2014-04-19 23:09+0000\n"
+"Last-Translator: Volkan Gezer <Unknown>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -1533,7 +1533,7 @@ msgid ""
 "proprietary. The software is subject to license terms included with its "
 "documentation."
 msgstr ""
-"${RELEASE}; Flash, MP3 ve diğer ortamları oynatmak için, bazı grafikler ve "
+"${RELEASE}; Flash, MP3 ve diğer ortamları oynatmak, bazı grafikler ve "
 "kablosuz (wi-fi) donanımlarla çalışmak için üçüncü parti yazılımlar "
 "kullanıyor. Bu yazılımların bazıları sahiplidir ve yazılımlar "
 "belgelendirmelerinde belirtilen lisans şartlarına tabidir."
@@ -1847,7 +1847,7 @@ msgstr "Sonra:"
 #. Description
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
-msgstr ""
+msgstr "${RELEASE} kurulumunu güvenlik için şifrele"
 
 #. Type: text
 #. Description
@@ -1859,7 +1859,7 @@ msgstr "Bir sonraki adımda bir güvenlik anahtarı seçeceksiniz."
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "Yeni ${DAĞITIM} kurulumunda LVM kullan"
 
 #. Type: text
 #. Description
@@ -1898,7 +1898,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "${RELEASE} dışarısındaki hiçbir dosya şifrelenmeyecek."
 
 #. Type: text
 #. Description
@@ -1973,6 +1973,8 @@ msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
 msgstr ""
+"Yerel Disk Birimi Yönetimi (LVM), ${RELEASE} sisteminin tüm fiziksel "
+"birimlere tek birim gibi davranmasını sağlar."
 
 #. Type: text
 #. Description

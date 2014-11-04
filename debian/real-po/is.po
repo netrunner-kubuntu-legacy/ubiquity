@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2013-10-23 07:48+0000\n"
+"PO-Revision-Date: 2014-04-18 08:51+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <debian-user-icelandic@lists.debian.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:12+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -27,13 +27,13 @@ msgstr "Tengist..."
 #. Description
 #: ../ubiquity.templates:4001
 msgid "Connection failed."
-msgstr ""
+msgstr "Tenging mistókst."
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:5001
 msgid "Connected."
-msgstr ""
+msgstr "Tengt."
 
 #. Type: text
 #. Description
@@ -199,13 +199,13 @@ msgstr "Nafn þitt"
 #. Description
 #: ../ubiquity.templates:27001
 msgid "At least 8 characters password"
-msgstr ""
+msgstr "Að minnsta kosti 8-stafa lykilorð"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:28001
 msgid "Retype password"
-msgstr ""
+msgstr "Endurtaktu lykilorðið"
 
 #. Type: text
 #. Description
@@ -1841,7 +1841,7 @@ msgstr "Eftir:"
 #. Description
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
-msgstr ""
+msgstr "Dulkóða nýju ${RELEASE} uppsetninguna fyrir aukið öryggi"
 
 #. Type: text
 #. Description
@@ -1853,7 +1853,7 @@ msgstr "Þú munt velja öryggis lykil í næsta skrefi"
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "Nota LVM með nýju ${RELEASE} uppsetningunni"
 
 #. Type: text
 #. Description
@@ -1891,7 +1891,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "Allar skrár utan ${RELEASE} verða ekki dulritaðar."
 
 #. Type: text
 #. Description
@@ -1966,6 +1966,8 @@ msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
 msgstr ""
+"Rökræn gagnarýmisstjórnun (Logical Volume Management - LVM) lætur ${RELEASE} "
+"meðhöndla margar gagnageymslur sem eina."
 
 #. Type: text
 #. Description

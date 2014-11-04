@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2013-10-28 12:58+0000\n"
+"PO-Revision-Date: 2014-05-29 10:48+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Debian L10n Albanian <debian-l10n-albanian@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -64,9 +64,9 @@ msgid ""
 "for this batch of systems. This name will be saved on the installed system "
 "and can be used to help with bug reports."
 msgstr ""
-"Ju jeni duke instaluar në modin e sistemit të prodhuesit. Ju lutem shkruani "
-"një emër të veçantë për këtë batch të sistemit. Ky emër do të ruhet në "
-"sistem të instaluar dhe mund të përdoret për ndihmë rreth raportimit të "
+"Ju jeni duke instaluar në mënyrën e sistemit të prodhuesit. Ju lutem "
+"shkruani një emër të veçantë për këtë batch të sistemit. Ky emër do të ruhet "
+"në sistem të instaluar dhe mund të përdoret për ndihmë rreth raportimit të "
 "gabimeve."
 
 #. Type: text
@@ -147,7 +147,7 @@ msgstr "Planimetria e tastierës"
 #. Description
 #: ../ubiquity.templates:18001
 msgid "Choose your keyboard layout:"
-msgstr "Zgjidhni daljen e tastirës suaj:"
+msgstr "Zgjidhni planimetrinë e tastirës suaj:"
 
 #. Type: text
 #. Description
@@ -1861,7 +1861,7 @@ msgstr "Më Pas"
 #. Description
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
-msgstr ""
+msgstr "Enkript i ri  ${RELEASE} instalimit për sigurinë"
 
 #. Type: text
 #. Description
@@ -1873,7 +1873,7 @@ msgstr "Ju do të zgjidhni një çelës sigurie në hapin tjetër"
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "Përdorni LVM me te ri ${RELEASE} instalim"
 
 #. Type: text
 #. Description
@@ -1911,7 +1911,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "Çdo skedar jashtëm ${RELEASE} nuk do të jetë i enkriptuar."
 
 #. Type: text
 #. Description
@@ -1986,6 +1986,8 @@ msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
 msgstr ""
+"Menaxhimi logjike Vëllimi (LVM) lejon të $ {MEDIA} trajtuar vëllime të "
+"shumta fizike si një vëllim të vetëm."
 
 #. Type: text
 #. Description

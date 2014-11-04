@@ -111,7 +111,7 @@ class PageGtk(PageBase):
         self.install_ubuntu = builder.get_object('install_ubuntu')
         self.try_ubuntu = builder.get_object('try_ubuntu')
         if not self.only:
-            if not 'UBIQUITY_GREETER' in os.environ:
+            if 'UBIQUITY_GREETER' not in os.environ:
                 choice_section_vbox = builder.get_object('choice_section_vbox')
                 choice_section_vbox and choice_section_vbox.hide()
             else:
@@ -444,7 +444,7 @@ class PageKde(PageBase):
             else:
                 self.page.release_notes_label.hide()
 
-            if not 'UBIQUITY_GREETER' in os.environ:
+            if 'UBIQUITY_GREETER' not in os.environ:
                 self.page.try_ubuntu.hide()
                 self.page.try_install_text_label.hide()
                 self.page.install_ubuntu.hide()

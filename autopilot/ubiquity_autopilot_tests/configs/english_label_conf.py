@@ -33,7 +33,7 @@ def generate_config():
     distro_flavor = get_distribution()
     config = configparser.ConfigParser()
 
-    #CREATE STEP LANGUAGE CONFIG
+    # CREATE STEP LANGUAGE CONFIG
     config['stepLanguage'] = {}
     stepLanguage = config['stepLanguage']
     stepLanguage['release_notes_label'] = \
@@ -64,7 +64,7 @@ def generate_config():
     stepPrepare['prepare_sufficient_space'] = \
         'has at least 6.0 GB available drive space'
 
-    #CREATE STEP PART ASK CONFIG
+    # CREATE STEP PART ASK CONFIG
     config['stepPartAsk'] = {}
     stepPartAsk = config['stepPartAsk']
     stepPartAsk['page_title'] = \
@@ -91,7 +91,7 @@ def generate_config():
         '<span size="small">You can create or resize partitions yourself, ' \
         'or choose multiple partitions for {0}.</span>'.format(distro_flavor)
 
-    #CREATE STEP PART CRYPTO CONFIG
+    # CREATE STEP PART CRYPTO CONFIG
     config['stepPartCrypto'] = {}
     stepPartCrypto = config['stepPartCrypto']
     stepPartCrypto["page_title"] = \
@@ -113,18 +113,18 @@ def generate_config():
         'Any files outside of {0} will not be encrypted.'.format(distro_flavor)
     stepPartCrypto["crypto_overwrite_space"] = 'Overwrite empty disk space'
 
-    #CREATE STEP LOCATION CONFIG
+    # CREATE STEP LOCATION CONFIG
     config['stepLocation'] = {}
     stepLocation = config['stepLocation']
     stepLocation["page_title"] = '<span size="xx-large">Where are you?</span>'
 
-    #CREATE STEP KEYBOARD CONFIG
+    # CREATE STEP KEYBOARD CONFIG
     config['stepKeyboardConf'] = {}
     stepKeyboardConf = config['stepKeyboardConf']
     stepKeyboardConf["page_title"] = \
         '<span size="xx-large">Keyboard layout</span>'
 
-    #CREATE STEP USER INFO CONFIG
+    # CREATE STEP USER INFO CONFIG
     config['stepUserInfo'] = {}
     stepUserInfo = config['stepUserInfo']
     stepUserInfo["page_title"] = '<span size="xx-large">Who are you?</span>'
@@ -136,6 +136,6 @@ def generate_config():
         'The name it uses when it talks to other computers.'
     stepUserInfo["login_encrypt"] = 'Require my password to log in'
 
-    #write config to tmp file
+    # write config to tmp file
     with open('/tmp/english_config.ini', 'w') as configfile:
         config.write(configfile)

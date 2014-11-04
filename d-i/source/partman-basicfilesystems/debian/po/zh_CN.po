@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
 "POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2013-10-31 23:00+0800\n"
+"PO-Revision-Date: 2014-03-05 14:59+0800\n"
 "Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -625,10 +625,8 @@ msgstr "noatime - 在每次对数据进行存取时不更新 inode 的存取时�
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
-#, fuzzy
-#| msgid "noatime - do not update inode access times at each access"
 msgid "nodiratime - do not update directory inode access times"
-msgstr "noatime - 在每次对数据进行存取时不更新 inode 的存取时间"
+msgstr "nodiratime - 不要更新目录 inode 访问时间"
 
 #. Type: text
 #. Description
@@ -736,7 +734,7 @@ msgstr "notail - 禁止将文件归置到文件系统树"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:55001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "discard - 在底层块设备上擦除释放的块"
 
 #. Type: text
 #. Description

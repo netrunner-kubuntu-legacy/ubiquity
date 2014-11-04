@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -27,13 +27,13 @@ msgstr "Pripája sa..."
 #. Description
 #: ../ubiquity.templates:4001
 msgid "Connection failed."
-msgstr ""
+msgstr "Spojenie zlyhalo."
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:5001
 msgid "Connected."
-msgstr ""
+msgstr "Spojenie nadviazané."
 
 #. Type: text
 #. Description
@@ -197,13 +197,13 @@ msgstr "Vaše meno"
 #. Description
 #: ../ubiquity.templates:27001
 msgid "At least 8 characters password"
-msgstr ""
+msgstr "Heslo obsahujúce minimálne 8 znakov"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:28001
 msgid "Retype password"
-msgstr ""
+msgstr "Znovu zadajte heslo"
 
 #. Type: text
 #. Description

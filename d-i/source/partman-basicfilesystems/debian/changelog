@@ -1,3 +1,153 @@
+partman-basicfilesystems (97ubuntu1) utopic; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - If partman/automount is preseeded to true, automatically mount
+      partitions with usefully-mountable filesystems on subdirectories of
+      /media.
+    - Add minimal support for NTFS partitions using ntfs-3g.
+    - Mount FAT filesystems at boot (fstab pass 1).
+    - Mount FAT (other than EFI System Partitions) and NTFS with
+      umask=007,gid=46 (static group plugdev).
+    - When formatting over the top of an existing swap partition, preserve
+      its UUID to avoid leaving systems that use UUIDs in /etc/fstab without
+      swap.
+    - mount.d/basic: Close mount's fd 3 so that it doesn't inherit a debconf
+      file descriptor, to prevent log-output hanging when ntfs-3g is in use.
+    - Special case loopmounted filesystems as it's safer to format the
+      underlying file, not the device.
+    - Allow armel/omap to use FAT for /boot, since the problems with it can
+      be worked around while it's difficult to use anything else given uboot
+      limitations.
+    - Disable existing swap partitions before formatting them.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 07 Jul 2014 11:06:56 +0100
+
+partman-basicfilesystems (97) unstable; urgency=medium
+
+  * dosfstools has a good deal of Linux-specific code and isn't currently
+    buildable on non-Linux architectures, so we can't create or check FAT
+    filesystems on non-Linux without libparted, although we can mount
+    existing FAT filesystems.  Make the dosfstools-udeb dependency
+    Linux-only, and disable relevant features at run-time when it is
+    unavailable (closes: #753964).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 06 Jul 2014 21:51:13 +0100
+
+partman-basicfilesystems (96) unstable; urgency=low
+
+  [ Phillip Susi ]
+  * Remove reliance on libparted's filesystem handling (closes: #738922):
+    - Use only mkswap instead of parted to format swap, since this is no
+      longer supported in parted3.
+    - Remove parted-based swap checking, as there is no such thing as
+      fscking swap.
+    - Use dosfstools to format and check fat filesystems rather than
+      libparted.
+    - Use mke2fs instead of libparted.
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 06 Jul 2014 01:32:41 +0100
+
+partman-basicfilesystems (95ubuntu1) utopic; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - If partman/automount is preseeded to true, automatically mount
+      partitions with usefully-mountable filesystems on subdirectories of
+      /media.
+    - Add minimal support for NTFS partitions using ntfs-3g.
+    - Mount FAT filesystems at boot (fstab pass 1).
+    - Mount FAT (other than EFI System Partitions) and NTFS with
+      umask=007,gid=46 (static group plugdev).
+    - When formatting over the top of an existing swap partition, preserve
+      its UUID to avoid leaving systems that use UUIDs in /etc/fstab without
+      swap.
+    - mount.d/basic: Close mount's fd 3 so that it doesn't inherit a debconf
+      file descriptor, to prevent log-output hanging when ntfs-3g is in use.
+    - Special case loopmounted filesystems as it's safer to format the
+      underlying file, not the device.
+    - Allow armel/omap to use FAT for /boot, since the problems with it can
+      be worked around while it's difficult to use anything else given uboot
+      limitations.
+    - Stop using libparted to format swap partitions.
+    - Disable existing swap partitions before formatting them.
+    - Use mkfs.fat to create FAT filesystems, since libparted cannot handle
+      doing that on non-512-sector disks.
+    - Always use mkfs.ext2 to create ext2 filesystems, since libparted's
+      ext2 code is deprecated and can't handle large sector sizes.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 05 Jun 2014 11:08:57 +0100
+
+partman-basicfilesystems (95) unstable; urgency=low
+
+  [ Updated translations ]
+  * Bosnian (bs.po) by Amila Valjevčić
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 17 May 2014 09:47:13 +0200
+
+partman-basicfilesystems (94) unstable; urgency=low
+
+  [ Updated translations ]
+  * Greek (el.po) by galaxico
+  * Ukrainian (uk.po) by Anton Gladky
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 13 May 2014 07:12:21 +0200
+
+partman-basicfilesystems (93) unstable; urgency=low
+
+  [ Updated translations ]
+  * Portuguese (pt.po) by Miguel Figueiredo
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 08 May 2014 17:55:50 +0200
+
+partman-basicfilesystems (92) unstable; urgency=low
+
+  [ Updated translations ]
+  * German (de.po) by Holger Wansing
+  * Korean (ko.po) by Changwoo Ryu
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 19 Mar 2014 14:07:30 +0100
+
+partman-basicfilesystems (91) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Italian (it.po) by Milo Casagrande
+  * Uyghur (ug.po) by Abduqadir Abliz
+  * Simplified Chinese (zh_CN.po) by YunQiang Su
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 14 Mar 2014 18:01:40 +0100
+
+partman-basicfilesystems (90) unstable; urgency=low
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Viktar Siarheichyk
+  * Tajik (tg.po) by Victor Ibragimov
+  * Turkish (tr.po) by Mert Dirik
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 14 Jan 2014 07:05:06 +0100
+
+partman-basicfilesystems (89) unstable; urgency=low
+
+  [ Updated translations ]
+  * Russian (ru.po) by Yuri Kozlov
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 01 Jan 2014 09:31:53 +0100
+
+partman-basicfilesystems (88) unstable; urgency=low
+
+  [ Updated translations ]
+  * Bokmål, Norwegian (nb.po) by Hans Fredrik Nordhaug
+  * Thai (th.po) by Theppitak Karoonboonyanan
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 21 Dec 2013 12:44:28 +0100
+
+partman-basicfilesystems (87) unstable; urgency=low
+
+  [ Updated translations ]
+  * Croatian (hr.po) by Tomislav Krznar
+  * Polish (pl.po) by Michał Kułach
+  * Slovak (sk.po) by Ivan Masár
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 13 Dec 2013 19:44:18 +0100
+
 partman-basicfilesystems (86ubuntu2) trusty; urgency=low
 
   * Use mkfs.fat rather than mkdosfs if it exists (LP: #1257702).

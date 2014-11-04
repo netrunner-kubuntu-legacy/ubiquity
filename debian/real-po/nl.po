@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2014-03-27 09:05+0000\n"
-"Last-Translator: Pjotr12345 <Unknown>\n"
+"PO-Revision-Date: 2014-04-14 06:38+0000\n"
+"Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <debian-l10n-dutch@lists.debian.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -1872,7 +1872,7 @@ msgstr "Na:"
 #. Description
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
-msgstr ""
+msgstr "De nieuwe installatie van ${RELEASE} versleutelen voor de veiligheid"
 
 #. Type: text
 #. Description
@@ -1884,7 +1884,7 @@ msgstr "In de volgende stap zult u een beveiligingssleutel kiezen."
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "LVM gebruiken bij de nieuwe installatie van ${RELEASE}"
 
 #. Type: text
 #. Description
@@ -1924,7 +1924,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "Bestanden die buiten ${RELEASE} vallen zullen niet worden versleuteld."
 
 #. Type: text
 #. Description
@@ -1999,6 +1999,8 @@ msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
 msgstr ""
+"Logical Volume Management (LVM) zorgt ervoor dat ${RELEASE} meerdere fysieke "
+"volumen behandelt als één enkel volume."
 
 #. Type: text
 #. Description

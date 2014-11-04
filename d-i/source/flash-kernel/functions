@@ -187,6 +187,19 @@ gen_kernel() {
 	} >"$output"
 }
 
+gen_ubootenv() {
+	ENVSTUBDIRS="/etc/flash-kernel/ubootenv.d /usr/share/flash-kernel/ubootenv.d"
+	ENVSTUBS="$(find $ENVSTUBDIRS -type f -regex '.*/[0-9a-zA-Z_-]+' -printf '%f\n' | LC_ALL=C sort -u)"
+	for file in $ENVSTUBS; do
+		for dir in $ENVSTUBDIRS; do
+			if [ -f $dir/$file ]; then
+				cat $dir/$file
+				break
+			fi
+		done
+	done
+}
+
 append_dtb() {
 	local kernel="$1"
 	local dtb="$2"
@@ -252,10 +265,19 @@ mkimage_script() {
 	local sdesc="$2"
 	local sdata="$3"
 	local script="$4"
+	local tdata="$tmpdir/$(basename $sdata)"
+
+	local ubootenv="$(mktemp --tmpdir=$tmpdir)"
+	gen_ubootenv > $ubootenv
 
 	printf "Generating boot script u-boot image... " >&2
+	sed -e "/@@UBOOT_ENV_EXTRA@@/{
+		s/@@UBOOT_ENV_EXTRA@@//g
+		r $ubootenv
+		}" < $sdata > $tdata
+
 	mkimage -A arm -O linux -T script -C none -a "$saddr" -e "$saddr" \
-		-n "$sdesc" -d "$sdata" "$script" >&2 1>/dev/null
+		-n "$sdesc" -d "$tdata" "$script" >&2 1>/dev/null
 	echo "done." >&2
 }
 
@@ -323,6 +345,29 @@ android_flash() {
 	fi
 }
 
+include_only_flavors() {
+	# include_only_flavors(flav1, flav2, flav3)
+	# filter lines of input in uname -r format (X.Y.Z-N-flavor)
+	# and filter-out anything that is not in the listed input
+	# if exactly zero flavors are given, then assume everything is a match
+	local cur_uname cur_flav allowed_flav
+	while read cur_uname; do
+		if [ $# -eq 0 ]; then
+			echo "$cur_uname"
+		else
+			# could use cur_flav=$(get_kfile_suffix "$cur_uname")
+			# but this is much faster.
+			cur_flav=${cur_uname#*-*-}
+			for allowed_flav in "$@"; do
+				if [ "${cur_flav}" = "${allowed_flav}" ]; then
+					echo "$cur_uname"
+					break
+				fi
+			done
+		fi
+	done
+}
+
 main() {
 if [ "x$1" = "x--machine" ]; then
 	machine="$2"
@@ -341,7 +386,10 @@ fi
 # kernel + initrd installation/upgrade mode, with optional version
 
 kvers="$1"
-latest_version=$(linux-version list | linux-version sort | tail -1)
+
+# if get_machine_field returns non-zero, then all flavors are allowed
+kflavors="$(get_machine_field "$machine" "Kernel-Flavors")" || :
+latest_version=$(linux-version list | include_only_flavors $kflavors | linux-version sort | tail -1)
 if [ -n "$kvers" ] && [ "$kvers" != "$latest_version" ]; then
 	echo "Ignoring old or unknown version $kvers (latest is $latest_version)" >&2
 	exit 0
@@ -384,7 +432,7 @@ if ! check_supported "$machine"; then
 	error "Unsupported platform."
 fi
 
-if kflavors="$(get_machine_field "$machine" "Kernel-Flavors")"; then
+if [ -n "$kflavors" ]; then
 	if ! check_kflavors "$kfile_suffix" $kflavors; then
 		echo "Kernel suffix $kfile_suffix does not match any of the expected flavors ($kflavors), therefore not writing it to flash." >&2
 		exit 0

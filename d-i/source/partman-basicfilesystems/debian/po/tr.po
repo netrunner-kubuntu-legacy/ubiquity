@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
 "POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2013-10-13 18:05-0000\n"
+"PO-Revision-Date: 2014-01-01 15:14-0000\n"
 "Last-Translator: Mert Dirik <mertdirik@gmail.com>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "Language: tr\n"
@@ -638,7 +638,7 @@ msgstr "Bağlama seçenekleri dosya sisteminin davranışını ayarlayabilir."
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:42001
 msgid "noatime - do not update inode access times at each access"
-msgstr "noatime - her erişimde inode erişim zamanlarını güncelleme"
+msgstr "noatime - inode erişim zamanlarını her erişimde güncelleme"
 
 #. Type: text
 #. Description
@@ -646,10 +646,8 @@ msgstr "noatime - her erişimde inode erişim zamanlarını güncelleme"
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
-#, fuzzy
-#| msgid "noatime - do not update inode access times at each access"
 msgid "nodiratime - do not update directory inode access times"
-msgstr "noatime - her erişimde inode erişim zamanlarını güncelleme"
+msgstr "nodiratime - dizin inode erişim zamanlarını güncelleme"
 
 #. Type: text
 #. Description
@@ -757,7 +755,7 @@ msgstr "notail - dosya sistemi ağacında dosya paketlemesi yapma"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:55001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "discard - boşaltılan blokları alttaki blok aygıtından kırp"
 
 #. Type: text
 #. Description

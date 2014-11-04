@@ -1,3 +1,9 @@
+partconf (1.45build1) utopic; urgency=medium
+
+  * Rebuild against libparted2.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 21 Jul 2014 21:44:03 +0100
+
 partconf (1.45) unstable; urgency=medium
 
   [ Updated translations ]

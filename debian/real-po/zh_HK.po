@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2014-01-26 02:18+0000\n"
-"Last-Translator: Daniel Cheung <daniel.2345@hotmail.com>\n"
+"PO-Revision-Date: 2014-08-15 01:58+0000\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <zh_HK@li.org>\n"
 "Language: zh_HK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -407,7 +407,7 @@ msgstr "預備分割區"
 #. Omit the [ ... ] from the translation.
 #: ../ubiquity.templates:60001
 msgid "_Install Now[ action ]"
-msgstr "立刻安裝(_I)"
+msgstr "立即安裝(_I)"
 
 #. Type: title
 #. Description
@@ -419,7 +419,7 @@ msgstr "結束安裝程式？"
 #. Description
 #: ../ubiquity.templates:62001
 msgid "Do you really want to quit the installation now?"
-msgstr "真的想現在結束安裝嗎？"
+msgstr "真的想立即結束安裝嗎？"
 
 #. Type: text
 #. Description
@@ -489,13 +489,13 @@ msgstr "繼續試用"
 #. Description
 #: ../ubiquity.templates:74001
 msgid "Restart Now"
-msgstr "現在就重新啟動電腦"
+msgstr "立即重新啟動電腦"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:75001
 msgid "Shutdown Now"
-msgstr "立刻關機"
+msgstr "立即關機"
 
 #. Type: text
 #. Description
@@ -1350,7 +1350,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:202001
 msgid "The installer encountered an unrecoverable error and will now reboot."
-msgstr "安裝程式遭遇到無法補救的錯誤，現在將重新開機。"
+msgstr "安裝程式遭遇到無法補救的錯誤，現在會重新開機。"
 
 #. Type: text
 #. Description
@@ -1790,7 +1790,7 @@ msgstr "之後："
 #. Description
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
-msgstr ""
+msgstr "加密 ${RELEASE} 新安裝以保障安全性"
 
 #. Type: text
 #. Description
@@ -1802,7 +1802,7 @@ msgstr "下個步驟中您需要選擇一道安全金鑰"
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "${RELEASE} 新安裝一併使用 LVM"
 
 #. Type: text
 #. Description
@@ -1838,7 +1838,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "${RELEASE} 以外的任何文件將不會被加密。"
 
 #. Type: text
 #. Description
@@ -1913,6 +1913,7 @@ msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
 msgstr ""
+"邏輯磁碟區管理 (LVM) 允許 ${RELEASE} 將多個實體磁碟區視為一個單一磁碟區。"
 
 #. Type: text
 #. Description

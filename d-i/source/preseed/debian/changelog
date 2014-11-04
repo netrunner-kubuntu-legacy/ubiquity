@@ -1,3 +1,29 @@
+preseed (1.64ubuntu1) utopic; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Change the "keymap" alias to keyboard-configuration/layoutcode.
+    - Change default preseed root to "d-i/utopic/./preseed.cfg".
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 07 Jul 2014 11:14:33 +0100
+
+preseed (1.64) unstable; urgency=low
+
+  [ Samuel Thibault ]
+  * Re-enable keyboard question on file preseed, thanks Brian Potkin for the
+    investigation. Closes: #696857.
+
+  [ Updated translations ]
+  * Simplified Chinese (zh_CN.po) by YunQiang Su
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 22 Mar 2014 12:51:31 +0100
+
+preseed (1.63) unstable; urgency=low
+
+  [ Updated translations ]
+  * Bosnian (bs.po) by Amila Valjevčić
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 19 Dec 2013 21:05:28 +0100
+
 preseed (1.62ubuntu1) trusty; urgency=low
 
   * Resynchronise with Debian.  Remaining changes:

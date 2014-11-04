@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: ubiquity\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2014-01-24 09:34+0000\n"
-"Last-Translator: Sahran <Unknown>\n"
+"PO-Revision-Date: 2014-09-22 05:27+0000\n"
+"Last-Translator: Gheyret T.Kenji <Unknown>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:20+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -1850,6 +1850,8 @@ msgstr "داۋامى:"
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
 msgstr ""
+"يېڭى {RELEASE}$گە مەخپىي نۇمۇر قېتىش ئارقىلىق بىخەتەرلىك دەرىجىسىنى يۇقۇرى "
+"كۆتۈرسۇن"
 
 #. Type: text
 #. Description
@@ -1861,7 +1863,7 @@ msgstr "كېيىنكى باسقۇچتا بىخەتەرلىك ئاچقۇچىنى 
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "يېڭى ${RELEASE} نى ئورنىتىشتا LVM نى ئىشلەتسۇن"
 
 #. Type: text
 #. Description
@@ -1900,7 +1902,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "${RELEASE} نىڭ سىرتىدىكى ھۆججەتلەر شىفىرلانمايدۇ."
 
 #. Type: text
 #. Description
@@ -1975,6 +1977,8 @@ msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
 msgstr ""
+"لوگىكىلىق دىسكا  باشقۇرغۇچ(LVM) بۇ ${RELEASE} دا فىزىكىلىق دىسكىلارنى "
+"بىرلەشتۈرۈپ بىر يەككە دىسكا قىلىپ بىر تەرەپ قىلسۇن."
 
 #. Type: text
 #. Description

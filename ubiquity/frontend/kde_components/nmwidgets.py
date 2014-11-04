@@ -61,7 +61,7 @@ def is_passphrase_valid(passphrase):
         return False
 
     for c in passphrase:
-        if not c in string.hexdigits:
+        if c not in string.hexdigits:
             return False
     return True
 

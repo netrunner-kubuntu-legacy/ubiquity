@@ -1,3 +1,39 @@
+flash-kernel (3.0~rc.4ubuntu53) utopic; urgency=medium
+
+  * Merge in remaining trusty SRU changes:
+    * Add U-Boot environment configuration support (LP: #1328597)
+    * HP Moonshot Cartridges: Use $baudrate from u-boot environment as
+      serial console speed (LP: #1373628)
+    * HP Moonshot Cartridges: Enable hardware flow control as required by
+      the HP moonshot chassis (LP: #1328280)
+    * Enable U-Boot environment support for X-Gene platforms
+    * Use filesystem agnostic "load" command instead of assuming ext4
+    * Add support for HP ProLiant m800 cartridges (LP: #1326437)
+    * Set required boot arguments for HP ProLiant m800 cartridges
+      (LP: #1373659)
+
+ -- dann frazier <dannf@ubuntu.com>  Mon, 29 Sep 2014 16:20:15 -0600
+
+flash-kernel (3.0~rc.4ubuntu52) utopic; urgency=medium
+
+  * Do not fail if there are no specified Kernel-Flavors for this machine.
+
+ -- Scott Moser <smoser@ubuntu.com>  Wed, 27 Aug 2014 15:59:26 -0400
+
+flash-kernel (3.0~rc.4ubuntu51) utopic; urgency=medium
+
+  * Filter the selection of 'latest' usable kernel through the
+    whitelist.  (LP: #1356569)
+
+ -- Manoj Iyer <manoj.iyer@canonical.com>  Tue, 19 Aug 2014 14:27:33 -0500
+
+flash-kernel (3.0~rc.4ubuntu50) utopic; urgency=medium
+
+  * Added support for user defined uboot environment variables
+  * Added support for HP ProLiant m800 Server Cartridge
+
+ -- Manoj Iyer <manoj.iyer@canonical.com>  Thu, 24 Apr 2014 17:34:28 -0500
+
 flash-kernel (3.0~rc.4ubuntu49) trusty; urgency=medium
 
   * db/all.db: add dummy entries as noops when running on VMs (LP: #1298070)

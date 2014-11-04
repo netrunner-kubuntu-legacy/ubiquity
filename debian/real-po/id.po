@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2014-04-09 22:32+0100\n"
-"PO-Revision-Date: 2013-04-01 16:09+0000\n"
+"PO-Revision-Date: 2014-04-11 00:33+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Bahasa Indonesia <debian-l10n-id@gurame.fisika.ui.ac.id>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-10 12:21+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-10-16 00:12+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. Type: text
 #. Description
@@ -1854,7 +1854,7 @@ msgstr "Setelah:"
 #. Description
 #: ../ubiquity.templates:261001
 msgid "Encrypt the new ${RELEASE} installation for security"
-msgstr ""
+msgstr "Sandikan instalasi ${RELEASE} baru untuk keamanan"
 
 #. Type: text
 #. Description
@@ -1866,7 +1866,7 @@ msgstr "Anda akan memilih sandi pada langkah selanjutnya."
 #. Description
 #: ../ubiquity.templates:263001
 msgid "Use LVM with the new ${RELEASE} installation"
-msgstr ""
+msgstr "Gunakan LVM pada instalasi ${RELEASE} baru"
 
 #. Type: text
 #. Description
@@ -1904,7 +1904,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:268001
 msgid "Any files outside of ${RELEASE} will not be encrypted."
-msgstr ""
+msgstr "Sebarang berkas di luar ${RELEASE} tak akan disandikan."
 
 #. Type: text
 #. Description
@@ -1979,6 +1979,8 @@ msgid ""
 "Logical Volume Management (LVM) lets ${RELEASE} treat multiple physical "
 "volumes as a single volume."
 msgstr ""
+"Logical Volume Management (LVM) memungkinkan ${RELEASE} memperlakukan "
+"beberapa volume fisik sebagai sebuah volume tunggal."
 
 #. Type: text
 #. Description

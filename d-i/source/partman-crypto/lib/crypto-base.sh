@@ -287,12 +287,13 @@ crypto_do_wipe () {
 	fifo=/var/run/wipe_progress
 
 	mknod $fifo p
-	/bin/blockdev-wipe -s 65536 $dev > $fifo &
+	/bin/blockdev-wipe -s $((512*1024)) $dev > $fifo &
 	pid=$!
 
 	cancelled=0
 	db_capb backup align progresscancel
-	db_progress START 0 65536 $template
+	db_progress START 0 1000 ${template}_title
+	db_progress INFO ${template}_text
 	while read x <&9; do
 		db_progress STEP 1
 		if [ $? -eq 30 ]; then
@@ -313,18 +314,24 @@ crypto_do_wipe () {
 }
 
 crypto_wipe_device () {
-	local device method interactive targetdevice
+	local device part interactive type cipher ivalgorithm keysize targetdevice
 	device=$1
-	method=$2
+	part=$2
 	interactive=$3
 	if [ "$interactive" != no ]; then
 		interactive=yes
 	fi
 	ret=1
 
+	if [ -r $part/crypto_type ] && [ "$(cat $part/crypto_type)" = dm-crypt ]; then
+		type=crypto
+	else
+		type=plain
+	fi
+
 	if [ $interactive = yes ]; then
 		# Confirm before erasing
-		template="partman-crypto/warn_erase"
+		template="partman-crypto/${type}_warn_erase"
 		db_set $template false
 		db_subst $template DEVICE $(humandev $device)
 		db_input critical $template || true
@@ -336,20 +343,26 @@ crypto_wipe_device () {
 	fi
 
 	# Setup crypto
-	if [ $method = dm-crypt ]; then
+	if [ "$type" = crypto ]; then
+		cipher=$(cat $part/cipher)
+		ivalgorithm=$(cat $part/ivalgorithm)
+		keysize=$(cat $part/keysize)
 		targetdevice=$(get_free_mapping)
-		setup_dmcrypt $targetdevice $device aes xts-plain64 plain 128 /dev/urandom || return 1
+		setup_dmcrypt $targetdevice $device $cipher $ivalgorithm plain $keysize /dev/urandom || return 1
 		targetdevice="/dev/mapper/$targetdevice"
+		log "wiping $targetdevice with $cipher $ivalgorithm $keysize"
 	else
 		# Just wipe the device with zeroes
 		targetdevice=$device
+		log "wiping $targetdevice with plain zeroes"
 	fi
 
 	# Erase
-	template="partman-crypto/progress/erase"
-	db_subst $template DEVICE $(humandev $device)
+	template="partman-crypto/progress/${type}_erase"
+	db_subst ${template}_title DEVICE $(humandev $device)
+	db_subst ${template}_text DEVICE $(humandev $device)
 	if ! crypto_do_wipe $template $targetdevice; then
-		template="partman-crypto/erase_failed"
+		template="partman-crypto/${type}_erase_failed"
 		db_subst $template DEVICE $(humandev $device)
 		db_input critical $template || true
 		db_go
@@ -358,7 +371,7 @@ crypto_wipe_device () {
 	fi
 
 	# Teardown crypto
-	if [ $method = dm-crypt ]; then
+	if [ "$type" = crypto ]; then
 		log-output -t partman-crypto /sbin/cryptsetup remove ${targetdevice##/dev/mapper/}
 	fi
 
@@ -753,7 +766,7 @@ crypto_setup() {
 				continue
 			fi
 
-			if ! crypto_wipe_device $path $(cat $id/crypto_type) $interactive; then
+			if ! crypto_wipe_device $path $dev/$id $interactive; then
 				db_fset partman-crypto/commit_failed seen false
 				db_input critical partman-crypto/commit_failed
 				db_go || true

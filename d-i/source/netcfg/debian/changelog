@@ -1,3 +1,63 @@
+netcfg (1.119ubuntu1) utopic; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Set default hostname to 'ubuntu'.
+    - Set priority for get_domain to high for static configurations.
+    - Set priority for get_domain to medium for non-static configurations.
+    - Use 'auto <interface>' for all interfaces, dropping allow-hotplug
+      which doesn't work with current udev.
+    - Set DHCP and DHCPv6 timeout to 30s.
+    - Use isc-dhcp-client-udeb on all architectures.
+    - Flush all addresses and routes before configuring interfaces
+      (LP: #848072)
+    - Don't copy /etc/resolv.conf to target if resolvconf is installed.  (We
+      already write resolvconf configuration to /etc/network/interfaces.)
+    - Add a post-base-install hook to detect resolvconf and copy
+      /run/resolvconf/resolv.conf to outside the target so that when /run is
+      bind-mounted DNS resolving continues to work. (LP: #926447)
+    - Apply patch from Alec Warner making netcfg respect
+      netcfg/dhcpv6_timeout and running dhclient in one-shot mode (-1).
+      (LP: #917905)
+    - Fix FTBFS by checking the return value of fgets and fscanf.
+    - Fix nm-conf to generate a valid NetworkManager static configuration
+      file.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 28 Aug 2014 12:42:06 -0700
+
+netcfg (1.119) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Don't copy /etc/network/interfaces to /target if
+    netcfg/target_network_config=ifupdown; it's already been copied by the
+    base-installer hook earlier, and copying it again makes it hard to
+    modify /target/etc/network/interfaces in a preseed file (closes:
+    #709017, LP: #1361902).
+  * Fix BOOTIF detection to handle the newline at the end of a line read
+    from /proc/cmdline (LP: #1350302).
+
+  [ Updated translations ]
+  * Estonian (et.po) by Mattias Põldaru
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 28 Aug 2014 20:26:09 +0100
+
+netcfg (1.118) unstable; urgency=high
+
+  * Fix support for entering an ESSID manually, it was previously
+    getting ignored (Closes: #757478). Thanks to James Cowgill for the
+    report and the patch!
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 09 Aug 2014 21:47:27 +0200
+
+netcfg (1.117) unstable; urgency=low
+
+  * Add lintian overrides for untranslatable debconf templates. I like
+    when packages are lintian-clean...
+
+  [ Updated translations ]
+  * Bosnian (bs.po) by Amila Valjevčić
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 11 May 2014 12:40:57 +0200
+
 netcfg (1.116ubuntu1) trusty; urgency=medium
 
   * Resynchronise with Debian.  Remaining changes:

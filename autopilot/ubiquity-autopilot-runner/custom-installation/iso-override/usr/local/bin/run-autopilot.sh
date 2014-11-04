@@ -4,7 +4,7 @@
 # This script runs autopilot
 #
 
-# Copyright © 2013 Canonical Ltd.
+# Copyright © 2013-2014 Canonical Ltd.
 # Author: Jean-baptiste Lallement <jean-baptiste.lallement@canonical.com>
 #
 # This program is free software; you can redistribute it and/or modify it under
@@ -163,13 +163,15 @@ setup_tests() {
 
     [ -e "$flag" ] && return 0
 
-
     if [ $DEBUG -ne 0 ]; then
         # Put here everything you want to run in debug mode
         xterm &  # Easier to debug from a live session, and rarely broken
     fi
 
     sudo stty -F /dev/ttyS0 raw speed 115200
+
+    # Adjust the name of the release in any apt .list file
+    sudo find /etc/apt -name "*.list" -exec sed -i "s/RELEASE/$(lsb_release -sc)/" {} \;
     
     tail_logs $SESSION_LOG /var/log/syslog
     # Disable notifications and screensaver
@@ -251,15 +253,15 @@ run_tests() {
     #
     # $1: Spool directory
     spooldir=$1
+    apbin=autopilot3
     if [ ! -d $spooldir ]; then
         echo "E: '$spooldir is not a directory. Exiting!"
         exit 1
     fi
 
-    if ! which autopilot-py3 >/dev/null 2>&1; then
-        echo "E: autopilot is required to run autopilot tests"
+    if ! which $apbin >/dev/null 2>&1; then
+        echo "E: $apbin not found in path. It is required to run autopilot tests"
         echo "autopilot_installed (see autopilot.log for details): ERROR" >> $AP_SUMMARY
-        shutdown_host
         exit 1
     fi
     echo "autopilot_installed: PASS" >> $AP_SUMMARY

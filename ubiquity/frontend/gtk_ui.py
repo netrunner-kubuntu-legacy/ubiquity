@@ -47,7 +47,7 @@ import dbus
 from dbus.mainloop.glib import DBusGMainLoop
 DBusGMainLoop(set_as_default=True)
 
-#in query mode we won't be in X, but import needs to pass
+# in query mode we won't be in X, but import needs to pass
 if 'DISPLAY' in os.environ:
     from gi.repository import Gtk, Gdk, GObject, GLib, Atk
     from ubiquity import gtkwidgets
@@ -726,7 +726,7 @@ class Wizard(BaseFrontend):
 
         if 'UBIQUITY_ONLY' in os.environ:
             self.disable_logout_indicator()
-            if not 'UBIQUITY_DEBUG' in os.environ:
+            if 'UBIQUITY_DEBUG' not in os.environ:
                 self.disable_terminal()
 
         # show interface
@@ -1021,7 +1021,7 @@ class Wizard(BaseFrontend):
         self.quit.hide()
         f = (Gdk.WMFunction.RESIZE | Gdk.WMFunction.MAXIMIZE |
              Gdk.WMFunction.MOVE)
-        if not 'UBIQUITY_ONLY' in os.environ:
+        if 'UBIQUITY_ONLY' not in os.environ:
             f |= Gdk.WMFunction.MINIMIZE
         self.live_installer.get_window().set_functions(f)
         self.allow_change_step(False)
@@ -1050,7 +1050,7 @@ class Wizard(BaseFrontend):
             self.quit.show()
         f = Gdk.WMFunction.RESIZE | Gdk.WMFunction.MAXIMIZE | \
             Gdk.WMFunction.MOVE | Gdk.WMFunction.CLOSE
-        if not 'UBIQUITY_ONLY' in os.environ:
+        if 'UBIQUITY_ONLY' not in os.environ:
             f |= Gdk.WMFunction.MINIMIZE
         self.refresh()
 

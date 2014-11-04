@@ -16,13 +16,14 @@
 # Alastair McKinstry <mckinstry@debian.org>, 2004.
 # Alexander Nyakhaychyk <nyakhaychyk@gmail.com>, 2009.
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2007, 2010.
+# Viktar Siarheichyk <viсs@eq.by>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: be\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
 "POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2012-11-07 09:49+0300\n"
-"Last-Translator: Viktar Siarheichyk <vics@eq.by>\n"
+"PO-Revision-Date: 2014-01-04 14:31+0300\n"
+"Last-Translator: Viktar Siarheichyk <viсs@eq.by>\n"
 "Language-Team: Belarusian (Official spelling) <debian-l10n-belarusian@lists."
 "debian.org>\n"
 "Language: be\n"
@@ -630,10 +631,8 @@ msgstr "noatime - не абнаўляць час доступу"
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:43001
-#, fuzzy
-#| msgid "noatime - do not update inode access times at each access"
 msgid "nodiratime - do not update directory inode access times"
-msgstr "noatime - не абнаўляць час доступу"
+msgstr "nodiratime - не абнаўляць часы доступу inode каталога"
 
 #. Type: text
 #. Description
@@ -741,7 +740,7 @@ msgstr "notail - не пакаваць файлы ў дрэва"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:55001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "discard - абразаць вызваленыя блокі на ніжэйшай блокавай прыладзе"
 
 #. Type: text
 #. Description
@@ -776,15 +775,14 @@ msgstr "Вярнуцца ў меню, каб выправіць праблему
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:58001
-#, fuzzy
 msgid ""
 "Your boot partition has not been configured with the ext2 file system. This "
 "is needed by your machine in order to boot. Please go back and use the ext2 "
 "file system."
 msgstr ""
-"Ваш падзел загрузкі не наладжаны, каб выкарыстоўваць файлавую сістэму "
-"старога ext2 або ext3. Такая наладка неабходная, каб Вашая машына магла "
-"загрузіцца. Калі ласка, вярніцеся, каб ужыць сістэму ext2 або ext3."
+"Ваш падзел загрузкі не наладжаны, каб выкарыстоўваць файлавую сістэму ext2. "
+"Такая наладка неабходная, каб ваша машына магла запусціцца. Калі ласка, "
+"вярніцеся, каб ужыць сістэму ext2."
 
 #. Type: boolean
 #. Description
@@ -807,12 +805,11 @@ msgstr ""
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:59001
-#, fuzzy
 msgid ""
 "Your boot partition is not located on the first partition of your hard disk. "
 "This is needed by your machine in order to boot.  Please go back and use "
 "your first partition as a boot partition."
 msgstr ""
-"На першым primary падзеле Вашага жорсткага дыска не знойдзена падзелу "
-"загрузкі.  Ён неабходны, каб машына магла загрузіцца.  Калі ласка, "
-"вярніцеся, каб ужыць першы primary падзел у якасці падзела загрузкі."
+"На першым раздзеле вашага цвёрдага дыска не знойдзена раздзелу загрузкі.  Ён "
+"неабходны, каб машына магла запусціцца.  Калі ласка, вярніцеся, каб ужыць "
+"першы падзел у якасці падзела загрузкі."

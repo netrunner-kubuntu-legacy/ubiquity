@@ -309,6 +309,14 @@ TimedLoginDelay=10"
 			        	/etc/xdg/lubuntu/lxdm/lxdm.conf
 			fi
 
+			if $chroot $ROOT [ -f /usr/bin/sddm ]; then
+				# Configure SDDM autologin with plasma 5 session
+				$log $chroot $ROOT /bin/sh -c "cat > /etc/sddm.conf" << EOF
+[Autologin]
+User=$USER
+Session=plasma.desktop
+EOF
+			fi
 			if $chroot $ROOT [ -d /etc/lightdm ]; then
 				# Configure LightDM autologin
 				LightDMCustomFile=$ROOT/etc/lightdm/lightdm.conf
