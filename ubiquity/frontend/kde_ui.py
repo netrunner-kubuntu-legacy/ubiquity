@@ -160,6 +160,9 @@ class Wizard(BaseFrontend):
         # For above settings to apply automatically we need to indicate that we
         # are inside a full KDE session.
         os.environ["KDE_FULL_SESSION"] = "TRUE"
+        
+        # Fix for plasma 5
+        os.environ["KDE_SESSION_VERSION"] = "4"
 
         self.app = QtGui.QApplication([])
         # The "hicolor" icon theme gets picked when Ubiquity is running as a
