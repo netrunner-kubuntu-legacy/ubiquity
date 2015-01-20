@@ -397,8 +397,8 @@ msgstr "Datnes (${SIZE})"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:58001
-msgid "Where would you like to install Netrunner?"
-msgstr "Kur vēlaties instalēt Netrunner?"
+msgid "Where would you like to install Kubuntu?"
+msgstr "Kur vēlaties instalēt Kubuntu?"
 
 #. Type: text
 #. Description

@@ -400,8 +400,8 @@ msgstr "Bestanden (${SIZE})"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:58001
-msgid "Where would you like to install Netrunner?"
-msgstr "Waar zou u Netrunner willen installeren?"
+msgid "Where would you like to install Kubuntu?"
+msgstr "Waar zou u Kubuntu willen installeren?"
 
 #. Type: text
 #. Description
