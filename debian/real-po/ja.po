@@ -401,8 +401,8 @@ msgstr "ファイル (${SIZE})"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:58001
-msgid "Where would you like to install Netrunner?"
-msgstr "Netrunnerをどこにインストールしますか?"
+msgid "Where would you like to install Kubuntu?"
+msgstr "Kubuntuをどこにインストールしますか?"
 
 #. Type: text
 #. Description

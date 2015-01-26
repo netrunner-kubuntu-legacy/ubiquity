@@ -394,7 +394,7 @@ msgstr "ஆவணங்கள்"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:58001
-msgid "Where would you like to install Netrunner?"
+msgid "Where would you like to install Kubuntu?"
 msgstr "கேபுண்டுவை எங்க நிறுவ விரும்புகிறீர்கள்?"
 
 #. Type: text

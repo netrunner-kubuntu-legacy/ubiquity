@@ -395,8 +395,8 @@ msgstr "Skrár (${SIZE})"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:58001
-msgid "Where would you like to install Netrunner?"
-msgstr "Hvar viltu setja Netrunner upp?"
+msgid "Where would you like to install Kubuntu?"
+msgstr "Hvar viltu setja Kubuntu upp?"
 
 #. Type: text
 #. Description

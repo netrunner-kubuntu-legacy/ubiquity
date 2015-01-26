@@ -394,7 +394,7 @@ msgstr "ফাইল (${SIZE})"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:58001
-msgid "Where would you like to install Netrunner?"
+msgid "Where would you like to install Kubuntu?"
 msgstr ""
 
 #. Type: text

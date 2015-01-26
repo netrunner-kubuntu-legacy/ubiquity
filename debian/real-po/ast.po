@@ -399,8 +399,8 @@ msgstr "Ficheros (${SIZE})"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:58001
-msgid "Where would you like to install Netrunner?"
-msgstr "¿Aú quies instalar Netrunner?"
+msgid "Where would you like to install Kubuntu?"
+msgstr "¿Aú quies instalar Kubuntu?"
 
 #. Type: text
 #. Description
