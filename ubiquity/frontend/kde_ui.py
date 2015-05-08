@@ -85,7 +85,7 @@ class UbiquityUI(QtGui.QMainWindow):
                 if "DISTRIB_ID=" in line:
                     name = str.strip(line.split("=")[1], '\n')
                     if name != "Netrunner":
-                        distro_name = name
+                        distro_name = "Netrunner"
                 elif "DISTRIB_RELEASE=" in line:
                     distro_release = str.strip(line.split("=")[1], '\n')
 
