@@ -6,7 +6,7 @@
 # translation of debian-installer_packages_po_sublevel1_da.po to
 # Danish messages for debian-installer.
 # This file is distributed under the same license as debian-installer.
-# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012.
+# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012, 2013, 2014.
 # Ask Hjorth Larsen <asklarsen@gmail.com>, 2010.
 # Mads Bille Lundby <lundbymads@gmail.com, 2009.
 # Henrik Christian Grove <debian@3001.dk>, 2008.
@@ -39,7 +39,7 @@ msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_da\n"
 "Report-Msgid-Bugs-To: partman-crypto@packages.debian.org\n"
 "POT-Creation-Date: 2013-10-30 22:04+0000\n"
-"PO-Revision-Date: 2012-05-04 20:24+0200\n"
+"PO-Revision-Date: 2014-08-10 20:20+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -55,7 +55,7 @@ msgstr ""
 #. :sl3:
 #: ../partman-crypto.templates:1001
 msgid "physical volume for encryption"
-msgstr "fysisk arkiv til kryptering"
+msgstr "fysisk diskenhed til kryptering"
 
 #. Type: text
 #. Description
@@ -265,17 +265,12 @@ msgstr "Vil du virkelig slette data på ${DEVICE}?"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:22001
-#, fuzzy
-#| msgid ""
-#| "The data on ${DEVICE} will be overwritten with random data. It can no "
-#| "longer be recovered after this step has completed. This is the last "
-#| "opportunity to abort the erase."
 msgid ""
 "The data on ${DEVICE} will be overwritten with zeroes. It can no longer be "
 "recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"Data på ${DEVICE} vil blive overskrevet med tilfældige data. De kan ikke "
+"Dataene på ${DEVICE} vil blive overskrevet med nul-tegn. De kan ikke "
 "genskabes, når dette er sket. Dette er sidste mulighed for at hindre "
 "sletningen."
 
@@ -297,6 +292,8 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"Installationsprogrammet overskriver nu ${DEVICE} med nul-tegn for at slette "
+"det tidligere indhold. Dette trin kan udelades ved at afbryde denne handling."
 
 #. Type: error
 #. Description
@@ -312,16 +309,12 @@ msgstr "Kunne ikke slette data på ${DEVICE}"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:25001
-#, fuzzy
-#| msgid ""
-#| "An error occurred trying to erase the data on ${DEVICE}. The data has not "
-#| "been erased."
 msgid ""
 "An error occurred while trying to overwrite the data on ${DEVICE} with "
 "zeroes. The data has not been erased."
 msgstr ""
-"Der opstod en fejl under forsøget på at slette data på ${DEVICE}. Dataene er "
-"ikke blevet slettet."
+"Der opstod en fejl under forsøget på at overskrive dataene på ${DEVICE} med "
+"nul-tegn. Dataene er ikke blevet slettet."
 
 #. Type: boolean
 #. Description
@@ -332,7 +325,7 @@ msgid ""
 "be recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"Data på ${DEVICE} vil blive overskrevet med tilfældige data. De kan ikke "
+"Dataene på ${DEVICE} vil blive overskrevet med tilfældige data. De kan ikke "
 "genskabes, når dette er sket. Dette er sidste mulighed for at hindre "
 "sletningen."
 
@@ -346,6 +339,10 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"Installationsprogrammet overskriver nu ${DEVICE} med vilkårlige data for at "
+"forhindre læk af metainformation fra krypterede diskenheder. Dette trin kan "
+"springes over ved at afbryde denne handling, dog med den konsekvens, at "
+"kvaliteten af krypteringen får en lille reduktion."
 
 #. Type: error
 #. Description
@@ -356,20 +353,23 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"Der opstod en fejl under forsøg på at overskrive ${DEVICE} med vilkårlige "
+"data. Gendannelse af enhedens tidligere indhold er mulig og metainformation "
+"om dens nye indhold kan være lækket."
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:30001
 msgid "Setting up encryption..."
-msgstr "Sætter kryptering op..."
+msgstr "Sætter kryptering op ..."
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:31001
 msgid "Configure encrypted volumes"
-msgstr "Indstil krypterede arkiver"
+msgstr "Indstil krypterede diskenheder"
 
 #. Type: note
 #. Description
@@ -437,7 +437,7 @@ msgstr "mangler"
 #. What is "in use" is a partition
 #: ../partman-crypto.templates:36001
 msgid "In use as physical volume for encrypted volume ${DEV}"
-msgstr "I brug som fysisk arkiv for det krypterede arkiv ${DEV}"
+msgstr "I brug som fysisk diskenhed for den krypterede diskenhed ${DEV}"
 
 #. Type: error
 #. Description
@@ -475,7 +475,7 @@ msgstr ""
 #. :sl3:
 #: ../partman-crypto.templates:38001
 msgid "Write the changes to disk and configure encrypted volumes?"
-msgstr "Skriv ændringerne til diskene og sæt de krypterede arkiver op?"
+msgstr "Skriv ændringerne til diskene og sæt de krypterede diskenheder op?"
 
 #. Type: boolean
 #. Description
@@ -485,8 +485,8 @@ msgid ""
 "Before encrypted volumes can be configured, the current partitioning scheme "
 "has to be written to disk.  These changes cannot be undone."
 msgstr ""
-"Den valgte partitionering skal skrives til diskene før de krypterede arkiver "
-"kan sættes op. Disse ændringer kan ikke fortrydes."
+"Den valgte partitionering skal skrives til diskene før de krypterede "
+"diskenheder kan sættes op. Disse ændringer kan ikke fortrydes."
 
 #. Type: boolean
 #. Description
@@ -501,31 +501,31 @@ msgid ""
 "decide if you are satisfied with the current partitioning scheme for these "
 "disks before continuing."
 msgstr ""
-"Når de krypterede arkiver er sat op, er det ikke tilladt at ændre "
-"partitionerne på de diske, der indeholder krypterede arkiver. Vær sikker på "
-"at du er tilfreds med det aktuelle partitionslayout på disse diske, inden du "
-"fortsætter."
+"Når de krypterede diskenheder er sat op, er det ikke tilladt at ændre "
+"partitionerne på de diske, der indeholder krypterede diskenheder. Vær sikker "
+"på at du er tilfreds med det aktuelle partitionslayout på disse diske, inden "
+"du fortsætter."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:39001
 msgid "Keep current partition layout and configure encrypted volumes?"
-msgstr "Bevar nuværende partitionslayout og sæt krypterede arkiver op?"
+msgstr "Bevar nuværende partitionslayout og sæt krypterede diskenheder op?"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:40001
 msgid "Configuration of encrypted volumes failed"
-msgstr "Opsætningen af krypterede arkiver mislykkedes"
+msgstr "Opsætningen af krypterede diskenheder mislykkedes"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:40001
 msgid "An error occurred while configuring encrypted volumes."
-msgstr "Der opstod en fejl under opsætningen af krypterede arkiver."
+msgstr "Der opstod en fejl under opsætningen af krypterede diskenheder."
 
 #. Type: error
 #. Description
@@ -539,14 +539,14 @@ msgstr "Opsætningen blev afbrudt."
 #. :sl3:
 #: ../partman-crypto.templates:41001
 msgid "Initialisation of encrypted volume failed"
-msgstr "Initialiseringen af krypteret arkiv mislykkedes"
+msgstr "Initialiseringen af krypteret diskenhed mislykkedes"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:41001
 msgid "An error occurred while setting up encrypted volumes."
-msgstr "Der opstod en fejl under opsætningen af de krypterede arkiver."
+msgstr "Der opstod en fejl under opsætningen af de krypterede diskenheder."
 
 #. Type: text
 #. Description
@@ -617,8 +617,8 @@ msgid ""
 "encrypted swap space and then run setup of encrypted volumes again. This "
 "program will now abort."
 msgstr ""
-"Deaktivér swapområdet (f.eks. ved at køre swapoff) eller sæt et krypteret "
-"swapområde op og gennemfør opsætningen af krypterede arkiver igen. Dette "
+"Deaktiver swapområdet (f.eks. ved at køre swapoff) eller sæt et krypteret "
+"swapområde op og gennemfør opsætningen af krypterede diskenheder igen. Dette "
 "program afbrydes nu."
 
 #. Type: password
@@ -909,7 +909,7 @@ msgstr ""
 #. :sl3:
 #: ../partman-crypto.templates:59001
 msgid "Create encrypted volumes"
-msgstr "Opret krypterede arkiver"
+msgstr "Opret krypterede diskenheder"
 
 #. Type: select
 #. Choices
@@ -933,7 +933,8 @@ msgstr "Handlinger for krypteringskonfiguration"
 #. :sl3:
 #: ../partman-crypto.templates:59002
 msgid "This menu allows you to configure encrypted volumes."
-msgstr "Denne menu giver dig mulighed for at konfigurere krypterede arkiver."
+msgstr ""
+"Denne menu giver dig mulighed for at konfigurere krypterede diskenheder."
 
 #. Type: multiselect
 #. Description

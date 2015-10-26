@@ -22,11 +22,11 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-crypto@packages.debian.org\n"
 "POT-Creation-Date: 2013-10-30 22:04+0000\n"
-"PO-Revision-Date: 2012-11-16 20:37+0530\n"
+"PO-Revision-Date: 2014-09-01 23:05+0530\n"
 "Last-Translator: sampada <sampadanakhare@gmail.com>\n"
 "Language-Team: Marathi, janabhaaratii, C-DAC, Mumbai, India "
 "<janabhaaratii@cdacmumbai.in>\n"
-"Language: \n"
+"Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -248,18 +248,13 @@ msgstr "${DEVICE} वरील सर्व माहिती खरंच प�
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:22001
-#, fuzzy
-#| msgid ""
-#| "The data on ${DEVICE} will be overwritten with random data. It can no "
-#| "longer be recovered after this step has completed. This is the last "
-#| "opportunity to abort the erase."
 msgid ""
 "The data on ${DEVICE} will be overwritten with zeroes. It can no longer be "
 "recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"${DEVICE} वरील माहिती वर नवीन माहिती लिहिली जाईल.  ही पायरी पुर्ण केल्यावर आधीची "
-"माहिती परत मिळवता येणार नाही. आधीची माहिती पुसणे थांबवण्याची ही शेवटची संधी आहे."
+"${DEVICE} वरील माहिती वर शून्ये लिहिली जातील.  ही पायरी पुर्ण केल्यावर आधीची माहिती "
+"परत मिळवता येणार नाही. आधीची माहिती पुसणे थांबवण्याची ही शेवटची संधी आहे."
 
 #. Type: text
 #. Description
@@ -279,6 +274,8 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"अधिष्ठापक आता पूर्वीची सामग्री काढून टाकण्यासाठी ${DEVICE} वर शून्यांनी पुनर्लेखन करत "
+"आहे. ही कृती रद्द करून ही पायरी वगळता येऊ शकते."
 
 #. Type: error
 #. Description
@@ -294,16 +291,12 @@ msgstr "${DEVICE} वरील माहिती पुसली जाण्�
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:25001
-#, fuzzy
-#| msgid ""
-#| "An error occurred trying to erase the data on ${DEVICE}. The data has not "
-#| "been erased."
 msgid ""
 "An error occurred while trying to overwrite the data on ${DEVICE} with "
 "zeroes. The data has not been erased."
 msgstr ""
-"${DEVICE} वरील माहिती पुसली जाण्याच्या क्रियेत त्रुटी आलेली आहे. आधीची माहिती पुसली "
-"गेली नाही."
+"${DEVICE} वरील माहिती वर शून्ये लिहिली जाण्याच्या क्रियेत त्रुटी आलेली आहे. आधीची "
+"माहिती पुसली गेली नाही."
 
 #. Type: boolean
 #. Description
@@ -327,6 +320,9 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"अधिष्ठापक आता एनक्रिप्टेड खंडांमधून मेटा-माहितीची गळती टाळण्यासाठी ${DEVICE} वर स्वैर "
+"डेटाने पुनर्लेखन करत आहे. ही कृती रद्द करून ही पायरी वगळता येऊ शकते, पण त्यामुळे "
+"एनक्रिप्शनची गुणवत्ता किंचित कमी होऊ शकेल."
 
 #. Type: error
 #. Description
@@ -337,6 +333,8 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"${DEVICE} वर स्वैर डेटाने पुनर्लेखन करताना त्रुटी आली. साधनावरील पूर्वीच्या सामग्रीची "
+"पुनर्प्राप्ती करता येऊ शकते व एनक्रिप्टेड खंडांमधून मेटा-माहितीची गळती होऊ शकते."
 
 #. Type: text
 #. Description

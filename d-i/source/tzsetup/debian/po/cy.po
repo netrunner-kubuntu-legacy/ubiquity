@@ -8,14 +8,23 @@
 # This file is distributed under the same license as debian-installer.
 #
 # Jonathan Price <mynamesnotclive@notclive.co.uk>, 2008.
+#
+# Translations from iso-codes:
+#   Alastair McKinstry <mckinstry@debian.org>, 2004.
+#   - translations from ICU-3.0
+#   Dafydd Harries <daf@muse.19inch.net>, 2002,2004,2006.
+#   Free Software Foundation, Inc., 2002,2004
+#   Alastair McKinstry <mckinstry@computer.org>, 2001
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-08-20 21:58+0100\n"
-"Last-Translator: Jonathan Price <mynamesnotclive@notclive.co.uk>\n"
+"PO-Revision-Date: 2012-10-08 21:16-0000\n"
+"Last-Translator: Dafydd Tomos <l10n@da.fydd.org>\n"
 "Language-Team: Welsh <>\n"
+"Language: cy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -551,7 +560,7 @@ msgstr "Ceuta"
 #. Time zone for Spain
 #: ../common.templates:9001
 msgid "Canary Islands"
-msgstr "Ynysoedd Canary"
+msgstr "Yr Ynysoedd Dedwydd"
 
 #. Type: select
 #. Choices
@@ -656,7 +665,7 @@ msgstr "Enderbury (Ynysoedd Phoenix)"
 #. Time zone for Kiribati
 #: ../common.templates:13001
 msgid "Kiritimati (Line Islands)"
-msgstr "Kiritimati (Ynysoed Line)"
+msgstr "Kiritimati (Ynysoedd Line)"
 
 #. Type: select
 #. Choices
@@ -930,7 +939,7 @@ msgstr "Samoa"
 #. :sl1:
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
-msgstr "Arbed y parth amser..."
+msgstr "Cadw y parth amser..."
 
 #. Type: boolean
 #. Description
@@ -967,6 +976,164 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Yn seiliedig ar eich gwlad, ${ZONE} yw eich parth amser."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Os nad yw'r cylch amser dymunol ar gael, yn ewch yn ôl i'r cam \"Dewis "
+#~ "iaith\" a dewiswch wlad sy'n defnyddio'r parth amser dymunol (y wlad lle "
+#~ "rydych yn byw neu wedi leoli)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Amser Cyd-drefnedig Cyffredinol (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Dewiswch y dalaith neu'r rhanbarth i osod eich parth amser:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Tiriogaeth Prifddinas Awstralia"
+
+#~ msgid "New South Wales"
+#~ msgstr "De Cymru Newydd"
+
+#~ msgid "Victoria"
+#~ msgstr "Victoria"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Tiriogaeth y Gogledd"
+
+#~ msgid "Queensland"
+#~ msgstr "Queensland"
+
+#~ msgid "South Australia"
+#~ msgstr "De Awstralia"
+
+#~ msgid "Tasmania"
+#~ msgstr "Tasmania"
+
+#~ msgid "Western Australia"
+#~ msgstr "Gorllewin Awstralia"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Eyre Highway"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Yancowinna County"
+
+#~ msgid "Acre"
+#~ msgstr "Acre"
+
+#~ msgid "Alagoas"
+#~ msgstr "Alagoas"
+
+#~ msgid "Amazonas"
+#~ msgstr "Amazonas"
+
+#~ msgid "Amapá"
+#~ msgstr "Amapá"
+
+#~ msgid "Ceará"
+#~ msgstr "Ceará"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Distrito Federal"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Espírito Sant "
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Fernando de Noronha"
+
+#~ msgid "Goiás"
+#~ msgstr "Goiás"
+
+#~ msgid "Maranhão"
+#~ msgstr "Maranhão"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Minas Gerais"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Mato Grosso do Sul"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Pará"
+#~ msgstr "Pará"
+
+#~ msgid "Paraíba"
+#~ msgstr "Paraíb "
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Piauí"
+#~ msgstr "Piauí"
+
+#~ msgid "Paraná"
+#~ msgstr "Paraná"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Rio de Janeiro"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Rio Grande do Norte"
+
+#~ msgid "Rondônia"
+#~ msgstr "Rondônia"
+
+#~ msgid "Roraima"
+#~ msgstr "Roraima"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Rio Grande do Sul"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Santa Catarina"
+
+#~ msgid "Sergipe"
+#~ msgstr "Sergipe"
+
+#~ msgid "São Paulo"
+#~ msgstr "São Paulo"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Gorllewinol (Sumatera, Jakarta, Java, Gorllewin a Canol Kalimantan)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "Canolog (Sulawesi, Bali, Nusa Tenggara, Dwyrain a De Kalimantan)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Dwyreiniol (Maluku, Papua)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Moscow+00 - Moscow"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Moscow+02 - Yekaterinburg"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Moscow+03 - Omsk"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Moscow+04 - Krasnoyarsk"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Moscow+05 - Irkutsk"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Moscow+06 - Yakutsk"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Moscow+07 - Vladivostok"

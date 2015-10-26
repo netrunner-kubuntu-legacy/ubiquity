@@ -53,14 +53,10 @@ if (! db_get apt-setup/restricted || [ "$RET" = false ]) && \
 elif db_get apt-setup/partner && [ "$RET" = true ]; then
 	enable_service partner
 fi
-if db_get apt-setup/extras && [ "$RET" = true ]; then
-	enable_service extras
-fi
 
 db_get apt-setup/security_host
 db_subst apt-setup/services-select-ubuntu SEC_HOST "$RET"
 db_subst apt-setup/services-select-ubuntu PARTNER_HOST archive.canonical.com
-db_subst apt-setup/services-select-ubuntu EXTRAS_HOST extras.ubuntu.com
 
 db_input medium apt-setup/services-select-ubuntu || true
 if ! db_go; then

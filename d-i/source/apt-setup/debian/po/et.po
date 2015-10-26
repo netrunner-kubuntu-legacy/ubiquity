@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: apt-setup@packages.debian.org\n"
-"POT-Creation-Date: 2013-05-08 22:03+0000\n"
+"POT-Creation-Date: 2015-01-11 23:02+0000\n"
 "PO-Revision-Date: 2012-06-16 14:01+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -171,7 +171,7 @@ msgstr ""
 #. :sl1:
 #. Type: multiselect
 #. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
+#. SEC_HOST, and PARTNER_HOST are host names (e.g.
 #. security.ubuntu.com)
 #. Translators: the *entire* string should be under 55 columns
 #. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
@@ -243,7 +243,7 @@ msgstr ""
 
 #. Type: multiselect
 #. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
+#. SEC_HOST, and PARTNER_HOST are host names (e.g.
 #. security.ubuntu.com)
 #. Translators: the *entire* string should be under 55 columns
 #. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
@@ -251,20 +251,7 @@ msgstr ""
 #: ../apt-setup-udeb.templates:12001
 #, fuzzy
 #| msgid "security updates (from ${SEC_HOST})"
-msgid "partner archive (from ${PARTNER_HOST})"
-msgstr "Turvauuendused (serverist ${SEC_HOST})"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
-#. security.ubuntu.com)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl2:
-#: ../apt-setup-udeb.templates:12001
-#, fuzzy
-#| msgid "security updates (from ${SEC_HOST})"
-msgid "extras archive (from ${EXTRAS_HOST})"
+msgid "partner archive (from ${PARTNER_HOST}))"
 msgstr "Turvauuendused (serverist ${SEC_HOST})"
 
 #. Type: multiselect
@@ -290,23 +277,6 @@ msgid ""
 "The partner archive contains software provided by Canonical's partners as a "
 "service to Ubuntu users."
 msgstr ""
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:12002
-#, fuzzy
-#| msgid ""
-#| "Some additional software is available from Canonical's \"partner\" "
-#| "repository. This software is not part of Ubuntu, but is offered by "
-#| "Canonical and the respective vendors as a service to Ubuntu users."
-msgid ""
-"The extras archive contains free software offered by third-party application "
-"developers who want to ship their latest software."
-msgstr ""
-"Osa lisatarkvara on saadaval Canonical'i \"partner\"-varamust. See tarkvara "
-"ei kuulu Ubuntusse, kuigi seda edastab Canonical ja edastajad, kes "
-"teenindavad Ubuntu kasutajaid."
 
 #. Type: text
 #. Description
@@ -635,16 +605,11 @@ msgstr ""
 #. Description
 #. This template is used by the Ubuntu version of d-i.
 #. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
 #: ../apt-mirror-setup.templates:3001
 #: ../apt-mirror-setup.templates-ubuntu:2001
 #: ../apt-mirror-setup.templates-ubuntu:3001
 #: ../apt-mirror-setup.templates-ubuntu:4001
 #: ../apt-mirror-setup.templates-ubuntu:5001
-#: ../apt-mirror-setup.templates-ubuntu:7001
 msgid ""
 "Please choose whether you want this software to be made available to you."
 msgstr "Palun vali, kas soovid säärast tarkvara kättesaadavaks teha."
@@ -829,31 +794,39 @@ msgstr ""
 "katsetatud, et ta peajaotusesse arvata, on tegemist siiski tarkvara uuemate "
 "versioonidega, mis võivad pakkuda uusi ning kasulikke võimalusi."
 
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:7001
 #, fuzzy
-#| msgid "Use software from the \"partner\" repository?"
-msgid "Use software from the \"extras\" repository?"
-msgstr "Kas kasutada \"partner\" komponenti kuuluvat tarkvara?"
+#~| msgid "security updates (from ${SEC_HOST})"
+#~ msgid "extras archive (from ${EXTRAS_HOST})"
+#~ msgstr "Turvauuendused (serverist ${SEC_HOST})"
 
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:7001
 #, fuzzy
-#| msgid ""
-#| "Some additional software is available from Canonical's \"partner\" "
-#| "repository. This software is not part of Ubuntu, but is offered by "
-#| "Canonical and the respective vendors as a service to Ubuntu users."
-msgid ""
-"Additional software is available from the Ubuntu \"extras\" repository. This "
-"software is not part of Ubuntu, but is offered by third-party developers who "
-"want to ship their latest software."
-msgstr ""
-"Osa lisatarkvara on saadaval Canonical'i \"partner\"-varamust. See tarkvara "
-"ei kuulu Ubuntusse, kuigi seda edastab Canonical ja edastajad, kes "
-"teenindavad Ubuntu kasutajaid."
+#~| msgid ""
+#~| "Some additional software is available from Canonical's \"partner\" "
+#~| "repository. This software is not part of Ubuntu, but is offered by "
+#~| "Canonical and the respective vendors as a service to Ubuntu users."
+#~ msgid ""
+#~ "The extras archive contains free software offered by third-party "
+#~ "application developers who want to ship their latest software."
+#~ msgstr ""
+#~ "Osa lisatarkvara on saadaval Canonical'i \"partner\"-varamust. See "
+#~ "tarkvara ei kuulu Ubuntusse, kuigi seda edastab Canonical ja edastajad, "
+#~ "kes teenindavad Ubuntu kasutajaid."
+
+#, fuzzy
+#~| msgid "Use software from the \"partner\" repository?"
+#~ msgid "Use software from the \"extras\" repository?"
+#~ msgstr "Kas kasutada \"partner\" komponenti kuuluvat tarkvara?"
+
+#, fuzzy
+#~| msgid ""
+#~| "Some additional software is available from Canonical's \"partner\" "
+#~| "repository. This software is not part of Ubuntu, but is offered by "
+#~| "Canonical and the respective vendors as a service to Ubuntu users."
+#~ msgid ""
+#~ "Additional software is available from the Ubuntu \"extras\" repository. "
+#~ "This software is not part of Ubuntu, but is offered by third-party "
+#~ "developers who want to ship their latest software."
+#~ msgstr ""
+#~ "Osa lisatarkvara on saadaval Canonical'i \"partner\"-varamust. See "
+#~ "tarkvara ei kuulu Ubuntusse, kuigi seda edastab Canonical ja edastajad, "
+#~ "kes teenindavad Ubuntu kasutajaid."

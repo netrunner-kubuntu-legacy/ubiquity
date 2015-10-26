@@ -1,3 +1,46 @@
+yaboot-installer (1.1.33ubuntu1) vivid; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Ubuntu branding.
+    - Add quiet boot parameter, and splash if
+      debian-installer/framebuffer=true.
+    - Check for Open Firmware path of MacOS (X) devices before adding them
+      to yaboot.conf, and avoid updating NVRAM if no Open Firmware path can
+      be found for the bootstrap partition.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 24 Nov 2014 14:11:28 +0000
+
+yaboot-installer (1.1.33) unstable; urgency=low
+
+  [ Updated translations ]
+  * Estonian (et.po) by Mattias Põldaru
+  * Turkish (tr.po) by Mert Dirik
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 20 Sep 2014 14:46:08 +0200
+
+yaboot-installer (1.1.32) unstable; urgency=low
+
+  [ Updated translations ]
+  * Simplified Chinese (zh_CN.po) by YunQiang Su
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 20 Mar 2014 07:06:38 +0100
+
+yaboot-installer (1.1.31) unstable; urgency=low
+
+  * Drop debconf abuse quik-installer/success
+
+  [ Updated translations ]
+  * Bosnian (bs.po) by Amila Valjevčić
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 21 Dec 2013 10:59:13 +0100
+
+yaboot-installer (1.1.30) unstable; urgency=low
+
+  [ Updated translations ]
+  * Turkish (tr.po) by Mert Dirik
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 10 Nov 2013 16:26:19 +0100
+
 yaboot-installer (1.1.29ubuntu1) trusty; urgency=low
 
   * Resynchronise with Debian.  Remaining changes:

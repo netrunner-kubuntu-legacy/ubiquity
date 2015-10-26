@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: apt-setup@packages.debian.org\n"
-"POT-Creation-Date: 2013-05-08 22:03+0000\n"
+"POT-Creation-Date: 2015-01-11 23:02+0000\n"
 "PO-Revision-Date: 2012-10-30 10:16+0530\n"
 "Last-Translator: Hrishikesh K B <hrishi.kb@gmail.com>\n"
 "Language-Team: Debian Malayalam <debian-l10n-malayalam@lists.debian.org>\n"
@@ -166,7 +166,7 @@ msgstr ""
 #. :sl1:
 #. Type: multiselect
 #. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
+#. SEC_HOST, and PARTNER_HOST are host names (e.g.
 #. security.ubuntu.com)
 #. Translators: the *entire* string should be under 55 columns
 #. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
@@ -237,7 +237,7 @@ msgstr ""
 
 #. Type: multiselect
 #. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
+#. SEC_HOST, and PARTNER_HOST are host names (e.g.
 #. security.ubuntu.com)
 #. Translators: the *entire* string should be under 55 columns
 #. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
@@ -245,20 +245,7 @@ msgstr ""
 #: ../apt-setup-udeb.templates:12001
 #, fuzzy
 #| msgid "security updates (from ${SEC_HOST})"
-msgid "partner archive (from ${PARTNER_HOST})"
-msgstr "(${SEC_HOST} ല്‍ നിന്നുമുള്ള) സുരക്ഷാപരമായ മാറ്റങ്ങള്‍"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
-#. security.ubuntu.com)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl2:
-#: ../apt-setup-udeb.templates:12001
-#, fuzzy
-#| msgid "security updates (from ${SEC_HOST})"
-msgid "extras archive (from ${EXTRAS_HOST})"
+msgid "partner archive (from ${PARTNER_HOST}))"
 msgstr "(${SEC_HOST} ല്‍ നിന്നുമുള്ള) സുരക്ഷാപരമായ മാറ്റങ്ങള്‍"
 
 #. Type: multiselect
@@ -283,15 +270,6 @@ msgstr ""
 msgid ""
 "The partner archive contains software provided by Canonical's partners as a "
 "service to Ubuntu users."
-msgstr ""
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:12002
-msgid ""
-"The extras archive contains free software offered by third-party application "
-"developers who want to ship their latest software."
 msgstr ""
 
 #. Type: text
@@ -630,16 +608,11 @@ msgstr ""
 #. Description
 #. This template is used by the Ubuntu version of d-i.
 #. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
 #: ../apt-mirror-setup.templates:3001
 #: ../apt-mirror-setup.templates-ubuntu:2001
 #: ../apt-mirror-setup.templates-ubuntu:3001
 #: ../apt-mirror-setup.templates-ubuntu:4001
 #: ../apt-mirror-setup.templates-ubuntu:5001
-#: ../apt-mirror-setup.templates-ubuntu:7001
 msgid ""
 "Please choose whether you want this software to be made available to you."
 msgstr "ഈ സോഫ്റ്റ്‌വെയര്‍ ലഭ്യമാകാന്‍ നിങ്ങള്‍ക്കാവശ്യമുണ്ടോ എന്നു്  ദയവായി തെരഞ്ഞെടുക്കുക."
@@ -823,23 +796,12 @@ msgstr ""
 "പോയിട്ടില്ലെങ്കിലും ചില പ്രയോഗങ്ങളുടെ പുതിയ ലക്കങ്ങള്‍ ഇതു് ഉള്‍​ക്കൊള്ളുന്നു അവ ഉപയോഗപ്രദമായ "
 "കഴിവുകള്‍ നല്കിയേക്കാം."
 
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:7001
 #, fuzzy
-#| msgid "Use software from the \"universe\" component?"
-msgid "Use software from the \"extras\" repository?"
-msgstr "\"universe\" ഘടകത്തില്‍ നിന്നുമുള്ള സോഫ്റ്റ്‌വെയര്‍ ഉപയോഗിക്കണോ?"
+#~| msgid "security updates (from ${SEC_HOST})"
+#~ msgid "extras archive (from ${EXTRAS_HOST})"
+#~ msgstr "(${SEC_HOST} ല്‍ നിന്നുമുള്ള) സുരക്ഷാപരമായ മാറ്റങ്ങള്‍"
 
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:7001
-msgid ""
-"Additional software is available from the Ubuntu \"extras\" repository. This "
-"software is not part of Ubuntu, but is offered by third-party developers who "
-"want to ship their latest software."
-msgstr ""
+#, fuzzy
+#~| msgid "Use software from the \"universe\" component?"
+#~ msgid "Use software from the \"extras\" repository?"
+#~ msgstr "\"universe\" ഘടകത്തില്‍ നിന്നുമുള്ള സോഫ്റ്റ്‌വെയര്‍ ഉപയോഗിക്കണോ?"

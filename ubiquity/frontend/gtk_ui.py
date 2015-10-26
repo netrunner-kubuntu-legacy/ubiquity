@@ -196,10 +196,9 @@ class Wizard(BaseFrontend):
             elif isinstance(widget, gtkwidgets.StateBox):
                 label = widget.label
 
-            # If we're runing Orca, we want to be able to read labels.
             if label:
-                label.set_property('can-focus', self.screen_reader)
-                label.set_selectable(self.screen_reader)
+                label.set_selectable(True)
+                label.set_property('can-focus', False)
 
         BaseFrontend.__init__(self, distro)
         self.previous_excepthook = sys.excepthook
@@ -743,6 +742,7 @@ class Wizard(BaseFrontend):
             self.refresh()
 
         self.set_current_page(0)
+        self.live_installer.show()
 
         while(self.pagesindex < len(self.pages)):
             if self.current_page is None:
@@ -901,15 +901,18 @@ class Wizard(BaseFrontend):
             style.add_class('menubar')
 
         # TODO lazy load
-        from gi.repository import Vte
+        import gi
+        gi.require_version("Vte", "2.91")
+        from gi.repository import Vte, Pango
         self.vte = Vte.Terminal()
         self.install_details_sw.add(self.vte)
         tail_cmd = [
             '/bin/busybox', 'tail', '-f', '/var/log/installer/debug',
             '-f', '/var/log/syslog', '-q',
         ]
-        self.vte.fork_command_full(0, None, tail_cmd, None, 0, None, None)
-        self.vte.set_font_from_string("Ubuntu Mono 8")
+        self.vte.spawn_sync(0, None, tail_cmd, None, 0, None, None, None)
+        fontdesc = Pango.font_description_from_string("Ubuntu Mono 8")
+        self.vte.set_font(fontdesc)
         self.vte.show()
         # FIXME shrink the window horizontally instead of locking the window
         # size.
@@ -1386,7 +1389,13 @@ class Wizard(BaseFrontend):
                                          '/org/gnome/SessionManager')
             manager.RequestReboot()
         else:
-            misc.execute_root("reboot")
+            # don't let reboot race with the shutdown of X in ubiquity-dm;
+            # reboot might be too fast and X will stay around forever instead
+            # of moving to plymouth
+            misc.execute_root(
+                "sh", "-c",
+                "if ! service display-manager status; then killall Xorg; "
+                "while pidof X; do sleep 0.5; done; fi; reboot")
 
     def do_shutdown(self):
         """Callback for main program to actually shutdown the machine."""
@@ -1401,7 +1410,13 @@ class Wizard(BaseFrontend):
                                          '/org/gnome/SessionManager')
             manager.RequestShutdown()
         else:
-            misc.execute_root("poweroff")
+            # don't let poweroff race with the shutdown of X in ubiquity-dm;
+            # poweroff might be too fast and X will stay around forever instead
+            # of moving to plymouth
+            misc.execute_root(
+                "sh", "-c",
+                "if ! service display-manager status; then killall Xorg; "
+                "while pidof X; do sleep 0.5; done; fi; poweroff")
 
     def quit_installer(self, *args):
         """Quit installer cleanly."""

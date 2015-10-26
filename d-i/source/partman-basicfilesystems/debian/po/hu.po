@@ -28,8 +28,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-basicfilesystems@packages.debian.org\n"
-"POT-Creation-Date: 2013-11-29 20:50+0000\n"
-"PO-Revision-Date: 2013-11-18 21:15+0100\n"
+"POT-Creation-Date: 2014-08-31 22:00+0000\n"
+"PO-Revision-Date: 2014-01-08 11:31:26 GMT+0100\n"
 "Last-Translator: Judit Gyimesi <judit.gyimesi.x@gmail.com>\n"
 "Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian."
 "org>\n"
@@ -841,6 +841,26 @@ msgstr "fat32"
 
 # Type: text
 # Description
+# File system name
+# :sl2:
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-basicfilesystems.templates:36001
+#, fuzzy
+msgid "NTFS journaling file system"
+msgstr "JFS naplózó fájlrendszer"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-basicfilesystems.templates:37001
+msgid "ntfs"
+msgstr ""
+
+# Type: text
+# Description
 # :sl2:
 # Type: text
 # Description
@@ -849,8 +869,8 @@ msgstr "fat32"
 #. :sl2:
 #. Type: text
 #. Description
-#: ../partman-basicfilesystems.templates:36001
 #: ../partman-basicfilesystems.templates:38001
+#: ../partman-basicfilesystems.templates:40001
 msgid "swap area"
 msgstr "cserehely"
 
@@ -862,8 +882,8 @@ msgstr "cserehely"
 #. Description
 #. :sl1:
 #. Short variant of `swap space'
-#: ../partman-basicfilesystems.templates:37001
 #: ../partman-basicfilesystems.templates:39001
+#: ../partman-basicfilesystems.templates:41001
 msgid "swap"
 msgstr "swap"
 
@@ -877,8 +897,8 @@ msgstr "swap"
 #. Type: multiselect
 #. Description
 #. :sl2:
-#: ../partman-basicfilesystems.templates:40001
-#: ../partman-basicfilesystems.templates:41001
+#: ../partman-basicfilesystems.templates:42001
+#: ../partman-basicfilesystems.templates:43001
 msgid "Mount options:"
 msgstr "Csatolási opciók:"
 
@@ -888,7 +908,7 @@ msgstr "Csatolási opciók:"
 #. Type: multiselect
 #. Description
 #. :sl2:
-#: ../partman-basicfilesystems.templates:41001
+#: ../partman-basicfilesystems.templates:43001
 msgid "Mount options can tune the behavior of the file system."
 msgstr ""
 "A csatolási opciók a fájlrendszer viselkedésének hangolását szolgálják."
@@ -903,7 +923,7 @@ msgstr ""
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:42001
+#: ../partman-basicfilesystems.templates:44001
 msgid "noatime - do not update inode access times at each access"
 msgstr "noatime - ne frissítse az inode-ok elérési időpontját minden eléréskor"
 
@@ -917,7 +937,7 @@ msgstr "noatime - ne frissítse az inode-ok elérési időpontját minden elér�
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:43001
+#: ../partman-basicfilesystems.templates:45001
 msgid "nodiratime - do not update directory inode access times"
 msgstr "nodiratime - ne frissítse a könyvtár inode hozzáférési időket"
 
@@ -931,7 +951,7 @@ msgstr "nodiratime - ne frissítse a könyvtár inode hozzáférési időket"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:44001
+#: ../partman-basicfilesystems.templates:46001
 msgid "relatime - update inode access times relative to modify time"
 msgstr "relatime - inode elérés időpontjainak frissítése a módosításhoz képest"
 
@@ -945,7 +965,7 @@ msgstr "relatime - inode elérés időpontjainak frissítése a módosításhoz 
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:45001
+#: ../partman-basicfilesystems.templates:47001
 msgid "nodev - do not support character or block special devices"
 msgstr "nodev - ne támogasson karakter és blokk eszközfájlokat"
 
@@ -959,7 +979,7 @@ msgstr "nodev - ne támogasson karakter és blokk eszközfájlokat"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:46001
+#: ../partman-basicfilesystems.templates:48001
 msgid "nosuid - ignore set-user-identifier or set-group-identifier bits"
 msgstr "nosuid - ne nézze a setuid és setgid biteket"
 
@@ -973,7 +993,7 @@ msgstr "nosuid - ne nézze a setuid és setgid biteket"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:47001
+#: ../partman-basicfilesystems.templates:49001
 msgid "noexec - do not allow execution of any binaries"
 msgstr "noexec - binárisok futtatásának tiltása"
 
@@ -987,7 +1007,7 @@ msgstr "noexec - binárisok futtatásának tiltása"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:48001
+#: ../partman-basicfilesystems.templates:50001
 msgid "ro - mount the file system read-only"
 msgstr "ro - fájlrendszer csak-olvasható csatolása"
 
@@ -1001,7 +1021,7 @@ msgstr "ro - fájlrendszer csak-olvasható csatolása"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:49001
+#: ../partman-basicfilesystems.templates:51001
 msgid "sync - all input/output activities occur synchronously"
 msgstr "sync - minden i/o művelet szinkron módon történik"
 
@@ -1015,7 +1035,7 @@ msgstr "sync - minden i/o művelet szinkron módon történik"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:50001
+#: ../partman-basicfilesystems.templates:52001
 msgid "usrquota - user disk quota accounting enabled"
 msgstr "usrquota - felhasználók lemezhasználati mértékének naplózása"
 
@@ -1029,7 +1049,7 @@ msgstr "usrquota - felhasználók lemezhasználati mértékének naplózása"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:51001
+#: ../partman-basicfilesystems.templates:53001
 msgid "grpquota - group disk quota accounting enabled"
 msgstr "grpquota - felhasználói csoportok lemezhasználati mértékének naplózása"
 
@@ -1043,7 +1063,7 @@ msgstr "grpquota - felhasználói csoportok lemezhasználati mértékének napl�
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:52001
+#: ../partman-basicfilesystems.templates:54001
 msgid "user_xattr - support user extended attributes"
 msgstr "user_xattr - felhasználói attribútumok támogatása"
 
@@ -1057,7 +1077,7 @@ msgstr "user_xattr - felhasználói attribútumok támogatása"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:53001
+#: ../partman-basicfilesystems.templates:55001
 msgid "quiet - changing owner and permissions does not return errors"
 msgstr "quiet - tulajdonos és jogok váltása sosem ad hibát"
 
@@ -1071,7 +1091,7 @@ msgstr "quiet - tulajdonos és jogok váltása sosem ad hibát"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:54001
+#: ../partman-basicfilesystems.templates:56001
 msgid "notail - disable packing of files into the file system tree"
 msgstr "notail - fájloknak a fájlrendszer-fába suvasztása elmarad"
 
@@ -1085,7 +1105,7 @@ msgstr "notail - fájloknak a fájlrendszer-fába suvasztása elmarad"
 #. :sl2:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:55001
+#: ../partman-basicfilesystems.templates:57001
 msgid "discard - trim freed blocks from underlying block device"
 msgstr "discard - használja a TRIM utasítást a blokkok felszabadítására"
 
@@ -1094,7 +1114,7 @@ msgstr "discard - használja a TRIM utasítást a blokkok felszabadítására"
 #. :sl4:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:56001
+#: ../partman-basicfilesystems.templates:58001
 msgid "acls - support POSIX.1e Access Control List"
 msgstr "acls - POSIX.1e Access Control List támogatása"
 
@@ -1103,7 +1123,7 @@ msgstr "acls - POSIX.1e Access Control List támogatása"
 #. :sl4:
 #. Note to translators: Please keep your translations of this string below
 #. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:57001
+#: ../partman-basicfilesystems.templates:59001
 msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
 msgstr "rövid nevek - csak a régi MS-DOS 8.3 stílusú fájlnevek használata"
 
@@ -1144,15 +1164,15 @@ msgstr "rövid nevek - csak a régi MS-DOS 8.3 stílusú fájlnevek használata"
 #. Type: boolean
 #. Description
 #. :sl5:
-#: ../partman-basicfilesystems.templates:58001
-#: ../partman-basicfilesystems.templates:59001
+#: ../partman-basicfilesystems.templates:60001
+#: ../partman-basicfilesystems.templates:61001
 msgid "Go back to the menu and correct this problem?"
 msgstr "Visszalép a menübe és javítja e hibát?"
 
 #. Type: boolean
 #. Description
 #. :sl5:
-#: ../partman-basicfilesystems.templates:58001
+#: ../partman-basicfilesystems.templates:60001
 #, fuzzy
 msgid ""
 "Your boot partition has not been configured with the ext2 file system. This "
@@ -1183,8 +1203,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl5:
-#: ../partman-basicfilesystems.templates:58001
-#: ../partman-basicfilesystems.templates:59001
+#: ../partman-basicfilesystems.templates:60001
+#: ../partman-basicfilesystems.templates:61001
 msgid ""
 "If you do not go back to the partitioning menu and correct this error, the "
 "partition will be used as is. This means that you may not be able to boot "
@@ -1196,7 +1216,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl5:
-#: ../partman-basicfilesystems.templates:59001
+#: ../partman-basicfilesystems.templates:61001
 #, fuzzy
 msgid ""
 "Your boot partition is not located on the first partition of your hard disk. "

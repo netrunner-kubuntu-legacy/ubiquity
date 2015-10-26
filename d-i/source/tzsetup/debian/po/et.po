@@ -8,19 +8,37 @@
 # This translation is released under the same licence as the debian-installer.
 #
 # Siim Põder <siim@p6drad-teel.net>, 2007.
-# Mattias Põldaru <mahfiaz@gmail.com>, 2009.
+#
+# Thanks to following Ubuntu Translators for review and fixes:
+#     Laur Mõtus
+#     Heiki Nooremäe
+#     tabbernuk
+#
+#
+# Translations from iso-codes:
+#   Tobias Quathamer <toddy@debian.org>, 2007.
+#     Translations taken from ICU SVN on 2007-09-09
+#   Alastair McKinstry <mckinstry@computer.org>, 2001,2002.
+#   Free Software Foundation, Inc., 2000, 2004, 2006
+#   Hasso Tepper <hasso@estpak.ee>, 2006.
+#   Margus Väli <mvali@hot.ee>, 2000.
+#   Siim Põder <windo@p6drad-teel.net>, 2006.
+#   Tõivo Leedjärv <leedjarv@interest.ee>, 2000, 2001, 2008.
+#   Mattias Põldaru <mahfiaz@gmail.com>, 2009-2012, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2009-04-24 07:13+0300\n"
-"Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
-"Language-Team: Eesti\n"
+"PO-Revision-Date: 2014-08-23 09:54+0300\n"
+"Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Type: select
 #. Choices
@@ -969,6 +987,171 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Riigi põhjal on sinu ajavöönd: ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Kui soovitud ajavööndit ei ole loetelus, mine palun tagasi sammu \"Keele "
+#~ "valimine\" juurde ja vali riik, mis kasutab soovitud ajavööndit (see "
+#~ "riik, kus sa elad või asud)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Maailmaaeg (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Ajavööndi määramiseks vali oma asukoht:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Austraalia pealinna ala"
+
+#~ msgid "New South Wales"
+#~ msgstr "Uus-Lõuna-Wales"
+
+#~ msgid "Victoria"
+#~ msgstr "Victoria"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Põhjaterritoorium"
+
+#~ msgid "Queensland"
+#~ msgstr "Queensland"
+
+#~ msgid "South Australia"
+#~ msgstr "Lõuna-Austraalia"
+
+#~ msgid "Tasmania"
+#~ msgstr "Tasmaania"
+
+#~ msgid "Western Australia"
+#~ msgstr "Lääne-Austraalia"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Eyre'i maantee"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Yancowinna maakond"
+
+#~ msgid "Acre"
+#~ msgstr "Akko"
+
+#~ msgid "Alagoas"
+#~ msgstr "Alagoas"
+
+#~ msgid "Amazonas"
+#~ msgstr "Amazonas"
+
+#~ msgid "Amapá"
+#~ msgstr "Amapá"
+
+#~ msgid "Ceará"
+#~ msgstr "Ceará"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Liiduringkond"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Espírito Santo"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Fernando de Noronha"
+
+#~ msgid "Goiás"
+#~ msgstr "Goiás"
+
+#~ msgid "Maranhão"
+#~ msgstr "Maranhão"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Minas Gerais"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Mato Grosso do Sul"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Pará"
+#~ msgstr "Pará"
+
+#~ msgid "Paraíba"
+#~ msgstr "Paraíba"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Piauí"
+#~ msgstr "Piauí"
+
+#~ msgid "Paraná"
+#~ msgstr "Paraná"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Rio de Janeiro"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Rio Grande do Norte"
+
+#~ msgid "Rondônia"
+#~ msgstr "Rondônia"
+
+#~ msgid "Roraima"
+#~ msgstr "rumeenia"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Rio Grande do Sul"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Santa Catarina"
+
+#~ msgid "Sergipe"
+#~ msgstr "Sergipe"
+
+#~ msgid "São Paulo"
+#~ msgstr "São Paulo"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#~ msgid "Berlin"
+#~ msgstr "Berliin"
+
+#~ msgid "Busingen"
+#~ msgstr "Busingen"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Läänesaared (Sumatra, Jakarta, Java, Lääne- ja Kesk-Kalimantan)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr ""
+#~ "Kesksaared (Sulawesi, Bali, Nusa Tenggara, Ida- ja Lõuna-Kalimantan)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Idasaared (Maluku, Papua)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Moskva+00 - Moskva"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Moskva+02 - Jekaterinburg"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Moskva+03 - Omsk"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Moskva+04 - Krasnojarsk"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Moskva+05 - Irkutsk"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Moskva+06 - Jakutsk"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Moskva+07 - Vladivostok"

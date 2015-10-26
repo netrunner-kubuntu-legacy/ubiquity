@@ -10,20 +10,26 @@
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt#
 #
+#
+# Translations from iso-codes:
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Alam <apreet.alam@gmail.com>, 2006.
-# A S Alam <apreet.alam@gmail.com>, 2006, 2007.
-# A S Alam <aalam@users.sf.net>, 2007.
+# A S Alam <aalam@users.sf.net>, 2006, 2007.
+# A S Alam <aalam@users.sf.net>, 2007, 2010.
 # Amanpreet Singh Alam <apreet.alam@gmail.com>, 2008.
 # Amanpreet Singh Brar <aalam@users.sf.net>, 2008.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2009.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2009, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-05-02 22:01+0530\n"
-"Last-Translator: Amanpreet Singh Alam <aalam@users.sf.net>\n"
+"PO-Revision-Date: 2014-08-21 21:30-0500\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -975,6 +981,169 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "ਤੁਹਾਡੇ ਦੇਸ਼ ਅਨੁਸਾਰ, ਤੁਹਾਡਾ ਟਾਈਮ ਜ਼ੋਨ ${ZONE} ਹੈ।"
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "ਜੇ ਲੋੜੀਦਾ ਸਮਾਂ ਖੇਤਰ ਲਿਸਟ ਵਿੱਚ ਨਾ ਹੋਵੇ ਤਾਂ \"ਭਾਸ਼ਾ ਚੁਣੋ\" ਪਗ਼ ਉੱਤੇ ਵਾਪਸ ਜਾਉ ਅਤੇ ਦੇਸ਼ ਚੁਣੋ, ਜੋ "
+#~ "ਕਿ ਲੋੜੀਦਾ ਸਮਾਂ-ਖੇਤਰ ਰੱਖਦਾ ਹੋਵੇ (ਦੇਸ਼ ਜਿੱਥੇ ਤੁਸੀਂ ਰਹਿੰਦੇ ਹੋ ਜਾਂ ਮੌਜੂਦ ਹੋ)।"
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "ਕੋਆਰਡੀਨੇਟ ਯੂਨੀਵਰਸਲ ਸਮਾਂ (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "ਆਪਣੇ ਸਮਾਂ ਖੇਤਰ ਵਿੱਚੋਂ ਸੂਬਾ ਜਾਂ ਖਿੱਤਾ ਚੁਣੋ:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "ਅਸਟਰੇਲੀਅਨ ਕੈਪੀਟਲ ਖੇਤਰ"
+
+#~ msgid "New South Wales"
+#~ msgstr "ਨਿਊ ਸਾਊਥ ਵੇਲਸ"
+
+#~ msgid "Victoria"
+#~ msgstr "ਵਿਕਟੋਰੀਆ"
+
+#~ msgid "Northern Territory"
+#~ msgstr "ਉੱਤਰੀ ਖੇਤਰ"
+
+#~ msgid "Queensland"
+#~ msgstr "ਕਵੀਨਜ਼ਲੈਂਡ"
+
+#~ msgid "South Australia"
+#~ msgstr "ਦੱਖਣੀ ਆਸਟੇਰਲੀਆ"
+
+#~ msgid "Tasmania"
+#~ msgstr "ਤਸਮਾਨੀਆ"
+
+#~ msgid "Western Australia"
+#~ msgstr "ਪੱਛਮੀ ਆਸਟਰੇਲੀਆ"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "ਇਰੇ ਹਾਈਵੇ"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "ਯਾਂਕਾਵੀਨਾ ਦੇਸ਼"
+
+#~ msgid "Acre"
+#~ msgstr "ਅੱਕਰੀ"
+
+#~ msgid "Alagoas"
+#~ msgstr "ਅਲਗੋਨਾ"
+
+#~ msgid "Amazonas"
+#~ msgstr "ਅਮਾਜੋਨਸ"
+
+#~ msgid "Amapá"
+#~ msgstr "ਅਮਾਪਾਲਾ"
+
+#~ msgid "Ceará"
+#~ msgstr "ਸੀਅਰਾ"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "ਡਿਸਟਰੀਟੋ ਫੈਡਰਲ"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "ਈਸਪੀਰੀਟੋ ਸੇਂਟੋ"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "ਫਰਨਾਨਡੋ ਡੇ ਨੋਰੋਨਹਾ"
+
+#~ msgid "Goiás"
+#~ msgstr "ਗੋਬਾਬੀਸ"
+
+#~ msgid "Maranhão"
+#~ msgstr "ਮਾਰਾਨਹਉ"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "ਮਿਨਾਸ ਗੀਰਾਈਸ"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "ਮਾਟੋ ਗਰੋੱਸੋ ਡੂ ਸੂਲ"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "ਮਾਟੋ ਗਰੋੱਸੋ"
+
+#~ msgid "Pará"
+#~ msgstr "ਪਾਰਾ"
+
+#~ msgid "Paraíba"
+#~ msgstr "ਪਾਰਾਈਬਾ"
+
+#~ msgid "Pernambuco"
+#~ msgstr "ਪੀਰਾਮਬੁਕੋ"
+
+#~ msgid "Piauí"
+#~ msgstr "ਪੀਅਉਈ"
+
+#~ msgid "Paraná"
+#~ msgstr "ਪਾਰਾਨਾ"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "ਰਾਉ ਡੀ ਜਾਨੀਈਰੋ"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "ਰਾਉ ਗਰੈਂਡੇ ਡੀ ਨੋਰਟੀ"
+
+#~ msgid "Rondônia"
+#~ msgstr "ਰੋਂਡੋਨੀਆ"
+
+#~ msgid "Roraima"
+#~ msgstr "ਰੋਰਾਈਮਾ"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "ਰਾਉ ਗਰੈਂਡੀ ਡੁ ਸੁਲ"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "ਸਾਂਤਾ ਕਾਟਾਰੀਨਾ"
+
+#~ msgid "Sergipe"
+#~ msgstr "ਸਿਰਗਿਪੀ"
+
+#~ msgid "São Paulo"
+#~ msgstr "ਸਾਉ ਪਾਉਵੋ"
+
+#~ msgid "Tocantins"
+#~ msgstr "ਟੂਕਾਨਟਿਨਸ"
+
+#~ msgid "Berlin"
+#~ msgstr "ਬਰਲਿਨ"
+
+#~ msgid "Busingen"
+#~ msgstr "ਬੁਸਿੰਜਨ"
+
+#~ msgid "Pohnpei"
+#~ msgstr "ਪੋਹਨਪੀਈ"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "ਪੱਛਮੀ (ਸੁਮਤਾਰਾ, ਜੈਕਾਰਤਾ, ਜਾਵਾ, ਪੱਛਮੀ ਅਤੇ ਕੇਂਦਰੀ ਕਲੀਮਾਂਟਾਂਨ)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "ਕੇਂਦਰੀ (ਸੁਲਾਵਾਸੀ, ਬਾਲੀ, ਨੁਸਾ ਤਿੱਗਾਰਾ, ਪੂਰਬੀ ਅਤੇ ਦੱਖਣੀ ਕਲੀਮਾਂਟਾਂਨ)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "ਪੂਰਬੀ (ਮਲੁਕੁ, ਪਾਪੁਆ)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "ਮਾਸਕੋ+00 - ਮਾਸਕੋ"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "ਮਾਸਕੋ+02 - ਯੀਕਾਟੀਰਿੰਬਰਗ"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "ਮਾਸਕੋ+03 - ਓਮਸਕ"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "ਮਾਸਕੋ+04 - ਕਰਾਸਨੋਯਾਰਸਕ"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "ਮਾਸਕੋ+05 - ਇਰਕੁਤਸਕ"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "ਮਾਸਕੋ+06 - ਯਾਤੂਸਟਕ"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "ਮਾਸਕੋ+07 - ਵਲਾਡੀਵੋਸਟੋਕ"

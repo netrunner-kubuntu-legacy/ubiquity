@@ -1,3 +1,66 @@
+partman-partitioning (106ubuntu1) vivid; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Add PATH, RAWMINSIZE, RAWPREFSIZE, and RAWMAXSIZE substitutions to
+      partman-partitioning/new_size in support of ubiquity's resize widget.
+    - Check that minimum filesystem sizes reported by tune2fs and ntfsresize
+      are between the minimum partition size and the current partition size;
+      if not, refuse to resize the partition at all.
+    - Save the swap size for ubiquity.
+    - On systems with only GPT disks, check that an EFI System Partition or
+      a BIOS Boot Partition exists, as appropriate.
+    - Detect "fsl" subarch for powerpc and set partition map to GPT.
+  * Dropped changes:
+    - Make sure to wipe disk label on Sun disks before creating a new one.
+    - Use mac as the default disk label on ppc64.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 17 Nov 2014 13:52:43 +0000
+
+partman-partitioning (106) unstable; urgency=low
+
+  [ Updated translations ]
+  * Turkish (tr.po) by Mert Dirik
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 20 Sep 2014 14:27:01 +0200
+
+partman-partitioning (105) unstable; urgency=medium
+
+  [ Steven Chamberlain ]
+  * On kfreebsd, drop unsatisified dependency on ntfs-3g-udeb;
+    ntfs will remain unsupported in the installer for now.
+    (Closes: #760499)
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 05 Sep 2014 22:28:56 +0200
+
+partman-partitioning (104) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Restore sensible architecture sorting in default_disk_label.
+  * Depend on ntfs-3g-udeb rather than ntfsprogs-udeb.
+  * Cache calls to tune2fs and ntfsresize, to make navigating through the
+    resize UI a little faster.
+
+  [ Updated translations ]
+  * Estonian (et.po) by Mattias Põldaru
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 04 Sep 2014 07:46:37 +0200
+
+partman-partitioning (103) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Danish (da.po) by Joe Hansen.
+
+  [ Frederic Bonnard ]
+  * Add ppc64el support.  Closes: #752444.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sun, 17 Aug 2014 23:48:02 +0200
+
+partman-partitioning (102) unstable; urgency=medium
+
+  * Group Loongson 3A and 3B in the same loongson-3 subarchitecture.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sat, 12 Jul 2014 17:08:15 +0200
+
 partman-partitioning (101ubuntu1) utopic; urgency=medium
 
   * Resynchronise with Debian.  Remaining changes:

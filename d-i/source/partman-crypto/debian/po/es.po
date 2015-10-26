@@ -17,7 +17,7 @@
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2005
 # Rubén Porras Campo <nahoo@inicia.es>, 2005
 # Omar Campagne <ocampagne@gmail.com>, 2010
-# Javier Fernández-Sanguino <jfs@debian.org>, 2003-2012
+# Javier Fernández-Sanguino <jfs@debian.org>, 2003-2012, 2014
 #
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
@@ -59,10 +59,10 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-crypto@packages.debian.org\n"
 "POT-Creation-Date: 2013-10-30 22:04+0000\n"
-"PO-Revision-Date: 2012-10-21 15:23+0200\n"
+"PO-Revision-Date: 2014-12-03 00:47+0100\n"
 "Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
-"Language: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -288,18 +288,14 @@ msgstr "¿Desea realmente borrar los datos de ${DEVICE}?"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:22001
-#, fuzzy
-#| msgid ""
-#| "The data on ${DEVICE} will be overwritten with random data. It can no "
-#| "longer be recovered after this step has completed. This is the last "
-#| "opportunity to abort the erase."
 msgid ""
 "The data on ${DEVICE} will be overwritten with zeroes. It can no longer be "
 "recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"Se sobrescribirán los datos en ${DEVICE} con datos aleatorios. Este paso no "
-"es recuperable y es su última oportunidad para interrumpir el borrado."
+"Se sobrescribirán los datos en ${DEVICE} con ceros. Este paso no es "
+"recuperable una vez se haya completado. Es su última oportunidad para "
+"interrumpir el borrado."
 
 #. Type: text
 #. Description
@@ -319,6 +315,9 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"El instalador está sobre-escribiendo ahora ${DEVICE} con ceros para borrar "
+"los contenidos que tenía anteriormente. Este paso puede omitirse cancelando "
+"esta acción."
 
 #. Type: error
 #. Description
@@ -334,16 +333,12 @@ msgstr "Falló el borrado de datos en ${DEVICE}"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:25001
-#, fuzzy
-#| msgid ""
-#| "An error occurred trying to erase the data on ${DEVICE}. The data has not "
-#| "been erased."
 msgid ""
 "An error occurred while trying to overwrite the data on ${DEVICE} with "
 "zeroes. The data has not been erased."
 msgstr ""
-"Se produjo un error cuando se intentaban borrar los datos en ${DEVICE}. No "
-"se han podido borrar los datos."
+"Se produjo un error cuando se intentaban sobre-escribir los datos en "
+"${DEVICE} con ceros. No se han podido borrar los datos."
 
 #. Type: boolean
 #. Description
@@ -367,6 +362,10 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"El instalador está ahora sobre-escribiendo ${DEVICE} con datos aleatorios "
+"para prevenir que se pueda filtrar meta-información del volumen cifrado. "
+"Este paso puede omitirse cancelando esta acción. Si lo hace se producirá una "
+"ligera merma de la calidad del cifrado."
 
 #. Type: error
 #. Description
@@ -377,6 +376,10 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"Se produjo un error al intentar sobre-escribir ${DEVICE} con datos "
+"aleatorios. Es posible recuperar los contenidos previamente almacenados en "
+"el dispositivo y puede que se haya filtrado meta-información de los nuevos "
+"contenidos."
 
 #. Type: text
 #. Description

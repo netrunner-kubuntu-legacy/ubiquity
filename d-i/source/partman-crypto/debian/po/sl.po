@@ -34,7 +34,7 @@ msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: partman-crypto@packages.debian.org\n"
 "POT-Creation-Date: 2013-10-30 22:04+0000\n"
-"PO-Revision-Date: 2012-10-18 12:56+0100\n"
+"PO-Revision-Date: 2014-10-21 14:42+0100\n"
 "Last-Translator: Vanja Cvelbar <cvelbar@gmail.com>\n"
 "Language-Team: Slovenian <gnome-si@googlegroups.com>\n"
 "Language: sl\n"
@@ -261,17 +261,12 @@ msgstr "Res želite izbrisati podatke na ${DEVICE}?"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:22001
-#, fuzzy
-#| msgid ""
-#| "The data on ${DEVICE} will be overwritten with random data. It can no "
-#| "longer be recovered after this step has completed. This is the last "
-#| "opportunity to abort the erase."
 msgid ""
 "The data on ${DEVICE} will be overwritten with zeroes. It can no longer be "
 "recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"Podatke na napravi ${DEVICE} bodo prepisali naključni podatki. Po tem koraku "
+"Podatke na napravi ${DEVICE} bodo prepisani z ničlami. Po tem koraku "
 "podatkov ni mogoče obnoviti. To je zadnja priložnost za preklic brisanja."
 
 #. Type: text
@@ -292,6 +287,8 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"Namestilnik prepisuje ${DEVICE} z ničlami, da izbriše prejšnje vsebine. Ta "
+"korak lahko preskočite s tem, da prekinete to dejanje."
 
 #. Type: error
 #. Description
@@ -307,16 +304,12 @@ msgstr "Brisanje podatkov na ${DEVICE} ni uspelo"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:25001
-#, fuzzy
-#| msgid ""
-#| "An error occurred trying to erase the data on ${DEVICE}. The data has not "
-#| "been erased."
 msgid ""
 "An error occurred while trying to overwrite the data on ${DEVICE} with "
 "zeroes. The data has not been erased."
 msgstr ""
-"Med brisanjem podatkov na ${DEVICE} je prišlo do napake. Podatki niso "
-"izbrisani."
+"Med prepisovanje podatkov z ničlami na ${DEVICE} je prišlo do napake. "
+"Podatki niso izbrisani."
 
 #. Type: boolean
 #. Description
@@ -340,6 +333,9 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"Namestilnik prepisuje ${DEVICE} z naključnimi podatki, da prepreči uhajanje "
+"meta informacij iz šifriranega nosilca. Ta korak lahko preskočite s tem, da "
+"prekinete to dejanje vendar bo kvaliteta šifriranja rahlo nižja."
 
 #. Type: error
 #. Description
@@ -350,6 +346,9 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"Med prepisovanje podatkov z naključnimi podatki na ${DEVICE} je prišlo do "
+"napake. Obstaja možnost obnovitve prejšnje vsebine naprave ter uhajanja meta-"
+"informacij o novih podatkih."
 
 #. Type: text
 #. Description

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: apt-setup@packages.debian.org\n"
-"POT-Creation-Date: 2013-05-08 22:03+0000\n"
+"POT-Creation-Date: 2015-01-11 23:02+0000\n"
 "PO-Revision-Date: 2012-09-24 19:57+0200\n"
 "Last-Translator:  Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team:  Czech <provoz@debian.cz>\n"
@@ -158,7 +158,7 @@ msgstr ""
 #. :sl1:
 #. Type: multiselect
 #. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
+#. SEC_HOST, and PARTNER_HOST are host names (e.g.
 #. security.ubuntu.com)
 #. Translators: the *entire* string should be under 55 columns
 #. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
@@ -229,26 +229,14 @@ msgstr ""
 
 #. Type: multiselect
 #. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
+#. SEC_HOST, and PARTNER_HOST are host names (e.g.
 #. security.ubuntu.com)
 #. Translators: the *entire* string should be under 55 columns
 #. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
 #. :sl2:
 #: ../apt-setup-udeb.templates:12001
 #, fuzzy
-msgid "partner archive (from ${PARTNER_HOST})"
-msgstr "bezpečnostní opravy (z ${SEC_HOST})"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
-#. security.ubuntu.com)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl2:
-#: ../apt-setup-udeb.templates:12001
-#, fuzzy
-msgid "extras archive (from ${EXTRAS_HOST})"
+msgid "partner archive (from ${PARTNER_HOST}))"
 msgstr "bezpečnostní opravy (z ${SEC_HOST})"
 
 #. Type: multiselect
@@ -271,19 +259,6 @@ msgid ""
 "The partner archive contains software provided by Canonical's partners as a "
 "service to Ubuntu users."
 msgstr ""
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:12002
-#, fuzzy
-msgid ""
-"The extras archive contains free software offered by third-party application "
-"developers who want to ship their latest software."
-msgstr ""
-"Některý software je dostupný z partnerského archivu firmy Canonical. Tento "
-"software není součástí Ubuntu, ale je poskytován Canonicalem a příslušnými "
-"partnery jako služba uživatelům Ubuntu."
 
 #. Type: text
 #. Description
@@ -615,16 +590,11 @@ msgstr ""
 #. Description
 #. This template is used by the Ubuntu version of d-i.
 #. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
 #: ../apt-mirror-setup.templates:3001
 #: ../apt-mirror-setup.templates-ubuntu:2001
 #: ../apt-mirror-setup.templates-ubuntu:3001
 #: ../apt-mirror-setup.templates-ubuntu:4001
 #: ../apt-mirror-setup.templates-ubuntu:5001
-#: ../apt-mirror-setup.templates-ubuntu:7001
 msgid ""
 "Please choose whether you want this software to be made available to you."
 msgstr "Rozhodněte se, zda chcete mít tento software k dispozici."
@@ -807,26 +777,29 @@ msgstr ""
 "testováním jako ostatní balíky, obsahuje novější verze některých aplikací, "
 "které mohou obsahovat nové užitečné vlastnosti."
 
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:7001
 #, fuzzy
-msgid "Use software from the \"extras\" repository?"
-msgstr "Používat software z archivu „partner“?"
+#~ msgid "extras archive (from ${EXTRAS_HOST})"
+#~ msgstr "bezpečnostní opravy (z ${SEC_HOST})"
 
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:7001
 #, fuzzy
-msgid ""
-"Additional software is available from the Ubuntu \"extras\" repository. This "
-"software is not part of Ubuntu, but is offered by third-party developers who "
-"want to ship their latest software."
-msgstr ""
-"Některý software je dostupný z partnerského archivu firmy Canonical. Tento "
-"software není součástí Ubuntu, ale je poskytován Canonicalem a příslušnými "
-"partnery jako služba uživatelům Ubuntu."
+#~ msgid ""
+#~ "The extras archive contains free software offered by third-party "
+#~ "application developers who want to ship their latest software."
+#~ msgstr ""
+#~ "Některý software je dostupný z partnerského archivu firmy Canonical. "
+#~ "Tento software není součástí Ubuntu, ale je poskytován Canonicalem a "
+#~ "příslušnými partnery jako služba uživatelům Ubuntu."
+
+#, fuzzy
+#~ msgid "Use software from the \"extras\" repository?"
+#~ msgstr "Používat software z archivu „partner“?"
+
+#, fuzzy
+#~ msgid ""
+#~ "Additional software is available from the Ubuntu \"extras\" repository. "
+#~ "This software is not part of Ubuntu, but is offered by third-party "
+#~ "developers who want to ship their latest software."
+#~ msgstr ""
+#~ "Některý software je dostupný z partnerského archivu firmy Canonical. "
+#~ "Tento software není součástí Ubuntu, ale je poskytován Canonicalem a "
+#~ "příslušnými partnery jako služba uživatelům Ubuntu."

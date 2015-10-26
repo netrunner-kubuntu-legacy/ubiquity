@@ -49,6 +49,7 @@ from ubiquity.frontend.kde_components import ProgressDialog
 from ubiquity.frontend.kde_components.Breadcrumb import Breadcrumb
 from ubiquity.frontend.kde_components import qssutils
 from ubiquity.plugin import Plugin
+from ubiquity.qtwidgets import SquareSvgWidget
 import ubiquity.progressposition
 
 
@@ -160,9 +161,12 @@ class Wizard(BaseFrontend):
         # For above settings to apply automatically we need to indicate that we
         # are inside a full KDE session.
         os.environ["KDE_FULL_SESSION"] = "TRUE"
-        
-        # Fix for plasma 5
+        # We also need to indicate version as otherwise KDElibs3 compatibility
+        # might kick in such as in QIconLoader.cpp:QString fallbackTheme.
+        # http://goo.gl/6LkM7X
         os.environ["KDE_SESSION_VERSION"] = "4"
+        # Pretty much all of the above but for Qt5
+        os.environ["QT_QPA_PLATFORMTHEME"] = "kde"
 
         self.app = QtGui.QApplication([])
         # The "hicolor" icon theme gets picked when Ubiquity is running as a
@@ -178,6 +182,28 @@ class Wizard(BaseFrontend):
 
         self.ui = UbiquityUI()
 
+        # Branding logo is spaced from left and right to cause it to shrink
+        # an undefined amount. This reduces the risk of having the branding
+        # shrink the steps_widget and thus cause text to be cut off or.
+        # Above the branding there is also a spacer pushing down on the logo
+        # and up on the steps to make sure spacing between steps is not
+        # awkwardly huge.
+        self.icon_widget = SquareSvgWidget(self.ui)
+        self.icon_widget.load("/usr/share/ubiquity/qt/images/branding.svgz")
+        branding_layout = QtGui.QHBoxLayout()
+        branding_layout.addItem(QtGui.QSpacerItem(1, 1,
+                                                  QtGui.QSizePolicy.Expanding,
+                                                  QtGui.QSizePolicy.Minimum))
+        branding_layout.addWidget(self.icon_widget)
+        branding_layout.addItem(QtGui.QSpacerItem(1, 1,
+                                                  QtGui.QSizePolicy.Expanding,
+                                                  QtGui.QSizePolicy.Minimum))
+        branding_spacer = QtGui.QSpacerItem(1, 1,
+                                            QtGui.QSizePolicy.Minimum,
+                                            QtGui.QSizePolicy.Expanding)
+        self.ui.sidebar_widget.layout().addItem(branding_spacer)
+        self.ui.sidebar_widget.layout().addItem(branding_layout)
+
         # initially the steps widget is not visible
         # it becomes visible once the first step becomes active
         self.ui.steps_widget.setVisible(False)
@@ -185,10 +211,10 @@ class Wizard(BaseFrontend):
 
         if 'UBIQUITY_GREETER' in os.environ:
             self.ui.setWindowFlags(
-                QtCore.Qt.Dialog
-                | QtCore.Qt.CustomizeWindowHint
-                | QtCore.Qt.WindowTitleHint
-                )
+                QtCore.Qt.Dialog |
+                QtCore.Qt.CustomizeWindowHint |
+                QtCore.Qt.WindowTitleHint
+            )
 
         self.ui.setWizard(self)
 
@@ -650,7 +676,7 @@ class Wizard(BaseFrontend):
             if not_current and p == current_page:
                 continue
             prefix = p.ui.get('plugin_prefix')
-            for w in p.widgets:
+            for w in p.widgets + p.optional_widgets:
                 for c in self.all_children(w):
                     widgets.append((c, prefix))
 
@@ -963,7 +989,13 @@ class Wizard(BaseFrontend):
             # ShutdownConfirmNo, ShutdownTypeReboot, ShutdownModeForceNow
             ksmserver.logout(0, 1, 2)
         else:
-            misc.execute_root('reboot')
+            # don't let reboot race with the shutdown of X in ubiquity-dm;
+            # reboot might be too fast and X will stay around forever instead
+            # of moving to plymouth
+            misc.execute_root(
+                'sh', '-c',
+                "if ! service display-manager status; then killall Xorg; "
+                "while pidof X; do sleep 0.5; done; fi; reboot")
 
     def do_shutdown(self):
         """Callback for main program to actually shutdown the machine."""
@@ -978,7 +1010,13 @@ class Wizard(BaseFrontend):
             # ShutdownConfirmNo, ShutdownTypeReboot, ShutdownModeForceNow
             ksmserver.logout(0, 2, 2)
         else:
-            misc.execute_root('poweroff')
+            # don't let poweroff race with the shutdown of X in ubiquity-dm;
+            # poweroff might be too fast and X will stay around forever instead
+            # of moving to plymouth
+            misc.execute_root(
+                'sh', '-c',
+                "if ! service display-manager status; then killall Xorg; "
+                "while pidof X; do sleep 0.5; done; fi; poweroff")
 
     def quit(self):
         """Quit installer cleanly."""

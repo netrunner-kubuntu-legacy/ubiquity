@@ -1,3 +1,27 @@
+hw-detect (1.95ubuntu7) wily; urgency=medium
+
+  * disk-detect.sh: run update-dev after installing multipath and sg3.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Mon, 03 Aug 2015 09:41:46 -0400
+
+hw-detect (1.95ubuntu6) wily; urgency=medium
+
+  * debian/control: drop the Depends I added; with the multipath command
+    always there but dm-multipath modules not loaded, the output of multipath
+    can confuse partman-base. This is the least intrusive change by dropping
+    delta for now.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 09 Jul 2015 17:43:30 -0400
+
+hw-detect (1.95ubuntu5) wily; urgency=medium
+
+  * disk-detect.sh: Use mpath[a-z] now rather than mpath[0-9] to identify
+    multipath devices and thus know to install partman-multipath.
+  * debian/control: Depends on multipath-udeb (>= 0.5.0), which introduces
+    the multipath device naming changes above.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Mon, 06 Jul 2015 11:20:20 -0400
+
 hw-detect (1.95ubuntu4) utopic; urgency=medium
 
   * driver-injection-disk.sh: also probe disks for OEMDRV label (LP: #1332187)

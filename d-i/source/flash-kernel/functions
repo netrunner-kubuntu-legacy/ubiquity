@@ -542,7 +542,7 @@ case "$method" in
 		fi
 		if [ -n "$dtb_kver" ]; then
 			if dpkg --compare-versions "$kvers" ge "$dtb_kver" >/dev/null; then
-				dtb="/lib/firmware/$kvers/device-tree/$dtb_name"
+				dtb="$(find /lib/firmware/$kvers/device-tree/ -name $dtb_name)"
 				if [ ! -f "$dtb" ] ; then
 					error "Couldn't find $dtb"
 				fi
@@ -584,7 +584,7 @@ case "$method" in
 			rm -f "$tmpdir/uImage"
 		fi
 		if [ -n "$dtb_name" ] && [ -n "$boot_dtb_path" ]; then
-			dtb="/lib/firmware/$kvers/device-tree/$dtb_name"
+			dtb="$(find /lib/firmware/$kvers/device-tree/ -name $dtb_name)"
 			if [ -f "$dtb" ]; then
 				cp "$dtb" "$tmpdir/$dtb_name"
 				dtb_path="$boot_mnt_dir/$boot_dtb_path"

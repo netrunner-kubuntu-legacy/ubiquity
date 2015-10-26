@@ -1,3 +1,27 @@
+apt-setup (1:0.80ubuntu8) wily; urgency=medium
+
+  * debian/apt-mirror-setup.templates-ubuntu:
+    - apt-setup/use_overlay -> apt-setup/overlay: that's the name used for the
+      template used in apt-setup, net-retriever, etc.
+    - switch apt-setup/overlay to default to false; in usual cases we don't
+      want to use an overlay, and this follows the description which says it
+      should not be enabled.
+    - apt-setup/overlay_components: fix typo in template name; it's used as
+      "overlay_components" elsewhere in d-i.
+    - apt-setup/overlay_path -> apt-setup/overlay_directory: again, follow the
+      actual name used in other d-i scripts.
+    - apt-setup/overlay_path: default to / rather than an arbitrary PPA.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Fri, 03 Jul 2015 23:20:20 -0400
+
+apt-setup (1:0.80ubuntu7) vivid; urgency=medium
+
+  * Remove extras.ubuntu.com. (LP: #1409555)
+  * Regenerate translations (needs later re-import from Launchpad?!)
+  * Drop extras.ubuntu.com release files
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Sun, 08 Feb 2015 20:01:29 +0000
+
 apt-setup (1:0.80ubuntu6) trusty; urgency=medium
 
   * Cherry-pick from trunk:

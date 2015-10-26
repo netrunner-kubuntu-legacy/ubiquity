@@ -116,7 +116,7 @@ EOF
 	fi
 	log-output -t disk-detect /sbin/multipath -v$MP_VERBOSE
 
-	if multipath -l 2>/dev/null | grep -q '^mpath[0-9]\+ '; then
+	if multipath -l 2>/dev/null | grep -q '^mpath[a-z]\+ '; then
 		return 0
 	else
 		return 1
@@ -289,6 +289,9 @@ if [ "$RET" = true ]; then
 		fi
 		# No way to check whether this is loaded already?
 		log-output -t disk-detect modprobe -v dm-round-robin || true
+
+		# ensure multipath and sg3 udev rules are run before we probe.
+		update-dev >/dev/null
 
 		# Look for multipaths...
 		if multipath_probe; then

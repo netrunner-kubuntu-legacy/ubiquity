@@ -8,21 +8,35 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
+#
+# Translations from iso-codes:
+#     Translations taken from ICU SVN on 2007-09-09
+#   Panayotis Pakos <aeikineton@yahoo.com>
 # George Papamichelakis <george@step.gr>, 2004.
 # Emmanuel Galatoulas <galas@tee.gr>, 2004.
 # Konstantinos Margaritis <markos@debian.org>, 2004, 2006.
 # Greek Translation Team <debian-l10n-greek@lists.debian.org>, 2004, 2005.
 # quad-nrg.net <galaxico@quad-nrg.net>, 2005, 2006, 2007.
-# quad-nrg.net <yodesy@quad-nrg.net>, 2006.
+# quad-nrg.net <yodesy@quad-nrg.net>, 2006, 2008.
 # QUAD-nrg.net <yodesy@quad-nrg.net>, 2006.
+# galaxico@quad-nrg.net <galaxico@quad-nrg.net>, 2009, 2011.
+# Emmanuel Galatoulas <galaxico@quad-nrg.net>, 2009, 2010, 2013, 2014.
+#   Tobias Quathamer <toddy@debian.org>, 2007.
+#   Free Software Foundation, Inc., 2004.
+#   Alastair McKinstry <mckinstry@computer.org>, 2001.
+#   QUAD-nrg.net <yodesy@quad-nrg.net>, 2006, 2010.
+#   Simos Xenitellis <simos@hellug.gr>, 2001.
+#   Konstantinos Margaritis <markos@debian.org>, 2004.
+#   Athanasios Lefteris <alefteris@gmail.com>, 2008, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-08-22 20:23+0300\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"PO-Revision-Date: 2014-05-11 13:37+0300\n"
+"Last-Translator: galaxico <galaxico@quad-nrg.net>\n"
+"Language-Team: el <debian-l10n-greek@lists.debian.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -976,6 +990,172 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Με βάση την χώρα σας, η χρονική ζώνη σας είναι ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Αν η επιθυμητή χρονική ζώνη δεν αναφέρεται στη λίστα, παρακαλώ επιστρέψτε "
+#~ "στο βήμα \"Επιλογή γλώσσας\" και επιλέξτε μια χώρα που χρησιμοποιεί αυτή "
+#~ "τη χρονική ζώνη (τη χώρα στην οποία ζείτε ή βρίσκεστε)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Συντεταγμένη Παγκόσμια Ώρα (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr ""
+#~ "Επιλέξτε την πολιτεία ή την επαρχία για τη ρύθμιση της χρονικής σας ζώνη:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Περιοχή Πρωτεύουσας Αυστραλίας"
+
+#~ msgid "New South Wales"
+#~ msgstr "Νέα Νότια Ουαλία"
+
+#~ msgid "Victoria"
+#~ msgstr "Βικτωρία"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Βόρειο Έδαφος"
+
+#~ msgid "Queensland"
+#~ msgstr "Queensland"
+
+#~ msgid "South Australia"
+#~ msgstr "Νότια Αυστραλία"
+
+#~ msgid "Tasmania"
+#~ msgstr "Τασμανία"
+
+#~ msgid "Western Australia"
+#~ msgstr "Δυτική Αυστραλία"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Eyre Highway"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Κομητεία Yancowinna"
+
+#~ msgid "Acre"
+#~ msgstr "Acre"
+
+#~ msgid "Alagoas"
+#~ msgstr "Alagoas"
+
+#~ msgid "Amazonas"
+#~ msgstr "Αμαζονία"
+
+#~ msgid "Amapá"
+#~ msgstr "Amapá"
+
+#~ msgid "Ceará"
+#~ msgstr "Ceará"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Distrito Federal"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Espírito Santo"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Fernando de Noronha"
+
+#~ msgid "Goiás"
+#~ msgstr "Goiás"
+
+#~ msgid "Maranhão"
+#~ msgstr "Maranhão"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Minas Gerais"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Mato Grosso do Sul"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Pará"
+#~ msgstr "Pará"
+
+#~ msgid "Paraíba"
+#~ msgstr "Paraíba"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Piauí"
+#~ msgstr "Piauí"
+
+#~ msgid "Paraná"
+#~ msgstr "Paraná"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Rio de Janeiro"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Rio Grande do Norte"
+
+#~ msgid "Rondônia"
+#~ msgstr "Rondônia"
+
+#~ msgid "Roraima"
+#~ msgstr "Roraima"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Rio Grande do Sul"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Santa Catarina"
+
+#~ msgid "Sergipe"
+#~ msgstr "Sergipe"
+
+#~ msgid "São Paulo"
+#~ msgstr "São Paulo"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#~ msgid "Berlin"
+#~ msgstr "Βερολίνο"
+
+#~ msgid "Busingen"
+#~ msgstr "Busingen"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Δυτική (Σουμάτρα, Τζακάρτα, Ιάβα, Δυτικό και Κεντρικό Kalimantan)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr ""
+#~ "Κεντρική (Sulawesi, Μπαλί, Nusa Tenggara, Ανατολική και Δυτική Kalimantan)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Ανατολική (Maluku, Papua)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Μόσχα+00 - Μόσχα"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Μόσχα+02 - Αικατερίνεμπουργκ"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Μόσχα+03 - Ομσκ"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Μόσχα+04 - Krasnoyarsk"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Μόσχα+05 - Irkutsk"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Μόσχα+06 - Yakutsk"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Μόσχα+07 - Βλαδιβοστόκ"

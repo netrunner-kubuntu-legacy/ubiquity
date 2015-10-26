@@ -324,7 +324,7 @@ case $prefix in
     /dev/loop)
 	disc_offered_devfs="$bootfs"
 	;;
-    /dev/[hmsv]d[a-z0-9]|/dev/xvd[a-z]|/dev/cciss/c[0-9]d[0-9]*|/dev/ida/c[0-9]d[0-9]*|/dev/rs/c[0-9]d[0-9]*|/dev/mmcblk[0-9]|/dev/ad[0-9]*|/dev/da[0-9]*|/dev/fio[a-z]|/dev/nvme[0-9]n[0-9])
+    /dev/[hmsv]d[a-z0-9]*|/dev/xvd[a-z]|/dev/cciss/c[0-9]d[0-9]*|/dev/ida/c[0-9]d[0-9]*|/dev/rs/c[0-9]d[0-9]*|/dev/mmcblk[0-9]|/dev/ad[0-9]*|/dev/da[0-9]*|/dev/fio[a-z]|/dev/nvme[0-9]n[0-9])
 	disc_offered_devfs="$prefix"
 	;;
     *)
@@ -357,12 +357,12 @@ fi
 # Check if the boot file system is on multipath
 if [ "$found" = "0" ] && type multipath >/dev/null 2>&1; then
 	for frdisk in $(multipath -l 2>/dev/null | \
-			grep '^mpath[0-9]\+ ' | cut -d ' ' -f 1); do
+			grep '^mpath[a-z]\+ ' | cut -d ' ' -f 1); do
 		if echo "$disc_offered" | 	   \
-			grep -q "^/dev/mapper/${frdisk}-part[0-9]\+"; then
+			grep -q "^/dev/mapper/${frdisk}[0-9]\+"; then
 			frdev=/dev/mapper/$frdisk
 			frbootpart=${disc_offered#$frdev}
-			frgrubroot=${frbootpart#-part}
+			frgrubroot=${frbootpart#p}
 			frtype=multipath
 			found=1
 			break
@@ -426,6 +426,9 @@ experimental_arch () {
 }
 
 case $ARCH in
+    arm64/efi)
+	grub_package="grub-efi-arm64"
+	;;
     i386/mac|amd64/mac)
 	# Note: depends on partman-efi to load the efivars module!
 	if [ -d /sys/firmware/efi ]; then
@@ -479,9 +482,24 @@ esac
 
 case $ARCH:$grub_package in
     ppc64el/*:grub-ieee1275)
+	# By default, use the first PReP partition found (prep-bootdev).
+	# If available, prefer a PReP partition in the same device (disc_offered).
+	# (the matching works on devices with/without disk-partition separator.)
 	wipe_bootdev="$(/usr/lib/grub-installer/prep-bootdev)"
-	info "Wiping PReP partition $wipe_bootdev"
-	log-output -t grub-installer dd if=/dev/zero of="$wipe_bootdev" bs=512 count="$(blockdev --getsz "$wipe_bootdev")"
+	for prep_p in $(/usr/lib/grub-installer/prep-bootdev -l); do
+		if [ "${prep_p%[0-9]*}" = "${disc_offered%[0-9]*}" ]; then
+			wipe_bootdev=$prep_p
+			break
+		fi
+	done
+	unset prep_p
+
+	if [ -n "$wipe_bootdev" ]; then
+		info "Wiping PReP partition $wipe_bootdev"
+		log-output -t grub-installer dd if=/dev/zero of="$wipe_bootdev" bs=512 count="$(blockdev --getsz "$wipe_bootdev")"
+	else
+		info "WARNING: PReP partition not found."
+	fi
 	;;
 esac
 
@@ -756,7 +774,7 @@ case $ARCH:$grub_package in
 	fi
 	;;
     ppc64el/*:grub-ieee1275)
-	bootdev="$(/usr/lib/grub-installer/prep-bootdev)"
+	bootdev="$wipe_bootdev"
 	state=3
 	;;
     *)
@@ -1006,6 +1024,12 @@ make_device_map () {
 }
 
 make_active_partition () {
+	if [ "$grub_package" != "grub-pc" ]; then
+	# only do this for grub-pc since on EFI $bootdev is a dummy argument
+	# and looking for a partition table on the wrong or non existing disk
+	# crashes the installer LP:#1303790
+		return
+	fi
 	bootdisk=
 	bootpart=
 	case $bootdev in

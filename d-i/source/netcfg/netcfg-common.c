@@ -1469,7 +1469,7 @@ int netcfg_detect_link(struct debconfclient *client, const struct netcfg_interfa
 {
     char arping[256];
     int count, rv = 0;
-    int link_waits;
+    int link_waits = 12;  /* default for netcfg/link_wait_timeout times 4 */
     int gw_tries = NETCFG_GATEWAY_REACHABILITY_TRIES;
     const char *if_name = interface->name;
     const char *gateway = interface->gateway;
@@ -1678,6 +1678,15 @@ int netcfg_gateway_reachable(const struct netcfg_interface *interface)
     } else if (interface->address_family == AF_INET6) {
         int i;
         
+        /* Check if the gateway is a link-local address (fe80::/64) */
+        if (gw_addr.in6.s6_addr16[0] == htons(0xFE80) &&
+                gw_addr.in6.s6_addr16[1] == 0 &&
+                gw_addr.in6.s6_addr16[2] == 0 &&
+                gw_addr.in6.s6_addr16[3] == 0) {
+            return 1;
+        }
+
+        /* Check if the gateway is on the same subnet */
         for (i = 0; i < 4; i++) {
             if ((gw_addr.in6.s6_addr32[i] & mask.in6.s6_addr32[i]) != net.in6.s6_addr32[i]) {
                 return 0;

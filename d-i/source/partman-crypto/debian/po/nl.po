@@ -21,19 +21,21 @@
 # Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2006, 2007, 2008, 2009, 2010, 2011.
 # Taco Witte <tcwitte@cs.uu.nl>, 2004.
 # Reinout van Schouwen <reinouts@gnome.org>, 2007.
+# Frans Spiesschaert <Frans.Spiesschaert@yucom.be>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/sublevel1\n"
 "Report-Msgid-Bugs-To: partman-crypto@packages.debian.org\n"
 "POT-Creation-Date: 2013-10-30 22:04+0000\n"
-"PO-Revision-Date: 2012-10-19 16:11+0200\n"
-"Last-Translator: Jeroen Schot <schot@a-eskwadraat.nl>\n"
-"Language-Team: Debian l10n Dutch <debian-l10n-dutch@lists.debian.org>\n"
+"PO-Revision-Date: 2014-10-13 13:12+0200\n"
+"Last-Translator: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>\n"
+"Language-Team: Debian Dutch l10n Team <debian-l10n-dutch@lists.debian.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Type: text
 #. Description
@@ -255,19 +257,14 @@ msgstr "Weet u zeker dat u de data op ${DEVICE} wilt wissen?"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:22001
-#, fuzzy
-#| msgid ""
-#| "The data on ${DEVICE} will be overwritten with random data. It can no "
-#| "longer be recovered after this step has completed. This is the last "
-#| "opportunity to abort the erase."
 msgid ""
 "The data on ${DEVICE} will be overwritten with zeroes. It can no longer be "
 "recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"De data op ${DEVICE} zal overschreven worden met willekeurige data. Nadat "
-"deze stap uitgevoerd is, kan de data niet meer teruggehaald worden. Dit is "
-"dus uw laatste kans om het wissen af te breken."
+"De data op ${DEVICE} zal overschreven worden met nullen. Nadat deze stap "
+"uitgevoerd is, kan de data niet meer teruggehaald worden. Dit is dus uw "
+"laatste kans om het wissen af te breken."
 
 #. Type: text
 #. Description
@@ -287,6 +284,9 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"Het installatieprogramma overschrijft nu ${DEVICE} met nullen om de eerdere "
+"inhoud te wissen. U kunt deze stap overslaan door deze bewerking te "
+"annuleren."
 
 #. Type: error
 #. Description
@@ -302,16 +302,12 @@ msgstr "Wissen van data op ${DEVICE} is mislukt"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:25001
-#, fuzzy
-#| msgid ""
-#| "An error occurred trying to erase the data on ${DEVICE}. The data has not "
-#| "been erased."
 msgid ""
 "An error occurred while trying to overwrite the data on ${DEVICE} with "
 "zeroes. The data has not been erased."
 msgstr ""
-"Er is een fout opgetreden tijdens het wissen van de data op ${DEVICE}. De "
-"data is niet gewist."
+"Er is een fout opgetreden tijdens het overschrijven met nullen van de data "
+"op ${DEVICE}. De data is niet gewist."
 
 #. Type: boolean
 #. Description
@@ -336,6 +332,10 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"Het installatieprogramma overschrijft nu ${DEVICE} met willekeurige data om "
+"te voorkomen dat meta-informatie zou kunnen weglekken uit de versleutelde "
+"schijf. U kunt deze stap overslaan door het annuleren van deze bewerking, "
+"weliswaar ten koste van een gering kwaliteitsverlies van de encryptie."
 
 #. Type: error
 #. Description
@@ -346,6 +346,9 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"Er is een fout opgetreden tijdens het overschrijven van ${DEVICE} met "
+"willekeurige data. Terughalen van de eerdere inhoud van het apparaat blijft "
+"mogelijk en mogelijk is er meta-informatie over de nieuwe inhoud weggelekt."
 
 #. Type: text
 #. Description

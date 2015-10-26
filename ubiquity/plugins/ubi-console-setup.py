@@ -286,19 +286,22 @@ class PageKde(plugin.PluginUI):
     @plugin.only_this_page
     def on_keyboard_layout_selected(self, *args):
         layout = self.get_keyboard()
-        lang = 'C'
+        lang = self.controller.dbfilter.get_locale()
         if layout is not None:
-            # skip updating keyboard if not using display
-            if self.keyboardDisplay:
-                ly = keyboard_names.layout_id(lang, misc.utf8(layout))
-                self.keyboardDisplay.setLayout(ly)
+                # skip updating keyboard if not using display
+                if self.keyboardDisplay:
+                    try:
+                        ly = keyboard_names.layout_id(lang, misc.utf8(layout))
+                    except KeyError:
+                        ly = keyboard_names.layout_id('C', misc.utf8(layout))
+                    self.keyboardDisplay.setLayout(ly)
 
-                # no variants, force update by setting none
-                # if not keyboard_names.has_variants(l, ly):
-                #    self.keyboardDisplay.setVariant(None)
+                    # no variants, force update by setting none
+                    # if not keyboard_names.has_variants(l, ly):
+                    #    self.keyboardDisplay.setVariant(None)
 
-            self.current_layout = layout
-            self.controller.dbfilter.change_layout(layout)
+                self.current_layout = layout
+                self.controller.dbfilter.change_layout(layout)
 
     @plugin.only_this_page
     def on_keyboard_variant_selected(self, *args):
@@ -307,8 +310,11 @@ class PageKde(plugin.PluginUI):
 
         if self.keyboardDisplay:
             var = None
-            lang = 'C'
-            ly = keyboard_names.layout_id(lang, layout)
+            lang = self.controller.dbfilter.get_locale()
+            try:
+                ly = keyboard_names.layout_id(lang, layout)
+            except KeyError:
+                ly = keyboard_names.layout_id('C', layout)
             if variant:
                 try:
                     var = keyboard_names.variant_id(lang, ly,
@@ -337,8 +343,11 @@ class PageKde(plugin.PluginUI):
             self.page.keyboard_layout_combobox.setCurrentIndex(index)
 
         if self.keyboardDisplay:
-            lang = 'C'
-            ly = keyboard_names.layout_id(lang, misc.utf8(layout))
+            lang = self.controller.dbfilter.get_locale()
+            try:
+                ly = keyboard_names.layout_id(lang, misc.utf8(layout))
+            except KeyError:
+                ly = keyboard_names.layout_id('C', misc.utf8(layout))
             self.keyboardDisplay.setLayout(ly)
 
     def get_keyboard(self):
@@ -361,8 +370,11 @@ class PageKde(plugin.PluginUI):
             self.page.keyboard_variant_combobox.setCurrentIndex(index)
 
         if self.keyboardDisplay:
-            lang = 'C'
-            layout = keyboard_names.layout_id(lang, self.get_keyboard())
+            lang = self.controller.dbfilter.get_locale()
+            try:
+                layout = keyboard_names.layout_id(lang, self.get_keyboard())
+            except KeyError:
+                layout = keyboard_names.layout_id('C', self.get_keyboard())
             if variant:
                 try:
                     var = keyboard_names.variant_id(

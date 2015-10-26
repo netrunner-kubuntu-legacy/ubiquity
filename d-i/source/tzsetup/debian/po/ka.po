@@ -3,7 +3,7 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
-# Georgian messages for ubuntu-installer.
+# Georgian messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
@@ -20,13 +20,14 @@ msgstr ""
 "Project-Id-Version: debian-installer.2006071\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-09-07 01:00+0400\n"
+"PO-Revision-Date: 2011-03-01 12:49+0400\n"
 "Last-Translator: Aiet Kolkhi <aietkolkhi@gmail.com>\n"
-"Language-Team: Georgian <aietkolkhi@gmail.com>\n"
+"Language-Team: Georgian\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0.\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #. Type: select
 #. Choices
@@ -974,6 +975,85 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "მითითებული ქვეყნის მიხედვით თქვენი ზონაა ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "თუ სასურველი დროის სარტელს ვერ ხედავთ, დაუბრუნდით ნაბიჯს „ენის ამორჩევა“ "
+#~ "და ამოირჩიეთ ქვეყანა, სადაც გამოიყენება სასურველი დროის სარტყელი (მაგ. "
+#~ "ქვეყანა, სადაც იმყოფებით)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "გრინვიჩის დრო (GMT), იგივე (UTC)"
+
+#, fuzzy
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "მიუთითეთ მდებარეობა თქვენს ზონაში:"
+
+#, fuzzy
+#~ msgid "South Australia"
+#~ msgstr "სამხრეთ ამერიკა"
+
+#, fuzzy
+#~ msgid "Tasmania"
+#~ msgstr "რუმინული"
+
+#, fuzzy
+#~ msgid "Yancowinna County"
+#~ msgstr "იანკოვინა"
+
+#, fuzzy
+#~ msgid "Acre"
+#~ msgstr "აზორის კ-ბი"
+
+#, fuzzy
+#~ msgid "Alagoas"
+#~ msgstr "გალაპაგოსი"
+
+#, fuzzy
+#~ msgid "Amazonas"
+#~ msgstr "არიზონა"
+
+#, fuzzy
+#~ msgid "Roraima"
+#~ msgstr "რუმინული"
+
+#, fuzzy
+#~ msgid "São Paulo"
+#~ msgstr "სან-პაულო"
+
+#, fuzzy
+#~ msgid "Pohnpei"
+#~ msgstr "პონაპე"
+
+#, fuzzy
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "ეკატერინბურგი"
+
+#, fuzzy
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "ანადირი"
+
+#, fuzzy
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "ეკატერინბურგი"
+
+#, fuzzy
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "ეკატერინბურგი"
+
+#, fuzzy
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "ეკატერინბურგი"
+
+#, fuzzy
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "ეკატერინბურგი"
+
+#, fuzzy
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "ნოვოსიბირსკი"

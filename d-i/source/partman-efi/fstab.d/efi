@@ -23,7 +23,7 @@ for dev in $DEVICES/*; do
 		[ -f "$id/method" ] || continue
 		method=$(cat $id/method)
 		[ "$method" = efi ] || continue
-		echo "$path" /boot/efi vfat defaults 0 1
+		echo "$path" /boot/efi vfat umask=0077 0 1
 		seen_efi=1
 	done
 	close_dialog

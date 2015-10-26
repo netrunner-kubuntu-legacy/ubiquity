@@ -149,8 +149,7 @@ class PartMan(QtGui.QWidget):
             dialog.partition_create_use_combo.currentIndexChanged[int].connect(
                 self.on_partition_create_use_combo_changed)
 
-            # TODO
-            # self.translate_widget_children(dialog)
+            self.ctrlr._wizard.translate_widget_children(dialog)
 
         # TODO cjwatson 2006-11-01: Because partman doesn't use a question
         # group for these, we have to figure out in advance whether each
@@ -261,8 +260,7 @@ class PartMan(QtGui.QWidget):
             dialog.partition_edit_use_combo.currentIndexChanged[int].connect(
                 self.on_partition_edit_use_combo_changed)
 
-            # TODO
-            # self.translate_widget_children(dialog)
+            self.ctrlr._wizard.translate_widget_children(dialog)
 
         current_size = None
         if ('can_resize' not in partition or not partition['can_resize'] or

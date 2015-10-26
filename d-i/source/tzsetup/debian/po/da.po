@@ -6,25 +6,47 @@
 # translation of debian-installer_packages_po_sublevel1_da.po to
 # Danish messages for debian-installer.
 # This file is distributed under the same license as debian-installer.
+# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012, 2013, 2014, 2015.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2010.
+# Mads Bille Lundby <lundbymads@gmail.com, 2009.
 # Henrik Christian Grove <debian@3001.dk>, 2008.
 # Jesper Dahl Nyerup <debian@jespernyerup.dk>, 2008.
-# Jacob Sparre Andersen <sparre@nbi.dk>, 2008.
+# Jacob Sparre Andersen <jacob@jacob-sparre.dk>, 2008, 2010.
 # Claus Hindsgaul <claus.hindsgaul@gmail.com>, 2004-2007.
 # Reviewed 2007 by Niels Rasmussen
 #
+# Volume er oversat til diskenhed. Ret hvis Dansk-gruppen finder en anbefaling.
+#
+# Translations from iso-codes:
+# Alastair McKinstry <mckinstry@computer.org>, 2001.
+# Claus Hindsgaul <claus.hindsgaul@gmail.com>, 2006.
+# Claus Hindsgaul <claus_h@image.dk>, 2004, 2005, 2006.
+# Computeroversættelse Tobias Toedter <t.toedter@gmx.net>, 2007.
+# Copyright (C) Free Software Foundation, Inc., 2006.
+# Frederik 'Freso' S. Olesen <freso.dk@gmail.com>, 2008.
+# Free Software Foundation, Inc., 2000, 2004, 2005.
+# Joe Hansen <joedalton2@yahoo.dk>, 2009, 2010, 2011.
+# Keld Simonsen <keld@dkuug.dk>, 2000, 2001.
+# Kenneth Christiansen <kenneth@gnu.org>, 2000.
+# Ole Laursen <olau@hardworking.dk>, 2001.
+#
+# vedrørende russisk:
+# (bogstavet й bliver normalt til j på dansk og y på engelsk.  Der er
+# også nogle forskelle med de mange s/sh-agtige lyde)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_da\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-09-19 16:35+0200\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"PO-Revision-Date: 2015-03-05 20:12+0200\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Type: select
 #. Choices
@@ -936,7 +958,7 @@ msgstr "Samoa"
 #. :sl1:
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
-msgstr "Gemmer tidszonen..."
+msgstr "Gemmer tidszonen ..."
 
 #. Type: boolean
 #. Description
@@ -974,6 +996,171 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Baseret på dit land, må din tidszone være ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Hvis den ønskede tidszone ikke er nævnt, så gå tilbage til trinnet »Vælg "
+#~ "sprog/Choose language« og vælg et land, der bruger den ønskede tidszone "
+#~ "(det land, hvor du bor eller opholder dig)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Zulutid (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Vælg stat eller provins for at angive din tidszone:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Austalsk hovedstadsområde"
+
+#~ msgid "New South Wales"
+#~ msgstr "New South Wales"
+
+#~ msgid "Victoria"
+#~ msgstr "Victoria"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Nordlige Territorie"
+
+#~ msgid "Queensland"
+#~ msgstr "Queensland"
+
+#~ msgid "South Australia"
+#~ msgstr "Sydaustralien"
+
+#~ msgid "Tasmania"
+#~ msgstr "Tasmanien"
+
+#~ msgid "Western Australia"
+#~ msgstr "Vestlige Australien"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Eyre Highway"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Yancowinna County"
+
+#~ msgid "Acre"
+#~ msgstr "Acre"
+
+#~ msgid "Alagoas"
+#~ msgstr "Alagoas"
+
+# # Amazonas (delstat i Brasilien) – en delstat i Brasilien
+#~ msgid "Amazonas"
+#~ msgstr "Amazonas"
+
+#~ msgid "Amapá"
+#~ msgstr "Amapá"
+
+#~ msgid "Ceará"
+#~ msgstr "Ceará"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Distrito Federal"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Espírito Santo"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Fernando de Noronha"
+
+#~ msgid "Goiás"
+#~ msgstr "Goiás"
+
+#~ msgid "Maranhão"
+#~ msgstr "Maranhão"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Minas Gerais"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Mato Grosso do Sul"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Pará"
+#~ msgstr "Pará"
+
+#~ msgid "Paraíba"
+#~ msgstr "Paraíba"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Piauí"
+#~ msgstr "Piauí"
+
+#~ msgid "Paraná"
+#~ msgstr "Paraná"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Rio de Janeiro"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Rio Grande do Norte"
+
+#~ msgid "Rondônia"
+#~ msgstr "Rondônia"
+
+#~ msgid "Roraima"
+#~ msgstr "Roraima"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Rio Grande do Sul"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Santa Catarina"
+
+#~ msgid "Sergipe"
+#~ msgstr "Sergipe"
+
+#~ msgid "São Paulo"
+#~ msgstr "Sao Paulo"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#~ msgid "Berlin"
+#~ msgstr "Berlin"
+
+#~ msgid "Busingen"
+#~ msgstr "Büsingen"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Vestlig (Sumatra, Jakarta, Java-, Vest- og Centralkalimantan)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "Central (Sulawesi, Bali, Nusa Tenggara, Øst- og Sydkalimantan)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Østlig (Maluku, Papua)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Moskva+00 - Moskva"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Moskva+02 - Jekaterinburg"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Moskva+03 - Omsk"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Moskva+04 - Krasnojarsk"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Moskva+05 - Irkutsk"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Moskva+06 - Jakutsk"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Moskva+07 - Vladivostok"

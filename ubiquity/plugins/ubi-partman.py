@@ -65,6 +65,9 @@ class PageBase(plugin.PluginUI):
     def __init__(self, *args, **kwargs):
         plugin.PluginUI.__init__(self)
 
+    def update_branded_strings(self):
+        pass
+
     def show_page_advanced(self):
         pass
 
@@ -99,6 +102,9 @@ class PageBase(plugin.PluginUI):
 
     def get_grub_choice(self):
         return misc.grub_default()
+
+    def show_crypto_page(self):
+        pass
 
     def get_crypto_keys(self):
         pass
@@ -200,6 +206,21 @@ class PageGtk(PageBase):
         # Define a list to save grub imformation
         self.grub_options = []
 
+    def update_branded_strings(self):
+        release = misc.get_release()
+
+        crypto_desc_obj = getattr(self, 'crypto_description_2')
+        text = self.controller.get_string(
+            'ubiquity/text/crypto_description_2')
+        text = text.replace('${RELEASE}', release.name)
+        crypto_desc_obj.set_label(text)
+
+        lvm_explanation_obj = getattr(self, 'partition_lvm_explanation')
+        text = self.controller.get_string(
+            'ubiquity/text/partition_lvm_explanation')
+        text = text.replace('${RELEASE}', release.name)
+        lvm_explanation_obj.set_label(text)
+
     def plugin_get_current_page(self):
         if self.current_page == self.page_ask:
             self.plugin_is_install = self.part_ask_option_is_install()
@@ -300,15 +321,8 @@ class PageGtk(PageBase):
         # TODO dmitrij.ledkov 2012-07-25 no way to go back and return
         # to here? This needs to be addressed in the design document.
         if crypto and use_device and self.current_page == self.page_ask:
-            self.set_page_title(
-                self.controller.get_string('ubiquity/text/crypto_label'))
-            self.current_page = self.page_crypto
-            self.move_crypto_widgets()
-            self.show_encryption_passphrase(crypto)
-            self.controller.go_to_page(self.current_page)
-            self.controller.toggle_next_button('install_button')
+            self.show_crypto_page()
             self.plugin_is_install = one_disk
-            self.info_loop(None)
             return True
 
         if (self.current_page == self.page_crypto and
@@ -324,8 +338,8 @@ class PageGtk(PageBase):
             reuse or replace)
 
         # Looks like not... go to disk space allocation page
-        if (self.current_page in [self.page_ask, self.page_crypto]
-                and not done_partitioning):
+        if (self.current_page in [self.page_ask, self.page_crypto] and
+                not done_partitioning):
             if resize:
                 self.set_page_title(self.resize_use_free.get_label())
                 if 'wubi' in self.extra_options:
@@ -633,18 +647,6 @@ class PageGtk(PageBase):
             title = title.replace('${RELEASE}', release.name)
             desc = self.controller.get_string('ubiquity/text/use_lvm_desc')
             options['some_device_lvm'] = PartitioningOption(title, desc)
-
-        crypto_desc_obj = getattr(self, 'crypto_description_2')
-        text = self.controller.get_string(
-            'ubiquity/text/crypto_description_2')
-        text = text.replace('${RELEASE}', release.name)
-        crypto_desc_obj.set_label(text)
-
-        lvm_explanation_obj = getattr(self, 'partition_lvm_explanation')
-        text = self.controller.get_string(
-            'ubiquity/text/partition_lvm_explanation')
-        text = text.replace('${RELEASE}', release.name)
-        lvm_explanation_obj.set_label(text)
 
         ticked = False
         for option, name in option_to_widget:
@@ -1135,15 +1137,24 @@ class PageGtk(PageBase):
                 self.controller.dbfilter.edit_partition(devpart, **edits)
 
     def plugin_translate(self, lang):
-        symbolic_widgets = ['partition_button_new', 'partition_button_delete']
-        for widget_name in symbolic_widgets:
+        widgets = (
+            ('partition_button_new', "empty"),
+            ('partition_button_delete', "empty"),
+            ('partition_button_edit', "i18n"),
+        )
+        for widget_name, action in widgets:
             widget = getattr(self, widget_name)
-            text = widget.get_label()
+            text = self.controller.get_string(widget_name, lang)
             if len(text) == 0:
                 continue
             a11y = widget.get_accessible()
             a11y.set_name(text)
-            widget.set_label('')
+            if action == "empty":
+                widget.set_label('')
+            elif action == "i18n":
+                widget.set_label(text)
+            else:
+                raise ValueError("unknown action '%s'" % action)
 
     @plugin.only_this_page
     def on_partition_use_combo_changed(self, combobox):
@@ -1437,8 +1448,8 @@ class PageGtk(PageBase):
             complete = False
             self.password_match.set_current_page(
                 self.password_match_pages['empty'])
-            if passw and (not passw.startswith(vpassw)
-                          or len(vpassw) / len(passw) > 0.8):
+            if passw and (not passw.startswith(vpassw) or
+                          len(vpassw) / len(passw) > 0.8):
                 self.password_match.set_current_page(
                     self.password_match_pages['mismatch'])
         else:
@@ -1456,6 +1467,16 @@ class PageGtk(PageBase):
         self.controller.allow_go_forward(complete)
         self.partition_dialog_okbutton.set_sensitive(complete)
         return complete
+
+    def show_crypto_page(self):
+        self.set_page_title(
+            self.controller.get_string('ubiquity/text/crypto_label'))
+        self.current_page = self.page_crypto
+        self.move_crypto_widgets()
+        self.show_encryption_passphrase(True)
+        self.controller.go_to_page(self.current_page)
+        self.controller.toggle_next_button('install_button')
+        self.info_loop(None)
 
     def get_crypto_keys(self):
         if self.info_loop(None):
@@ -1611,6 +1632,8 @@ class Page(plugin.Plugin):
         self.description_cache = {}
         self.local_progress = False
         self.swap_size = 0
+
+        self.ui.update_branded_strings()
 
         self.install_bootloader = False
         if (self.db.get('ubiquity/install_bootloader') == 'true' and
@@ -3113,10 +3136,21 @@ class Page(plugin.Plugin):
             return True
 
         elif question.startswith('partman-crypto/passphrase'):
+            # Go forward rather than back in response to passphrase and
+            # passphrase-again questions if the UI is not available but they
+            # have been preseeded
+            if not hasattr(self.ui, 'get_crypto_keys'):
+                return self.db.fget(question, 'seen') == 'true'
+
+            do_preseed = True
             if not self.ui.get_crypto_keys():
-                return False
-            self.preseed(question, self.ui.get_crypto_keys())
-            return True
+                if hasattr(self.ui, 'show_crypto_page'):
+                    do_preseed = False
+                    self.ui.show_crypto_page()
+
+            if do_preseed:
+                self.preseed(question, self.ui.get_crypto_keys())
+                return True
 
         elif question == 'partman-crypto/mainmenu':
             if self.activating_crypto:
@@ -3177,6 +3211,9 @@ class Page(plugin.Plugin):
             if question == 'partman/unmount_active':
                 yes = 'ubiquity/imported/yes'
                 no = 'ubiquity/imported/no'
+            elif question == 'partman-efi/non_efi_system':
+                yes = 'ubiquity/text/in_uefi_mode'
+                no = 'ubiquity/text/go_back'
             else:
                 yes = 'ubiquity/text/continue'
                 no = 'ubiquity/text/go_back'
@@ -3185,7 +3222,9 @@ class Page(plugin.Plugin):
                 self.extended_description(question), (no, yes))
 
             answer_reversed = False
-            if question in ('partman-jfs/jfs_boot', 'partman-jfs/jfs_root',
+            if question in ('partman-jfs/jfs_boot',
+                            'partman-jfs/jfs_root',
+                            'partman-efi/non_efi_system',
                             'partman/unmount_active'):
                 answer_reversed = True
             if response == yes:

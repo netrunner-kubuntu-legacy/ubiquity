@@ -1,3 +1,18 @@
+flash-kernel (3.0~rc.4ubuntu55) wily; urgency=medium
+
+  * Wandboard: Use /dev/disk/by-path/platform-2198000.usdhc-part1
+    instead of the hardcoded mmcblk1p1, this should make things work on
+    boards with just a single microSD card in.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Thu, 27 Aug 2015 11:55:41 -0400
+
+flash-kernel (3.0~rc.4ubuntu54) vivid; urgency=medium
+
+  * Allow us to find DTBs in both the old flat layout and the new vendor
+    subdirectory layout, so we keep backward compatibility (LP: #1408004)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 27 Feb 2015 03:46:28 -0700
+
 flash-kernel (3.0~rc.4ubuntu53) utopic; urgency=medium
 
   * Merge in remaining trusty SRU changes:

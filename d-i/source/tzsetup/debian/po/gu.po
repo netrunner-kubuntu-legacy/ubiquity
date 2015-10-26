@@ -10,16 +10,25 @@
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt
 # Contributor:
-# Kartik Mistry <kartik.mistry@gmail.com>, 2006-2007.
+# Kartik Mistry <kartik.mistry@gmail.com>, 2006-2011
 #
+#
+# Translations from iso-codes:
+#   - translations from ICU-3.0
+#
+#   Alastair McKinstry <mckinstry@debian.org>, 2004.
+#   Kartik Mistry <kartik.mistry@gmail.com>, 2006, 2007, 2008.
+#   Ankit Patel <ankit644@yahoo.com>, 2009,2010.
+#   Sweta Kothari <swkothar@redhat.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: d-i\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-03-20 18:08+0530\n"
+"PO-Revision-Date: 2008-08-07 11:42+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <team@utkarsh.org>\n"
+"Language: gu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +38,7 @@ msgstr ""
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "McMurdo"
-msgstr "Antarctica/મેકમુરડો"
+msgstr "મેકમુરડો"
 
 #. Type: select
 #. Choices
@@ -43,56 +52,56 @@ msgstr "Antarctica/દક્ષિણ_ધ્રુવ"
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "Rothera"
-msgstr "Antarctica/રોથેરા"
+msgstr "રોથેરા"
 
 #. Type: select
 #. Choices
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "Palmer"
-msgstr "Antarctica/પાલ્મેર"
+msgstr "પાલ્મેર"
 
 #. Type: select
 #. Choices
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "Mawson"
-msgstr "Antarctica/માઉસેન"
+msgstr "માઉસેન"
 
 #. Type: select
 #. Choices
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "Davis"
-msgstr "Antarctica/ડેવીસ"
+msgstr "ડેવીસ"
 
 #. Type: select
 #. Choices
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "Casey"
-msgstr "Antarctica/કેસે"
+msgstr "કેસે"
 
 #. Type: select
 #. Choices
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "Vostok"
-msgstr "Antarctica/વોસ્તોક"
+msgstr "વોસ્તોક"
 
 #. Type: select
 #. Choices
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "Dumont-d'Urville"
-msgstr "Antarctica/ડુમોન્ટડુર્વિલે"
+msgstr "ડુમોન્ટડુર્વિલે"
 
 #. Type: select
 #. Choices
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "Syowa"
-msgstr "Antarctica/સયોવા"
+msgstr "સયોવા"
 
 #. Type: select
 #. Choices
@@ -199,7 +208,7 @@ msgstr "તમારા સમય વિસ્તારમાંનું સ્
 #. Time zone for Australia
 #: ../common.templates:3001
 msgid "Lord Howe Island"
-msgstr "Australia/લોર્ડ_હોવે"
+msgstr "લોર્ડ હોવે ટાપુ"
 
 #. Type: select
 #. Choices
@@ -329,7 +338,7 @@ msgstr "America/મેસીઓ"
 #. Time zone for Brazil
 #: ../common.templates:4001
 msgid "Bahia"
-msgstr "America/બાહીઆ"
+msgstr "બાહીઆ"
 
 #. Type: select
 #. Choices
@@ -392,14 +401,14 @@ msgstr "America/રીઓ_બ્રાન્કો"
 #. Time zone for Canada
 #: ../common.templates:5001
 msgid "Newfoundland"
-msgstr "Canada/ન્યુફાઉન્ડલેન્ડ"
+msgstr "ન્યુફાઉન્ડલેન્ડ"
 
 #. Type: select
 #. Choices
 #. Time zone for Canada
 #: ../common.templates:5001
 msgid "Atlantic"
-msgstr "Canada/અટલાન્ટિક"
+msgstr "અટલાન્ટિક"
 
 #. Type: select
 #. Choices
@@ -409,7 +418,7 @@ msgstr "Canada/અટલાન્ટિક"
 #. Time zone for United States
 #: ../common.templates:5001 ../common.templates:22001
 msgid "Eastern"
-msgstr "Canada/પૂર્વીય"
+msgstr "પૂર્વીય"
 
 #. Type: select
 #. Choices
@@ -423,21 +432,21 @@ msgstr "Canada/પૂર્વીય"
 #: ../common.templates:5001 ../common.templates:16001
 #: ../common.templates:22001
 msgid "Central"
-msgstr "Canada/કેન્દ્રીય"
+msgstr "કેન્દ્રીય"
 
 #. Type: select
 #. Choices
 #. Time zone for Canada
 #: ../common.templates:5001
 msgid "East Saskatchewan"
-msgstr "Canada/પૂર્વ-સાસ્કાચેવાન"
+msgstr "પૂર્વ-સાસ્કાચેવાન"
 
 #. Type: select
 #. Choices
 #. Time zone for Canada
 #: ../common.templates:5001
 msgid "Saskatchewan"
-msgstr "Canada/સાસ્કાચેવાન"
+msgstr "સાસ્કાચેવાન"
 
 #. Type: select
 #. Choices
@@ -646,63 +655,63 @@ msgstr "Asia/જયાપુરા"
 #. Time zone for Kiribati
 #: ../common.templates:13001
 msgid "Tarawa (Gilbert Islands)"
-msgstr "Pacific/તારાવા"
+msgstr "તારાવા (ગિલ્બર્ટ ટાપુઓ)"
 
 #. Type: select
 #. Choices
 #. Time zone for Kiribati
 #: ../common.templates:13001
 msgid "Enderbury (Phoenix Islands)"
-msgstr "Pacific/એન્ડરબરી"
+msgstr "એન્ડરબરી (ફિનિક્સ ટાપુઓ)"
 
 #. Type: select
 #. Choices
 #. Time zone for Kiribati
 #: ../common.templates:13001
 msgid "Kiritimati (Line Islands)"
-msgstr "Pacific/કીરીમાતી"
+msgstr "કીરીમાતી (લાઈન ટાપુઓ)"
 
 #. Type: select
 #. Choices
 #. Time zone for Kazakhstan
 #: ../common.templates:14001
 msgid "Almaty"
-msgstr "Asia/અલ્માતી"
+msgstr "અલ્માતી"
 
 #. Type: select
 #. Choices
 #. Time zone for Kazakhstan
 #: ../common.templates:14001
 msgid "Qyzylorda"
-msgstr "Asia/કવીઝીલોર્ડા"
+msgstr "કવીઝીલોર્ડા"
 
 #. Type: select
 #. Choices
 #. Time zone for Kazakhstan
 #: ../common.templates:14001
 msgid "Aqtobe"
-msgstr "Asia/એક્ટોબે"
+msgstr "એક્ટોબે"
 
 #. Type: select
 #. Choices
 #. Time zone for Kazakhstan
 #: ../common.templates:14001
 msgid "Atyrau"
-msgstr "Asia/એક્ટાવુ"
+msgstr "એક્ટાવુ"
 
 #. Type: select
 #. Choices
 #. Time zone for Kazakhstan
 #: ../common.templates:14001
 msgid "Oral"
-msgstr "Asia/ઓરલ"
+msgstr "ઓરલ"
 
 #. Type: select
 #. Choices
 #. Time zone for Mongolia
 #: ../common.templates:15001
 msgid "Ulaanbaatar"
-msgstr "Asia/ઉલનબટોર"
+msgstr "ઉલનબટોર"
 
 #. Type: select
 #. Choices
@@ -856,7 +865,7 @@ msgstr "Asia/સખાલિન"
 #. Time zone for Russian Federation
 #: ../common.templates:20001
 msgid "Moscow+08 - Magadan"
-msgstr "Asia/મગાદાન"
+msgstr "મોસ્કો+08 - મગાદાન"
 
 #. Type: select
 #. Choices
@@ -877,7 +886,7 @@ msgstr "Asia/એનાડીર"
 #. Time zone for United States Minor Outlying Islands
 #: ../common.templates:21001
 msgid "Johnston Atoll"
-msgstr "Pacific/જોહ્નસ્ટન"
+msgstr "જોહ્નસ્ટન એટોલ"
 
 #. Type: select
 #. Choices
@@ -970,6 +979,164 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "તમારા દેશ પરથી, તમારો સમય વિસ્તાર ${ZONE} છે."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "જો તમારો પસંદિત સમય વિસ્તાર યાદીમાં ન હોય તો, મહેરબાની કરી પાછળનાં પગથિયાં "
+#~ "\"ભાષા પસંદ કરો\" પર પાછા જઈને ને તમારા પસંદગીનો સમય વિસ્તાર ધરાવતો દેશ પસંદ કરો "
+#~ "(દેશ કે જ્યાં તમે રહો છો અથવા તમારું સ્થાન છે)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "કોઓર્ડિનેટેડ યુનિવર્સલ સમય (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "તમારો સમય વિસ્તાર ગોઠવવા માટે રાજ્ય અથવા વિસ્તાર પસંદ કરો:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "ઓસ્ટ્રેલિઅન રાજધાની વિસ્તાર"
+
+#~ msgid "New South Wales"
+#~ msgstr "ન્યૂ સાઉથ વેલ્શ"
+
+#~ msgid "Victoria"
+#~ msgstr "વિક્ટોરિઆ"
+
+#~ msgid "Northern Territory"
+#~ msgstr "ઉત્તરી વિસ્તાર"
+
+#~ msgid "Queensland"
+#~ msgstr "ક્વિન્સલેન્ડ"
+
+#~ msgid "South Australia"
+#~ msgstr "દક્ષિણ ઓસ્ટ્રેલિઆ"
+
+#~ msgid "Tasmania"
+#~ msgstr "તાસ્માનિઆ"
+
+#~ msgid "Western Australia"
+#~ msgstr "પશ્ચિમ ઓસ્ટ્રેલિઆ"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "ઈયેર હાઈવે"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "યાન્કોવિન્ના પરગણું"
+
+#~ msgid "Acre"
+#~ msgstr "એક્રે"
+
+#~ msgid "Alagoas"
+#~ msgstr "એલાગોઆસ"
+
+#~ msgid "Amazonas"
+#~ msgstr "એમેઝોનાસ"
+
+#~ msgid "Amapá"
+#~ msgstr "અમાપા"
+
+#~ msgid "Ceará"
+#~ msgstr "સેરા"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "ડિસ્ટ્રીઓ ફેડરલ"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "એસ્પ્રિન્ટો સાન્તો"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "ફર્નાન્ડો ડી નોરોન્હા"
+
+#~ msgid "Goiás"
+#~ msgstr "ગોઈઆસ"
+
+#~ msgid "Maranhão"
+#~ msgstr "મારાન્હાઓ"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "મિનાસ ગેરાઈસ"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "માતો ગ્રોસ્સાઓ ડો સુલ"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "માતો ગ્રોસ્સાઓ"
+
+#~ msgid "Pará"
+#~ msgstr "પારા"
+
+#~ msgid "Paraíba"
+#~ msgstr "પારાઈબા"
+
+#~ msgid "Pernambuco"
+#~ msgstr "પેર્નામ્બુકો"
+
+#~ msgid "Piauí"
+#~ msgstr "પિઆયુ"
+
+#~ msgid "Paraná"
+#~ msgstr "પારાના"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "રીઓ ડી જાનેરો"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "રીઓ ગ્રાન્ડે ડો નોર્ટે"
+
+#~ msgid "Rondônia"
+#~ msgstr "રોન્ડોનિઆ"
+
+#~ msgid "Roraima"
+#~ msgstr "રોરેઈમા"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "રીઓ ગ્રાન્ડે ડો સુલ"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "સાન્તા કેટરિના"
+
+#~ msgid "Sergipe"
+#~ msgstr "સેરગીપે"
+
+#~ msgid "São Paulo"
+#~ msgstr "સાઓ પાઉલો"
+
+#~ msgid "Tocantins"
+#~ msgstr "ટોકાન્ટિસ"
+
+#~ msgid "Pohnpei"
+#~ msgstr "પોનાપે"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "પશ્ચિમી (સુમાત્રા, જાકાર્તા, જાવા, પશ્ચિમ અને મધ્ય કાલિમાન્તાન)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "મધ્ય (સુલાવેઈ, બાલી, નુસા ટેન્ગારા, પૂર્વ અને દક્ષિણ કાલિમાન્તાન)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "પૂર્વિય (માલુકુ, પાપુઆ)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "મોસ્કો+00 - મોસ્કો"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "મોસ્કો+02 - યેકાતેરિનબર્ગ"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "મોસ્કો+03 - ઓમસ્ક"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "મોસ્કો+04 - ક્રાન્સોયાર્સ્ક"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "મોસ્કો+05 - ઇર્કુસ્ત્સ્ક"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "મોસ્કો+06 - યાકુત્સ્ક"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "મોસ્કો+07 - વ્લાદિવોસ્તોક"

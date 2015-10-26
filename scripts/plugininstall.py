@@ -232,9 +232,9 @@ class Install(install_misc.InstallBase):
         self.db.progress('INFO', 'ubiquity/install/installing')
 
         #if 'UBIQUITY_OEM_USER_CONFIG' in os.environ:
-            #self.install_oem_extras()
+        #    self.install_oem_extras()
         #else:
-            #self.install_extras()
+        #    self.install_extras()
 
         self.next_region()
         self.db.progress('INFO', 'ubiquity/install/bootloader')
@@ -1418,24 +1418,28 @@ class Install(install_misc.InstallBase):
             with open(manifest_remove) as manifest_file:
                 for line in manifest_file:
                     if line.strip() != '' and not line.startswith('#'):
-                        difference.add(line.split()[0])
+                        pkg = line.split(':')[0]
+                        difference.add(pkg.split()[0])
             live_packages = set()
             with open(manifest) as manifest_file:
                 for line in manifest_file:
                     if line.strip() != '' and not line.startswith('#'):
-                        live_packages.add(line.split()[0])
+                        pkg = line.split(':')[0]
+                        live_packages.add(pkg.split()[0])
             desktop_packages = live_packages - difference
         elif os.path.exists(manifest_desktop) and os.path.exists(manifest):
             desktop_packages = set()
             with open(manifest_desktop) as manifest_file:
                 for line in manifest_file:
                     if line.strip() != '' and not line.startswith('#'):
-                        desktop_packages.add(line.split()[0])
+                        pkg = line.split(':')[0]
+                        desktop_packages.add(pkg.split()[0])
             live_packages = set()
             with open(manifest) as manifest_file:
                 for line in manifest_file:
                     if line.strip() != '' and not line.startswith('#'):
-                        live_packages.add(line.split()[0])
+                        pkg = line.split(':')[0]
+                        live_packages.add(pkg.split()[0])
             difference = live_packages - desktop_packages
         else:
             difference = set()
@@ -1617,13 +1621,8 @@ class Install(install_misc.InstallBase):
         target_user_wallpaper_cache_dir = os.path.join(target_user_cache_dir,
                                                        'wallpaper')
         if (not os.path.isdir(target_user_wallpaper_cache_dir) and
-            os.path.isfile('/usr/lib/gnome-settings-daemon/'
-                           'gnome-update-wallpaper-cache')):
-            # installer mode (else, g-s-d created it)
-            if not os.path.isdir(casper_user_wallpaper_cache_dir):
-                subprocess.call(['sudo', '-u', casper_user, '-i', 'DISPLAY=:0',
-                                 '/usr/lib/gnome-settings-daemon/'
-                                 'gnome-update-wallpaper-cache'])
+                os.path.isdir(casper_user_wallpaper_cache_dir)):
+
             # copy to targeted user
             uid = subprocess.Popen(
                 ['chroot', self.target, 'sudo', '-u', target_user, '--',

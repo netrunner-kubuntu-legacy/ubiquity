@@ -1,3 +1,477 @@
+ubiquity (2.21.37) wily; urgency=medium
+
+  * Fix the :arch ignoring bits harder, by doing the same change as 2.21.35
+    but in scripts/install.py this time.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 20 Oct 2015 18:23:16 +0100
+
+ubiquity (2.21.36) wily; urgency=medium
+
+  * Automatic update of included source packages: console-setup 1.108ubuntu9,
+    grub-installer 1.78ubuntu30, localechooser 2.65ubuntu3. I just did that
+    yesterday, too.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 20 Oct 2015 16:17:28 +0100
+
+ubiquity (2.21.35) wily; urgency=medium
+
+  * scripts/plugininstall.py: Ignore ':arch' in package names when deciding
+    which packages to keep after installing. We keep track of installed
+    packages without arch, so should remove it when doing this comparison.
+    (LP: #1503297)
+
+ -- Iain Lane <iain.lane@canonical.com>  Mon, 19 Oct 2015 17:31:46 +0100
+
+ubiquity (2.21.34) wily; urgency=medium
+
+  [ Mathieu Trudel-Lapierre ]
+  * Automatic update of included source packages: console-setup
+    1.108ubuntu8, localechooser 2.65ubuntu2.
+  * Set a height_request property for the details extender (the thing you can
+    click to get syslog from the ubiquity slideshow window). (LP: #1507330)
+
+  [ Aron Xu ]
+  * d-i/patches/localechooser-post-base-installer.patch: update patch for
+    new languagelist format.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Mon, 19 Oct 2015 17:02:29 +0100
+
+ubiquity (2.21.33) wily; urgency=medium
+
+  * Automatic update of included source packages: tzsetup 1:0.66ubuntu2.
+    (LP: #1462688)
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 01 Oct 2015 15:50:33 -0400
+
+ubiquity (2.21.32) wily; urgency=medium
+
+  * Resolve a spacing issue in the KDE ui.
+    - Move vertial spacer for branding logo from designer file to code
+    - Adjust spacing policies of the lefthand pane to do what we need:
+      + the header layout doesn't expand anymore
+      + the steps layout expands horizontally and verticall and additionally
+        enforces its sizeHint as minimum.
+      + the unused footer layout no longer expands horizontally but sticks to
+        its minimum
+    - Push branding logo to smaller size
+      + The logo is now packed into a layout where it is spaced from left and
+        right to cause an undefined shrinking as per Qt's choice. This
+        effectively reduces the sizes of the logo both in width and height (as
+        height is bound to width). This in turn brings the overall size down
+        enough to not cause size expansion beyond "resonable" measures.
+        (Reasonable being just big enough to be good looking but small enough
+         to not push down on the labels in the steps widget. Latter has an
+         unknown cause, but when the logo is too big it starts pushing on the
+         labels, disregarding the entire sizepolicy of all involved widgets.
+         If the logo is small enough this doesn't happen which either may be
+         because there is a hardcoded height somewhere or the joint minimal
+         size of all steps' pages is heigh enough to allow for this to happen.
+         This overall layout problem has been there for years and only became
+         visible now because we have a somewhat heigh widget below the steps
+         layout. Ultimately this issue is going to get resolved if/when
+         ubiquity gets ported to QML which is substantially more suited to
+         building UIs like this with right scaling.)
+
+ -- Harald Sitter <sitter@kde.org>  Tue, 29 Sep 2015 14:37:29 +0200
+
+ubiquity (2.21.31) wily; urgency=medium
+
+  [ Iain Lane ]
+  * Build-Depend on the new adwaita-icon-theme instead of the old
+    gnome-icon-theme.
+
+  [ Mathieu Trudel-Lapierre ]
+  * Automatic update of included source packages: user-setup
+    1.48ubuntu7.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Wed, 23 Sep 2015 12:19:47 -0400
+
+ubiquity (2.21.30) wily; urgency=medium
+
+  [ Mathieu Trudel-Lapierre ]
+  * Fix access denied crashes in calling GetDevices() for NM integration: this
+    happened because we didn't specify a DBus interface for the call.
+    (LP: #1495017)
+  * Automatic update of included source packages: grub-installer
+    1.78ubuntu29.
+
+  [ Dan Chapman ]
+  * Multiple autopilot fixes:
+    - Add workaround for 'Write changes to disk' dialog. (LP: #1480430)
+    - Update the use_device_desc string in generated config file use for
+      english install tests.
+    - Fix handling of globalRect mismatches. (LP: #1479064)
+    - Fixup string comparisons to properly match Ubuntu-MATE for the english
+      install tests.
+    - Fix the autopilot test runner for Ubuntu-GNOME and Ubuntu-MATE.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 15 Sep 2015 17:04:57 -0400
+
+ubiquity (2.21.29) wily; urgency=medium
+
+  [ Harald Sitter ]
+  * Refine KDE ui with slight changes to artwork and layout to improve visual
+    integration with the overall desing of Breeze styled applications
+
+  [ Jonathan Riddell ]
+  * Automatic update of included source packages: console-setup
+    1.108ubuntu6.
+
+ -- Harald Sitter <sitter@kde.org>  Wed, 09 Sep 2015 11:00:10 +0200
+
+ubiquity (2.21.28) wily; urgency=medium
+
+  [ Sean Davis ]
+  * bin/ubiquity-dm: Draw the ubiquity desktop with feh under
+    Xfce environments (LP: #1437180)
+
+  [ Mathieu Trudel-Lapierre ]
+  * Automatic update of included source packages: apt-setup
+    1:0.80ubuntu8, base-installer 1.144ubuntu2, flash-kernel
+    3.0~rc.4ubuntu55, hw-detect 1.95ubuntu7, partconf 1.48, partman-base
+    187ubuntu1, partman-basicmethods 60, partman-jfs 46, partman-lvm
+    110, partman-newworld 33, partman-xfs 56, user-setup 1.48ubuntu6.
+  * Update timezone map to add North Korea (Pyongyang time). (LP: #1462688)
+  * Fix instances of PEP8 warning: W503 line break before binary operator.
+  * Ignore the PEP8 error E402 (imports at beginning of file). There are a few
+    instances where we need to set sys.path to where ubiquity files are.
+  * Fix some more style errors from PEP8.
+  * autogen.sh: Use any available version of automake/aclocal.
+
+  [ Luke Yelavich ]
+  * ubiquity/frontend/gtk_ui.py: We do not want to be able to focus labels
+    with Orca at all. It negatively affects the install experience and
+    tab/shift tab flow through the installer pages, and prevents Orca
+    presenting label relationships with other widgets
+
+  [ Max Brustkern ]
+  * Update the automated autopilot installation in the vm: get the updated
+    sources.list picked up by hooks by being in the right location.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 08 Sep 2015 10:58:17 -0400
+
+ubiquity (2.21.27) wily; urgency=medium
+
+  * Automatic update of included source packages: choose-mirror
+    2.57ubuntu3, partconf 1.47, partman-lvm 109, preseed 1.64ubuntu3,
+    tzsetup 1:0.66ubuntu1, localechooser 2.65ubuntu1.
+  * debian/rules: wipe all environment when running tests, only set
+    LANG to C.UTF-8 for debconf to be able to handle the Brazil
+    timezones' accents.
+  * d-i/sources.list: switch to wily release.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 04 Jun 2015 10:34:59 -0400
+
+ubiquity (2.21.26) vivid; urgency=medium
+
+  * ubiquity/plugins/ubi-console-setup.py: use untranslated keyboard
+    names if translated ones do not exist LP: #1182784
+  * Automatic update of included source packages: console-setup
+    1.108ubuntu5.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 27 Apr 2015 13:32:25 +0200
+
+ubiquity (2.21.25) vivid; urgency=medium
+
+  * GTK/KDE UI: Don't apply the reboot/poweroff race hack when running under
+    an actual display-manager, i. e. go back to what we always did there. This
+    fixes restarting the greeter after clicking "restart" at the end of
+    installation. lightdm and friends do a proper shutdown already, it's just
+    ubiquity-dm which is racy here.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 21 Apr 2015 18:09:57 +0100
+
+ubiquity (2.21.24) vivid; urgency=medium
+
+  * Revert ubiquity.service changes (r6294) from previous upload. It's not
+    necessary to fix proper shutdown, and broke the "Try Ubuntu" button in
+    ubiquity-dm.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 21 Apr 2015 09:49:16 +0100
+
+ubiquity (2.21.23) vivid; urgency=medium
+
+  * Stop running ubiquity.service as an oneshot service, as this blocks the
+    initial boot transaction (including ureadahead etc.). Instead, manually
+    start lightdm in the cases where we don't want ubiquity-dm.
+  * GTK/KDE UI: GTK/KDE UI: Fix race between calling reboot/poweroff and the
+    later stopping of the spawned X server by ubiquity-dm. We need to first
+    shut down X orderly and then reboot/poweroff to get a proper transition to
+    Plymouth.  This is a rather nasty hack; fixing this properly requires some
+    more intrusive reeingeering. (LP: #1445587)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 20 Apr 2015 18:41:11 +0100
+
+ubiquity (2.21.22) vivid; urgency=medium
+
+  * Automatic update of included source packages: partman-efi 62ubuntu2,
+    user-setup 1.48ubuntu5.
+  * debian/ubiquity.templates: add a string for "Continue in UEFI mode".
+  * ubiquity/plugins/ubi-partman.py: Fix up the buttons for the non_efi_system
+    question to use the new string for UEFI mode.
+  * ubiquity/plugins/ubi-partman.py: try to reverse the meaning of the debconf
+    partman-efi/non_efi_system question so that "Continue in UEFI mode" will
+    actually really mean continuing with setting up an EFI System Partition
+    and "Go Back" will properly return to the partitioning scheme selection
+    page and allow to try again without an ESP. (LP: #1444104)
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 16 Apr 2015 14:27:08 -0500
+
+ubiquity (2.21.21) vivid; urgency=medium
+
+  * KDE: ubiquity/plugins/ubi-console-setup.py workaround for LP: #1182784
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 15 Apr 2015 19:28:00 +0200
+
+ubiquity (2.21.20) vivid; urgency=medium
+
+  * Automatic update of included source packages: partman-auto
+    125ubuntu2.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 14 Apr 2015 23:05:13 -0500
+
+ubiquity (2.21.19) vivid; urgency=medium
+
+  * user-setup-encrypted-swap: Don't zero out the first 4K of the swap
+    partition so that the UUID gets retained. /etc/crypttab refers to the
+    cipher device via UUID. See corresponding fix in ecryptfs-utils.
+    (LP: #953875)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 14 Apr 2015 10:55:05 -0500
+
+ubiquity (2.21.18) vivid; urgency=medium
+
+  * Overhaul for proper systemd support (LP: #1436937)
+  * bin/oem-config-prepare: set the systemd default target to oem-config.target
+    instead of using /var/lib/oem-config/run as a flag.
+  * bin/oem-config-firstboot:
+    - after removing the oem user, set the default target back to graphical.
+    - call for systemd to start the graphical target, so as to complete booting
+      to graphical or to TTYs after oem-config-firstboot has run.
+  * debian/oem-config.target: create a new target for oem-config so that it can
+    start without conflicting with a display-manager that may also want to
+    start and use the oem user in auto-login.
+  * debian/oem-config.oem-config.service: simplify the service's start
+    conditions; we don't really need to worry about Before/After since we'll
+    run in our own isolated target.
+  * debian/oem-config.install: force the installation of the new target in the
+    right location for systemd.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 02 Apr 2015 13:58:02 -0400
+
+ubiquity (2.21.17) vivid; urgency=medium
+
+  * Update the sed for the path to keyboard-configuration.config from
+    console-setup to account for changes from 1.108.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 24 Mar 2015 15:16:01 -0400
+
+ubiquity (2.21.16) vivid; urgency=medium
+
+  * Automatic update of included source packages: grub-installer
+    1.78ubuntu27, partman-base 181ubuntu2.
+  * KDE: update ubiquity-dm for new Plasma wallpaper path
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Mar 2015 12:58:23 +0100
+
+ubiquity (2.21.15) vivid; urgency=medium
+
+  * debian/rules, debian/clean: fixup rules and clean due to the rename of
+    console-setup's MyKeyboardNames.pl script to KeyboardNames.pl.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Wed, 11 Mar 2015 16:08:14 -0400
+
+ubiquity (2.21.14) vivid; urgency=medium
+
+  [ Paul Larson, Parameswaran Sivatharman ]
+  * Get the autopilot tests up and running again.
+
+  [ Scott Sanbar ]
+  * Stop using legacy gtk-dialog-* icon names (LP: #1422113).
+
+  [ Parth Panchal ]
+  * KDE: Fix Manual Partitioner Does not Translate when Selecting a new
+    Language LP: #1350855
+
+  [ Jonathan Riddell ]
+  * Automatic update of included source packages: console-setup
+    1.108ubuntu4, flash-kernel 3.0~rc.4ubuntu54, grub-installer
+    1.78ubuntu26, netcfg 1.127ubuntu1, partman-base 181ubuntu1.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 11 Mar 2015 18:59:18 +0100
+
+ubiquity (2.21.13) vivid; urgency=medium
+
+  * ubiquity/plugins/ubi-console-setup.py: revert change to use
+    untranslated keyboard names, it's causing crashes when installing in
+    !english LP: #1182784
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 23 Feb 2015 18:00:42 +0100
+
+ubiquity (2.21.12) vivid; urgency=medium
+
+  * Clean up after NetworkManager's system-connections files in prepare job
+    for oem-config: we shouldn't keep wireless connections (or any, really)
+    on the system that may have been setup by OEM, unless done *after* running
+    oem-prepare. (LP: #1418105)
+  * Force the GTK-based installer to be visible when starting, this should fix
+    it being running but hidden on some Xubuntu only-ubiquity installs, which
+    meant users had to Alt-Tab to it and switch language for it to appear.
+    (LP: #1423161)
+  * Automatic update of included source packages: grub-installer
+    1.78ubuntu25.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Fri, 20 Feb 2015 17:15:16 -0500
+
+ubiquity (2.21.11) vivid; urgency=medium
+
+  * Be sure to include the top level linux-signed-* metapackage in our
+    list of candidates to keep so we don't accidentally remove it.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 18 Feb 2015 10:26:33 -0700
+
+ubiquity (2.21.10) vivid; urgency=medium
+
+  * debian/ubiquity.install-any: Adjust for dropped 94extras in apt-setup
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 17 Feb 2015 18:42:54 -0700
+
+ubiquity (2.21.9) vivid; urgency=medium
+
+  * Automatic update of included source packages: apt-setup
+    1:0.80ubuntu7, partman-auto 125ubuntu1.
+  * Limit the signed kernel candidates to ones that are already on the
+    media to avoid pulling in ALL of the signed kernels (LP: #1422864)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 17 Feb 2015 16:07:38 -0700
+
+ubiquity (2.21.8) vivid; urgency=medium
+
+  * Automatic update of included source packages: grub-installer
+    1.78ubuntu24, partman-auto 118ubuntu5, partman-efi 62ubuntu1.
+  * ubiquity/plugins/ubi-partman.py: allow prompting for a missing passphrase
+    on preseeded installs, if they are requesting to setup crypto.
+    (LP: #1386131)
+  * Add a fallback for a Greybird-themed background for the panel, for Xubuntu.
+    Thanks to Simon Steinbeiß for the patch.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Wed, 04 Feb 2015 16:49:35 -0500
+
+ubiquity (2.21.7) vivid; urgency=medium
+
+  * bin/ubiquity-dm: update to use the proper gsettings keys for the MATE
+    installer.
+  * Automatic update of included source packages: partman-lvm 105.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 29 Jan 2015 14:21:46 -0500
+
+ubiquity (2.21.6) vivid; urgency=medium
+
+  [ Unit 193 ]
+  * Start all Xfce components with --sm-client-disable.
+  * Explicitly run `xfdesktop` to paint the background. (LP: #1375893)
+
+  [ Ma Jun ]
+  * lp:~maclin.jun/ubiquity/fix_1304410:
+    - fix missing translation for "Change..." in the partition page
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 23 Jan 2015 13:18:51 +0100
+
+ubiquity (2.21.5) vivid; urgency=medium
+
+  * kde: explicitly set the KDE_SESSION_VERSION env variable to 4
+    to make sure that for example QIcon uses 4.x compatibility features
+    rather than 3.x ones.
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Mon, 19 Jan 2015 18:08:04 +0100
+
+ubiquity (2.21.4) vivid; urgency=medium
+
+  * Factorize ubiquity-dm startup logic out of
+    debian/ubiquity.ubiquity.upstart into scripts/start-ubiquity-dm; don't
+    call initctl emit when running under systemd.
+  * Add systemd unit for ubiquity-dm.
+  * start-ubiquity-dm: Make setterm failures non-fatal; under systemd
+    services don't run under a PTY.
+  * Add systemd unit for oem-config.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 15 Jan 2015 13:11:33 +0100
+
+ubiquity (2.21.3) vivid; urgency=medium
+
+  [ Martin Wimpress ]
+  * Fix TypeError in ubiquity-dm for MATE desktop (LP: #1408219).
+
+  [ Colin Watson ]
+  * Automatic update of included source packages: partman-basicfilesystems
+    109ubuntu1, partman-lvm 103.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 07 Jan 2015 09:42:13 +0000
+
+ubiquity (2.21.2) vivid; urgency=medium
+
+  [ Dimitri John Ledkov ]
+  * Add --quiet option to dmidecode calls, in the future release that will
+    prevent dmidecode from printing error banner if a newer than dmidecode
+    smbios version has happened to be in use. LP: #1353580.
+  * Add "support" for Gauja laptops and self-builts - that is do not use
+    "To be filled by O.E.M." as a valid model name.
+  * Remove setting translated placeholder text in the usersetup
+    plugin. (LP: #1283047)
+  * Drop translation messages from ubiquity.templates.
+  
+  [ Unit 193 ]
+  * Enable the ubiquity panel in xfwm4 now since it is functional.
+  
+  [ Tim Lunn ]
+  * scripts/plugininstall.py: Remove obsolete code to generate wallpaper
+    cache, unity-settings-daemon/gnome-settings-daemon now run in install
+    mode (LP: #1318621) 
+
+  [ Martin Wimpress ]
+  * Improve support for Mate desktop.
+
+  [ Shih-Yuan Lee (FourDollars) ]
+  * Fix the usage of effective uid/gid and the HOME environment variable.
+
+  [ Dimitri John Ledkov ]
+  * Automatic update of included source packages: clock-setup
+    0.121ubuntu1, console-setup 1.70ubuntu11, partman-basicfilesystems
+    108ubuntu1, partman-crypto 78ubuntu1, partman-jfs 45, partman-lvm
+    102, partman-xfs 55.
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Sun, 21 Dec 2014 06:46:46 +0000
+
+ubiquity (2.21.1) vivid; urgency=medium
+
+  * Automatic update of included source packages: console-setup
+    1.70ubuntu10, debian-installer-utils 1.109ubuntu1, partman-auto-
+    crypto 22ubuntu1, partman-auto-lvm 56ubuntu1, partman-base
+    180ubuntu1, partman-basicfilesystems 106ubuntu1, partman-efi
+    25ubuntu7, partman-ext3 84ubuntu1, partman-jfs 44, partman-lvm 100,
+    partman-partitioning 106ubuntu1, partman-target 92ubuntu1, partman-
+    xfs 54, yaboot-installer 1.1.33ubuntu1.
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Sun, 30 Nov 2014 23:27:41 +0000
+
+ubiquity (2.21.0) vivid; urgency=medium
+
+  [ Colin Watson ]
+  * Go forward rather than back in response to partman-crypto/passphrase and
+    partman-crypto/passphrase-again questions if the UI is not available but
+    they have been preseeded (LP: #1386113).
+
+  [ Iain Lane ]
+  * Port the Vte widget to use the 2.91 API.
+
+  [ Dimitri John Ledkov ]
+  * Automatic update of included source packages: choose-mirror
+    2.57ubuntu2, netcfg 1.119ubuntu2, partconf 1.46, partman-base
+    179ubuntu1, partman-basicfilesystems 104ubuntu1, partman-lvm 98,
+    preseed 1.64ubuntu2.
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Wed, 12 Nov 2014 14:34:42 +0000
+
 ubiquity (2.20.0) utopic; urgency=medium
 
   * Exclude free space from counts of deleted partitions.

@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_he\n"
 "Report-Msgid-Bugs-To: partman-lvm@packages.debian.org\n"
-"POT-Creation-Date: 2011-08-01 22:50+0000\n"
+"POT-Creation-Date: 2014-09-15 22:01+0000\n"
 "PO-Revision-Date: 2012-04-17 01:53+0300\n"
 "Last-Translator: Omer Zak <w1@zak.co.il>\n"
 "Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
@@ -433,12 +433,11 @@ msgstr "השם שנבחר לקבוצת הנפחים חופף עם שם התקן 
 #. Type: error
 #. Description
 #. :sl3:
-#. Type: error
-#. Description
-#. :sl3:
-#: ../partman-lvm.templates:32001 ../partman-lvm.templates:46001
-msgid "Error while reducing volume group"
-msgstr "שגיאה בזמן צמצום קבוצת נפחים"
+#: ../partman-lvm.templates:32001
+#, fuzzy
+#| msgid "Error while deleting volume group"
+msgid "Error while creating volume group"
+msgstr "שגיאה במחיקת קבוצת הנפחים"
 
 #. Type: error
 #. Description
@@ -655,6 +654,13 @@ msgstr "בחר את ההתקנים שברצונך להסיר מקבוצת הנפ
 msgid ""
 "No physical volumes were selected. Reduction of the volume group was aborted."
 msgstr "לא נבחרו נפחים פיזיים. צמצום קבוצת הנפחים בוטלה."
+
+#. Type: error
+#. Description
+#. :sl3:
+#: ../partman-lvm.templates:46001
+msgid "Error while reducing volume group"
+msgstr "שגיאה בזמן צמצום קבוצת נפחים"
 
 #. Type: error
 #. Description

@@ -1,3 +1,70 @@
+partman-crypto (78ubuntu1) vivid; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Disable partition erasing by default, as it's very slow and only of
+      moderate value.
+    - Warn that the passphrase cannot be recovered if lost.
+    - Add an "Activate existing encrypted volumes" option to the
+      partman-crypto main menu.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 10 Dec 2014 17:51:11 +0000
+
+partman-crypto (78) unstable; urgency=low
+
+  [ Updated translations ]
+  * Esperanto (eo.po) by Felipe Castro
+  * Spanish (es.po) by Javier Fernández-Sanguino Peña
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 08 Dec 2014 06:15:18 +0100
+
+partman-crypto (77ubuntu1) vivid; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Disable partition erasing by default, as it's very slow and only of
+      moderate value.
+    - Warn that the passphrase cannot be recovered if lost.
+    - Add an "Activate existing encrypted volumes" option to the
+      partman-crypto main menu.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 03 Dec 2014 17:35:35 +0000
+
+partman-crypto (77) unstable; urgency=medium
+
+  * Cherry-pick bzr r693 from Ubuntu (partman-crypto/40ubuntu2), thanks
+    to Colin Watson:
+    - Allow preseeding the first passphrase prompt (LP: #546405).
+      (Preseeding passphrases for multiple different physical volumes is
+      a whole different kettle of fish ...)
+  * Cherry-pick bzr r695 from Ubuntu (partman-crypto/40ubuntu3), thanks
+    to Colin Watson:
+    - Allow preseeding partman-crypto/weak_passphrase too (LP: #546405).
+  * Add a security note in debian/partman-crypto.templates, documenting
+    the preseedability of the three extra items listed below, warning
+    against possible eavesdropping, and suggesting a proper key escrow
+    system (Closes: #656710):
+    - partman-crypto/passphrase
+    - partman-crypto/passphrase-again
+    - partman-crypto/weak_passphrase
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 24 Oct 2014 12:00:46 +0200
+
+partman-crypto (76) unstable; urgency=low
+
+  [ Updated translations ]
+  * Slovenian (sl.po) by Vanja Cvelbar
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 22 Oct 2014 09:26:30 +0200
+
+partman-crypto (75) unstable; urgency=low
+
+  [ Updated translations ]
+  * Danish (da.po) by Joe Hansen
+  * Estonian (et.po) by Mattias Põldaru
+  * Marathi (mr.po) by sampada
+  * Panjabi (pa.po) by A S Alam
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 20 Sep 2014 14:11:50 +0200
+
 partman-crypto (74ubuntu1) utopic; urgency=medium
 
   * Resynchronise with Debian.  Remaining changes:

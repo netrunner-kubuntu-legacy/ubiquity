@@ -4,10 +4,10 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # translation of Debian Installer Level 1 - sublevel 1 to malayalam
-# Copyright (c)  2006-2009 Debian Project
-# Praveen|പ്രവീണ്‍ A|എ <pravi.a@gmail.com>, 2006-2009
-# Santhosh Thottingal <santhosh00@gmail.com>, 2006
-# Sreejith :: ശ്രീജിത്ത് കെ <sreejithk2000@gmail.com>,  2006
+# Copyright (c)  2006-2010 Debian Project
+# Praveen|പ്രവീണ്‍ A|എ <pravi.a@gmail.com>, 2006-2010.
+# Santhosh Thottingal <santhosh00@gmail.com>, 2006.
+# Sreejith :: ശ്രീജിത്ത് കെ <sreejithk2000@gmail.com>, 2006.
 # Credits:  V Sasi Kumar, Sreejith N, Seena N, Anivar Aravind, Hiran Venugopalan and Suresh P
 #
 # Debian Installer master translation file template
@@ -15,14 +15,22 @@
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt#
 #
+#
+# Translations from iso-codes:
+#   Tobias Quathamer <toddy@debian.org>, 2007.
+#     Translations taken from ICU SVN on 2007-09-09
+#   Praveen A <pravi.a@gmail.com>, 2006, 2008.
+#   Ani Peter <peter.ani@gmail.com>, 2009
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2009-02-03 14:50-0800\n"
+"PO-Revision-Date: 2012-03-16 19:33+0530\n"
 "Last-Translator: Praveen Arimbrathodiyil <pravi.a@gmail.com>\n"
 "Language-Team: Debian Malayalam <debian-l10n-malayalam@lists.debian.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -196,7 +204,7 @@ msgstr ""
 #: ../common.templates:17002 ../common.templates:18002
 #: ../common.templates:19002 ../common.templates:21002
 msgid "Select a location in your time zone:"
-msgstr "നിങ്ങളുടെ സമയ മേഘലയിലുള്ള ഒരു സ്ഥലം തെരഞ്ഞെടുക്കുക:"
+msgstr "നിങ്ങളുടെ സമയ മേഖലയിലുള്ള ഒരു സ്ഥലം തെരഞ്ഞെടുക്കുക:"
 
 #. Type: select
 #. Choices
@@ -284,7 +292,7 @@ msgstr "പെര്‍ത്ത്"
 #: ../common.templates:12002 ../common.templates:14002
 #: ../common.templates:15002
 msgid "Select a city in your time zone:"
-msgstr "നിങ്ങളുടെ സമയ മേഘലയിലെ പട്ടണം തെരഞ്ഞെടുക്കുക:"
+msgstr "നിങ്ങളുടെ സമയ മേഖലയിലെ പട്ടണം തെരഞ്ഞെടുക്കുക:"
 
 #. Type: select
 #. Choices
@@ -496,7 +504,7 @@ msgstr "യുകോണ്‍"
 #: ../common.templates:16002 ../common.templates:20002
 #: ../common.templates:22002 ../common.templates:23001
 msgid "Select your time zone:"
-msgstr "നിങ്ങളുടെ സമയ മേഘല തെരഞ്ഞെടുക്കുക:"
+msgstr "നിങ്ങളുടെ സമയ മേഖല തെരഞ്ഞെടുക്കുക:"
 
 #. Type: select
 #. Choices
@@ -938,7 +946,7 @@ msgstr "സമോവ"
 #. :sl1:
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
-msgstr "സമയ മേഘല സൂക്ഷിച്ചു കൊണ്ടിരിയ്ക്കുന്നു..."
+msgstr "സമയ മേഖല സൂക്ഷിച്ചു കൊണ്ടിരിയ്ക്കുന്നു..."
 
 #. Type: boolean
 #. Description
@@ -974,6 +982,164 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "നിങ്ങളുടെ രാജ്യത്തെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ സമയ മേഘല ${ZONE} ആണു്."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "നിങ്ങളാഗ്രഹിയ്ക്കുന്ന സമയ മേഖല പട്ടികയിലില്ലെങ്കില്‍, ദയവായി \"ഭാഷ തെരഞ്ഞെടുക്കുക\" എന്ന "
+#~ "നടപടിക്രമത്തിലേയ്ക്കു് തിരിച്ചു് പോയി നിങ്ങളാഗ്രഹിയ്ക്കുന്ന സമയം ഉപയോഗിയ്ക്കുന്ന (നിങ്ങള്‍ "
+#~ "താമസിയ്ക്കുന്നതോ ഇപ്പോഴുള്ളതോ ആയ രാജ്യം) രാജ്യം തെരഞ്ഞെടുക്കുക."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "അംഗീകൃത സാര്‍വ്വജനിക സമയം (യുടിസി)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "നിങ്ങളുടെ സമയ മേഖല മനസ്സിലാകാന്‍ ഒരു സംസ്ഥാനമോ പ്രൊവിന്‍സോ തിരഞ്ഞെടുക്കുക:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "ഓസ്ത്രേലിയയുടെ തലസ്ഥാന പ്രദേശം"
+
+#~ msgid "New South Wales"
+#~ msgstr "ന്യൂ സൌത്ത് വെയില്‍സ്"
+
+#~ msgid "Victoria"
+#~ msgstr "വിക്ടോറിയ"
+
+#~ msgid "Northern Territory"
+#~ msgstr "നോര്‍ത്തേണ്‍ ടെറിട്ടറി"
+
+#~ msgid "Queensland"
+#~ msgstr "ക്വീന്‍സ്‌ലാന്‍ഡ്"
+
+#~ msgid "South Australia"
+#~ msgstr "തെക്കന്‍ ഓസ്ട്രേലിയ"
+
+#~ msgid "Tasmania"
+#~ msgstr "റ്റാസ്മാനിയ"
+
+#~ msgid "Western Australia"
+#~ msgstr "പടിഞ്ഞാറന്‍ ഓസ്ട്രേലിയ"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "ഈറി ഹൈവേ"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "യാന്‍ക്കോവിന കൌണ്ടി"
+
+#~ msgid "Acre"
+#~ msgstr "ആക്രെ"
+
+#~ msgid "Alagoas"
+#~ msgstr "അലാഗോവാസ്"
+
+#~ msgid "Amazonas"
+#~ msgstr "ആമസോണാസ്"
+
+#~ msgid "Amapá"
+#~ msgstr "അമാപ"
+
+#~ msgid "Ceará"
+#~ msgstr "സിയാറ"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "ഡിസ്ടിറ്റോ ഫെഡറല്‍"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "എസ്പിറിറ്റോ സാന്റോ"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "ഫെര്‍ണാണ്ടോ ഡി നൊരോഞ്ഞ"
+
+#~ msgid "Goiás"
+#~ msgstr "ഗോയിയാസ്"
+
+#~ msgid "Maranhão"
+#~ msgstr "മറാഞ്ഞാവോ"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "മിനാസ് ഗെറായിസ്"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "മാറ്റോ ഗ്രോസ്സോ ഡു സുല്‍"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "മാറ്റോ ഗ്രോസ്സോ"
+
+#~ msgid "Pará"
+#~ msgstr "പാര"
+
+#~ msgid "Paraíba"
+#~ msgstr "പരൈബ"
+
+#~ msgid "Pernambuco"
+#~ msgstr "പെര്‍നാബുക്കോ"
+
+#~ msgid "Piauí"
+#~ msgstr "പിയാവുയി"
+
+#~ msgid "Paraná"
+#~ msgstr "പരാന"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "റിയോ ഡി ജനീറോ"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "റിയോ ഗ്രാന്‍ഡെ ഡു നോര്‍ട്ടെ"
+
+#~ msgid "Rondônia"
+#~ msgstr "റോണ്ടോണിയ"
+
+#~ msgid "Roraima"
+#~ msgstr "റൊറൈമാ"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "റിയോ ഗ്രാന്‍ഡേ ഡോ സുല്‍"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "സാന്റാ കാറ്ററിന"
+
+#~ msgid "Sergipe"
+#~ msgstr "സെര്‍ഗൈപ്പ്"
+
+#~ msgid "São Paulo"
+#~ msgstr "സാവോ പോളോ"
+
+#~ msgid "Tocantins"
+#~ msgstr "ടോക്കാന്റിന്‍സ്"
+
+#~ msgid "Pohnpei"
+#~ msgstr "പോന്‍പെയ്"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "പടിഞ്ഞാറന്‍ (സുമാത്ര, ജക്കാര്‍ത്ത, ജാവ, കലിമാന്റന്റെ പടിഞ്ഞാറും മദ്ധ്യവും)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "മദ്ധ്യം (സുലാവേസി, ബാലി, നുസ ടെങ്കാര, കലിമാന്റന്റെ കിഴക്കും തെക്കും)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "കിഴക്കന്‍ (പാപുവ ന്യൂ ഗിനിയ)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "മോസ്കൌ+00 - മോസ്കൌ"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "മോസ്കൌ+02 - യെകാറ്റെറിന്‍ബര്‍ഗ്"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "മോസ്ക്കോ+03 - ഓമ്സ്ക്"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "മോസ്കൌ+04 - ക്രസ്നോയാര്‍സ്ക്"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "മോസ്കൌ+05 - ഇര്‍ക്കുത്സ്ക്"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "മോസ്കൌ+06 - യാകുട്സ്ക്"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "മോസ്കൌ+07 - വ്ലാഡിവോസ്റ്റോക്"

@@ -3,7 +3,7 @@ Section: debian-installer
 Priority: standard
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Uploaders: Colin Watson <cjwatson@debian.org>, Christian Perrier <bubulle@debian.org>
-Build-Depends: debhelper (>= 9), libdebconfclient0-dev (>= 0.47), libparted0-dev (>= 2.2), po-debconf (>= 0.5.3), libdebian-installer4-dev (>= 0.41)
+Build-Depends: debhelper (>= 9), libdebconfclient0-dev (>= 0.47), libparted-dev (>= 2.2), po-debconf (>= 0.5.3), libdebian-installer4-dev (>= 0.41)
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=d-i/partconf.git
 Vcs-Git: git://anonscm.debian.org/d-i/partconf.git
 

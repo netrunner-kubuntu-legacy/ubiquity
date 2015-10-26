@@ -99,19 +99,19 @@ _Description: Services to use:
  the usability of the software. It also provides regression fixes.
  This service is only available for stable and oldstable releases.
 
-# All services except partner and extras are enabled by default to allow
-# preseeding; partner will be automatically disabled if non-free software is
-# disabled.  For convenience, preseeding apt-setup/partner or
-# apt-setup/extras will automatically enable the respective services.
+# All services except partner are enabled by default to allow
+# preseeding; partner will be automatically disabled if non-free
+# software is disabled.  For convenience, preseeding apt-setup/partner
+# will automatically enable the respective service.
 Template: apt-setup/services-select-ubuntu
 Type: multiselect
-Choices-C: security, partner, extras
-# SEC_HOST, PARTNER_HOST, and EXTRAS_HOST are host names (e.g.
+Choices-C: security, partner
+# SEC_HOST, and PARTNER_HOST are host names (e.g.
 # security.ubuntu.com)
 # Translators: the *entire* string should be under 55 columns
 # including host name. In short, KEEP THIS SHORT and, yes, that's tricky
 # :sl2:
-__Choices: security updates (from ${SEC_HOST}), partner archive (from ${PARTNER_HOST}), extras archive (from ${EXTRAS_HOST})
+__Choices: security updates (from ${SEC_HOST}), partner archive (from ${PARTNER_HOST}))
 Default: security
 # :sl2:
 _Description: Services to use:
@@ -123,9 +123,6 @@ _Description: Services to use:
  .
  The partner archive contains software provided by Canonical's partners as a
  service to Ubuntu users.
- .
- The extras archive contains free software offered by third-party
- application developers who want to ship their latest software.
 
 Template: apt-setup/multiarch
 Type: string

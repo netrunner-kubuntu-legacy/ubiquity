@@ -3,21 +3,32 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
-# Serbian/Cyrillic translation of cp6Linux.
+# Serbian/Cyrillic messages for debian-installer.
+# Copyright (C) 2010-2012 Software in the Public Interest, Inc.
 # Copyright (C) 2008 THE cp6Linux'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the cp6Linux package.
+# This file is distributed under the same license as the debian-installer package.
+# Karolina Kalic <karolina@resenje.org>, 2010-2012.
+# Janos Guljas <janos@resenje.org>, 2010-2012.
 # Veselin Mijušković <veselin.mijuskovic@gmail.com>, 2008.
-# , fuzzy
+# Milan Kostic <kosticmilan77@open.telekom.rs>, 2012.
 #
+# Translations from iso-codes:
+#   Aleksandar Jelenak <aleksandar.jelenak@gmail.com>, 2010.
+#   Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+#   Danilo Segan <dsegan@gmx.net>, 2003, 2004, 2005.
+#   Milos Komarcevic <kmilos@gmail.com>, Caslav Ilic <caslav.ilic@gmx.net>, 2009.
+#   Tobias Quathamer <toddy@debian.org>, 2007.
+#     Translations taken from ICU SVN on 2007-09-09
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cp6Linux 2008\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-09-19 22:27+0100\n"
-"Last-Translator: Veselin Mijušković <panzer@cp6linux.org>\n"
-"Language-Team: Serbian/Cyrillic\n"
+"PO-Revision-Date: 2012-10-19 22:10+0100\n"
+"Last-Translator: Karolina Kalic <karolina@resenje.org>\n"
+"Language-Team: Serbian <debian-l10n-serbian@lists.debian.org>\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +38,7 @@ msgstr ""
 #. Time zone for Antarctica
 #: ../common.templates:2001
 msgid "McMurdo"
-msgstr "MекМурдо"
+msgstr "Mекмурдо"
 
 #. Type: select
 #. Choices
@@ -190,7 +201,7 @@ msgstr "Изаберите са листе"
 #: ../common.templates:17002 ../common.templates:18002
 #: ../common.templates:19002 ../common.templates:21002
 msgid "Select a location in your time zone:"
-msgstr "Одаберите локацију у вашој временској зони:"
+msgstr "Изаберите локацију у вашој временској зони:"
 
 #. Type: select
 #. Choices
@@ -278,7 +289,7 @@ msgstr "Перт"
 #: ../common.templates:12002 ../common.templates:14002
 #: ../common.templates:15002
 msgid "Select a city in your time zone:"
-msgstr "Одаберите град у вашој временској зони:"
+msgstr "Изаберите град у вашој временској зони:"
 
 #. Type: select
 #. Choices
@@ -490,7 +501,7 @@ msgstr "Јукон"
 #: ../common.templates:16002 ../common.templates:20002
 #: ../common.templates:22002 ../common.templates:23001
 msgid "Select your time zone:"
-msgstr "Одаберите вашу временску зону:"
+msgstr "Изаберите вашу временску зону:"
 
 #. Type: select
 #. Choices
@@ -932,7 +943,7 @@ msgstr "Самоа"
 #. :sl1:
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
-msgstr "Снимам временску зону..."
+msgstr "Снимање временске зоне..."
 
 #. Type: boolean
 #. Description
@@ -968,6 +979,169 @@ msgstr "Ако није, можете да је изаберете са спис
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Према подацима о вашој земљи, ваша временска зона је ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Уколико временска зона није излистана, вратите се назад на корак „Изабери "
+#~ "језик“ и изаберите земљу са жељеном временском зоном."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Координисано универзално време (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Изаберите државу или провинцију за подешавање ваше временске зоне:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Аустралијска Престоничка Територија"
+
+#~ msgid "New South Wales"
+#~ msgstr "Нови Јужни Велс"
+
+#~ msgid "Victoria"
+#~ msgstr "Викторија"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Северна Територија"
+
+#~ msgid "Queensland"
+#~ msgstr "Квинсленд"
+
+#~ msgid "South Australia"
+#~ msgstr "Јужна Аустралија"
+
+#~ msgid "Tasmania"
+#~ msgstr "Тасманија"
+
+#~ msgid "Western Australia"
+#~ msgstr "Западна Аустралија"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Еир Аутопут"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Јанковина"
+
+#~ msgid "Acre"
+#~ msgstr "Акри"
+
+#~ msgid "Alagoas"
+#~ msgstr "Алагоас"
+
+#~ msgid "Amazonas"
+#~ msgstr "Амазон"
+
+#~ msgid "Amapá"
+#~ msgstr "Амапа"
+
+#~ msgid "Ceará"
+#~ msgstr "Сеара"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Федерални Округ"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Ешпирито Санто"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Фернандо де Нороња"
+
+#~ msgid "Goiás"
+#~ msgstr "Гојаш"
+
+#~ msgid "Maranhão"
+#~ msgstr "Марањо"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Минаш Гераиш"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Мато Гросо ду Сул"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Мато Гросо"
+
+#~ msgid "Pará"
+#~ msgstr "Пара"
+
+#~ msgid "Paraíba"
+#~ msgstr "Параиба"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Перамбуко"
+
+#~ msgid "Piauí"
+#~ msgstr "Пиауи"
+
+#~ msgid "Paraná"
+#~ msgstr "Парана"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Рио де Женеиро"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Рио Гранде до Норте"
+
+#~ msgid "Rondônia"
+#~ msgstr "Рондониа"
+
+#~ msgid "Roraima"
+#~ msgstr "Рораима"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Рио Гранде ду Сул"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Санта Катарина"
+
+#~ msgid "Sergipe"
+#~ msgstr "Сержипе"
+
+#~ msgid "São Paulo"
+#~ msgstr "Сао Паоло"
+
+#~ msgid "Tocantins"
+#~ msgstr "Токантинс"
+
+#, fuzzy
+#~ msgid "Berlin"
+#~ msgstr "Берлин"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Понпеи"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Западни (Суматра, Џакарта, Јава, Западни и Централни Калимантан)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr ""
+#~ "Централни (Сулавеси, Бали, Мала Сундска острва, Источни и Јужни "
+#~ "Калимантан)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Источни (Малуку, Папуа)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Москва+00 - Москва"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Москва+02 - Екатеринбург"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Москва+03 - Омск"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Москва+04 - Краснојарск"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Москва+05 - Иркутск"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Москва+06 - Јакутск"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Москва+07 - Владивосток"

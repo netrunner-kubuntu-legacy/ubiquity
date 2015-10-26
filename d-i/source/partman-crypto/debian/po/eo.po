@@ -4,12 +4,12 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # translation of Debian Installer templates to Esperanto.
-# Copyright (C) 2005-2011 Software in the Public Interest, Inc.
+# Copyright (C) 2005-2013 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
 # Samuel Gimeno <sgimeno@gmail.com>, 2005.
 # Serge Leblanc <serge.leblanc@wanadoo.fr>, 2005, 2006, 2007.
-# Felipe Castro <fefcas@gmail.com>, 2008, 2009, 2010, 2011, 2012.
+# Felipe Castro <fefcas@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
 #
 # Translations from iso-codes:
 # Alastair McKInstry <mckinstry@computer.org>, 2001,2002.
@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-crypto@packages.debian.org\n"
 "POT-Creation-Date: 2013-10-30 22:04+0000\n"
-"PO-Revision-Date: 2012-11-01 21:41-0300\n"
+"PO-Revision-Date: 2014-12-07 15:01-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "Language: eo\n"
@@ -247,19 +247,14 @@ msgstr "Ĉu vere forviŝi la datumaron de ${DEVICE}?"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:22001
-#, fuzzy
-#| msgid ""
-#| "The data on ${DEVICE} will be overwritten with random data. It can no "
-#| "longer be recovered after this step has completed. This is the last "
-#| "opportunity to abort the erase."
 msgid ""
 "The data on ${DEVICE} will be overwritten with zeroes. It can no longer be "
 "recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"La datumaro sur ${DEVICE} estos surskribitaj per hazardaj datumoj. Ĝi ne plu "
-"povos esti restarigataj post kompletigo de tiu ĉi paŝo. Tio ĉi estas la "
-"lasta oportuno por nuligi la forviŝon."
+"La datumaro sur ${DEVICE} estos anstataŭigitaj per nuloj. Ĝi ne plu povos "
+"esti restarigataj post kompletigo de tiu ĉi paŝo. Tio ĉi estas la lasta "
+"oportuno rezigni la forviŝon."
 
 #. Type: text
 #. Description
@@ -279,6 +274,8 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"La instalilo nun anstataŭigas ${DEVICE} per nuloj por forviŝi ĝiajn antaŭajn "
+"enhavojn. Tiu ĉi paŝo povas esti preterpasata per ĉesigo de tiu ĉi ago."
 
 #. Type: error
 #. Description
@@ -294,16 +291,12 @@ msgstr "Forviŝado de datumaro sur ${DEVICE} malsukcesis"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:25001
-#, fuzzy
-#| msgid ""
-#| "An error occurred trying to erase the data on ${DEVICE}. The data has not "
-#| "been erased."
 msgid ""
 "An error occurred while trying to overwrite the data on ${DEVICE} with "
 "zeroes. The data has not been erased."
 msgstr ""
-"Eraro okazis dum la forviŝado de datumaro sur ${DEVICE}. La datumaro ne "
-"estas forviŝita."
+"Eraro okazis dum provo anstataŭigi la datumaron sur ${DEVICE} per nuloj. La "
+"datumaro ne estis forviŝata."
 
 #. Type: boolean
 #. Description
@@ -328,6 +321,10 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"La instalilo nun anstataŭigas ${DEVICE} per hazarda datumaro por eviti meta-"
+"informara likoj el la ĉifrita datumportilo. Tiu ĉi paŝo povas esti "
+"preterpasata per ĉesigo de tiu ĉi ago, tamen kaŭzante etan malplibonigon de "
+"la ĉifrada kvalito."
 
 #. Type: error
 #. Description
@@ -338,6 +335,9 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"Eraro okazis dum provo anstataŭigi ${DEVICE} per hazarda datumaro. Restarigo "
+"de la antaŭaj enhavoj de la aparato eblas kaj meta-informaro de ĝiaj novaj "
+"enhavoj povas esti likita."
 
 #. Type: text
 #. Description

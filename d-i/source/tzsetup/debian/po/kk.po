@@ -8,17 +8,25 @@
 # This file is distributed under the same license as debian-installer.
 #
 # Talgat Daniyarov
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2008, 2009
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2008-2011
 # Dauren Sarsenov <daur88@inbox.ru>, 2008, 2009
+#
+# Translations from iso-codes:
+#   Alastair McKinstry <mckinstry@debian.org>, 2004.
+#   Sairan Kikkarin <sairan@sci.kz>, 2006
+#   KDE Kazakh l10n team, 2006
+#   Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2008, 2009, 2010
+#   Dauren Sarsenov <daur88@inbox.ru>, 2009
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2009-02-06 15:57+0600\n"
-"Last-Translator: daur88 <daur88@inbox.ru>\n"
+"PO-Revision-Date: 2012-02-27 13:30+0600\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
+"Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -279,7 +287,7 @@ msgstr "Перт"
 #: ../common.templates:12002 ../common.templates:14002
 #: ../common.templates:15002
 msgid "Select a city in your time zone:"
-msgstr "Уақыт белдеуіңізге сай қала таңдаңыз:"
+msgstr "Уақыт белдеуіңізге сай қаланы таңдаңыз:"
 
 #. Type: select
 #. Choices
@@ -970,7 +978,167 @@ msgstr "Егер де олай болмаса, онда толық сағат б
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr ""
 "Көрсетілген еліңізге сәйкес, сіз ${ZONE} уақыт белдеуінде орналасқансыз."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Керек уақыт белдеуі тізімде жоқ болса, артқа қарай \"Тілді таңдау\" "
+#~ "қадамына барыңыз да, осы белдеуді қолданатын елді таңдаңыз (өзіңіз "
+#~ "тұратын не қазір орналасқан еліңіз)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Бүкіләлемдік координацияланған уақыты (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Уақыт белдеуін орнату үшін облыс не аймақты таңдаңыз:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Австралиялық астаналық территориясы"
+
+#~ msgid "New South Wales"
+#~ msgstr "Жаңа Оңтүстік Уэльс"
+
+#~ msgid "Victoria"
+#~ msgstr "Виктория"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Солтүстік территория"
+
+#~ msgid "Queensland"
+#~ msgstr "Квинсленд"
+
+#~ msgid "South Australia"
+#~ msgstr "Оңтүстік Австралия"
+
+#~ msgid "Tasmania"
+#~ msgstr "Тасмания"
+
+#~ msgid "Western Australia"
+#~ msgstr "Батыс Австралия"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Эйр тас жолы"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Янковинна графствосы"
+
+#~ msgid "Acre"
+#~ msgstr "Акри"
+
+#~ msgid "Alagoas"
+#~ msgstr "Алагоас"
+
+#~ msgid "Amazonas"
+#~ msgstr "Амазонас"
+
+#~ msgid "Amapá"
+#~ msgstr "Амапа"
+
+#~ msgid "Ceará"
+#~ msgstr "Сеара"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Федералды аймақ"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Эспириту-Санту"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Фернанду-ди-Норонья"
+
+#~ msgid "Goiás"
+#~ msgstr "Гояс"
+
+#~ msgid "Maranhão"
+#~ msgstr "Мараньян"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Минас-Жерайс"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Мату-Гросу-ду-Сул"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Мату-Гросу"
+
+#~ msgid "Pará"
+#~ msgstr "Пара"
+
+#~ msgid "Paraíba"
+#~ msgstr "Параиба"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Пернамбуку"
+
+#~ msgid "Piauí"
+#~ msgstr "Пиауи"
+
+#~ msgid "Paraná"
+#~ msgstr "Парана"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Рио-де-Жанейро"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Риу-Гранди-ду-Норти"
+
+#~ msgid "Rondônia"
+#~ msgstr "Рондония"
+
+#~ msgid "Roraima"
+#~ msgstr "Рорайма"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Риу-Гранди-ду-Сул"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Санта-Катарина"
+
+#~ msgid "Sergipe"
+#~ msgstr "Сержипи"
+
+#~ msgid "São Paulo"
+#~ msgstr "Сан-Паулу"
+
+#~ msgid "Tocantins"
+#~ msgstr "Токантинс"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Понпей"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Батыс (Суматра, Джакарта, Ява, Батыс және Орталық Калимантан)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr ""
+#~ "Орталық (Сулавеси, Бали, Батыс Кіші Зонд аралдары, Шығыс пен Орталық "
+#~ "Калимантан)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Шығыс (Малуку, Папуа)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Moscow+00 - Мәскеу"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Moscow+02 - Екатеринбург"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Moscow+03 - Омбы"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Moscow+04 - Красноярск"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Moscow+05 - Иркутск"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Moscow+06 - Якутск"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Moscow+07 - Владивосток"

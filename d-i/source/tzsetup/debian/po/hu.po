@@ -8,15 +8,32 @@
 # This file is distributed under the same license as debian-installer.
 # coor: SZERVÁC Attila - sas 321hu -- 2006-2008
 #
+#
+# Translations from iso-codes:
+#   Tobias Quathamer <toddy@debian.org>, 2007.
+#     Translations taken from ICU SVN on 2007-09-09
+#
+#   Arpad Biro <biro_arpad@yahoo.com>, 2001.
+#   VERÓK István <vi@fsf.hu>, 2004.
+#   SZERVÁC Attila <sas@321.hu>, 2006.
+#   Kálmán Kéménczy <kkemenczy@novell.com>, 2007, 2008.
+#   Gabor Kelemen <kelemeng@gnome.hu>, 2006, 2007.
+#   Kalman Kemenczy <kkemenczy@gmail.com>, 2010.
+#   Andras TIMAR <timar@gnome.hu>, 2000-2001.
+# SZERVÁC Attila <sas@321.hu>, 2012.
+# Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>, 2012.
+# Judit Gyimesi <judit.gyimesi.x@gmail.com>, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-04-29 23:36+0100\n"
-"Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
+"PO-Revision-Date: 2013-11-18 21:15+0100\n"
+"Last-Translator: Judit Gyimesi <judit.gyimesi.x@gmail.com>\n"
 "Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian."
 "org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -428,7 +445,7 @@ msgstr "Közép"
 #. Time zone for Canada
 #: ../common.templates:5001
 msgid "East Saskatchewan"
-msgstr "Kelet Saskatchewan"
+msgstr "Kelet-Saskatchewan"
 
 #. Type: select
 #. Choices
@@ -686,7 +703,7 @@ msgstr "Akutobe"
 #. Time zone for Kazakhstan
 #: ../common.templates:14001
 msgid "Atyrau"
-msgstr "Akutau"
+msgstr "Atirau"
 
 #. Type: select
 #. Choices
@@ -735,7 +752,7 @@ msgstr "Chatham-szigetek"
 #. Time zone for French Polynesia
 #: ../common.templates:18001
 msgid "Tahiti (Society Islands)"
-msgstr "Tahiti"
+msgstr "Tahiti (Társaság-szigetek)"
 
 #. Type: select
 #. Choices
@@ -763,7 +780,7 @@ msgstr "Lisszabon"
 #. Time zone for Portugal
 #: ../common.templates:19001
 msgid "Madeira Islands"
-msgstr "Madeira"
+msgstr "Madeira-szigetek"
 
 #. Type: select
 #. Choices
@@ -875,7 +892,7 @@ msgstr "Moszkva+10 - Bering-tenger"
 #. Time zone for United States Minor Outlying Islands
 #: ../common.templates:21001
 msgid "Johnston Atoll"
-msgstr "Johnston Atoll"
+msgstr "Johnston-atoll"
 
 #. Type: select
 #. Choices
@@ -889,7 +906,7 @@ msgstr "Midway-szigetek"
 #. Time zone for United States Minor Outlying Islands
 #: ../common.templates:21001
 msgid "Wake Island"
-msgstr "Wake sziget"
+msgstr "Wake-sziget"
 
 #. Type: select
 #. Choices
@@ -969,6 +986,164 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "A megadott hely alapján az időzóna ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Ha a kívánt időzóna nincs a listában, lépj vissza a \"Nyelv kiválasztása"
+#~ "\" lépésre és válassz egy a kívánt zónát használó országot (az országot, "
+#~ "ahol élsz vagy laksz)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Koordinált világidő (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Válassz államit vagy provinciát időzónát beállításához:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Australian Capital Territory"
+
+#~ msgid "New South Wales"
+#~ msgstr "Új Dél-Wales"
+
+#~ msgid "Victoria"
+#~ msgstr "Viktória"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Északi terület"
+
+#~ msgid "Queensland"
+#~ msgstr "Queensland"
+
+#~ msgid "South Australia"
+#~ msgstr "Dél-Ausztrália"
+
+#~ msgid "Tasmania"
+#~ msgstr "Tasmania"
+
+#~ msgid "Western Australia"
+#~ msgstr "Nyugat-Ausztrália"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Eyre Highway"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Yancowinna megye"
+
+#~ msgid "Acre"
+#~ msgstr "Acre"
+
+#~ msgid "Alagoas"
+#~ msgstr "Alagoas"
+
+#~ msgid "Amazonas"
+#~ msgstr "Amazonas (brazil állam)"
+
+#~ msgid "Amapá"
+#~ msgstr "Amapá"
+
+#~ msgid "Ceará"
+#~ msgstr "Ceará"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Distrito Federal"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Espírito Santo"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Fernando de Noronha-szigetcsoport"
+
+#~ msgid "Goiás"
+#~ msgstr "Goiás"
+
+#~ msgid "Maranhão"
+#~ msgstr "Maranhão"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Minas Gerais"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Mato Grosso do Sul"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Pará"
+#~ msgstr "Pará"
+
+#~ msgid "Paraíba"
+#~ msgstr "Paraíba"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Piauí"
+#~ msgstr "Piauí"
+
+#~ msgid "Paraná"
+#~ msgstr "Paraná"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Rio de Janeiro"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Rio Grande do Norte"
+
+#~ msgid "Rondônia"
+#~ msgstr "Rondônia"
+
+#~ msgid "Roraima"
+#~ msgstr "Roraima"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Rio Grande do Sul"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Santa Catarina"
+
+#~ msgid "Sergipe"
+#~ msgstr "Sergipe"
+
+#~ msgid "São Paulo"
+#~ msgstr "São Paulo"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Nyugati (Szumátra, Jakarta, Jáva, Nyugat- és Közép-Kalimantan)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "Közép (Celebesz, Bali, Nusa Tenggara, Kelet- és Dél-Kalimantan)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Keleti (Maluku, Papua)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Moszkva+00 - Moszkva"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Moszkva+02 - Jekatyerinburg"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Moszkva+03 - Omszk"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Moszkva+04 - Krasznojarszk"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Moszkva+05 - Irkutszk"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Moszkva+06 - Jakutszk"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Moszkva+07 - Vlagyivosztok"

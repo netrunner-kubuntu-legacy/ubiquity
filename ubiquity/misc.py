@@ -609,7 +609,7 @@ def dmimodel():
         kwargs['stderr'] = open('/dev/null', 'w')
     try:
         proc = subprocess.Popen(
-            ['dmidecode', '--string', 'system-manufacturer'],
+            ['dmidecode', '--quiet', '--string', 'system-manufacturer'],
             stdout=subprocess.PIPE, universal_newlines=True, **kwargs)
         manufacturer = proc.communicate()[0]
         if not manufacturer:
@@ -626,9 +626,10 @@ def dmimodel():
                 key = 'system-version'
             else:
                 key = 'system-product-name'
-            proc = subprocess.Popen(['dmidecode', '--string', key],
-                                    stdout=subprocess.PIPE,
-                                    universal_newlines=True)
+            proc = subprocess.Popen(
+                ['dmidecode', '--quiet', '--string', key],
+                stdout=subprocess.PIPE,
+                universal_newlines=True)
             model = proc.communicate()[0]
         if 'apple' in manufacturer:
             # MacBook4,1 - strip the 4,1
@@ -637,6 +638,8 @@ def dmimodel():
         # Ensure the resulting string does not begin or end with a dash.
         model = re.sub('[^a-zA-Z0-9]+', '-', model).rstrip('-').lstrip('-')
         if model.lower() == 'not-available':
+            return
+        if model.lower() == "To be filled by O.E.M.".lower():
             return
     except Exception:
         syslog.syslog(syslog.LOG_ERR, 'Unable to determine the model from DMI')

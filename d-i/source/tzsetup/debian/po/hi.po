@@ -11,18 +11,30 @@
 # in doc/i18n/i18n.txt
 #
 #
+#
+# Translations from iso-codes:
+#   Data taken from ICU-2.8; originally from:
+#   - Shehnaz Nagpurwala and Anwar Nagpurwala [first version]
+#   - IBM NLTC:  http://w3.torolab.ibm.com/gcoc/documents/india/hi-nlsgg.htm
+#   - Arundhati Bhowmick [IBM Cupertino]
+#
+#
 # Nishant Sharma <me@nishants.net>, 2005, 2006.
 # Kumar Appaiah <akumar@ee.iitm.ac.in>, 2008.
-# Kumar Appaiah <a.kumar@alumni.iitm.ac.in>, 2008, 2009.
+# Kumar Appaiah <a.kumar@alumni.iitm.ac.in>, 2008, 2009, 2010.
 # Kumar Appaiah <kumar.appaiah@gmail.com>, 2009.
+#   Alastair McKinstry <mckinstry@debian.org>, 2004.
+# Kumar Appaiah <a.kumar@alumni.iitm.ac.in>, 2008.
+# Kumar Appaiah <kumar.appaiah@gmail.com>, 2008, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_hi\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2009-07-06 22:29-0400\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2012-02-23 22:25-0600\n"
+"Last-Translator: Kumar Appaiah\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -974,6 +986,163 @@ msgstr "यदि यह सही नहीं है, तो इसे आप 
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "आपके देश के आधार पर, आपका समय-मण्डल है ${ZONE}"
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "अगर आपका समय मंडल इस सूची में न हो, तो कृपया \"भाषा चुनें\" भाग में वापस जाएँऔर एक "
+#~ "ऐसा देश चुनें जोकि वाही समय मंडल में हो जिसमें आप स्थित हैं."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Coordinated Universal Time (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "अपने समय-मण्डल में एक राज्य या प्रांत चुनें:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "ऑस्ट्रेलियाई राजधानी क्षेत्र"
+
+#~ msgid "New South Wales"
+#~ msgstr "न्यू साउथ वेल्स"
+
+#~ msgid "Victoria"
+#~ msgstr "विक्टोरिया"
+
+#~ msgid "Northern Territory"
+#~ msgstr "नार्थर्न टेरीटोरीस"
+
+#~ msgid "Queensland"
+#~ msgstr "क्वींसलैंड"
+
+#~ msgid "South Australia"
+#~ msgstr "दक्षिणी ऑस्ट्रेलिया"
+
+#~ msgid "Tasmania"
+#~ msgstr "तस्मानिया"
+
+#~ msgid "Western Australia"
+#~ msgstr "पश्चिमी ऑस्ट्रेलिया"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "आयर राजमार्ग"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "यांकोविन्ना प्रांत"
+
+#~ msgid "Acre"
+#~ msgstr "एकड़"
+
+#~ msgid "Alagoas"
+#~ msgstr "अलागोवास"
+
+#~ msgid "Amazonas"
+#~ msgstr "अमाजोनास"
+
+#~ msgid "Amapá"
+#~ msgstr "अमापा"
+
+#~ msgid "Ceará"
+#~ msgstr "सेयारा"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "डिस्ट्रिटो फ़ेडरल"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "एस्परिटो सेंटो"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "फर्नांडो डे नोरोन्हा"
+
+#~ msgid "Goiás"
+#~ msgstr "गोइयास"
+
+#~ msgid "Maranhão"
+#~ msgstr "मरान्हाओ"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "मिनस गेरैस"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "मातो ग्रोसो डो सुल"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "मातो ग्रोसो"
+
+#~ msgid "Pará"
+#~ msgstr "पारा"
+
+#~ msgid "Paraíba"
+#~ msgstr "पारैबा"
+
+#~ msgid "Pernambuco"
+#~ msgstr "पेर्नाम्बुको"
+
+#~ msgid "Piauí"
+#~ msgstr "पिआवी"
+
+#~ msgid "Paraná"
+#~ msgstr "पराना"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "रिओ डे जैनेरो"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "रिओ ग्रांडे डो नोर्टे"
+
+#~ msgid "Rondônia"
+#~ msgstr "रॉन्डोनिया"
+
+#~ msgid "Roraima"
+#~ msgstr "रोरैमा"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "रिओ ग्रांडे डो सुल"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "सांटा काटारीना"
+
+#~ msgid "Sergipe"
+#~ msgstr "सेर्जीपे"
+
+#~ msgid "São Paulo"
+#~ msgstr "साओ_पॉलो"
+
+#~ msgid "Tocantins"
+#~ msgstr "टोकान्तिंस"
+
+#~ msgid "Pohnpei"
+#~ msgstr "पोनापे"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "पश्चिमी (सुमात्रा, जकार्ता, जावा, पश्चिम और मध्य कलिमंतन)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "सेंट्रल (सुलावेसी, बाली, नुसा तेंगारा, पूर्व और दक्षिण कालीमंतन)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "पूर्वी (मालुकु, पापुआ)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "मास्को+00 - मास्को"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "येकाटेरिनबर्ग"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "मास्को+03 - ऑम्स्क"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "मास्को+04 - क्रस्योनार्स्क"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "मास्को+05 - इर्कुटस्क"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "मास्को+06 - याकुत्स्क"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "मास्को+07 - व्लादिवोस्टोक"

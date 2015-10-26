@@ -16,13 +16,14 @@
 # Alastair McKinstry <mckinstry@debian.org>, 2004.
 # Alexander Nyakhaychyk <nyakhaychyk@gmail.com>, 2009.
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2007, 2010.
+# Viktar Siarheichyk <viсs@eq.by>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: be\n"
 "Report-Msgid-Bugs-To: partman-auto@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-06 22:48+0000\n"
-"PO-Revision-Date: 2011-09-15 01:58+0300\n"
-"Last-Translator: Viktar Siarheichyk <vics@eq.by>\n"
+"PO-Revision-Date: 2014-01-04 14:31+0300\n"
+"Last-Translator: Viktar Siarheichyk <viсs@eq.by>\n"
 "Language-Team: Belarusian (Official spelling) <debian-l10n-belarusian@lists."
 "debian.org>\n"
 "Language: be\n"
@@ -282,3 +283,6 @@ msgid ""
 msgstr ""
 "Аперацыя зьмяненьня памера не замгла выдзеліць дастаткова месца для "
 "усталёўкі. Магчыма ўзьнікла памылка. Вам патрэбна наладзіць падзелы ўручную."
+
+#~ msgid "Separate /home, /var, and /tmp partitions"
+#~ msgstr "Асобныя падзелы /home, /var, /tmp"

@@ -1,3 +1,30 @@
+partman-auto-lvm (56ubuntu1) vivid; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Accept autopartitioning automatically.
+    - Change fallback VG name to Ubuntu.
+    - Ask how much of the VG should be used for logical volumes, rather than
+      unconditionally using it all.
+    - Set locale to "C" when calling vgs for available free space.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 19 Nov 2014 09:49:09 +0000
+
+partman-auto-lvm (56) unstable; urgency=low
+
+  [ Updated translations ]
+  * German (de.po) by Holger Wansing
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 25 Sep 2014 07:25:21 +0200
+
+partman-auto-lvm (55) unstable; urgency=low
+
+  [ Updated translations ]
+  * Danish (da.po) by Joe Hansen
+  * Estonian (et.po) by Mattias Põldaru
+  * Turkish (tr.po) by Mert Dirik
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 20 Sep 2014 12:44:16 +0200
+
 partman-auto-lvm (54ubuntu1) utopic; urgency=medium
 
   * Resynchronise with Debian.  Remaining changes:

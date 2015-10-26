@@ -29,7 +29,6 @@ d-i/source/apt-setup/generators/60local usr/lib/ubiquity/apt-setup/generators
 d-i/source/apt-setup/generators/90services-select usr/lib/ubiquity/apt-setup/generators
 d-i/source/apt-setup/generators/91security usr/lib/ubiquity/apt-setup/generators
 d-i/source/apt-setup/generators/93partner usr/lib/ubiquity/apt-setup/generators
-d-i/source/apt-setup/generators/94extras usr/lib/ubiquity/apt-setup/generators
 d-i/source/apt-setup/release-files/archive.ubuntu.com usr/share/apt-setup/release-files
 d-i/source/apt-setup/release-files/security.ubuntu.com usr/share/apt-setup/release-files
 d-i/source/apt-setup/release-files/archive.canonical.com usr/share/apt-setup/release-files

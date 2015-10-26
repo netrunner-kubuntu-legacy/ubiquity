@@ -76,6 +76,13 @@ fstab=$(
 				fi
 			fi
 			;;
+		    ([a-zA-Z]*/ROOT/*)
+			if [ "$type" = "zfs" -a "$mp" != "/" ]; then
+			     # This is definitely a ZFS, it's not the root fs (which is auto mounted
+			     # in the initrd).
+			     addfstab "$fs" "$mp" "$type" "$options" "$dump" "$pass"
+			fi
+			;;
 		esac
 	done
 )

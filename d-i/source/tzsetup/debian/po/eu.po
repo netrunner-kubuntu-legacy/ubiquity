@@ -7,18 +7,28 @@
 # Basque messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Inaki Larranaga Murgoitio 2005
-#
-# Piarres Beobide <pi@beobide.net>, 2004, 2005, 2006, 2007, 2008.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008.
+# Translations from iso-codes:
+# Copyright (C)
+# Translations from KDE:
+# Piarres Beobide <pi@beobide.net>, 2004-2009, 2011.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008, 2010.
+# Mikel Olasagasti <hey_neken@mundurat.net>, 2004.
+# Piarres Beobide Egaña <pi@beobide.net>, 2004,2006,2007, 2008, 2009.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2010.
+# Free Software Foundation, Inc., 2002.
+# Alastair McKinstry <mckinstry@computer.org>, 2002.
+# Marcos Goienetxe <marcos_g@infonegocio.com>, 2002.
+# Piarres Beobide <pi@beobide.net>, 2008.
+# Xabier Bilbao <xabidu@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2009-01-14 09:20+0200\n"
-"Last-Translator: Piarres Beobide <pi@beobide.net>\n"
-"Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
+"PO-Revision-Date: 2012-10-19 19:41+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"Language-Team: debian-l10n-eu@lists.debian.org\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -971,6 +981,173 @@ msgstr "Egokia ez bada, zure ordu-zona zerrenda osoan hautatu dezakezu."
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Zure estatuan oinarriturik, ordu-zona ${ZONE} da."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Desio duzun ordu-zonaldea instalatuta ez badago, itzuli \"hizkuntza "
+#~ "hautatu\" urratsera eta hautatu desio duzun ordu-zonaldea erabiltzen duen "
+#~ "estatua (bizi zaren edo kokaturik zauden estatua)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Denbora unibertsal koordinatu (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Hautatu ordu-zonaldea ezartzeko estatu edo probintzia:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Australiako hiriburuaren lurraldea"
+
+#~ msgid "New South Wales"
+#~ msgstr "Hego Gales berria"
+
+#~ msgid "Victoria"
+#~ msgstr "Victoria"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Iparraldeko lurraldea"
+
+#~ msgid "Queensland"
+#~ msgstr "Queensland"
+
+#~ msgid "South Australia"
+#~ msgstr "Hego Australia"
+
+#~ msgid "Tasmania"
+#~ msgstr "Tasmania"
+
+#~ msgid "Western Australia"
+#~ msgstr "Mendebaldeko Australia"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Eyre autobidea"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Yancowinna konderria"
+
+#~ msgid "Acre"
+#~ msgstr "Acre"
+
+#~ msgid "Alagoas"
+#~ msgstr "Alagoas"
+
+#~ msgid "Amazonas"
+#~ msgstr "Amazonas"
+
+#~ msgid "Amapá"
+#~ msgstr "Amapá"
+
+#~ msgid "Ceará"
+#~ msgstr "Ceará"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Barruti Federala"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Espírito Santo"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Fernando de Noronha"
+
+#~ msgid "Goiás"
+#~ msgstr "Goiás"
+
+#~ msgid "Maranhão"
+#~ msgstr "Maranhão"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Minas Gerais"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Hegoaldeko Mato Grosso"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Pará"
+#~ msgstr "Pará"
+
+#~ msgid "Paraíba"
+#~ msgstr "Paraíba"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Piauí"
+#~ msgstr "Piauí"
+
+#~ msgid "Paraná"
+#~ msgstr "Paraná"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Rio de Janeiro"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Iparraldeko Rio Grande"
+
+#~ msgid "Rondônia"
+#~ msgstr "Rondônia"
+
+#~ msgid "Roraima"
+#~ msgstr "Roraima"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Hegoaldeko Rio grande"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Santa Catarina"
+
+#~ msgid "Sergipe"
+#~ msgstr "Sergipe"
+
+#~ msgid "São Paulo"
+#~ msgstr "São Paulo"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#, fuzzy
+#~ msgid "Berlin"
+#~ msgstr "Benin"
+
+#, fuzzy
+#~ msgid "Busingen"
+#~ msgstr "Bulgaria"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr ""
+#~ "Mendebaldea (Sumatra, Jakarta, Java, Mendebalde eta Erdi Kalimantan)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "Erdikoa (Sulawesi, Bali, Nusa Tenggara, Eki eta Hego Kalimantan)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Ekialdekoa (Maluku, Papua)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Mosku+00 - Mosku"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Mosku+02 - Yekaterinburg"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Mosku+03 - Omsk"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Mosku+04 - Krasnoyarsk"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Mosku+05 - Irkutsk"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Mosku+06 - Yakutsk"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Mosku+07 - Vladivostok"

@@ -9,18 +9,29 @@
 #
 # Georgi Stanojevski, <glisha@gmail.com>, 2004, 2005, 2006.
 # Georgi Stanojevski <georgis@unet.com.mk>, 2005, 2006.
-# Arangel Angov <ufo@linux.net.mk>, 2008.
+#
+# Translations from iso-codes:
+#   Alastair McKinstry <mckinstry@computer.org>, 2002
+#   Arangel Angov <ufo@linux.net.mk>, 2008.
+#   Free Software Foundation, Inc., 2002,2004
+#   Georgi Stanojevski <glisha@gmail.com>, 2004, 2006.
+# Translations from KDE:
+#   Danko Ilik <danko@mindless.com>
+# Arangel Angov <arangel@linux.net.mk>, 2008, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_mk\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-09-17 19:03+0200\n"
-"Last-Translator: Arangel Angov <ufo@linux.net.mk>\n"
-"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
+"PO-Revision-Date: 2012-04-11 15:54+0200\n"
+"Last-Translator: Arangel Angov <arangel@linux.net.mk>\n"
+"Language-Team: Macedonian <>\n"
+"Language: mk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n!=1);\n"
 
 #. Type: select
 #. Choices
@@ -449,7 +460,7 @@ msgstr "Саскачеван"
 #: ../common.templates:5001 ../common.templates:16001
 #: ../common.templates:22001
 msgid "Mountain"
-msgstr "Планинса"
+msgstr "Планинска"
 
 #. Type: select
 #. Choices
@@ -644,7 +655,7 @@ msgstr "Јауапура"
 #. Time zone for Kiribati
 #: ../common.templates:13001
 msgid "Tarawa (Gilbert Islands)"
-msgstr "Тарава"
+msgstr "Тарава (Гилбертски острови)"
 
 #. Type: select
 #. Choices
@@ -917,7 +928,7 @@ msgstr "Аризона"
 #. Time zone for United States
 #: ../common.templates:22001
 msgid "East Indiana"
-msgstr "Источна Индиана"
+msgstr "Источна Индијана"
 
 #. Type: select
 #. Choices
@@ -968,6 +979,165 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Врз основа на твојата држава, временската зона е ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Ако саканата временска зона не е во листата, вратете се назад на чекорот "
+#~ "\"Изберете јазик\" и изберете ја земјата која што ја користи временската "
+#~ "зона (земјата во која што живеете или се наоѓате)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Coordinated Universal Time (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Одбери држава за поставување на твојата временска зона:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Австралиска главна територија"
+
+#~ msgid "New South Wales"
+#~ msgstr "Нов јужен Велс"
+
+#~ msgid "Victoria"
+#~ msgstr "Викторија"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Северна територија"
+
+#~ msgid "Queensland"
+#~ msgstr "Квинсленд"
+
+#~ msgid "South Australia"
+#~ msgstr "Јужно австралиски"
+
+#~ msgid "Tasmania"
+#~ msgstr "Тасмански"
+
+#~ msgid "Western Australia"
+#~ msgstr "Западна Австралија"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Ејре Хајвеј"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Област Јанковина "
+
+#~ msgid "Acre"
+#~ msgstr "Акри"
+
+#~ msgid "Alagoas"
+#~ msgstr "Алагоас"
+
+#~ msgid "Amazonas"
+#~ msgstr "Амазонски"
+
+#~ msgid "Amapá"
+#~ msgstr "Амапски"
+
+#~ msgid "Ceará"
+#~ msgstr "Цеара"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Дистрито федерал"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Еспирито Санто"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Фернандо де Норонха"
+
+#~ msgid "Goiás"
+#~ msgstr "Гоијас"
+
+#~ msgid "Maranhão"
+#~ msgstr "Маранхао"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Минас Гераис"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Мато Гросо до Сул"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Мато Гросо"
+
+#~ msgid "Pará"
+#~ msgstr "Пара"
+
+#~ msgid "Paraíba"
+#~ msgstr "Параиба"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Пернамбуко"
+
+#~ msgid "Piauí"
+#~ msgstr "Пиауи"
+
+#~ msgid "Paraná"
+#~ msgstr "Парана"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Рио де Жанеиро"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Рио гранде до Норте"
+
+#~ msgid "Rondônia"
+#~ msgstr "Рондонија"
+
+#~ msgid "Roraima"
+#~ msgstr "Рораима"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Рио гранде до Сул"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Санта Катарина"
+
+#~ msgid "Sergipe"
+#~ msgstr "Сергипе"
+
+#~ msgid "São Paulo"
+#~ msgstr "Сао Паоло"
+
+#~ msgid "Tocantins"
+#~ msgstr "Токантис"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Понпејска"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Западна (Суматра, Џакарта, Јава, Западен и централен Калимантан)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr ""
+#~ "Централно (Сулавеси, Бали, Нуса Тенгара, Источен и јужен Калимантан)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Источна (Малуку, Папуа)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Москва+00 - Москва"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Москва+02 - Јекатеринбург"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Москва+03 - Омск"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Москва+04 - Краснојарск"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Москва+05 - Иркутск"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Москва+06 - Јакутск"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Москва+07 - Владивосток"

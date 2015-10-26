@@ -1,3 +1,62 @@
+grub-installer (1.78ubuntu30) wily; urgency=medium
+
+  * Multipath device names have changed; so since multipath-tools 0.5.0 rather
+    than mpath[0-9]+p[0-9]+, they are now named mpath[a-z]+[0-9]+. Fix this so
+    grub-installer has a chance of properly installing on multipath devices
+    when not using grub-ieee1275.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 20 Oct 2015 14:06:44 +0100
+
+grub-installer (1.78ubuntu29) wily; urgency=medium
+
+  * Properly handle systems on which there may be more than 26 disks, and our
+    boot partition meant to be on a disk named [hsv]d[a-z][a-z]. (LP: #1479213)
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Mon, 14 Sep 2015 20:48:40 -0400
+
+grub-installer (1.78ubuntu28) vivid; urgency=medium
+
+  [ Phillip Susi ]
+  * Don't try to mark a partition as active, except on grub-pc.
+    This was causing failures for grub-efi (LP: #1303790).
+
+ -- Timo Aaltonen <tjaalton@ubuntu.com>  Sat, 04 Apr 2015 16:48:58 +0300
+
+grub-installer (1.78ubuntu27) vivid; urgency=medium
+
+  [ Mauricio Faria de Oliveira ]
+  * grub-installer: Use 'p' (not '-part') as multipath disk-partition
+    separator. This fixes the check of whether the boot file system is on
+    multipath (i.e., $disc_offered is a multipath partition). (LP: #1430074)
+  * Better handle PReP partitions on ppc64el: (LP: #1415918)
+    - prep-bootdev: add '-l' option to list all PReP partitions.  With this,
+      it's possible to do more things to select a PReP partition.
+    - grub-installer [ppc64el]: bootdev/wipe_bootdev: prefer PReP partition in
+      the same disk as the boot file system partition ($disc_offered).
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 17 Mar 2015 00:25:13 -0400
+
+grub-installer (1.78ubuntu26) vivid; urgency=medium
+
+  * Revert changes from 1.78ubuntu25:
+    * grub_probe(): return a single line in BTRFS multi-disk RAID configurations
+      - It breaks bootloader install on LVM. (LP: #1427821)
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 10 Mar 2015 15:33:01 -0400
+
+grub-installer (1.78ubuntu25) vivid; urgency=medium
+
+  * grub_probe(): return a single line in BTRFS multi-disk RAID configurations
+    (LP: #1354730).
+
+ -- TJ <ubuntu@iam.tj>  Thu, 19 Feb 2015 11:44:43 -0500
+
+grub-installer (1.78ubuntu24) vivid; urgency=medium
+
+  * Install grub-arm64-efi on arm64/efi platforms. (From Debian)
+
+ -- dann frazier <dannf@ubuntu.com>  Tue, 03 Feb 2015 16:45:04 -0700
+
 grub-installer (1.78ubuntu23) utopic; urgency=medium
 
   * On ppc64el, wipe the PReP partition before installing grub-ieee1275,

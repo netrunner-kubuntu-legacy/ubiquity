@@ -16,7 +16,8 @@
 # Steve Langasek <vorlon@debian.org>, 2004
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2005
 # Rubén Porras Campo <nahoo@inicia.es>, 2005
-# Javier Fernández-Sanguino <jfs@debian.org>, 2003-2007
+# Omar Campagne <ocampagne@gmail.com>, 2010
+# Javier Fernández-Sanguino <jfs@debian.org>, 2003-2012, 2014
 #
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
@@ -43,15 +44,25 @@
 # - 'array' no está traducido aún. La traducción como 'arreglo' suena
 # fatal (y es poco conocida)
 #
-#  
+#
+# Translations from iso-codes:
+#   Alastair McKinstry <mckinstry@computer.org>, 2001.
+#   Free Software Foundation, Inc., 2001,2003,2004
+#   Javier Fernández-Sanguino <jfs@debian.org>, 2004-2008, 2010
+#   Juan Manuel García Molina <juanmagm@mail.com>, 2001.
+#   Ricardo Fernández Pascual <ric@users.sourceforge.net>, 2000, 2001.
+#   Tobias Quathamer <toddy@debian.org>, 2007.
+#     Translations taken from ICU SVN on 2007-09-09
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2008-09-06 22:55+0200\n"
+"PO-Revision-Date: 2014-12-03 00:47+0100\n"
 "Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -431,7 +442,7 @@ msgstr "Terranova"
 #. Time zone for Canada
 #: ../common.templates:5001
 msgid "Atlantic"
-msgstr "Atlántico (Labrador - Nuevo Brunswick - Nueva Escocia)"
+msgstr "Atlántico"
 
 #. Type: select
 #. Choices
@@ -441,7 +452,7 @@ msgstr "Atlántico (Labrador - Nuevo Brunswick - Nueva Escocia)"
 #. Time zone for United States
 #: ../common.templates:5001 ../common.templates:22001
 msgid "Eastern"
-msgstr "Este (Ontario - Quebec)"
+msgstr "Este"
 
 #. Type: select
 #. Choices
@@ -455,7 +466,7 @@ msgstr "Este (Ontario - Quebec)"
 #: ../common.templates:5001 ../common.templates:16001
 #: ../common.templates:22001
 msgid "Central"
-msgstr "Central (Manitoba - Nunavut (Centro) - Ontario (Oeste))"
+msgstr "Central"
 
 #. Type: select
 #. Choices
@@ -483,7 +494,7 @@ msgstr "Nunavut (Isla Southampton) y Saskatchewan"
 #: ../common.templates:5001 ../common.templates:16001
 #: ../common.templates:22001
 msgid "Mountain"
-msgstr "Alberta - Territorios del Noroeste - Nunavut (montañas)"
+msgstr "Montañas"
 
 #. Type: select
 #. Choices
@@ -497,7 +508,7 @@ msgstr "Alberta - Territorios del Noroeste - Nunavut (montañas)"
 #: ../common.templates:5001 ../common.templates:16001
 #: ../common.templates:22001
 msgid "Pacific"
-msgstr "Pacífico (Colombia Británica)"
+msgstr "Pacífico"
 
 #. Type: select
 #. Choices
@@ -888,7 +899,7 @@ msgstr "Zona 10 (Isla Sakhalin)"
 #. Time zone for Russian Federation
 #: ../common.templates:20001
 msgid "Moscow+08 - Magadan"
-msgstr "Zona 11 (Magadan)"
+msgstr "Moscú+08 - Magadán"
 
 #. Type: select
 #. Choices
@@ -930,28 +941,28 @@ msgstr "Islas Wake"
 #. Time zone for United States
 #: ../common.templates:22001
 msgid "Alaska"
-msgstr "EEUU Alaska"
+msgstr "Alaska"
 
 #. Type: select
 #. Choices
 #. Time zone for United States
 #: ../common.templates:22001
 msgid "Hawaii"
-msgstr "EEUU Hawai e Islas Aleutianas de Alaska"
+msgstr "Hawaii"
 
 #. Type: select
 #. Choices
 #. Time zone for United States
 #: ../common.templates:22001
 msgid "Arizona"
-msgstr "EEUU Arizona"
+msgstr "Arizona"
 
 #. Type: select
 #. Choices
 #. Time zone for United States
 #: ../common.templates:22001
 msgid "East Indiana"
-msgstr "EEUU Indiana Este"
+msgstr "Indiana Este"
 
 #. Type: select
 #. Choices
@@ -1004,6 +1015,172 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Se ha determinado en base a su país que su zona horaria es ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Si la zona horaria deseada no está en la lista entonces vuelva atrás al "
+#~ "paso «Escoja el idioma» y seleccione un país que utilice la zona horaria "
+#~ "deseada (el país donde vive o está ubicado)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Tiempo Universal Coordinado (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Seleccione el estado o provincia para configurar su zona horaria:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Territorio de la capital de Australia"
+
+#~ msgid "New South Wales"
+#~ msgstr "Nueva Gales del Sur"
+
+#~ msgid "Victoria"
+#~ msgstr "Victoria"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Territorio del Norte"
+
+#~ msgid "Queensland"
+#~ msgstr "Queensland"
+
+#~ msgid "South Australia"
+#~ msgstr "Sur de Australia"
+
+#~ msgid "Tasmania"
+#~ msgstr "Tasmania"
+
+#~ msgid "Western Australia"
+#~ msgstr "Australia Occidental"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Autopista de Eyre"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Condado de Yancowinna"
+
+#~ msgid "Acre"
+#~ msgstr "Acre"
+
+#~ msgid "Alagoas"
+#~ msgstr "Alagoas"
+
+#~ msgid "Amazonas"
+#~ msgstr "Amazonas"
+
+#~ msgid "Amapá"
+#~ msgstr "Amapá"
+
+#~ msgid "Ceará"
+#~ msgstr "Ceará"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Distrito Federal"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Espírito Santo"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Fernando de Noronha"
+
+#~ msgid "Goiás"
+#~ msgstr "Goiás"
+
+#~ msgid "Maranhão"
+#~ msgstr "Maranhão"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Minas Gerais"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Mato Grosso do Sul"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Pará"
+#~ msgstr "Pará"
+
+#~ msgid "Paraíba"
+#~ msgstr "Paraíba"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Piauí"
+#~ msgstr "Piauí"
+
+#~ msgid "Paraná"
+#~ msgstr "Paraná"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Rio de Janeiro"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Rio Grande do Norte"
+
+#~ msgid "Rondônia"
+#~ msgstr "Rondônia"
+
+#~ msgid "Roraima"
+#~ msgstr "Roraima"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Rio Grande do Sul"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Santa Catarina"
+
+#~ msgid "Sergipe"
+#~ msgstr "Sergipe"
+
+#~ msgid "São Paulo"
+#~ msgstr "Sao Paulo"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#~ msgid "Berlin"
+#~ msgstr "Berlín"
+
+#~ msgid "Busingen"
+#~ msgstr "Busingen"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Occidental (Sumatra, Yakarta, Java, Kalimantan Occidental y Cental)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr ""
+#~ "Central (Célebes, Bali, Islas menores de la Sonda, Kalimentan Oriental y "
+#~ "Meridional)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Oriental (Islas Molucas, Nueva Guinea)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Moscú+00 - Moscú"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Moscú+02 - Ekaterimburgo"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Moscú+03 - Omsk"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Moscú+04 - Krasnoyarsk"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Moscú+05 - Irkutsk"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Moscú+06 - Yakutsk"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Moscú+07 - Vladivostok"

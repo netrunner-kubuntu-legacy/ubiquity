@@ -120,25 +120,9 @@ Template: ubiquity/text/fullname_label
 Type: text
 _Description: Your name:
 
-Template: ubiquity/text/fullname_inactive_label
-Type: text
-_Description: Your name
-
-Template: ubiquity/text/password_new_inactive_label
-Type: text
-_Description: At least 8 characters password
-
-Template: ubiquity/text/password_new_again_inactive_label
-Type: text
-_Description: Retype password
-
 Template: ubiquity/text/username_label
 Type: text
 _Description: Pick a username:
-
-Template: ubiquity/text/username_inactive_label
-Type: text
-_Description: Username
 
 Template: ubiquity/text/username_extra_label
 Type: text
@@ -515,6 +499,11 @@ Template: ubiquity/text/next
 Type: text
 # Translators, this text will appear on a button, so KEEP IT SHORT
 _Description: Continue
+
+Template: ubiquity/text/in_uefi_mode
+Type: text
+# Translators, this text will appear on a button, so KEEP IT SHORT
+_Description: Continue in UEFI mode
 
 Template: ubiquity/finished_restart_only
 Type: text

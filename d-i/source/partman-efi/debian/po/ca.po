@@ -4,17 +4,24 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # Catalan messages for debian-installer.
-# Copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010 Software in the Public Interest, Inc.
+# Copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010, 2012 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004, 2006, 2007, 2008, 2010.
+# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004, 2006, 2007, 2008, 2010, 2012.
 # Guillem Jover <guillem@debian.org>, 2005, 2007.
 #
+# Translations from iso-codes:
+# Alastair McKinstry <mckinstry@computer.org>, 2001.
+# Free Software Foundation, Inc., 2002,2004,2006
+# Orestes Mas i Casals <orestes@tsc.upc.es>, 2004-2006. (orestes: He usat la nomenclatura de http://www.traduim.com/)
+# Softcatalà <info@softcatala.org>, 2000-2001
+# Toni Hermoso Pulido <toniher@softcatala.cat>, 2010.
+# Traductor: Jordi Ferré <jordiferre@catalonia.altranet.fr>
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer squeeze\n"
+"Project-Id-Version: debian-installer wheezy\n"
 "Report-Msgid-Bugs-To: partman-efi@packages.debian.org\n"
-"POT-Creation-Date: 2012-03-14 12:33+0000\n"
-"PO-Revision-Date: 2010-10-18 21:17+0200\n"
+"POT-Creation-Date: 2014-11-13 22:01+0000\n"
+"PO-Revision-Date: 2012-10-18 18:34+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "Language: ca\n"
@@ -38,7 +45,7 @@ msgstr ""
 "carrega el carregador des de la seua partició EFI privada del disc dur. "
 "Aleshores el carregador inicia el sistema operatiu des d'aquesta mateixa "
 "partició. Una partició EFI té un sistema de fitxers FAT16 formatat en ella i "
-"el senyalador d'arrencable establert. La majoria de les instaŀlacions "
+"el senyalador d'arrencable establert. La majoria de les instal·lacions "
 "ubiquen la partició EFI a la primera partició primària del mateix disc on "
 "està el sistema de fitxers arrel."
 
@@ -49,7 +56,8 @@ msgstr ""
 #. Description
 #. :sl5:
 #: ../partman-efi.templates:2001 ../partman-efi.templates:4001
-msgid "EFI boot partition"
+#, fuzzy
+msgid "EFI System Partition"
 msgstr "Partició d'arrencada EFI"
 
 #. Type: boolean
@@ -69,11 +77,11 @@ msgstr "No s'ha trobat cap partició EFI."
 #. Type: text
 #. Description
 #. :sl5:
-#. short variant of 'EFI boot partition'
+#. short variant of 'EFI System Partition'
 #. Up to 10 character positions
 #: ../partman-efi.templates:5001
-msgid "EFIboot"
-msgstr "arrencadaEFI"
+msgid "ESP"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -86,15 +94,48 @@ msgstr "EFI-fat16"
 #. Description
 #. :sl5:
 #: ../partman-efi.templates:8001
-#, fuzzy
 msgid "EFI partition too small"
-msgstr "Partició d'arrencada EFI"
+msgstr "La partició EFI és massa petita"
 
 #. Type: error
 #. Description
 #. :sl5:
 #: ../partman-efi.templates:8001
+#, fuzzy
 msgid ""
-"EFI boot partitions on this architecture cannot be created with a size less "
-"than 35 MB. Please make the EFI boot partition larger."
+"EFI System Partitions on this architecture cannot be created with a size "
+"less than 35 MB. Please make the EFI System Partition larger."
+msgstr ""
+"Les particions d'arrencada EFI en aquesta arquitectura no poden tindre una "
+"mida inferior als 35MB. Feu la partició d'arrencada EFI més gran."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+#, fuzzy
+msgid "Force UEFI installation?"
+msgstr "Avorta la instal·lació"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid ""
+"This machine's firmware has started the installer in UEFI mode but it looks "
+"like there may be existing operating systems already installed using \"BIOS "
+"compatibility mode\". If you continue to install Debian in UEFI mode, it "
+"might be difficult to reboot the machine into any BIOS-mode operating "
+"systems later."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid ""
+"If you wish to install in UEFI mode and don't care about keeping the ability "
+"to boot one of the existing systems, you have the option to force that here. "
+"If you wish to keep the option to boot an existing operating system, you "
+"should choose NOT to force UEFI installation here."
 msgstr ""

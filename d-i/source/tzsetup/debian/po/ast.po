@@ -3,27 +3,30 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
-#
-#
 # Debian Installer master translation file template
 # Don't forget to properly fill-in the header of PO files
-#
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt
-#
-#
+# astur <malditoastur@gmail.com>, 2010
+# Marquinos <maacub@gmail.com>, 2010.
+# Translations from iso-codes:
+# Marcos Alvarez Costales <marcoscostales@gmail.com>, 2009, 2010.
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# Marquinos <maacub@gmail.com>, 2008.
+# Mikel González <mikelglez@softastur.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2012-03-07 23:31+0000\n"
-"PO-Revision-Date: 2009-01-07 12:15+0100\n"
-"Last-Translator: Marcos Alvarez Costales <marcos.alvarez.costales@gmail."
-"com>\n"
-"Language-Team: Asturian <ubuntu-l10n-ast@lists.ubuntu.com>\n"
+"PO-Revision-Date: 2012-03-03 13:06+0200\n"
+"Last-Translator: Mikel González <mikelglez@softastur.org>\n"
+"Language-Team: Softastur\n"
+"Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: select
 #. Choices
@@ -193,7 +196,7 @@ msgstr "Esbillar de la llista completa"
 #: ../common.templates:17002 ../common.templates:18002
 #: ../common.templates:19002 ../common.templates:21002
 msgid "Select a location in your time zone:"
-msgstr "Seleiciona una llocalización pa la to zona horaria:"
+msgstr "Seleiciona una llocalización pa la to estaya horaria:"
 
 #. Type: select
 #. Choices
@@ -281,7 +284,7 @@ msgstr "Perth"
 #: ../common.templates:12002 ../common.templates:14002
 #: ../common.templates:15002
 msgid "Select a city in your time zone:"
-msgstr "Seleiciona una ciudá na to zona horaria:"
+msgstr "Seleiciona una ciudá na to estaya horaria:"
 
 #. Type: select
 #. Choices
@@ -493,7 +496,7 @@ msgstr "Yukon"
 #: ../common.templates:16002 ../common.templates:20002
 #: ../common.templates:22002 ../common.templates:23001
 msgid "Select your time zone:"
-msgstr "Seleiciona la to zona horaria:"
+msgstr "Seleiciona la to estaya horaria:"
 
 #. Type: select
 #. Choices
@@ -745,7 +748,7 @@ msgstr "Tahiti (Islles Society)"
 #. Time zone for French Polynesia
 #: ../common.templates:18001
 msgid "Marquesas Islands"
-msgstr "Islles Marquesas"
+msgstr "Islles Marqueses"
 
 #. Type: select
 #. Choices
@@ -759,7 +762,7 @@ msgstr "Islles Gambier"
 #. Time zone for Portugal
 #: ../common.templates:19001
 msgid "Lisbon"
-msgstr "Llisboa"
+msgstr "Lisboa"
 
 #. Type: select
 #. Choices
@@ -899,14 +902,14 @@ msgstr "Islles Wake"
 #. Time zone for United States
 #: ../common.templates:22001
 msgid "Alaska"
-msgstr "Alaska"
+msgstr "Alasca"
 
 #. Type: select
 #. Choices
 #. Time zone for United States
 #: ../common.templates:22001
 msgid "Hawaii"
-msgstr "Hawaii"
+msgstr "Ḥawai"
 
 #. Type: select
 #. Choices
@@ -920,7 +923,7 @@ msgstr "Arizona"
 #. Time zone for United States
 #: ../common.templates:22001
 msgid "East Indiana"
-msgstr "Este Indiana"
+msgstr "Indiana del este"
 
 #. Type: select
 #. Choices
@@ -935,7 +938,7 @@ msgstr "Samoa"
 #. :sl1:
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
-msgstr "Guardando la zona horaria..."
+msgstr "Guardando la estaya horaria..."
 
 #. Type: boolean
 #. Description
@@ -973,6 +976,164 @@ msgstr ""
 #. :sl1:
 #: ../tzsetup-udeb.templates:4001
 #, fuzzy
-#| msgid "Based on your country, your time zone is ${ZONE}."
 msgid "Based on your present physical location, your time zone is ${ZONE}."
 msgstr "Basáu nel to país, la to zona horaria ye ${ZONE}."
+
+#~ msgid ""
+#~ "If the desired time zone is not listed, then please go back to the step "
+#~ "\"Choose language\" and select a country that uses the desired time zone "
+#~ "(the country where you live or are located)."
+#~ msgstr ""
+#~ "Si la estaya horaria que quies nun apaez na llista, entós vuelve atrás al "
+#~ "pasu \"Escoyer llingua\" y esbilla un país qu'use la mesma estaya horaria "
+#~ "(que la del país au vives)."
+
+#~ msgid "Coordinated Universal Time (UTC)"
+#~ msgstr "Tiempu Coordináu Universal (UTC)"
+
+#~ msgid "Select the state or province to set your time zone:"
+#~ msgstr "Seleiciona un estáu o provincia p'afitar la to estaya horaria:"
+
+#~ msgid "Australian Capital Territory"
+#~ msgstr "Territoriu Capital Australia"
+
+#~ msgid "New South Wales"
+#~ msgstr "Nuevu Gales del Sur"
+
+#~ msgid "Victoria"
+#~ msgstr "Victoria"
+
+#~ msgid "Northern Territory"
+#~ msgstr "Territoriu del Norte"
+
+#~ msgid "Queensland"
+#~ msgstr "Queensland"
+
+#~ msgid "South Australia"
+#~ msgstr "Australia del Sur"
+
+#~ msgid "Tasmania"
+#~ msgstr "Tasmania"
+
+#~ msgid "Western Australia"
+#~ msgstr "Oeste d'Australia"
+
+#~ msgid "Eyre Highway"
+#~ msgstr "Eyre Highway"
+
+#~ msgid "Yancowinna County"
+#~ msgstr "Yancowinna County"
+
+#~ msgid "Acre"
+#~ msgstr "Acre"
+
+#~ msgid "Alagoas"
+#~ msgstr "Alagoas"
+
+#~ msgid "Amazonas"
+#~ msgstr "Amazones"
+
+#~ msgid "Amapá"
+#~ msgstr "Amapá"
+
+#~ msgid "Ceará"
+#~ msgstr "Ceará"
+
+#~ msgid "Distrito Federal"
+#~ msgstr "Distritu Federal"
+
+#~ msgid "Espírito Santo"
+#~ msgstr "Espíritu Santu"
+
+#~ msgid "Fernando de Noronha"
+#~ msgstr "Fernando de Noronha"
+
+#~ msgid "Goiás"
+#~ msgstr "Goiás"
+
+#~ msgid "Maranhão"
+#~ msgstr "Maranhão"
+
+#~ msgid "Minas Gerais"
+#~ msgstr "Mines Gerais"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Mato Grosso del Sur"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Pará"
+#~ msgstr "Pará"
+
+#~ msgid "Paraíba"
+#~ msgstr "Paraíba"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Piauí"
+#~ msgstr "Piauí"
+
+#~ msgid "Paraná"
+#~ msgstr "Paraná"
+
+#~ msgid "Rio de Janeiro"
+#~ msgstr "Ríu de Xaneiro"
+
+#~ msgid "Rio Grande do Norte"
+#~ msgstr "Rio Grande del Norte"
+
+#~ msgid "Rondônia"
+#~ msgstr "Rondônia"
+
+#~ msgid "Roraima"
+#~ msgstr "Roraima"
+
+#~ msgid "Rio Grande do Sul"
+#~ msgstr "Rio Grande del Sur"
+
+#~ msgid "Santa Catarina"
+#~ msgstr "Santa Catarina"
+
+#~ msgid "Sergipe"
+#~ msgstr "Sergipe"
+
+#~ msgid "São Paulo"
+#~ msgstr "São Paulo"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgid "Western (Sumatra, Jakarta, Java, West and Central Kalimantan)"
+#~ msgstr "Oeste (Sumatra, Jakarta, Java, West y Kalimantan Central)"
+
+#~ msgid "Central (Sulawesi, Bali, Nusa Tenggara, East and South Kalimantan)"
+#~ msgstr "Central (Sulawesi, Bali, Nusa Tenggara, East y Kalimantan Sur)"
+
+#~ msgid "Eastern (Maluku, Papua)"
+#~ msgstr "Este (Maluku, Papua)"
+
+#~ msgid "Moscow+00 - Moscow"
+#~ msgstr "Moscú+00 - Moscú"
+
+#~ msgid "Moscow+02 - Yekaterinburg"
+#~ msgstr "Moscú+02 - Yekaterinburg"
+
+#~ msgid "Moscow+03 - Omsk"
+#~ msgstr "Moscú+03 - Omsk"
+
+#~ msgid "Moscow+04 - Krasnoyarsk"
+#~ msgstr "Moscú+04 - Krasnoyarsk"
+
+#~ msgid "Moscow+05 - Irkutsk"
+#~ msgstr "Moscú+05 - Irkutsk"
+
+#~ msgid "Moscow+06 - Yakutsk"
+#~ msgstr "Moscú+06 - Yakutsk"
+
+#~ msgid "Moscow+07 - Vladivostok"
+#~ msgstr "Moscú+07 - Vladivostok"

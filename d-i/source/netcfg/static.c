@@ -367,7 +367,7 @@ static int netcfg_activate_static_ipv4(struct debconfclient *client,
         rv |= di_exec_shell_log(buf);
     }
     else if (!empty_str(interface->gateway)) {
-        snprintf(buf, sizeof(buf), "ip route add default via %s", interface->gateway);
+        snprintf(buf, sizeof(buf), "ip route add default via %s dev %s", interface->gateway, interface->name);
         rv |= di_exec_shell_log(buf);
     }
 #endif
@@ -469,7 +469,7 @@ static int netcfg_activate_static_ipv6(struct debconfclient *client,
     rv |= di_exec_shell_log(buf);
 
     if (!empty_str(interface->gateway)) {
-        snprintf(buf, sizeof(buf), "ip route add default via %s", interface->gateway);
+        snprintf(buf, sizeof(buf), "ip route add default via %s dev %s", interface->gateway, interface->name);
         rv |= di_exec_shell_log(buf);
     }
 #endif
