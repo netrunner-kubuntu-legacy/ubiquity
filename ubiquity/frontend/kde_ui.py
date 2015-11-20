@@ -188,13 +188,13 @@ class Wizard(BaseFrontend):
         # Above the branding there is also a spacer pushing down on the logo
         # and up on the steps to make sure spacing between steps is not
         # awkwardly huge.
-        self.icon_widget = SquareSvgWidget(self.ui)
-        self.icon_widget.load("/usr/share/ubiquity/qt/images/branding.svgz")
+        #self.icon_widget = SquareSvgWidget(self.ui)
+        #self.icon_widget.load("/usr/share/ubiquity/qt/images/branding.svgz")
         branding_layout = QtGui.QHBoxLayout()
         branding_layout.addItem(QtGui.QSpacerItem(1, 1,
                                                   QtGui.QSizePolicy.Expanding,
                                                   QtGui.QSizePolicy.Minimum))
-        branding_layout.addWidget(self.icon_widget)
+        #branding_layout.addWidget(self.icon_widget)
         branding_layout.addItem(QtGui.QSpacerItem(1, 1,
                                                   QtGui.QSizePolicy.Expanding,
                                                   QtGui.QSizePolicy.Minimum))
