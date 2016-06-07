@@ -286,11 +286,10 @@ class PageKde(PreparePageBase):
         self.prepare_power_source.hide()
         self.prepare_network_connection.hide()
         self.page.prepare_best_results.hide()
-        # Nettrunner does not need this
+        # Netrunner does not need this
         self.prepare_download_updates.hide()
         self.prepare_nonfree_software.hide()
         self.prepare_foss_disclaimer.hide()
-        
 
     def show_insufficient_space_page(self, required, free):
         return

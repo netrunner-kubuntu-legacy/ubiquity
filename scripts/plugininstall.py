@@ -199,7 +199,7 @@ class Install(install_misc.InstallBase):
 
         self.next_region()
         self.db.progress('INFO', 'ubiquity/install/apt')
-        #self.configure_apt()
+        # self.configure_apt()
 
         self.configure_plugins()
 
@@ -231,9 +231,9 @@ class Install(install_misc.InstallBase):
         self.next_region()
         self.db.progress('INFO', 'ubiquity/install/installing')
 
-        #if 'UBIQUITY_OEM_USER_CONFIG' in os.environ:
+        # if 'UBIQUITY_OEM_USER_CONFIG' in os.environ:
         #    self.install_oem_extras()
-        #else:
+        # else:
         #    self.install_extras()
 
         self.next_region()
