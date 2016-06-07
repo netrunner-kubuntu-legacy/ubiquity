@@ -199,7 +199,7 @@ class Install(install_misc.InstallBase):
 
         self.next_region()
         self.db.progress('INFO', 'ubiquity/install/apt')
-        #self.configure_apt()
+        # self.configure_apt()
 
         self.configure_plugins()
 
@@ -231,9 +231,9 @@ class Install(install_misc.InstallBase):
         self.next_region()
         self.db.progress('INFO', 'ubiquity/install/installing')
 
-        #if 'UBIQUITY_OEM_USER_CONFIG' in os.environ:
+        # if 'UBIQUITY_OEM_USER_CONFIG' in os.environ:
         #    self.install_oem_extras()
-        #else:
+        # else:
         #    self.install_extras()
 
         self.next_region()
@@ -918,6 +918,10 @@ class Install(install_misc.InstallBase):
         osextras.unlink_force(
             self.target_file('etc/ssl/private/ssl-cert-snakeoil.key'))
 
+        # ensure /etc/mtab is a symlink
+        osextras.unlink_force(self.target_file('etc/mtab'))
+        os.symlink('../proc/self/mounts', self.target_file('etc/mtab'))
+
         install_misc.chroot_setup(self.target, x11=True)
         install_misc.chrex(
             self.target, 'dpkg-divert', '--package', 'ubiquity', '--rename',
@@ -932,6 +936,11 @@ class Install(install_misc.InstallBase):
                     'popularity-contest',
                     'libpaper1',
                     'ssl-cert']
+        arch, subarch = install_misc.archdetect()
+
+        # this postinst installs EFI application and cleans old entries
+        if arch in ('amd64', 'i386') and subarch == 'efi':
+            packages.append('fwupdate')
 
         try:
             for package in packages:
@@ -1451,7 +1460,7 @@ class Install(install_misc.InstallBase):
 
         if arch in ('amd64', 'i386'):
             for pkg in ('grub', 'grub-pc', 'grub-efi', 'grub-efi-amd64',
-                        'grub-efi-amd64-signed', 'shim-signed',
+                        'grub-efi-amd64-signed', 'shim-signed', 'mokutil',
                         'lilo'):
                 if pkg not in keep:
                     difference.add(pkg)
@@ -1721,7 +1730,7 @@ class Install(install_misc.InstallBase):
             return
         if not stat.S_ISCHR(st.st_mode):
             return
-        if not os.path.isdir(self.target_file("var/lib/urandom")):
+        if not os.path.isdir(self.target_file("var/lib/systemd")):
             return
 
         poolbytes = 512
@@ -1736,7 +1745,7 @@ class Install(install_misc.InstallBase):
         old_umask = os.umask(0o077)
         try:
             with open("/dev/urandom", "rb") as urandom:
-                with open(self.target_file("var/lib/urandom/random-seed"),
+                with open(self.target_file("var/lib/systemd/random-seed"),
                           "wb") as seed:
                     seed.write(urandom.read(poolbytes))
         except IOError:
