@@ -1505,6 +1505,15 @@ class PageKde(PageBase):
         self.plugin_optional_widgets = self.page_advanced
         self.current_page = self.page
 
+    def update_branded_strings(self):
+        new_part_auto_comment_label_text = \
+            self.partAuto.part_auto_comment_label.text()\
+            .replace('Kubuntu', misc.get_release().name)
+        new_part_auto_comment_label_text = \
+            new_part_auto_comment_label_text.replace('Ubuntu', 'Kubuntu')
+        self.partAuto.part_auto_comment_label.\
+            setText(new_part_auto_comment_label_text)
+
     def show_page_advanced(self):
         self.current_page = self.page_advanced
 
