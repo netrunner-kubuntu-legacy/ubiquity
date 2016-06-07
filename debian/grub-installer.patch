@@ -1,0 +1,13 @@
+--- ./d-i/source/grub-installer/grub-installer	2016-03-14 20:04:16.000000000 +0000
++++ grub-installer	2016-05-28 22:43:50.965185523 +0100
+@@ -193,6 +193,10 @@
+ 		db_progress STOP
+ 		exit 1
+ 	fi
++	if [ -e /target/boot/efi/EFI/neon/grub.cfg ]; then
++	    echo "grub-installer: copying boot/efi/EFI/neon/grub.cfg to boot/efi/EFI/ubuntu for hardcoded grub path"
++	    cp /target/boot/efi/EFI/neon/grub.cfg /target/boot/efi/EFI/ubuntu/grub.cfg
++	fi
+ }
+ 
+ findfs () {

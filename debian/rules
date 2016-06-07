@@ -4,6 +4,7 @@
 #export DH_VERBOSE=1
 
 export DH_OPTIONS
+export LC_ALL=C.UTF-8
 
 VERSION := $(shell dpkg-parsechangelog | awk '/^Version:/ { print $$2 }')
 EXPECTED_AC_VERSION := $(shell echo "$(VERSION)" | cut -d. -f1,2)
@@ -52,8 +53,8 @@ check:
 		sh -n $$x; \
 	done
 	# Check the syntax of any Python scripts.
-	#./tests/run-pyflakes
-	#./tests/run-pep8
+	./tests/run-pyflakes
+	./tests/run-pep8
 
 pychecker:
 	./run-pychecker
